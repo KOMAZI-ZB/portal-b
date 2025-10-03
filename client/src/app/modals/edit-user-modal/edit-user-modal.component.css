@@ -1,0 +1,15 @@
+/* src/app/modals/edit-user-modal.component.css */
+.modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+    z-index: 2;
+}

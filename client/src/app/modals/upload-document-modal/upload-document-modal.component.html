@@ -1,0 +1,28 @@
+<div class="modal-header">
+    <h5 class="modal-title">Upload Document</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="attemptClose()"></button>
+</div>
+
+<form [formGroup]="uploadForm" (ngSubmit)="upload()">
+    <div class="modal-body">
+        <div class="mb-3">
+            <label for="title" class="form-label">Document Title</label>
+            <input id="title" type="text" class="form-control" formControlName="title"
+                [ngClass]="{ 'is-invalid': uploadForm.get('title')?.invalid && uploadForm.get('title')?.touched }" />
+            <div class="invalid-feedback" *ngIf="uploadForm.get('title')?.invalid && uploadForm.get('title')?.touched">
+                Title is required.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="file" class="form-label">Select File</label>
+            <input type="file" id="file" class="form-control" (change)="onFileSelected($event)" />
+            <div class="form-text">Accepted formats: PDF, DOCX, images, etc.</div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="attemptClose()">Cancel</button>
+        <button type="submit" class="btn btn-primary" [disabled]="uploadForm.invalid">Upload</button>
+    </div>
+</form>

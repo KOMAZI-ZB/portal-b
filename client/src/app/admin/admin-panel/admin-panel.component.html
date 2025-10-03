@@ -1,0 +1,22 @@
+<h2 class="mb-0 admin-title">Admin Panel</h2>
+<div class="tab-panel">
+    <tabset class="member-tabset">
+
+        <ng-container *appHasRole="['Admin']">
+            <tab heading="User management">
+                <div class="container">
+                    <app-user-management></app-user-management>
+                </div>
+            </tab>
+        </ng-container>
+
+        <ng-container *appHasRole="['Admin']">
+            <tab heading="Module management">
+                <div class="container">
+                    <app-module-management></app-module-management>
+                </div>
+            </tab>
+        </ng-container>
+
+    </tabset>
+</div>

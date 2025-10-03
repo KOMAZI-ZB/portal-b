@@ -1,0 +1,18 @@
+<form #codeForm="ngForm">
+    <div class="modal-header">
+        <h5 class="modal-title">Edit Module Code</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="attemptClose()"></button>
+    </div>
+
+    <div class="modal-body">
+        <div class="mb-3">
+            <label>Current Code: <strong>{{ module.moduleCode }}</strong></label>
+            <input type="text" class="form-control mt-2" [(ngModel)]="newCode" name="newCode" required />
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" (click)="attemptClose()">Cancel</button>
+        <button class="btn btn-primary" type="button" (click)="submit()">Save</button>
+    </div>
+</form>

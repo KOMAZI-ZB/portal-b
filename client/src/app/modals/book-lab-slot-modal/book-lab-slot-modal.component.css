@@ -1,0 +1,51 @@
+/* Modal background overlay */
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+/* Ensure the modal stays centered */
+.modal-dialog {
+    margin-top: 10vh;
+    max-width: 500px;
+}
+
+/* Smooth fade-in */
+.modal-content {
+    animation: fadeIn 0.3s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal title spacing */
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Proper spacing for modal content */
+.modal-body {
+    padding: 1.5rem;
+}
+
+/* Button styling */
+.modal-footer .btn {
+    min-width: 100px;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Inline alerts inside modal body */
+.alert {
+    margin-bottom: 0.75rem;
+}

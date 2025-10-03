@@ -1,0 +1,118 @@
+/* ===========================
+   Header (logo above + topbar)
+   =========================== */
+.logo-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.pdf-logo-top {
+    max-width: clamp(220px, 28vw, 400px);
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.keep-with-next {
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+.table-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 6px;
+}
+
+.topbar-title,
+.topbar-user {
+    font-size: 24px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.topbar-user {
+    text-align: right;
+}
+
+/* Semester filter appearance */
+.no-print .filter-label {
+    color: #000 !important;
+    font-weight: 600 !important;
+}
+
+.no-print .filter-select {
+    color: #000 !important;
+    font-weight: 400 !important;
+}
+
+/* Export root */
+#pdfContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: visible;
+}
+
+/* Table */
+#pdfContent table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#pdfContent th,
+#pdfContent td {
+    word-break: break-word;
+}
+
+.table-bordered td,
+.table-bordered th {
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #000;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.table thead th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Page-break hygiene */
+tr,
+td,
+th,
+.avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+@media print {
+    thead {
+        display: table-header-group;
+    }
+
+    tfoot {
+        display: table-footer-group;
+    }
+
+    table {
+        break-inside: auto;
+        page-break-inside: auto;
+    }
+
+    .btn,
+    .form-select,
+    .no-print {
+        display: none !important;
+    }
+
+    #pdfContent {
+        page-break-inside: avoid;
+    }
+}

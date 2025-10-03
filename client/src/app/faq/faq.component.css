@@ -1,0 +1,146 @@
+/* Shell */
+.faq-shell {
+    max-width: 980px;
+    margin: 0 auto;
+    background: #f6f6f6;
+    padding: 24px;
+    border-radius: 18px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Title: black text + Notifications-style blue underline */
+.faq-title {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #000 !important;
+    /* black title */
+    display: inline-block;
+    /* underline matches text width */
+    position: relative;
+    padding-bottom: 0.25rem;
+    /* small gap between text and line */
+}
+
+.faq-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* full width of the text */
+    bottom: 0;
+    height: 2px;
+    background: #0D6EFD;
+    /* blue underline (same as Notifications) */
+    border-radius: 2px;
+}
+
+/* Search pill */
+.search-wrap {
+    min-width: 320px;
+}
+
+.search-group {
+    border-radius: 28px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px #e6e6e6;
+}
+
+.search-input {
+    border: none !important;
+    background: transparent !important;
+    padding: 12px 16px;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.search-icon {
+    border: none;
+    background: transparent;
+}
+
+/* FAQ card row (pill look) */
+.faq-item.card {
+    border: none;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+    transition: transform .08s ease, box-shadow .2s ease;
+}
+
+.faq-item.card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* Header row inside item */
+.faq-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+}
+
+.faq-question {
+    font-weight: 700;
+    color: #1e1e1e;
+    font-size: 1.2rem;
+}
+
+.faq-chevron i {
+    font-size: 1.3rem;
+    color: #8b8b8b;
+}
+
+/* Expanded area */
+.faq-body {
+    position: relative;
+    padding: 16px 20px 56px 20px;
+    border-top: 1px solid #f0f0f0;
+    background: #fff;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.faq-body p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Bottom-right action buttons (inside expanded card) */
+.faq-actions {
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
+}
+
+/* Buttons */
+.btn.btn-sm {
+    padding: 4px 10px;
+    font-size: 0.85rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+    .search-wrap {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .faq-shell {
+        padding: 16px;
+    }
+
+    .faq-row {
+        padding: 14px 16px;
+    }
+
+    .faq-body {
+        padding: 14px 16px 56px 16px;
+    }
+}

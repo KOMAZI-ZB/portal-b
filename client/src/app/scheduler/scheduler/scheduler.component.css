@@ -1,0 +1,130 @@
+/* Scheduler title: match Notifications (h2.mb-0) with blue underline */
+.scheduler-container>h2,
+.scheduler-container>h2.mb-0 {
+    margin-bottom: 0 !important;
+    /* same as Notifications' mb-0 */
+    display: inline-block;
+    /* underline matches text width */
+    position: relative;
+    padding-bottom: 0.25rem;
+    /* small gap between text and line */
+    color: #000 !important;
+    /* black */
+    font-weight: 700 !important;
+    /* bold */
+}
+
+.scheduler-container>h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* full width of the text */
+    bottom: 0;
+    height: 2px;
+    background: #0D6EFD;
+    /* blue */
+    border-radius: 2px;
+}
+
+/* Add spacing so the underline doesn't touch the cards */
+.scheduler-container .card-container {
+    margin-top: 0.75rem;
+}
+
+/* Existing styles (unchanged) */
+.scheduler-container {
+    padding: 0px;
+}
+
+/* Desktop cards */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    flex: 1 1 200px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ccc;
+    min-width: 220px;
+}
+
+.card:hover {
+    background-color: #e0e0e0;
+}
+
+.card.disabled {
+    background-color: #ddd;
+    color: #888;
+    pointer-events: none;
+    border: 1px dashed #aaa;
+}
+
+/* ✅ Fix overflow: allow wrapping for long titles */
+.assessment-card h3 {
+    white-space: normal;
+    /* was nowrap causing overflow */
+    word-break: break-word;
+}
+
+/* Selected state */
+.card.active {
+    background-color: #e7f1ff;
+    border-color: #b3d4ff;
+    box-shadow: 0 0 0 2px rgba(19, 102, 241, 0.15);
+}
+
+/* -----------------------------
+   Mobile hamburger menu
+   ----------------------------- */
+.mobile-menu {
+    display: none;
+    margin-bottom: 12px;
+}
+
+.menu-toggle {
+    width: 120px;
+}
+
+.menu-panel {
+    display: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+    background: #fff;
+    margin-top: 8px;
+}
+
+.menu-panel.open {
+    display: block;
+}
+
+.menu-panel a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    color: #0d6efd;
+}
+
+.menu-panel a:hover {
+    background: #f2f6ff;
+}
+
+/* Show hamburger / hide cards on small screens */
+@media (max-width: 576px) {
+    .mobile-menu {
+        display: block;
+    }
+
+    .card-container {
+        display: none;
+    }
+}

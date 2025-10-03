@@ -1,0 +1,409 @@
+[
+    {
+        "userName": "2023000001",
+        "firstName": "Alice",
+        "lastName": "Mokoena",
+        "email": "alice@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Student",
+        "joinDate": "2024-01-15",
+        "semester1ModuleIds": [
+            1,
+            2,
+            1
+        ],
+        "semester2ModuleIds": [
+            1,
+            2,
+            1
+        ]
+    },
+    {
+        "userName": "2023000002",
+        "firstName": "Brian",
+        "lastName": "Nkosi",
+        "email": "brian@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Student",
+        "joinDate": "2024-01-18",
+        "semester1ModuleIds": [
+            3,
+            4,
+            53
+        ],
+        "semester2ModuleIds": [
+            3,
+            4,
+            53
+        ]
+    },
+    {
+        "userName": "2023000003",
+        "firstName": "Cindy",
+        "lastName": "Naidoo",
+        "email": "cindy@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Student",
+        "joinDate": "2024-01-20",
+        "semester1ModuleIds": [
+            5,
+            6,
+            1
+        ],
+        "semester2ModuleIds": [
+            5,
+            6,
+            1
+        ]
+    },
+    {
+        "userName": "2023000004",
+        "firstName": "Daniel",
+        "lastName": "Smith",
+        "email": "daniel@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Student",
+        "joinDate": "2024-01-25",
+        "semester1ModuleIds": [
+            7,
+            8,
+            53
+        ],
+        "semester2ModuleIds": [
+            7,
+            8,
+            53
+        ]
+    },
+    {
+        "userName": "2023000005",
+        "firstName": "Drake",
+        "lastName": "Zulu",
+        "email": "drake@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Lecturer",
+        "joinDate": "2023-12-10",
+        "semester1ModuleIds": [
+            9,
+            10,
+            1
+        ],
+        "semester2ModuleIds": [
+            9,
+            10,
+            1
+        ]
+    },
+    {
+        "userName": "2023000006",
+        "firstName": "Esther",
+        "lastName": "Van Rooyen",
+        "email": "esther@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Lecturer",
+        "joinDate": "2023-12-12",
+        "semester1ModuleIds": [
+            11,
+            12
+        ],
+        "semester2ModuleIds": [
+            11,
+            12
+        ]
+    },
+    {
+        "userName": "2023000007",
+        "firstName": "Felix",
+        "lastName": "Mabena",
+        "email": "felix@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Lecturer",
+        "joinDate": "2023-12-14",
+        "semester1ModuleIds": [
+            13,
+            14
+        ],
+        "semester2ModuleIds": [
+            13,
+            14
+        ]
+    },
+    {
+        "userName": "2023000008",
+        "firstName": "Grace",
+        "lastName": "Peters",
+        "email": "grace@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Lecturer",
+        "joinDate": "2023-12-18",
+        "semester1ModuleIds": [
+            15,
+            16
+        ],
+        "semester2ModuleIds": [
+            15,
+            16
+        ]
+    },
+    {
+        "userName": "2023000009",
+        "firstName": "Hannah",
+        "lastName": "Williams",
+        "email": "hannah@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Coordinator",
+        "joinDate": "2023-11-20",
+        "semester1ModuleIds": [
+            17,
+            18
+        ],
+        "semester2ModuleIds": [
+            17,
+            18
+        ]
+    },
+    {
+        "userName": "2023000010",
+        "firstName": "Ivan",
+        "lastName": "Moloi",
+        "email": "ivan@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Coordinator",
+        "joinDate": "2023-11-22",
+        "semester1ModuleIds": [
+            19,
+            20
+        ],
+        "semester2ModuleIds": [
+            19,
+            20
+        ]
+    },
+    {
+        "userName": "admin",
+        "firstName": "Admin",
+        "lastName": "Administrator",
+        "email": "admin@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Admin",
+        "joinDate": "2023-10-01",
+        "semester1ModuleIds": [],
+        "semester2ModuleIds": []
+    },
+    {
+        "userName": "2023000011",
+        "firstName": "Eva",
+        "lastName": "Khoza",
+        "email": "eva@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Student",
+        "joinDate": "2024-02-01",
+        "semester1ModuleIds": [
+            21,
+            22,
+            1
+        ],
+        "semester2ModuleIds": [
+            21,
+            22,
+            1
+        ]
+    },
+    {
+        "userName": "2023000012",
+        "firstName": "Frank",
+        "lastName": "Dlamini",
+        "email": "frank@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Student",
+        "joinDate": "2024-02-03",
+        "semester1ModuleIds": [
+            23,
+            24,
+            1
+        ],
+        "semester2ModuleIds": [
+            23,
+            24,
+            1
+        ]
+    },
+    {
+        "userName": "2023000013",
+        "firstName": "Lerato",
+        "lastName": "Mhlongo",
+        "email": "lerato@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Student",
+        "joinDate": "2024-02-05",
+        "semester1ModuleIds": [
+            25,
+            26,
+            1
+        ],
+        "semester2ModuleIds": [
+            25,
+            26,
+            1
+        ]
+    },
+    {
+        "userName": "2023000014",
+        "firstName": "Musa",
+        "lastName": "Shabalala",
+        "email": "musa@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Student",
+        "joinDate": "2024-02-07",
+        "semester1ModuleIds": [
+            27,
+            28,
+            53
+        ],
+        "semester2ModuleIds": [
+            27,
+            28,
+            53
+        ]
+    },
+    {
+        "userName": "2023000015",
+        "firstName": "Naledi",
+        "lastName": "Pule",
+        "email": "naledi@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Student",
+        "joinDate": "2024-02-10",
+        "semester1ModuleIds": [
+            29,
+            30,
+            53
+        ],
+        "semester2ModuleIds": [
+            29,
+            30,
+            53
+        ]
+    },
+    {
+        "userName": "2023000016",
+        "firstName": "Owen",
+        "lastName": "Radebe",
+        "email": "owen@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Student",
+        "joinDate": "2024-02-12",
+        "semester1ModuleIds": [
+            31,
+            32,
+            53
+        ],
+        "semester2ModuleIds": [
+            31,
+            32,
+            53
+        ]
+    },
+    {
+        "userName": "2023000017",
+        "firstName": "Patrick",
+        "lastName": "Khoabane",
+        "email": "patrick@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Lecturer",
+        "joinDate": "2023-12-20",
+        "semester1ModuleIds": [
+            21,
+            22
+        ],
+        "semester2ModuleIds": [
+            21,
+            22
+        ]
+    },
+    {
+        "userName": "2023000018",
+        "firstName": "Queenie",
+        "lastName": "Jantjie",
+        "email": "queenie@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Lecturer",
+        "joinDate": "2023-12-22",
+        "semester1ModuleIds": [
+            23,
+            24
+        ],
+        "semester2ModuleIds": [
+            23,
+            24
+        ]
+    },
+    {
+        "userName": "2023000019",
+        "firstName": "Riaan",
+        "lastName": "Botha",
+        "email": "riaan@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Lecturer",
+        "joinDate": "2023-12-24",
+        "semester1ModuleIds": [
+            25,
+            26
+        ],
+        "semester2ModuleIds": [
+            25,
+            26
+        ]
+    },
+    {
+        "userName": "2023000020",
+        "firstName": "Sibongile",
+        "lastName": "Maseko",
+        "email": "sibongile@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Lecturer",
+        "joinDate": "2023-12-26",
+        "semester1ModuleIds": [
+            27,
+            28
+        ],
+        "semester2ModuleIds": [
+            27,
+            28
+        ]
+    },
+    {
+        "userName": "2023000021",
+        "firstName": "Tariq",
+        "lastName": "Patel",
+        "email": "tariq@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Lecturer",
+        "joinDate": "2023-12-28",
+        "semester1ModuleIds": [
+            29,
+            30
+        ],
+        "semester2ModuleIds": [
+            29,
+            30
+        ]
+    },
+    {
+        "userName": "2023000022",
+        "firstName": "Yvonne",
+        "lastName": "Molefe",
+        "email": "yvonne@ufs4life.ac.za",
+        "password": "Pa$$w0rd",
+        "role": "Lecturer",
+        "joinDate": "2023-12-30",
+        "semester1ModuleIds": [
+            31,
+            32
+        ],
+        "semester2ModuleIds": [
+            31,
+            32
+        ]
+    }
+]

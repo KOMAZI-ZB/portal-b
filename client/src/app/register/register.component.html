@@ -1,0 +1,38 @@
+<form [formGroup]="registerForm" (ngSubmit)="register()" autocomplete="off">
+    <h2 class="text-center text-primary">Register New User</h2>
+    <hr />
+
+    <app-text-input [formControl]="$any(registerForm.controls['userName'])" label="User Number"></app-text-input>
+    <app-text-input [formControl]="$any(registerForm.controls['name'])" label="Name"></app-text-input>
+    <app-text-input [formControl]="$any(registerForm.controls['surname'])" label="Surname"></app-text-input>
+    <app-text-input [formControl]="$any(registerForm.controls['email'])" label="Email"></app-text-input>
+
+    <div class="form-group mb-3">
+        <label for="role">Role</label>
+        <select formControlName="role" class="form-control">
+            <option value="Student">Student</option>
+            <option value="Lecturer">Lecturer</option>
+            <option value="Coordinator">Coordinator</option>
+        </select>
+    </div>
+
+    <app-text-input [formControl]="$any(registerForm.controls['password'])" label="Password"
+        type="password"></app-text-input>
+    <app-text-input [formControl]="$any(registerForm.controls['confirmPassword'])" label="Confirm Password"
+        type="password"></app-text-input>
+
+    @if (validationErrors) {
+    <div class="alert alert-danger text-start">
+        <ul>
+            @for (error of validationErrors; track $index) {
+            <li>{{ error }}</li>
+            }
+        </ul>
+    </div>
+    }
+
+    <div class="form-group text-center">
+        <button [disabled]="!registerForm.valid" class="btn btn-success me-2" type="submit">Register</button>
+        <button class="btn btn-default me-2" (click)="cancel()" type="button">Cancel</button>
+    </div>
+</form>

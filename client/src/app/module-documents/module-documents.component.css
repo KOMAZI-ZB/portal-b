@@ -1,0 +1,58 @@
+/* Blue circular back button with white arrow */
+.back-button {
+    background-color: #0D6EFD;
+    /* app blue */
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(13, 110, 253, .25);
+}
+
+.back-button:hover {
+    background-color: #0B5ED7;
+}
+
+.back-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, .2);
+}
+
+.back-icon {
+    color: #fff;
+    /* white arrow */
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+/* Make crumb text black */
+.back-crumb {
+    color: #000 !important;
+}
+
+/* (kept) Title underline matching Notifications */
+.module-docs-header>h2.mb-0 {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.25rem;
+    margin: 0 !important;
+    color: #000 !important;
+    /* black */
+    font-weight: 700 !important;
+    /* bold */
+}
+
+.module-docs-header>h2.mb-0::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #0D6EFD;
+    border-radius: 2px;
+}

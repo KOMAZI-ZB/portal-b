@@ -1,0 +1,39 @@
+/* Keep modal body scrollable if wrapped in modal-body elsewhere */
+:host {
+    display: block;
+}
+
+/* Tabs container */
+.nav-tabs .nav-link {
+    cursor: pointer;
+}
+
+/* Section headings */
+h6 {
+    margin-top: 0.75rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+/* Divider styling between assessment items */
+.assessment-divider {
+    border: 0;
+    border-top: 2px solid #6c757d;
+    margin: 0.75rem 0 1rem 0;
+}
+
+/* Assessment card */
+.assessment-card {
+    border: 2px solid #dee2e6 !important;
+}
+
+/* Venue card (thicker like Edit Details) */
+.venue-card {
+    border: 3px solid #dee2e6 !important;
+    border-radius: 0.375rem;
+}
+
+/* Subtle padding below footer */
+.text-end {
+    padding-bottom: 0.25rem;
+}

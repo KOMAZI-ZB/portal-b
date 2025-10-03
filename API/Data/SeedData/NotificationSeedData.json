@@ -1,0 +1,47 @@
+[
+    {
+        "type": "GENERAL",
+        "title": "Welcome to the Portal",
+        "message": "The academic portal is now live. Please explore the features.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-06-10T09:00:00Z",
+        "moduleId": null
+    },
+    {
+        "type": "SYSTEM",
+        "title": "System Maintenance",
+        "message": "Portal will be under maintenance on June 15 from 01:00–03:00.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-06-11T10:00:00Z",
+        "moduleId": null
+    },
+    {
+        "type": "DOCUMENT UPLOAD",
+        "title": "Assignment 1 Uploaded",
+        "message": "Assignment 1 has been added to the course materials for CSC101.",
+        "imagePath": null,
+        "createdBy": "2023000005",
+        "createdAt": "2025-06-12T08:30:00Z",
+        "moduleId": 9
+    },
+    {
+        "type": "REPOSITORY UPDATE",
+        "title": "New Research Paper Added",
+        "message": "A new PDF has been uploaded to the Internal Repository.",
+        "imagePath": null,
+        "createdBy": "2023000006",
+        "createdAt": "2025-06-12T12:00:00Z",
+        "moduleId": null
+    },
+    {
+        "type": "SCHEDULE UPDATE",
+        "title": "Updated Test Schedule",
+        "message": "Test 1 for MTH102 has been moved to July 1. Please check the scheduler.",
+        "imagePath": null,
+        "createdBy": "2023000007",
+        "createdAt": "2025-06-13T10:00:00Z",
+        "moduleId": 13
+    }
+]

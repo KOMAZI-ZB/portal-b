@@ -1,0 +1,4512 @@
+[
+    {
+        "ModuleCode": "CSIS6809",
+        "ModuleName": "Computer Science and Informatics Research Project",
+        "Semester": 0,
+        "IsYearModule": true,
+        "ClassSessions": [
+            {
+                "Venue": "EXR1",
+                "WeekDay": "Monday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "Research Hub",
+                "WeekDay": "Tuesday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "STABILIS",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "Research Hub",
+                "WeekDay": "Thursday",
+                "StartTime": "14:00:00",
+                "EndTime": "16:00:00"
+            },
+            {
+                "Venue": "EXR1",
+                "WeekDay": "Friday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Proposal Brief (S1)",
+                "Description": "500–700 word abstract; PDF via portal.",
+                "IsTimed": false,
+                "Date": "2025-03-17",
+                "DueTime": "12:00:00",
+                "Venue": null
+            },
+            {
+                "Title": "Research Methods Quiz (S1)",
+                "Description": "Closed-book quiz on study design.",
+                "IsTimed": true,
+                "Date": "2025-04-08",
+                "StartTime": "10:00:00",
+                "EndTime": "10:30:00",
+                "Venue": "STABILIS"
+            },
+            {
+                "Title": "Lit Review Draft (S1)",
+                "Description": "8–10 sources; structured synthesis.",
+                "IsTimed": false,
+                "Date": "2025-05-05",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Methodology Check-in (S2)",
+                "Description": "Supervisor consultation slot (timed).",
+                "IsTimed": true,
+                "Date": "2025-08-13",
+                "StartTime": "11:00:00",
+                "EndTime": "11:20:00",
+                "Venue": "Research Hub"
+            },
+            {
+                "Title": "Results Milestone (S2)",
+                "Description": "Upload preliminary results + plots.",
+                "IsTimed": false,
+                "Date": "2025-09-22",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Final Report & Demo (S2)",
+                "Description": "Presentation + Q&A.",
+                "IsTimed": true,
+                "Date": "2025-10-21",
+                "StartTime": "13:00:00",
+                "EndTime": "14:30:00",
+                "Venue": "EXR1"
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIS6813",
+        "ModuleName": "Introduction to Research",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "B108",
+                "WeekDay": "Monday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "EXR2",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Thursday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Friday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: Basics of Research",
+                "Description": "Ch.1–3; closed book.",
+                "IsTimed": true,
+                "Date": "2025-03-10",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "C1"
+            },
+            {
+                "Title": "Assignment 1: Report",
+                "Description": "≈1500 words; submit PDF.",
+                "IsTimed": false,
+                "Date": "2025-03-17",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Sampling & Ethics",
+                "Description": "Ch.4–6; calculators allowed.",
+                "IsTimed": true,
+                "Date": "2025-04-07",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "C2"
+            },
+            {
+                "Title": "Assignment 2: Proposal Outline",
+                "Description": "Problem, aims, methods.",
+                "IsTimed": false,
+                "Date": "2025-04-21",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 3: Validity & Reliability",
+                "Description": "Short-answer & MCQ.",
+                "IsTimed": true,
+                "Date": "2025-05-12",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "C3"
+            },
+            {
+                "Title": "Assignment 3: Literature Matrix",
+                "Description": "Matrix of 10 sources.",
+                "IsTimed": false,
+                "Date": "2025-06-02",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIC6813",
+        "ModuleName": "Artificial Intelligence",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "FG",
+                "WeekDay": "Monday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "FG3",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "FG3",
+                "WeekDay": "Thursday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "FG",
+                "WeekDay": "Friday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: Search & Heuristics",
+                "Description": "In-class quiz.",
+                "IsTimed": true,
+                "Date": "2025-03-20",
+                "StartTime": "10:00:00",
+                "EndTime": "10:30:00",
+                "Venue": "FG3"
+            },
+            {
+                "Title": "Assignment 1: A* Pathfinding",
+                "Description": "Implement A*; submit code + README.",
+                "IsTimed": false,
+                "Date": "2025-03-27",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Quiz 2: Probabilistic Reasoning",
+                "Description": "Short-form test.",
+                "IsTimed": true,
+                "Date": "2025-04-10",
+                "StartTime": "09:30:00",
+                "EndTime": "10:00:00",
+                "Venue": "FG"
+            },
+            {
+                "Title": "Assignment 2: Bayes Nets",
+                "Description": "Inference tasks + brief report.",
+                "IsTimed": false,
+                "Date": "2025-04-24",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: ML Intro",
+                "Description": "Notebook-based assessment.",
+                "IsTimed": true,
+                "Date": "2025-05-08",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "FG3"
+            },
+            {
+                "Title": "Assignment 3: Mini ML Project",
+                "Description": "Dataset + model + 2-page brief.",
+                "IsTimed": false,
+                "Date": "2025-06-05",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIC6833",
+        "ModuleName": "Robotics",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "EXR2",
+                "WeekDay": "Monday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "Lab-3",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "Lab-3",
+                "WeekDay": "Thursday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "EXR2",
+                "WeekDay": "Friday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: Kinematics",
+                "Description": "Short-answer test.",
+                "IsTimed": true,
+                "Date": "2025-03-25",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "C4"
+            },
+            {
+                "Title": "Assignment 1: Arm Simulation",
+                "Description": "MATLAB/Python sim + report.",
+                "IsTimed": false,
+                "Date": "2025-04-01",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Lab Test: Sensors & Actuators",
+                "Description": "In-lab practical assessment.",
+                "IsTimed": true,
+                "Date": "2025-04-18",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "Lab-3"
+            },
+            {
+                "Title": "Assignment 2: Control Design",
+                "Description": "PID control design + tuning log.",
+                "IsTimed": false,
+                "Date": "2025-05-02",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Mobile Robots",
+                "Description": "Coverage of Weeks 1–10.",
+                "IsTimed": true,
+                "Date": "2025-05-23",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "EXR2"
+            },
+            {
+                "Title": "Assignment 3: Project Proposal",
+                "Description": "Team proposal (≤2 pages).",
+                "IsTimed": false,
+                "Date": "2025-06-06",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIC6853",
+        "ModuleName": "Capita Selecta",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "B108",
+                "WeekDay": "Monday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Thursday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Friday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: Research Themes",
+                "Description": "Short-answer test on core readings.",
+                "IsTimed": true,
+                "Date": "2025-03-10",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 1: Topic Pitch",
+                "Description": "1-page concept note.",
+                "IsTimed": false,
+                "Date": "2025-03-17",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Methods Review",
+                "Description": "Ch.4–6; calculators allowed.",
+                "IsTimed": true,
+                "Date": "2025-04-07",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 2: Annotated Bibliography",
+                "Description": "10 sources; 2–3 lines each.",
+                "IsTimed": false,
+                "Date": "2025-04-21",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 3: Synthesis & Framing",
+                "Description": "In-class test; closed book.",
+                "IsTimed": true,
+                "Date": "2025-05-12",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 3: Mini Report",
+                "Description": "Draft report (≤2000 words).",
+                "IsTimed": false,
+                "Date": "2025-06-02",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSID6813",
+        "ModuleName": "Business Intelligence",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "B108",
+                "WeekDay": "Monday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Wednesday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "Lab A",
+                "WeekDay": "Thursday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Friday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: BI Concepts",
+                "Description": "DW/OLAP basics.",
+                "IsTimed": true,
+                "Date": "2025-03-11",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 1: Dashboard Critique",
+                "Description": "Evaluate two real dashboards.",
+                "IsTimed": false,
+                "Date": "2025-03-18",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: ETL Lab",
+                "Description": "Hands-on ETL pipeline.",
+                "IsTimed": true,
+                "Date": "2025-04-08",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00",
+                "Venue": "Lab A"
+            },
+            {
+                "Title": "Assignment 2: KPI Design",
+                "Description": "Define KPIs for case study.",
+                "IsTimed": false,
+                "Date": "2025-04-22",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Data Modelling",
+                "Description": "Star/Snowflake schemas.",
+                "IsTimed": true,
+                "Date": "2025-05-13",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 3: BI Proposal",
+                "Description": "Short BI solution proposal.",
+                "IsTimed": false,
+                "Date": "2025-06-03",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSID6833",
+        "ModuleName": "Advanced Databases",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "B108",
+                "WeekDay": "Monday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Wednesday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "Lab A",
+                "WeekDay": "Thursday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Friday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: Indexing",
+                "Description": "B-Tree/Hash indexes.",
+                "IsTimed": true,
+                "Date": "2025-03-12",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 1: Query Plans",
+                "Description": "Explain plans + tuning.",
+                "IsTimed": false,
+                "Date": "2025-03-19",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Transactions",
+                "Description": "ACID/Isolation levels lab.",
+                "IsTimed": true,
+                "Date": "2025-04-09",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "Lab A"
+            },
+            {
+                "Title": "Assignment 2: Normalization",
+                "Description": "BCNF/3NF case.",
+                "IsTimed": false,
+                "Date": "2025-04-23",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: NoSQL & NewSQL",
+                "Description": "Comparative concepts.",
+                "IsTimed": true,
+                "Date": "2025-05-14",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 3: Index Strategy",
+                "Description": "Design & justify indexes.",
+                "IsTimed": false,
+                "Date": "2025-06-04",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSID6853",
+        "ModuleName": "Data Warehousing",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "B108",
+                "WeekDay": "Monday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Wednesday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "Lab B",
+                "WeekDay": "Thursday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Friday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: DW Concepts",
+                "Description": "Kimball vs Inmon.",
+                "IsTimed": true,
+                "Date": "2025-03-13",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 1: Star Schema",
+                "Description": "Design a star schema.",
+                "IsTimed": false,
+                "Date": "2025-03-20",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: ETL Pipeline",
+                "Description": "In-lab extraction & load.",
+                "IsTimed": true,
+                "Date": "2025-04-10",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "Lab B"
+            },
+            {
+                "Title": "Assignment 2: SCD Strategy",
+                "Description": "Type 1/2/3 plan.",
+                "IsTimed": false,
+                "Date": "2025-04-24",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: OLAP & Aggregations",
+                "Description": "Roll-up & drill-down.",
+                "IsTimed": true,
+                "Date": "2025-05-15",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 3: DW Case Report",
+                "Description": "Short case write-up.",
+                "IsTimed": false,
+                "Date": "2025-06-05",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIE6813",
+        "ModuleName": "Knowledge-based Systems",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "C1",
+                "WeekDay": "Monday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "C1",
+                "WeekDay": "Wednesday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "C1",
+                "WeekDay": "Thursday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "C1",
+                "WeekDay": "Friday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: Rule-based Systems",
+                "Description": "Production rules & inference.",
+                "IsTimed": true,
+                "Date": "2025-03-14",
+                "StartTime": "09:30:00",
+                "EndTime": "10:00:00",
+                "Venue": "C1"
+            },
+            {
+                "Title": "Assignment 1: Expert System Mini",
+                "Description": "Small expert system prototype.",
+                "IsTimed": false,
+                "Date": "2025-03-21",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Knowledge Representation",
+                "Description": "Frames & ontologies.",
+                "IsTimed": true,
+                "Date": "2025-04-11",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "C1"
+            },
+            {
+                "Title": "Assignment 2: Inference Engine",
+                "Description": "Forward/backward chaining.",
+                "IsTimed": false,
+                "Date": "2025-04-25",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Shell Tools",
+                "Description": "Use a KB shell tool.",
+                "IsTimed": true,
+                "Date": "2025-05-16",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "C1"
+            },
+            {
+                "Title": "Assignment 3: Case Study Write-up",
+                "Description": "Applied KB system report.",
+                "IsTimed": false,
+                "Date": "2025-06-06",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIE6833",
+        "ModuleName": "Management Information Systems",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "C2",
+                "WeekDay": "Monday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "C2",
+                "WeekDay": "Wednesday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "C2",
+                "WeekDay": "Thursday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "C2",
+                "WeekDay": "Friday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: MIS Foundations",
+                "Description": "IS types & strategy.",
+                "IsTimed": true,
+                "Date": "2025-03-17",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "C2"
+            },
+            {
+                "Title": "Assignment 1: Case Analysis",
+                "Description": "IS success/failure case.",
+                "IsTimed": false,
+                "Date": "2025-03-24",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: ERP/CRM",
+                "Description": "Enterprise systems overview.",
+                "IsTimed": true,
+                "Date": "2025-04-14",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "C2"
+            },
+            {
+                "Title": "Assignment 2: Process Mapping",
+                "Description": "BPMN diagram + note.",
+                "IsTimed": false,
+                "Date": "2025-04-28",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 3: IS Governance",
+                "Description": "COBIT/ITIL basics.",
+                "IsTimed": true,
+                "Date": "2025-05-19",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "C2"
+            },
+            {
+                "Title": "Assignment 3: Strategy Brief",
+                "Description": "Align IS with org goals.",
+                "IsTimed": false,
+                "Date": "2025-06-09",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIE6853",
+        "ModuleName": "IT Project Management",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "C3",
+                "WeekDay": "Monday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "C3",
+                "WeekDay": "Wednesday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "C3",
+                "WeekDay": "Thursday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "C3",
+                "WeekDay": "Friday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: PM Basics",
+                "Description": "Scope/time/cost.",
+                "IsTimed": true,
+                "Date": "2025-03-18",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "C3"
+            },
+            {
+                "Title": "Assignment 1: WBS",
+                "Description": "Work Breakdown Structure.",
+                "IsTimed": false,
+                "Date": "2025-03-25",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Risk & Quality",
+                "Description": "Quiz on PMBOK areas.",
+                "IsTimed": true,
+                "Date": "2025-04-15",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "C3"
+            },
+            {
+                "Title": "Assignment 2: Gantt + Network",
+                "Description": "Schedule & critical path.",
+                "IsTimed": false,
+                "Date": "2025-04-29",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Agile Simulation",
+                "Description": "Sprint planning exercise.",
+                "IsTimed": true,
+                "Date": "2025-05-20",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00",
+                "Venue": "C3"
+            },
+            {
+                "Title": "Assignment 3: Project Charter",
+                "Description": "Charter + stakeholder map.",
+                "IsTimed": false,
+                "Date": "2025-06-10",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIE6873",
+        "ModuleName": "Decision Support Systems",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "C4",
+                "WeekDay": "Monday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "C4",
+                "WeekDay": "Wednesday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "Lab B",
+                "WeekDay": "Thursday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "C4",
+                "WeekDay": "Friday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: DSS Concepts",
+                "Description": "Models & data for decisions.",
+                "IsTimed": true,
+                "Date": "2025-03-19",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "C4"
+            },
+            {
+                "Title": "Assignment 1: Decision Model",
+                "Description": "Build a simple decision model.",
+                "IsTimed": false,
+                "Date": "2025-03-26",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Solver Lab",
+                "Description": "Optimization with tools.",
+                "IsTimed": true,
+                "Date": "2025-04-16",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00",
+                "Venue": "Lab B"
+            },
+            {
+                "Title": "Assignment 2: Sensitivity Analysis",
+                "Description": "Scenarios & what-ifs.",
+                "IsTimed": false,
+                "Date": "2025-04-30",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: MCDA",
+                "Description": "Multi-criteria decision analysis.",
+                "IsTimed": true,
+                "Date": "2025-05-21",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "C4"
+            },
+            {
+                "Title": "Assignment 3: DSS Case Study",
+                "Description": "Short report on a DSS case.",
+                "IsTimed": false,
+                "Date": "2025-06-11",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSII6813",
+        "ModuleName": "Information Security",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "SEC-101",
+                "WeekDay": "Monday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "SEC-101",
+                "WeekDay": "Wednesday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "Lab C",
+                "WeekDay": "Thursday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "SEC-101",
+                "WeekDay": "Friday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: CIA & Threats",
+                "Description": "Foundations of InfoSec.",
+                "IsTimed": true,
+                "Date": "2025-03-10",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "SEC-101"
+            },
+            {
+                "Title": "Assignment 1: Policy Draft",
+                "Description": "Org security policy (2–3 pages).",
+                "IsTimed": false,
+                "Date": "2025-03-17",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Lab Test: Cryptography Basics",
+                "Description": "Hashing & symmetric crypto.",
+                "IsTimed": true,
+                "Date": "2025-04-09",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00",
+                "Venue": "Lab C"
+            },
+            {
+                "Title": "Assignment 2: Risk Assessment",
+                "Description": "Asset–vulnerability matrix.",
+                "IsTimed": false,
+                "Date": "2025-04-23",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Network Security",
+                "Description": "Firewalls/IDS/Zero Trust.",
+                "IsTimed": true,
+                "Date": "2025-05-19",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "SEC-101"
+            },
+            {
+                "Title": "Assignment 3: Incident Report",
+                "Description": "Post-incident write-up.",
+                "IsTimed": false,
+                "Date": "2025-06-06",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSII6833",
+        "ModuleName": "Human-Computer Interaction",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "UX-201",
+                "WeekDay": "Monday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "UX-201",
+                "WeekDay": "Wednesday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "UX-Lab",
+                "WeekDay": "Thursday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "UX-201",
+                "WeekDay": "Friday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: UX Principles",
+                "Description": "Heuristics & affordances.",
+                "IsTimed": true,
+                "Date": "2025-03-11",
+                "StartTime": "10:00:00",
+                "EndTime": "10:30:00",
+                "Venue": "UX-201"
+            },
+            {
+                "Title": "Assignment 1: Persona & Scenario",
+                "Description": "2 personas + task flow.",
+                "IsTimed": false,
+                "Date": "2025-03-18",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Studio Test: Paper Prototyping",
+                "Description": "In-class evaluation.",
+                "IsTimed": true,
+                "Date": "2025-04-10",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "UX-Lab"
+            },
+            {
+                "Title": "Assignment 2: Wireframes",
+                "Description": "Low-fi wireframes + notes.",
+                "IsTimed": false,
+                "Date": "2025-04-24",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Usability & A/B",
+                "Description": "Metrics & experiments.",
+                "IsTimed": true,
+                "Date": "2025-05-16",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "UX-201"
+            },
+            {
+                "Title": "Assignment 3: Prototype + Findings",
+                "Description": "Interactive prototype + brief report.",
+                "IsTimed": false,
+                "Date": "2025-06-05",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSII6853",
+        "ModuleName": "Computer Ethics",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "ETH-1",
+                "WeekDay": "Monday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "ETH-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "ETH-1",
+                "WeekDay": "Thursday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "ETH-1",
+                "WeekDay": "Friday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: Ethical Theories",
+                "Description": "Utilitarianism, deontology, virtue.",
+                "IsTimed": true,
+                "Date": "2025-03-12",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "ETH-1"
+            },
+            {
+                "Title": "Assignment 1: Case Reflection",
+                "Description": "800–1000 word essay.",
+                "IsTimed": false,
+                "Date": "2025-03-19",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Privacy & Surveillance",
+                "Description": "Short-answer test.",
+                "IsTimed": true,
+                "Date": "2025-04-14",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00",
+                "Venue": "ETH-1"
+            },
+            {
+                "Title": "Assignment 2: Policy Brief",
+                "Description": "2-page policy memo.",
+                "IsTimed": false,
+                "Date": "2025-04-28",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Debate Test: AI Ethics",
+                "Description": "In-class, timed debate notes.",
+                "IsTimed": true,
+                "Date": "2025-05-20",
+                "StartTime": "09:30:00",
+                "EndTime": "10:30:00",
+                "Venue": "ETH-1"
+            },
+            {
+                "Title": "Assignment 3: Final Essay",
+                "Description": "1500–2000 words.",
+                "IsTimed": false,
+                "Date": "2025-06-09",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIM6813",
+        "ModuleName": "Theory of Algorithms",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "ALG-201",
+                "WeekDay": "Monday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "ALG-201",
+                "WeekDay": "Wednesday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "ALG-201",
+                "WeekDay": "Thursday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "ALG-201",
+                "WeekDay": "Friday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: Complexity",
+                "Description": "Big-O/Ω/Θ basics.",
+                "IsTimed": true,
+                "Date": "2025-03-13",
+                "StartTime": "12:15:00",
+                "EndTime": "12:45:00",
+                "Venue": "ALG-201"
+            },
+            {
+                "Title": "Assignment 1: Recurrences",
+                "Description": "Master theorem exercises.",
+                "IsTimed": false,
+                "Date": "2025-03-20",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Greedy & DP",
+                "Description": "Short-answer test.",
+                "IsTimed": true,
+                "Date": "2025-04-11",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "ALG-201"
+            },
+            {
+                "Title": "Assignment 2: Graphs",
+                "Description": "Cuts/flows/shortest paths.",
+                "IsTimed": false,
+                "Date": "2025-04-25",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 3: NP-Completeness",
+                "Description": "Reductions practice.",
+                "IsTimed": true,
+                "Date": "2025-05-23",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00",
+                "Venue": "ALG-201"
+            },
+            {
+                "Title": "Assignment 3: Approximation",
+                "Description": "Approximation algorithms set.",
+                "IsTimed": false,
+                "Date": "2025-06-06",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIM6833",
+        "ModuleName": "Automata Theory and Application",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "AUTO-1",
+                "WeekDay": "Monday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "AUTO-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "AUTO-1",
+                "WeekDay": "Thursday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "AUTO-1",
+                "WeekDay": "Friday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: DFAs & NFAs",
+                "Description": "Formal languages basics.",
+                "IsTimed": true,
+                "Date": "2025-03-14",
+                "StartTime": "10:00:00",
+                "EndTime": "10:30:00",
+                "Venue": "AUTO-1"
+            },
+            {
+                "Title": "Assignment 1: Regex ↔ Automata",
+                "Description": "Constructions & proofs.",
+                "IsTimed": false,
+                "Date": "2025-03-21",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: PDA & CFLs",
+                "Description": "Short-answer test.",
+                "IsTimed": true,
+                "Date": "2025-04-15",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "AUTO-1"
+            },
+            {
+                "Title": "Assignment 2: TMs & Decidability",
+                "Description": "Problem set.",
+                "IsTimed": false,
+                "Date": "2025-04-29",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 3: Complexity Classes",
+                "Description": "P, NP, co-NP overview.",
+                "IsTimed": true,
+                "Date": "2025-05-20",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00",
+                "Venue": "AUTO-1"
+            },
+            {
+                "Title": "Assignment 3: Applications",
+                "Description": "Lexer/validator mini-build.",
+                "IsTimed": false,
+                "Date": "2025-06-10",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIN6813",
+        "ModuleName": "Network Management",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "NET-1",
+                "WeekDay": "Monday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "NET-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "Lab N",
+                "WeekDay": "Thursday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "NET-1",
+                "WeekDay": "Friday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: SNMP & MIB",
+                "Description": "Monitoring foundations.",
+                "IsTimed": true,
+                "Date": "2025-03-17",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "NET-1"
+            },
+            {
+                "Title": "Assignment 1: Dashboards",
+                "Description": "Design NOC dashboard.",
+                "IsTimed": false,
+                "Date": "2025-03-24",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Lab Test: Syslog/NetFlow",
+                "Description": "Hands-on parsing & alerts.",
+                "IsTimed": true,
+                "Date": "2025-04-17",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "Lab N"
+            },
+            {
+                "Title": "Assignment 2: SLA Report",
+                "Description": "Weekly SLA analysis.",
+                "IsTimed": false,
+                "Date": "2025-04-30",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Fault & Perf Mgmt",
+                "Description": "Cases & metrics.",
+                "IsTimed": true,
+                "Date": "2025-05-26",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "NET-1"
+            },
+            {
+                "Title": "Assignment 3: Capacity Plan",
+                "Description": "6-month capacity forecast.",
+                "IsTimed": false,
+                "Date": "2025-06-12",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIN6833",
+        "ModuleName": "Advanced Computer Networks",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "NET-2",
+                "WeekDay": "Monday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "NET-2",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "Lab N",
+                "WeekDay": "Thursday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "NET-2",
+                "WeekDay": "Friday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: TCP Congestion",
+                "Description": "AIMD & fairness.",
+                "IsTimed": true,
+                "Date": "2025-03-18",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "NET-2"
+            },
+            {
+                "Title": "Assignment 1: Wireshark Study",
+                "Description": "Trace analysis.",
+                "IsTimed": false,
+                "Date": "2025-03-25",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Lab Test: SDN/OpenFlow",
+                "Description": "Mininet practical.",
+                "IsTimed": true,
+                "Date": "2025-04-18",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00",
+                "Venue": "Lab N"
+            },
+            {
+                "Title": "Assignment 2: Routing Convergence",
+                "Description": "Experiment & report.",
+                "IsTimed": false,
+                "Date": "2025-05-02",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Wireless & 5G",
+                "Description": "PHY/MAC concepts.",
+                "IsTimed": true,
+                "Date": "2025-05-27",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "NET-2"
+            },
+            {
+                "Title": "Assignment 3: QoS Design",
+                "Description": "QoS policy for campus.",
+                "IsTimed": false,
+                "Date": "2025-06-13",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIP6813",
+        "ModuleName": "Object Design",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "SE-101",
+                "WeekDay": "Monday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "SE-101",
+                "WeekDay": "Wednesday",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00"
+            },
+            {
+                "Venue": "SE-101",
+                "WeekDay": "Thursday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "SE-101",
+                "WeekDay": "Friday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: SOLID",
+                "Description": "Principles & examples.",
+                "IsTimed": true,
+                "Date": "2025-03-19",
+                "StartTime": "09:15:00",
+                "EndTime": "09:45:00",
+                "Venue": "SE-101"
+            },
+            {
+                "Title": "Assignment 1: UML Class Diagram",
+                "Description": "Model given domain.",
+                "IsTimed": false,
+                "Date": "2025-03-26",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Design Patterns I",
+                "Description": "GoF basics.",
+                "IsTimed": true,
+                "Date": "2025-04-16",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "SE-101"
+            },
+            {
+                "Title": "Assignment 2: Refactoring",
+                "Description": "Apply patterns to legacy code.",
+                "IsTimed": false,
+                "Date": "2025-04-30",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 3: Patterns II",
+                "Description": "Structural/Behavioral focus.",
+                "IsTimed": true,
+                "Date": "2025-05-21",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00",
+                "Venue": "SE-101"
+            },
+            {
+                "Title": "Assignment 3: Design Review",
+                "Description": "Design doc + critique.",
+                "IsTimed": false,
+                "Date": "2025-06-11",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIP6833",
+        "ModuleName": "Advanced Internet Programming",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "WEB-1",
+                "WeekDay": "Monday",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00"
+            },
+            {
+                "Venue": "WEB-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "Lab W",
+                "WeekDay": "Thursday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "WEB-1",
+                "WeekDay": "Friday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: HTTP & REST",
+                "Description": "Web protocols & APIs.",
+                "IsTimed": true,
+                "Date": "2025-03-20",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "WEB-1"
+            },
+            {
+                "Title": "Assignment 1: API Build",
+                "Description": "CRUD + auth demo.",
+                "IsTimed": false,
+                "Date": "2025-03-27",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Frontend SPA",
+                "Description": "Routing + state.",
+                "IsTimed": true,
+                "Date": "2025-04-17",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00",
+                "Venue": "Lab W"
+            },
+            {
+                "Title": "Assignment 2: Performance",
+                "Description": "Bundle & cache strategy.",
+                "IsTimed": false,
+                "Date": "2025-05-01",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Realtime & Sockets",
+                "Description": "WebSocket/EventSource.",
+                "IsTimed": true,
+                "Date": "2025-05-22",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "WEB-1"
+            },
+            {
+                "Title": "Assignment 3: Final App",
+                "Description": "Deploy full-stack app.",
+                "IsTimed": false,
+                "Date": "2025-06-12",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIP6853",
+        "ModuleName": "Advanced Programming I",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "CODE-1",
+                "WeekDay": "Monday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "CODE-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "CODE-1",
+                "WeekDay": "Thursday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "CODE-1",
+                "WeekDay": "Friday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: Language Features",
+                "Description": "Generics, lambdas.",
+                "IsTimed": true,
+                "Date": "2025-03-21",
+                "StartTime": "08:15:00",
+                "EndTime": "08:45:00",
+                "Venue": "CODE-1"
+            },
+            {
+                "Title": "Assignment 1: CLI Tool",
+                "Description": "Small utility program.",
+                "IsTimed": false,
+                "Date": "2025-03-28",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Concurrency",
+                "Description": "Threads, tasks, sync.",
+                "IsTimed": true,
+                "Date": "2025-04-18",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00",
+                "Venue": "CODE-1"
+            },
+            {
+                "Title": "Assignment 2: Unit Tests",
+                "Description": "Coverage & CI setup.",
+                "IsTimed": false,
+                "Date": "2025-05-02",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Profiling",
+                "Description": "Performance tuning lab.",
+                "IsTimed": true,
+                "Date": "2025-05-30",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "CODE-1"
+            },
+            {
+                "Title": "Assignment 3: Library Design",
+                "Description": "Publish a small lib.",
+                "IsTimed": false,
+                "Date": "2025-06-13",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIP6873",
+        "ModuleName": "Advanced Programming II",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "CODE-2",
+                "WeekDay": "Monday",
+                "StartTime": "16:00:00",
+                "EndTime": "17:00:00"
+            },
+            {
+                "Venue": "CODE-2",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "CODE-2",
+                "WeekDay": "Thursday",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00"
+            },
+            {
+                "Venue": "CODE-2",
+                "WeekDay": "Friday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: FP & Streams",
+                "Description": "Functional patterns.",
+                "IsTimed": true,
+                "Date": "2025-03-24",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "CODE-2"
+            },
+            {
+                "Title": "Assignment 1: Async Service",
+                "Description": "Build async API.",
+                "IsTimed": false,
+                "Date": "2025-03-31",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Reactive",
+                "Description": "Reactive stream pipeline.",
+                "IsTimed": true,
+                "Date": "2025-04-24",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00",
+                "Venue": "CODE-2"
+            },
+            {
+                "Title": "Assignment 2: Resilience",
+                "Description": "Retry/circuit breaker demo.",
+                "IsTimed": false,
+                "Date": "2025-05-08",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Memory & GC",
+                "Description": "Tuning & leaks.",
+                "IsTimed": true,
+                "Date": "2025-05-29",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "CODE-2"
+            },
+            {
+                "Title": "Assignment 3: Distributed Task",
+                "Description": "Worker/queue prototype.",
+                "IsTimed": false,
+                "Date": "2025-06-16",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSII6873",
+        "ModuleName": "Digital Forensic Science",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "DF-1",
+                "WeekDay": "Monday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "DF-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00"
+            },
+            {
+                "Venue": "Lab F",
+                "WeekDay": "Thursday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "DF-1",
+                "WeekDay": "Friday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: Chain of Custody",
+                "Description": "Procedures & evidence.",
+                "IsTimed": true,
+                "Date": "2025-03-25",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "DF-1"
+            },
+            {
+                "Title": "Assignment 1: Imaging Report",
+                "Description": "Disk imaging workflow.",
+                "IsTimed": false,
+                "Date": "2025-04-01",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Lab Test: File Carving",
+                "Description": "Recover deleted files.",
+                "IsTimed": true,
+                "Date": "2025-04-22",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "Lab F"
+            },
+            {
+                "Title": "Assignment 2: Timeline Analysis",
+                "Description": "Event reconstruction.",
+                "IsTimed": false,
+                "Date": "2025-05-02",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Mobile Forensics",
+                "Description": "Acquisition & analysis.",
+                "IsTimed": true,
+                "Date": "2025-05-30",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "DF-1"
+            },
+            {
+                "Title": "Assignment 3: Expert Affidavit",
+                "Description": "Draft expert statement.",
+                "IsTimed": false,
+                "Date": "2025-06-17",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIA6813",
+        "ModuleName": "Advanced Data Science",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "DS-1",
+                "WeekDay": "Monday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "DS-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "Lab DS",
+                "WeekDay": "Thursday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "DS-1",
+                "WeekDay": "Friday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: Stats Refresher",
+                "Description": "Estimation & tests.",
+                "IsTimed": true,
+                "Date": "2025-03-26",
+                "StartTime": "09:15:00",
+                "EndTime": "09:45:00",
+                "Venue": "DS-1"
+            },
+            {
+                "Title": "Assignment 1: EDA Notebook",
+                "Description": "Exploratory analysis report.",
+                "IsTimed": false,
+                "Date": "2025-04-01",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Lab Test: Model Selection",
+                "Description": "Cross-val & metrics.",
+                "IsTimed": true,
+                "Date": "2025-04-23",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00",
+                "Venue": "Lab DS"
+            },
+            {
+                "Title": "Assignment 2: Feature Engineering",
+                "Description": "Pipelines & transforms.",
+                "IsTimed": false,
+                "Date": "2025-05-06",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: ML Algorithms",
+                "Description": "Ensembles & kernels.",
+                "IsTimed": true,
+                "Date": "2025-05-28",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "DS-1"
+            },
+            {
+                "Title": "Assignment 3: Capstone Proposal",
+                "Description": "Dataset + problem + metric.",
+                "IsTimed": false,
+                "Date": "2025-06-18",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIA6833",
+        "ModuleName": "Analytical Programming",
+        "Semester": 1,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "AN-1",
+                "WeekDay": "Monday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "AN-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "Lab A",
+                "WeekDay": "Thursday",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00"
+            },
+            {
+                "Venue": "AN-1",
+                "WeekDay": "Friday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: NumPy/Pandas",
+                "Description": "Data wrangling basics.",
+                "IsTimed": true,
+                "Date": "2025-03-27",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "AN-1"
+            },
+            {
+                "Title": "Assignment 1: Data Cleaning",
+                "Description": "Pipeline & docstrings.",
+                "IsTimed": false,
+                "Date": "2025-04-03",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Visualization",
+                "Description": "Charts & EDA.",
+                "IsTimed": true,
+                "Date": "2025-04-24",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00",
+                "Venue": "Lab A"
+            },
+            {
+                "Title": "Assignment 2: Time Series",
+                "Description": "Stationarity & ARIMA prep.",
+                "IsTimed": false,
+                "Date": "2025-05-08",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Optimization",
+                "Description": "LP/gradient basics.",
+                "IsTimed": true,
+                "Date": "2025-05-29",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "AN-1"
+            },
+            {
+                "Title": "Assignment 3: Mini Project",
+                "Description": "Notebook + README.",
+                "IsTimed": false,
+                "Date": "2025-06-19",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIS6823",
+        "ModuleName": "Introduction to Research",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "B108",
+                "WeekDay": "Monday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "EXR2",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Thursday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Friday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: Research Basics",
+                "Description": "Ch.1–3; closed book.",
+                "IsTimed": true,
+                "Date": "2025-07-14",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 1: Proposal Outline",
+                "Description": "Problem, aims, methods.",
+                "IsTimed": false,
+                "Date": "2025-07-21",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Sampling & Ethics",
+                "Description": "Short-answer test.",
+                "IsTimed": true,
+                "Date": "2025-08-18",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "EXR2"
+            },
+            {
+                "Title": "Assignment 2: Literature Matrix",
+                "Description": "10 sources, summary matrix.",
+                "IsTimed": false,
+                "Date": "2025-09-01",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 3: Validity & Reliability",
+                "Description": "MCQ + short answers.",
+                "IsTimed": true,
+                "Date": "2025-10-06",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 3: Methods Mini-Report",
+                "Description": "≤1500 words.",
+                "IsTimed": false,
+                "Date": "2025-11-03",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIC6823",
+        "ModuleName": "Artificial Intelligence",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "FG",
+                "WeekDay": "Monday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "FG3",
+                "WeekDay": "Wednesday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "FG3",
+                "WeekDay": "Thursday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "FG",
+                "WeekDay": "Friday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: Search & Heuristics",
+                "Description": "In-class quiz.",
+                "IsTimed": true,
+                "Date": "2025-07-15",
+                "StartTime": "11:30:00",
+                "EndTime": "12:00:00",
+                "Venue": "FG"
+            },
+            {
+                "Title": "Assignment 1: A* Pathfinding",
+                "Description": "Code + README.",
+                "IsTimed": false,
+                "Date": "2025-07-29",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Quiz 2: Probabilistic Reasoning",
+                "Description": "Short test.",
+                "IsTimed": true,
+                "Date": "2025-08-19",
+                "StartTime": "13:00:00",
+                "EndTime": "13:30:00",
+                "Venue": "FG3"
+            },
+            {
+                "Title": "Assignment 2: Bayes Nets",
+                "Description": "Inference tasks.",
+                "IsTimed": false,
+                "Date": "2025-09-02",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: ML Pipelines",
+                "Description": "Notebook assessment.",
+                "IsTimed": true,
+                "Date": "2025-10-10",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "FG3"
+            },
+            {
+                "Title": "Assignment 3: Mini Project",
+                "Description": "Dataset + model + brief.",
+                "IsTimed": false,
+                "Date": "2025-11-07",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIC6843",
+        "ModuleName": "Robotics",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "EXR2",
+                "WeekDay": "Monday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "Lab-3",
+                "WeekDay": "Wednesday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "Lab-3",
+                "WeekDay": "Thursday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "EXR2",
+                "WeekDay": "Friday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: Manipulators",
+                "Description": "Kinematics & dynamics.",
+                "IsTimed": true,
+                "Date": "2025-07-22",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "EXR2"
+            },
+            {
+                "Title": "Assignment 1: Arm Simulation",
+                "Description": "MATLAB/Python sim.",
+                "IsTimed": false,
+                "Date": "2025-08-01",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Lab Test: Sensors",
+                "Description": "In-lab practical.",
+                "IsTimed": true,
+                "Date": "2025-08-21",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00",
+                "Venue": "Lab-3"
+            },
+            {
+                "Title": "Assignment 2: Control Design",
+                "Description": "PID + tuning log.",
+                "IsTimed": false,
+                "Date": "2025-09-05",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Mobile Robots",
+                "Description": "Coverage Weeks 1–10.",
+                "IsTimed": true,
+                "Date": "2025-10-17",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "EXR2"
+            },
+            {
+                "Title": "Assignment 3: Final Proposal",
+                "Description": "Team proposal ≤2 pages.",
+                "IsTimed": false,
+                "Date": "2025-11-14",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIC6863",
+        "ModuleName": "Capita Selecta",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "B108",
+                "WeekDay": "Monday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Wednesday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Thursday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Friday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: Emerging Themes",
+                "Description": "Short-answer.",
+                "IsTimed": true,
+                "Date": "2025-07-23",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 1: Topic Pitch",
+                "Description": "1-page concept.",
+                "IsTimed": false,
+                "Date": "2025-07-30",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Methods Review",
+                "Description": "Ch.4–6.",
+                "IsTimed": true,
+                "Date": "2025-08-20",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 2: Annotated Bibliography",
+                "Description": "10 sources.",
+                "IsTimed": false,
+                "Date": "2025-09-03",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 3: Synthesis",
+                "Description": "In-class.",
+                "IsTimed": true,
+                "Date": "2025-10-15",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 3: Mini Report",
+                "Description": "≤2000 words.",
+                "IsTimed": false,
+                "Date": "2025-11-12",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSID6823",
+        "ModuleName": "Business Intelligence",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "B108",
+                "WeekDay": "Monday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Wednesday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "Lab A",
+                "WeekDay": "Thursday",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Friday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: BI Concepts",
+                "Description": "DW/OLAP basics.",
+                "IsTimed": true,
+                "Date": "2025-07-24",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 1: Dashboard Critique",
+                "Description": "Evaluate two dashboards.",
+                "IsTimed": false,
+                "Date": "2025-07-31",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: ETL Lab",
+                "Description": "Hands-on ETL.",
+                "IsTimed": true,
+                "Date": "2025-08-21",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00",
+                "Venue": "Lab A"
+            },
+            {
+                "Title": "Assignment 2: KPI Design",
+                "Description": "Define KPIs.",
+                "IsTimed": false,
+                "Date": "2025-09-04",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Data Modelling",
+                "Description": "Star/Snowflake.",
+                "IsTimed": true,
+                "Date": "2025-10-16",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 3: BI Proposal",
+                "Description": "Short solution brief.",
+                "IsTimed": false,
+                "Date": "2025-11-13",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSID6843",
+        "ModuleName": "Advanced Databases",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "B108",
+                "WeekDay": "Monday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Wednesday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "Lab A",
+                "WeekDay": "Thursday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Friday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: Indexing",
+                "Description": "B-Tree/Hash.",
+                "IsTimed": true,
+                "Date": "2025-07-28",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 1: Query Plans",
+                "Description": "Explain & tune.",
+                "IsTimed": false,
+                "Date": "2025-08-04",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Transactions",
+                "Description": "ACID/Isolation lab.",
+                "IsTimed": true,
+                "Date": "2025-08-28",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "Lab A"
+            },
+            {
+                "Title": "Assignment 2: Normalization",
+                "Description": "BCNF/3NF case.",
+                "IsTimed": false,
+                "Date": "2025-09-11",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: NoSQL & NewSQL",
+                "Description": "Comparative concepts.",
+                "IsTimed": true,
+                "Date": "2025-10-20",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 3: Index Strategy",
+                "Description": "Design indexes.",
+                "IsTimed": false,
+                "Date": "2025-11-17",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSID6863",
+        "ModuleName": "Data Warehousing",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "B108",
+                "WeekDay": "Monday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Wednesday",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00"
+            },
+            {
+                "Venue": "Lab B",
+                "WeekDay": "Thursday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "B108",
+                "WeekDay": "Friday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: DW Concepts",
+                "Description": "Kimball vs Inmon.",
+                "IsTimed": true,
+                "Date": "2025-07-29",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 1: Star Schema",
+                "Description": "Design a star.",
+                "IsTimed": false,
+                "Date": "2025-08-06",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: ETL Pipeline",
+                "Description": "In-lab ETL.",
+                "IsTimed": true,
+                "Date": "2025-08-29",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "Lab B"
+            },
+            {
+                "Title": "Assignment 2: SCD Strategy",
+                "Description": "Type 1/2/3 plan.",
+                "IsTimed": false,
+                "Date": "2025-09-12",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: OLAP",
+                "Description": "Roll-up & drill-down.",
+                "IsTimed": true,
+                "Date": "2025-10-21",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00",
+                "Venue": "B108"
+            },
+            {
+                "Title": "Assignment 3: DW Case Report",
+                "Description": "Short case write-up.",
+                "IsTimed": false,
+                "Date": "2025-11-18",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIE6823",
+        "ModuleName": "Knowledge-based Systems",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "C1",
+                "WeekDay": "Monday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "C1",
+                "WeekDay": "Wednesday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "C1",
+                "WeekDay": "Thursday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "C1",
+                "WeekDay": "Friday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: Rules & Inference",
+                "Description": "Production rules.",
+                "IsTimed": true,
+                "Date": "2025-07-30",
+                "StartTime": "13:15:00",
+                "EndTime": "13:45:00",
+                "Venue": "C1"
+            },
+            {
+                "Title": "Assignment 1: Expert System Mini",
+                "Description": "Prototype + doc.",
+                "IsTimed": false,
+                "Date": "2025-08-07",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Knowledge Representation",
+                "Description": "Frames/ontologies.",
+                "IsTimed": true,
+                "Date": "2025-08-22",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "C1"
+            },
+            {
+                "Title": "Assignment 2: Inference Engine",
+                "Description": "Forward/backward chaining.",
+                "IsTimed": false,
+                "Date": "2025-09-05",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Shell Tools",
+                "Description": "KB shell lab.",
+                "IsTimed": true,
+                "Date": "2025-10-24",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "C1"
+            },
+            {
+                "Title": "Assignment 3: Case Study",
+                "Description": "Applied KB system report.",
+                "IsTimed": false,
+                "Date": "2025-11-19",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIE6843",
+        "ModuleName": "Management Information Systems",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "C2",
+                "WeekDay": "Monday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "C2",
+                "WeekDay": "Wednesday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "C2",
+                "WeekDay": "Thursday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "C2",
+                "WeekDay": "Friday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: MIS Foundations",
+                "Description": "IS types & strategy.",
+                "IsTimed": true,
+                "Date": "2025-07-21",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "C2"
+            },
+            {
+                "Title": "Assignment 1: Case Analysis",
+                "Description": "IS success/failure case.",
+                "IsTimed": false,
+                "Date": "2025-07-28",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: ERP/CRM",
+                "Description": "Enterprise systems overview.",
+                "IsTimed": true,
+                "Date": "2025-08-25",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "C2"
+            },
+            {
+                "Title": "Assignment 2: Process Mapping",
+                "Description": "BPMN diagram + note.",
+                "IsTimed": false,
+                "Date": "2025-09-08",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 3: IS Governance",
+                "Description": "COBIT/ITIL basics.",
+                "IsTimed": true,
+                "Date": "2025-10-20",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "C2"
+            },
+            {
+                "Title": "Assignment 3: Strategy Brief",
+                "Description": "Align IS with org goals.",
+                "IsTimed": false,
+                "Date": "2025-11-17",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIE6863",
+        "ModuleName": "IT Project Management",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "C3",
+                "WeekDay": "Monday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "C3",
+                "WeekDay": "Wednesday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "C3",
+                "WeekDay": "Thursday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "C3",
+                "WeekDay": "Friday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: PM Basics",
+                "Description": "Scope/time/cost.",
+                "IsTimed": true,
+                "Date": "2025-07-22",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "C3"
+            },
+            {
+                "Title": "Assignment 1: WBS",
+                "Description": "Work Breakdown Structure.",
+                "IsTimed": false,
+                "Date": "2025-07-29",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Risk & Quality",
+                "Description": "Quiz on PMBOK areas.",
+                "IsTimed": true,
+                "Date": "2025-08-26",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "C3"
+            },
+            {
+                "Title": "Assignment 2: Gantt + Network",
+                "Description": "Schedule & critical path.",
+                "IsTimed": false,
+                "Date": "2025-09-09",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Agile Simulation",
+                "Description": "Sprint planning exercise.",
+                "IsTimed": true,
+                "Date": "2025-10-22",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00",
+                "Venue": "C3"
+            },
+            {
+                "Title": "Assignment 3: Project Charter",
+                "Description": "Charter + stakeholder map.",
+                "IsTimed": false,
+                "Date": "2025-11-19",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIE6883",
+        "ModuleName": "Decision Support Systems",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "C4",
+                "WeekDay": "Monday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "C4",
+                "WeekDay": "Wednesday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "Lab B",
+                "WeekDay": "Thursday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "C4",
+                "WeekDay": "Friday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: DSS Concepts",
+                "Description": "Models & data for decisions.",
+                "IsTimed": true,
+                "Date": "2025-07-23",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "C4"
+            },
+            {
+                "Title": "Assignment 1: Decision Model",
+                "Description": "Build a simple decision model.",
+                "IsTimed": false,
+                "Date": "2025-07-30",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Solver Lab",
+                "Description": "Optimization with tools.",
+                "IsTimed": true,
+                "Date": "2025-08-27",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00",
+                "Venue": "Lab B"
+            },
+            {
+                "Title": "Assignment 2: Sensitivity Analysis",
+                "Description": "Scenarios & what-ifs.",
+                "IsTimed": false,
+                "Date": "2025-09-10",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: MCDA",
+                "Description": "Multi-criteria decision analysis.",
+                "IsTimed": true,
+                "Date": "2025-10-23",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "C4"
+            },
+            {
+                "Title": "Assignment 3: DSS Case Study",
+                "Description": "Short report on a DSS case.",
+                "IsTimed": false,
+                "Date": "2025-11-20",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSII6823",
+        "ModuleName": "Information Security",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "SEC-101",
+                "WeekDay": "Monday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "SEC-101",
+                "WeekDay": "Wednesday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "Lab C",
+                "WeekDay": "Thursday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "SEC-101",
+                "WeekDay": "Friday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: CIA & Threats",
+                "Description": "Foundations of InfoSec.",
+                "IsTimed": true,
+                "Date": "2025-07-24",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "SEC-101"
+            },
+            {
+                "Title": "Assignment 1: Policy Draft",
+                "Description": "Org security policy (2–3 pages).",
+                "IsTimed": false,
+                "Date": "2025-07-31",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Lab Test: Cryptography Basics",
+                "Description": "Hashing & symmetric crypto.",
+                "IsTimed": true,
+                "Date": "2025-08-28",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00",
+                "Venue": "Lab C"
+            },
+            {
+                "Title": "Assignment 2: Risk Assessment",
+                "Description": "Asset–vulnerability matrix.",
+                "IsTimed": false,
+                "Date": "2025-09-11",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Network Security",
+                "Description": "Firewalls/IDS/Zero Trust.",
+                "IsTimed": true,
+                "Date": "2025-10-27",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "SEC-101"
+            },
+            {
+                "Title": "Assignment 3: Incident Report",
+                "Description": "Post-incident write-up.",
+                "IsTimed": false,
+                "Date": "2025-11-21",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSII6843",
+        "ModuleName": "Human-Computer Interaction",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "UX-201",
+                "WeekDay": "Monday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "UX-201",
+                "WeekDay": "Wednesday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "UX-Lab",
+                "WeekDay": "Thursday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "UX-201",
+                "WeekDay": "Friday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: UX Principles",
+                "Description": "Heuristics & affordances.",
+                "IsTimed": true,
+                "Date": "2025-07-25",
+                "StartTime": "10:00:00",
+                "EndTime": "10:30:00",
+                "Venue": "UX-201"
+            },
+            {
+                "Title": "Assignment 1: Persona & Scenario",
+                "Description": "2 personas + task flow.",
+                "IsTimed": false,
+                "Date": "2025-08-01",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Studio Test: Paper Prototyping",
+                "Description": "In-class evaluation.",
+                "IsTimed": true,
+                "Date": "2025-08-29",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "UX-Lab"
+            },
+            {
+                "Title": "Assignment 2: Wireframes",
+                "Description": "Low-fi wireframes + notes.",
+                "IsTimed": false,
+                "Date": "2025-09-12",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Usability & A/B",
+                "Description": "Metrics & experiments.",
+                "IsTimed": true,
+                "Date": "2025-10-24",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "UX-201"
+            },
+            {
+                "Title": "Assignment 3: Prototype + Findings",
+                "Description": "Interactive prototype + brief report.",
+                "IsTimed": false,
+                "Date": "2025-11-22",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSII6863",
+        "ModuleName": "Computer Ethics",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "ETH-1",
+                "WeekDay": "Monday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "ETH-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "ETH-1",
+                "WeekDay": "Thursday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "ETH-1",
+                "WeekDay": "Friday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: Ethical Theories",
+                "Description": "Utilitarianism, deontology, virtue.",
+                "IsTimed": true,
+                "Date": "2025-07-28",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "ETH-1"
+            },
+            {
+                "Title": "Assignment 1: Case Reflection",
+                "Description": "800–1000 word essay.",
+                "IsTimed": false,
+                "Date": "2025-08-04",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Privacy & Surveillance",
+                "Description": "Short-answer test.",
+                "IsTimed": true,
+                "Date": "2025-08-25",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00",
+                "Venue": "ETH-1"
+            },
+            {
+                "Title": "Assignment 2: Policy Brief",
+                "Description": "2-page policy memo.",
+                "IsTimed": false,
+                "Date": "2025-09-08",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Debate Test: AI Ethics",
+                "Description": "In-class, timed debate notes.",
+                "IsTimed": true,
+                "Date": "2025-10-27",
+                "StartTime": "09:30:00",
+                "EndTime": "10:30:00",
+                "Venue": "ETH-1"
+            },
+            {
+                "Title": "Assignment 3: Final Essay",
+                "Description": "1500–2000 words.",
+                "IsTimed": false,
+                "Date": "2025-11-24",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIM6823",
+        "ModuleName": "Theory of Algorithms",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "ALG-201",
+                "WeekDay": "Monday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "ALG-201",
+                "WeekDay": "Wednesday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "ALG-201",
+                "WeekDay": "Thursday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "ALG-201",
+                "WeekDay": "Friday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: Complexity",
+                "Description": "Big-O/Ω/Θ basics.",
+                "IsTimed": true,
+                "Date": "2025-07-29",
+                "StartTime": "12:15:00",
+                "EndTime": "12:45:00",
+                "Venue": "ALG-201"
+            },
+            {
+                "Title": "Assignment 1: Recurrences",
+                "Description": "Master theorem exercises.",
+                "IsTimed": false,
+                "Date": "2025-08-05",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Greedy & DP",
+                "Description": "Short-answer test.",
+                "IsTimed": true,
+                "Date": "2025-08-26",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "ALG-201"
+            },
+            {
+                "Title": "Assignment 2: Graphs",
+                "Description": "Cuts/flows/shortest paths.",
+                "IsTimed": false,
+                "Date": "2025-09-09",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 3: NP-Completeness",
+                "Description": "Reductions practice.",
+                "IsTimed": true,
+                "Date": "2025-10-28",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00",
+                "Venue": "ALG-201"
+            },
+            {
+                "Title": "Assignment 3: Approximation",
+                "Description": "Approximation algorithms set.",
+                "IsTimed": false,
+                "Date": "2025-11-25",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIM6843",
+        "ModuleName": "Automata Theory and Application",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "AUTO-1",
+                "WeekDay": "Monday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "AUTO-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "AUTO-1",
+                "WeekDay": "Thursday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "AUTO-1",
+                "WeekDay": "Friday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: DFAs & NFAs",
+                "Description": "Formal languages basics.",
+                "IsTimed": true,
+                "Date": "2025-07-30",
+                "StartTime": "10:00:00",
+                "EndTime": "10:30:00",
+                "Venue": "AUTO-1"
+            },
+            {
+                "Title": "Assignment 1: Regex ↔ Automata",
+                "Description": "Constructions & proofs.",
+                "IsTimed": false,
+                "Date": "2025-08-06",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: PDA & CFLs",
+                "Description": "Short-answer test.",
+                "IsTimed": true,
+                "Date": "2025-08-26",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "AUTO-1"
+            },
+            {
+                "Title": "Assignment 2: TMs & Decidability",
+                "Description": "Problem set.",
+                "IsTimed": false,
+                "Date": "2025-09-09",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 3: Complexity Classes",
+                "Description": "P, NP, co-NP overview.",
+                "IsTimed": true,
+                "Date": "2025-10-28",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00",
+                "Venue": "AUTO-1"
+            },
+            {
+                "Title": "Assignment 3: Applications",
+                "Description": "Lexer/validator mini-build.",
+                "IsTimed": false,
+                "Date": "2025-11-25",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIN6843",
+        "ModuleName": "Advanced Computer Networks",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "NET-2",
+                "WeekDay": "Monday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "NET-2",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "Lab N",
+                "WeekDay": "Thursday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "NET-2",
+                "WeekDay": "Friday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: TCP Congestion",
+                "Description": "AIMD & fairness.",
+                "IsTimed": true,
+                "Date": "2025-07-29",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "NET-2"
+            },
+            {
+                "Title": "Assignment 1: Wireshark Study",
+                "Description": "Trace analysis.",
+                "IsTimed": false,
+                "Date": "2025-08-05",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Lab Test: SDN/OpenFlow",
+                "Description": "Mininet practical.",
+                "IsTimed": true,
+                "Date": "2025-08-29",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00",
+                "Venue": "Lab N"
+            },
+            {
+                "Title": "Assignment 2: Routing Convergence",
+                "Description": "Experiment & report.",
+                "IsTimed": false,
+                "Date": "2025-09-12",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Wireless & 5G",
+                "Description": "PHY/MAC concepts.",
+                "IsTimed": true,
+                "Date": "2025-10-29",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "NET-2"
+            },
+            {
+                "Title": "Assignment 3: QoS Design",
+                "Description": "QoS policy for campus.",
+                "IsTimed": false,
+                "Date": "2025-11-26",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIP6823",
+        "ModuleName": "Object Design",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "SE-101",
+                "WeekDay": "Monday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "SE-101",
+                "WeekDay": "Wednesday",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00"
+            },
+            {
+                "Venue": "SE-101",
+                "WeekDay": "Thursday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "SE-101",
+                "WeekDay": "Friday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: SOLID",
+                "Description": "Principles & examples.",
+                "IsTimed": true,
+                "Date": "2025-07-31",
+                "StartTime": "09:15:00",
+                "EndTime": "09:45:00",
+                "Venue": "SE-101"
+            },
+            {
+                "Title": "Assignment 1: UML Class Diagram",
+                "Description": "Model given domain.",
+                "IsTimed": false,
+                "Date": "2025-08-07",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Design Patterns I",
+                "Description": "GoF basics.",
+                "IsTimed": true,
+                "Date": "2025-08-27",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "SE-101"
+            },
+            {
+                "Title": "Assignment 2: Refactoring",
+                "Description": "Apply patterns to legacy code.",
+                "IsTimed": false,
+                "Date": "2025-09-10",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 3: Patterns II",
+                "Description": "Structural/Behavioral focus.",
+                "IsTimed": true,
+                "Date": "2025-10-30",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00",
+                "Venue": "SE-101"
+            },
+            {
+                "Title": "Assignment 3: Design Review",
+                "Description": "Design doc + critique.",
+                "IsTimed": false,
+                "Date": "2025-11-27",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIP6843",
+        "ModuleName": "Advanced Internet Programming",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "WEB-1",
+                "WeekDay": "Monday",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00"
+            },
+            {
+                "Venue": "WEB-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "Lab W",
+                "WeekDay": "Thursday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "WEB-1",
+                "WeekDay": "Friday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: HTTP & REST",
+                "Description": "Web protocols & APIs.",
+                "IsTimed": true,
+                "Date": "2025-08-01",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "WEB-1"
+            },
+            {
+                "Title": "Assignment 1: API Build",
+                "Description": "CRUD + auth demo.",
+                "IsTimed": false,
+                "Date": "2025-08-08",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Frontend SPA",
+                "Description": "Routing + state.",
+                "IsTimed": true,
+                "Date": "2025-08-28",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00",
+                "Venue": "Lab W"
+            },
+            {
+                "Title": "Assignment 2: Performance",
+                "Description": "Bundle & cache strategy.",
+                "IsTimed": false,
+                "Date": "2025-09-11",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Realtime & Sockets",
+                "Description": "WebSocket/EventSource.",
+                "IsTimed": true,
+                "Date": "2025-10-31",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "WEB-1"
+            },
+            {
+                "Title": "Assignment 3: Final App",
+                "Description": "Deploy full-stack app.",
+                "IsTimed": false,
+                "Date": "2025-11-28",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIP6863",
+        "ModuleName": "Advanced Programming I",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "CODE-1",
+                "WeekDay": "Monday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "CODE-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "CODE-1",
+                "WeekDay": "Thursday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "CODE-1",
+                "WeekDay": "Friday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: Language Features",
+                "Description": "Generics, lambdas.",
+                "IsTimed": true,
+                "Date": "2025-08-05",
+                "StartTime": "08:15:00",
+                "EndTime": "08:45:00",
+                "Venue": "CODE-1"
+            },
+            {
+                "Title": "Assignment 1: CLI Tool",
+                "Description": "Small utility program.",
+                "IsTimed": false,
+                "Date": "2025-08-12",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Concurrency",
+                "Description": "Threads, tasks, sync.",
+                "IsTimed": true,
+                "Date": "2025-09-02",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00",
+                "Venue": "CODE-1"
+            },
+            {
+                "Title": "Assignment 2: Unit Tests",
+                "Description": "Coverage & CI setup.",
+                "IsTimed": false,
+                "Date": "2025-09-16",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Profiling",
+                "Description": "Performance tuning lab.",
+                "IsTimed": true,
+                "Date": "2025-10-30",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "CODE-1"
+            },
+            {
+                "Title": "Assignment 3: Library Design",
+                "Description": "Publish a small lib.",
+                "IsTimed": false,
+                "Date": "2025-11-27",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIP6883",
+        "ModuleName": "Advanced Programming II",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "CODE-2",
+                "WeekDay": "Monday",
+                "StartTime": "16:00:00",
+                "EndTime": "17:00:00"
+            },
+            {
+                "Venue": "CODE-2",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "CODE-2",
+                "WeekDay": "Thursday",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00"
+            },
+            {
+                "Venue": "CODE-2",
+                "WeekDay": "Friday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: FP & Streams",
+                "Description": "Functional patterns.",
+                "IsTimed": true,
+                "Date": "2025-08-06",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "CODE-2"
+            },
+            {
+                "Title": "Assignment 1: Async Service",
+                "Description": "Build async API.",
+                "IsTimed": false,
+                "Date": "2025-08-13",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Reactive",
+                "Description": "Reactive stream pipeline.",
+                "IsTimed": true,
+                "Date": "2025-09-04",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00",
+                "Venue": "CODE-2"
+            },
+            {
+                "Title": "Assignment 2: Resilience",
+                "Description": "Retry/circuit breaker demo.",
+                "IsTimed": false,
+                "Date": "2025-09-18",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Memory & GC",
+                "Description": "Tuning & leaks.",
+                "IsTimed": true,
+                "Date": "2025-10-31",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "CODE-2"
+            },
+            {
+                "Title": "Assignment 3: Distributed Task",
+                "Description": "Worker/queue prototype.",
+                "IsTimed": false,
+                "Date": "2025-11-28",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSII6883",
+        "ModuleName": "Digital Forensics",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "DF-1",
+                "WeekDay": "Monday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            },
+            {
+                "Venue": "DF-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00"
+            },
+            {
+                "Venue": "Lab F",
+                "WeekDay": "Thursday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "DF-1",
+                "WeekDay": "Friday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: Chain of Custody",
+                "Description": "Procedures & evidence.",
+                "IsTimed": true,
+                "Date": "2025-08-07",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "DF-1"
+            },
+            {
+                "Title": "Assignment 1: Imaging Report",
+                "Description": "Disk imaging workflow.",
+                "IsTimed": false,
+                "Date": "2025-08-14",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Lab Test: File Carving",
+                "Description": "Recover deleted files.",
+                "IsTimed": true,
+                "Date": "2025-09-05",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "Lab F"
+            },
+            {
+                "Title": "Assignment 2: Timeline Analysis",
+                "Description": "Event reconstruction.",
+                "IsTimed": false,
+                "Date": "2025-09-19",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Mobile Forensics",
+                "Description": "Acquisition & analysis.",
+                "IsTimed": true,
+                "Date": "2025-10-31",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "DF-1"
+            },
+            {
+                "Title": "Assignment 3: Expert Affidavit",
+                "Description": "Draft expert statement.",
+                "IsTimed": false,
+                "Date": "2025-11-28",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIN6823",
+        "ModuleName": "Network Management",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "NET-1",
+                "WeekDay": "Monday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "NET-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "Lab N",
+                "WeekDay": "Thursday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "NET-1",
+                "WeekDay": "Friday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: SNMP & MIB",
+                "Description": "Monitoring foundations.",
+                "IsTimed": true,
+                "Date": "2025-08-04",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "NET-1"
+            },
+            {
+                "Title": "Assignment 1: Dashboards",
+                "Description": "Design NOC dashboard.",
+                "IsTimed": false,
+                "Date": "2025-08-11",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Lab Test: Syslog/NetFlow",
+                "Description": "Parsing & alerts.",
+                "IsTimed": true,
+                "Date": "2025-09-04",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "Lab N"
+            },
+            {
+                "Title": "Assignment 2: SLA Report",
+                "Description": "Weekly SLA analysis.",
+                "IsTimed": false,
+                "Date": "2025-09-18",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Fault & Perf Mgmt",
+                "Description": "Cases & metrics.",
+                "IsTimed": true,
+                "Date": "2025-10-27",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "NET-1"
+            },
+            {
+                "Title": "Assignment 3: Capacity Plan",
+                "Description": "6-month capacity forecast.",
+                "IsTimed": false,
+                "Date": "2025-11-24",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIA6843",
+        "ModuleName": "Analytical Programming",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "AN-1",
+                "WeekDay": "Monday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            },
+            {
+                "Venue": "AN-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "Lab A",
+                "WeekDay": "Thursday",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00"
+            },
+            {
+                "Venue": "AN-1",
+                "WeekDay": "Friday",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: NumPy/Pandas",
+                "Description": "Data wrangling basics.",
+                "IsTimed": true,
+                "Date": "2025-08-05",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "AN-1"
+            },
+            {
+                "Title": "Assignment 1: Data Cleaning",
+                "Description": "Pipeline & docstrings.",
+                "IsTimed": false,
+                "Date": "2025-08-12",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Practical Test: Visualization",
+                "Description": "Charts & EDA.",
+                "IsTimed": true,
+                "Date": "2025-09-04",
+                "StartTime": "15:00:00",
+                "EndTime": "16:00:00",
+                "Venue": "Lab A"
+            },
+            {
+                "Title": "Assignment 2: Time Series",
+                "Description": "Stationarity & ARIMA prep.",
+                "IsTimed": false,
+                "Date": "2025-09-18",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Optimization",
+                "Description": "LP/gradient basics.",
+                "IsTimed": true,
+                "Date": "2025-10-30",
+                "StartTime": "08:00:00",
+                "EndTime": "09:00:00",
+                "Venue": "AN-1"
+            },
+            {
+                "Title": "Assignment 3: Mini Project",
+                "Description": "Notebook + README.",
+                "IsTimed": false,
+                "Date": "2025-11-27",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIA6823",
+        "ModuleName": "Advanced Data Science",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "DS-1",
+                "WeekDay": "Monday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "DS-1",
+                "WeekDay": "Wednesday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "Lab DS",
+                "WeekDay": "Thursday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "DS-1",
+                "WeekDay": "Friday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Quiz 1: Stats Refresher",
+                "Description": "Estimation & tests.",
+                "IsTimed": true,
+                "Date": "2025-08-06",
+                "StartTime": "09:15:00",
+                "EndTime": "09:45:00",
+                "Venue": "DS-1"
+            },
+            {
+                "Title": "Assignment 1: EDA Notebook",
+                "Description": "Exploratory analysis report.",
+                "IsTimed": false,
+                "Date": "2025-08-13",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Lab Test: Model Selection",
+                "Description": "Cross-val & metrics.",
+                "IsTimed": true,
+                "Date": "2025-09-05",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00",
+                "Venue": "Lab DS"
+            },
+            {
+                "Title": "Assignment 2: Feature Engineering",
+                "Description": "Pipelines & transforms.",
+                "IsTimed": false,
+                "Date": "2025-09-19",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: ML Algorithms",
+                "Description": "Ensembles & kernels.",
+                "IsTimed": true,
+                "Date": "2025-10-31",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00",
+                "Venue": "DS-1"
+            },
+            {
+                "Title": "Assignment 3: Capstone Proposal",
+                "Description": "Dataset + problem + metric.",
+                "IsTimed": false,
+                "Date": "2025-11-28",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "CSIS6863",
+        "ModuleName": "Capita Selecta",
+        "Semester": 2,
+        "IsYearModule": false,
+        "ClassSessions": [
+            {
+                "Venue": "B109",
+                "WeekDay": "Monday",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00"
+            },
+            {
+                "Venue": "B109",
+                "WeekDay": "Wednesday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "B109",
+                "WeekDay": "Thursday",
+                "StartTime": "13:00:00",
+                "EndTime": "14:00:00"
+            },
+            {
+                "Venue": "B109",
+                "WeekDay": "Friday",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Test 1: Emerging Topics",
+                "Description": "Short-answer.",
+                "IsTimed": true,
+                "Date": "2025-08-07",
+                "StartTime": "12:00:00",
+                "EndTime": "13:00:00",
+                "Venue": "B109"
+            },
+            {
+                "Title": "Assignment 1: Topic Pitch",
+                "Description": "1-page concept.",
+                "IsTimed": false,
+                "Date": "2025-08-14",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 2: Methods Review",
+                "Description": "Ch.4–6.",
+                "IsTimed": true,
+                "Date": "2025-09-04",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00",
+                "Venue": "B109"
+            },
+            {
+                "Title": "Assignment 2: Annotated Bibliography",
+                "Description": "10 sources.",
+                "IsTimed": false,
+                "Date": "2025-09-18",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Test 3: Synthesis",
+                "Description": "In-class.",
+                "IsTimed": true,
+                "Date": "2025-10-30",
+                "StartTime": "11:00:00",
+                "EndTime": "12:00:00",
+                "Venue": "B109"
+            },
+            {
+                "Title": "Assignment 3: Mini Report",
+                "Description": "≤2000 words.",
+                "IsTimed": false,
+                "Date": "2025-11-27",
+                "DueTime": "23:59:00",
+                "Venue": null
+            }
+        ]
+    },
+    {
+        "ModuleCode": "BCIS6809",
+        "ModuleName": "Computer Information Systems Research Project",
+        "Semester": 0,
+        "IsYearModule": true,
+        "ClassSessions": [
+            {
+                "Venue": "EXR1",
+                "WeekDay": "Monday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            },
+            {
+                "Venue": "STABILIS",
+                "WeekDay": "Wednesday",
+                "StartTime": "10:00:00",
+                "EndTime": "11:00:00"
+            },
+            {
+                "Venue": "ResearchHub",
+                "WeekDay": "Thursday",
+                "StartTime": "14:00:00",
+                "EndTime": "15:00:00"
+            },
+            {
+                "Venue": "EXR1",
+                "WeekDay": "Friday",
+                "StartTime": "09:00:00",
+                "EndTime": "10:00:00"
+            }
+        ],
+        "Assessments": [
+            {
+                "Title": "Concept Note (S1)",
+                "Description": "500–700 word abstract.",
+                "IsTimed": false,
+                "Date": "2025-02-17",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Methodology Quiz (S1)",
+                "Description": "Study design basics.",
+                "IsTimed": true,
+                "Date": "2025-04-08",
+                "StartTime": "10:00:00",
+                "EndTime": "10:30:00",
+                "Venue": "STABILIS"
+            },
+            {
+                "Title": "Lit Review Draft (S1)",
+                "Description": "8–10 sources.",
+                "IsTimed": false,
+                "Date": "2025-05-12",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Data Collection Plan (S2)",
+                "Description": "Sampling + instruments.",
+                "IsTimed": false,
+                "Date": "2025-08-05",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Results Milestone (S2)",
+                "Description": "Upload preliminary results.",
+                "IsTimed": false,
+                "Date": "2025-09-22",
+                "DueTime": "23:59:00",
+                "Venue": null
+            },
+            {
+                "Title": "Final Presentation (S2)",
+                "Description": "Presentation + Q&A.",
+                "IsTimed": true,
+                "Date": "2025-11-18",
+                "StartTime": "13:00:00",
+                "EndTime": "14:30:00",
+                "Venue": "EXR1"
+            }
+        ]
+    }
+]

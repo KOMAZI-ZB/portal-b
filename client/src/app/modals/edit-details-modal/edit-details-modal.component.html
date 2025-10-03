@@ -1,0 +1,170 @@
+<div class="modal-header">
+    <h5 class="modal-title">Edit Scheduling & Venue Details</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="attemptClose()"></button>
+</div>
+
+<div class="modal-body">
+    <form #detailsForm="ngForm">
+        <!-- Tabs -->
+        <ul class="nav nav-tabs mb-3">
+            <li class="nav-item">
+                <a class="nav-link" [class.active]="activeTab==='contact'" (click)="setTab('contact')">Class Venues</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [class.active]="activeTab==='assessments'"
+                    (click)="setTab('assessments')">Assessments</a>
+            </li>
+        </ul>
+
+        <div class="border border-top-0 rounded-bottom p-3">
+            <!-- Venues tab -->
+            <div [hidden]="activeTab!=='contact'">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">Class Venues</h6>
+                    <button type="button" class="btn btn-outline-primary btn-sm" (click)="addVenue()">+ Add
+                        Venue</button>
+                </div>
+
+                <div *ngFor="let v of venues; let vi = index" class="border rounded p-2 mb-3 venue-card">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div class="flex-grow-1 me-2">
+                            <label class="form-label">Venue</label>
+                            <input class="form-control" [(ngModel)]="v.venue" [name]="'venue-'+vi"
+                                placeholder="e.g., B108" (ngModelChange)="markDirty()"
+                                [class.is-invalid]="((v.venue||'').trim().length===0)" />
+                            <div class="invalid-feedback">Venue is required.</div>
+                        </div>
+                        <button type="button" class="btn btn-outline-danger btn-sm mt-4"
+                            (click)="removeVenue(vi)">Remove</button>
+                    </div>
+
+                    <div class="mb-2"><strong>Days & Times</strong></div>
+
+                    <div *ngFor="let day of weekDays" class="border rounded p-2 mb-2">
+                        <div class="form-check mb-2">
+                            <input type="checkbox" class="form-check-input" [checked]="v.days[day].checked"
+                                (change)="toggleDay(vi, day)" [id]="'day-'+vi+'-'+day" />
+                            <label class="form-check-label fw-bold" [for]="'day-'+vi+'-'+day">{{ day }}</label>
+                        </div>
+
+                        <div *ngIf="v.days[day].checked" class="row">
+                            <div class="col">
+                                <label>Start Time</label>
+                                <input type="time" class="form-control" [(ngModel)]="v.days[day].startTime"
+                                    [name]="'start-'+vi+'-'+day" min="06:00" max="21:00" (ngModelChange)="markDirty()"
+                                    [class.is-invalid]="!(v.days[day].startTime||'').trim()" />
+                                <div class="invalid-feedback">Start time is required.</div>
+                            </div>
+                            <div class="col">
+                                <label>End Time</label>
+                                <input type="time" class="form-control" [(ngModel)]="v.days[day].endTime"
+                                    [name]="'end-'+vi+'-'+day" min="06:00" max="22:00" (ngModelChange)="markDirty()"
+                                    [class.is-invalid]="!(v.days[day].endTime||'').trim()" />
+                                <div class="invalid-feedback">End time is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assessments tab -->
+            <div [hidden]="activeTab!=='assessments'">
+                <hr />
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">Assessments</h6>
+                    <button class="btn btn-outline-primary btn-sm" (click)="addAssessment()" type="button">+ Add
+                        Assessment</button>
+                </div>
+
+                <ng-container *ngFor="let assessment of assessments; let i = index">
+                    <hr class="assessment-divider" *ngIf="i > 0" />
+                    <div class="border rounded mb-3 assessment-card">
+                        <button class="btn btn-light w-100 text-start p-3" type="button" data-bs-toggle="collapse"
+                            [attr.data-bs-target]="'#collapse' + i" [attr.aria-expanded]="true"
+                            [attr.aria-controls]="'collapse' + i">
+                            <strong>📘 Assessment {{ i + 1 }}: {{ assessment.title || 'Untitled' }}</strong>
+                        </button>
+
+                        <div class="collapse show p-3" [id]="'collapse' + i">
+                            <div class="mb-2">
+                                <label>Title</label>
+                                <input type="text" class="form-control" [(ngModel)]="assessment.title"
+                                    [name]="'title' + i" (ngModelChange)="markDirty()"
+                                    [class.is-invalid]="!(assessment.title||'').trim()" />
+                                <div class="invalid-feedback">Title is required.</div>
+                            </div>
+
+                            <div class="mb-2">
+                                <label>Description</label>
+                                <textarea class="form-control" rows="2" [(ngModel)]="assessment.description"
+                                    [name]="'description' + i" (ngModelChange)="markDirty()"
+                                    [class.is-invalid]="!(assessment.description||'').trim()"></textarea>
+                                <div class="invalid-feedback">Description is required.</div>
+                            </div>
+
+                            <div class="mb-2">
+                                <label>Date</label>
+                                <input type="date" class="form-control" [(ngModel)]="assessment.date"
+                                    [name]="'date' + i" (ngModelChange)="markDirty()"
+                                    [class.is-invalid]="!(assessment.date||'').trim()" />
+                                <div class="invalid-feedback">Date is required.</div>
+                            </div>
+
+                            <div class="mb-2">
+                                <label>
+                                    <input type="checkbox" [(ngModel)]="assessment.isTimed" [name]="'isTimed' + i"
+                                        (ngModelChange)="markDirty()" />
+                                    Timed Assessment
+                                </label>
+                            </div>
+
+                            <div *ngIf="assessment.isTimed">
+                                <div class="mb-2">
+                                    <label>Venue</label>
+                                    <input type="text" class="form-control" [(ngModel)]="assessment.venue"
+                                        [name]="'venue' + i" (ngModelChange)="markDirty()"
+                                        [class.is-invalid]="!(assessment.venue||'').trim()" />
+                                    <div class="invalid-feedback">Venue is required for timed assessments.</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label>Start Time</label>
+                                        <input type="time" class="form-control" [(ngModel)]="assessment.startTime"
+                                            [name]="'startTime' + i" (ngModelChange)="markDirty()"
+                                            [class.is-invalid]="!(assessment.startTime||'').trim()" />
+                                        <div class="invalid-feedback">Start/End time is required for timed assessments.
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <label>End Time</label>
+                                        <input type="time" class="form-control" [(ngModel)]="assessment.endTime"
+                                            [name]="'endTime' + i" (ngModelChange)="markDirty()"
+                                            [class.is-invalid]="!(assessment.endTime||'').trim()" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div *ngIf="!assessment.isTimed" class="mb-2">
+                                <label>Submission Deadline</label>
+                                <input type="time" class="form-control" [(ngModel)]="assessment.dueTime"
+                                    [name]="'dueTime' + i" (ngModelChange)="markDirty()"
+                                    [class.is-invalid]="!(assessment.dueTime||'').trim()" />
+                                <div class="invalid-feedback">Start/End time is required for timed assessments.</div>
+                            </div>
+
+                            <div class="text-end mt-3">
+                                <button class="btn btn-sm btn-outline-danger" (click)="removeAssessment(i)"
+                                    type="button">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-secondary" (click)="attemptClose()">Cancel</button>
+    <button class="btn btn-primary" (click)="submit()">Save Changes</button>
+</div>

@@ -1,0 +1,35 @@
+<div class="modal-header">
+    <h5 class="modal-title">Add External Repository</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="cancel()"></button>
+</div>
+
+<div class="modal-body">
+    <form [formGroup]="form" enctype="multipart/form-data" (ngSubmit)="submit()">
+
+        <div class="mb-3">
+            <label for="label" class="form-label">Repository Name</label>
+            <input type="text" id="label" class="form-control" formControlName="label"
+                placeholder="e.g., SpringerLink" />
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Repository Image</label>
+            <input type="file" id="image" class="form-control" (change)="onFileSelected($event)"
+                accept=".png, .jpg, .jpeg" />
+            <div class="form-text text-muted">
+                Optional. If no image is selected, <code>/assets/database.png</code> will be used by default.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="linkUrl" class="form-label">Repository Link</label>
+            <input type="url" id="linkUrl" class="form-control" formControlName="linkUrl"
+                placeholder="e.g., https://link.springer.com/" />
+        </div>
+
+        <div class="modal-footer px-0">
+            <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+            <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Add</button>
+        </div>
+    </form>
+</div>

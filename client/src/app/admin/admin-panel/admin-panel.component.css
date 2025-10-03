@@ -1,0 +1,21 @@
+/* Match Notifications h2 */
+.admin-title {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.25rem;
+    color: #000 !important;
+    font-weight: 700 !important;
+    /* NEW: space below the underline */
+    margin-bottom: 1rem !important;
+}
+
+.admin-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #0D6EFD;
+    border-radius: 2px;
+}

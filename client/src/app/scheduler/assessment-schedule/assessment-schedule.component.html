@@ -1,0 +1,69 @@
+<div class="container mt-4">
+    <!-- Filter + Download -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <label for="semester" class="filter-label">Semester:</label>
+            <select id="semester" class="form-select d-inline-block w-auto ms-2 filter-select" [(ngModel)]="semester"
+                (change)="onSemesterChange()">
+                <option [value]="1">Semester 1</option>
+                <option [value]="2">Semester 2</option>
+            </select>
+        </div>
+
+        <button class="btn btn-success d-inline-flex align-items-center justify-content-center"
+            (click)="downloadScheduleAsPdf()" [disabled]="groupedMonths.length === 0">
+            Download (PDF)
+        </button>
+    </div>
+
+    <!-- Empty state -->
+    <div *ngIf="groupedMonths.length === 0" class="alert alert-info text-center py-4">
+        Nothing scheduled.
+    </div>
+
+    <!-- PDF Content -->
+    <div *ngIf="groupedMonths.length > 0" id="pdfContent" class="mt-4 p-4 bg-white">
+        <div class="logo-row keep-with-next">
+            <img src="assets/ufslogo.jpg" alt="UFS Logo" class="pdf-logo-top" />
+        </div>
+
+        <div class="table-topbar keep-with-next">
+            <div class="topbar-title">Assessment Schedule</div>
+            <div class="topbar-user">{{ userFullName }}</div>
+        </div>
+
+        <div>
+            <div *ngFor="let month of groupedMonths" class="month-section">
+                <table class="table table-bordered text-center align-middle mb-5">
+                    <thead class="table-dark">
+                        <tr>
+                            <th colspan="8" class="text-center fs-5">{{ month }}</th>
+                        </tr>
+                        <tr class="table-light">
+                            <th>Module Code</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Submission Deadline</th>
+                            <th>Venue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of groupedAssessments[month]" class="avoid-break">
+                            <td>{{ item.moduleCode }}</td>
+                            <td>{{ item.title }}</td>
+                            <td>{{ item.description || '-' }}</td>
+                            <td>{{ item.date | date: 'fullDate' }}</td>
+                            <td>{{ formatTime(item.startTime) }}</td>
+                            <td>{{ formatTime(item.endTime) }}</td>
+                            <td>{{ formatTime(item.dueTime) }}</td>
+                            <td>{{ item.venue || '-' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,252 @@
+[
+    {
+        "question": "How do I reset my portal password?",
+        "answer": "Click on 'Forgot Password' on the login page and follow the instructions.",
+        "lastUpdated": "2025-06-01T10:00:00Z"
+    },
+    {
+        "question": "Where can I find previous exam papers?",
+        "answer": "Visit the Repository tab and check the internal repository for module resources.",
+        "lastUpdated": "2025-06-02T11:45:00Z"
+    },
+    {
+        "question": "Can I submit my project late if I was sick?",
+        "answer": "",
+        "lastUpdated": "2025-06-03T12:15:00Z"
+    },
+    {
+        "question": "When are semester 2 modules starting?",
+        "answer": "Semester 2 starts on July 15th. Check the academic calendar for more.",
+        "lastUpdated": "2025-06-04T11:00:00Z"
+    },
+    {
+        "question": "Is it mandatory to attend lab sessions?",
+        "answer": "Yes, attendance is compulsory for lab sessions unless otherwise stated.",
+        "lastUpdated": "2025-06-05T15:45:00Z"
+    },
+    {
+        "question": "How can I view my class timetable?",
+        "answer": "Go to the Scheduler tab and select 'Class Schedule' to see your timetable.",
+        "lastUpdated": "2025-06-06T09:30:00Z"
+    },
+    {
+        "question": "Who do I contact for academic counselling?",
+        "answer": "You can contact your assigned coordinator or visit the Help Centre.",
+        "lastUpdated": "2025-06-07T10:00:00Z"
+    },
+    {
+        "question": "Can I access the portal on my phone?",
+        "answer": "Yes, the portal is mobile-friendly and works on all modern smartphones.",
+        "lastUpdated": "2025-06-08T14:00:00Z"
+    },
+    {
+        "question": "Are supplementary exams scheduled automatically?",
+        "answer": "",
+        "lastUpdated": "2025-06-09T16:10:00Z"
+    },
+    {
+        "question": "Can I download resources without Wi-Fi?",
+        "answer": "Yes, once you download materials from the Repository tab, they are available offline.",
+        "lastUpdated": "2025-06-10T12:00:00Z"
+    },
+    {
+        "question": "How do I change my registered modules?",
+        "answer": "Go to Profile → Registration → 'Change Modules'. Changes are open only during the add/drop window.",
+        "lastUpdated": "2025-06-11T09:00:00Z"
+    },
+    {
+        "question": "What browsers are supported?",
+        "answer": "Latest versions of Chrome, Edge, Firefox, and Safari are supported.",
+        "lastUpdated": "2025-06-11T11:20:00Z"
+    },
+    {
+        "question": "How do I book a lab slot?",
+        "answer": "Open Scheduler → Lab Schedule → 'Book Slot'. Only lecturers/coordinators can create bookings.",
+        "lastUpdated": "2025-06-11T13:10:00Z"
+    },
+    {
+        "question": "My timetable is blank. What should I do?",
+        "answer": "Ensure you are enrolled in modules and refresh under Scheduler. If still blank, contact your coordinator.",
+        "lastUpdated": "2025-06-12T08:30:00Z"
+    },
+    {
+        "question": "How do I update my email address?",
+        "answer": "Go to Profile → Account → 'Change Email'. You’ll need to verify the new address.",
+        "lastUpdated": "2025-06-12T10:00:00Z"
+    },
+    {
+        "question": "Can I recover a deleted file from the Repository?",
+        "answer": "Yes, check Repository → 'Trash' within 30 days. After that, files are permanently deleted.",
+        "lastUpdated": "2025-06-12T15:45:00Z"
+    },
+    {
+        "question": "How are assessment weights calculated?",
+        "answer": "Each module page lists assessment components and weights under Assessments → 'Breakdown'.",
+        "lastUpdated": "2025-06-13T09:40:00Z"
+    },
+    {
+        "question": "Where do I see my attendance record?",
+        "answer": "Navigate to Profile → Attendance. You can export it as PDF.",
+        "lastUpdated": "2025-06-13T11:15:00Z"
+    },
+    {
+        "question": "I can’t upload my assignment; the upload fails.",
+        "answer": "Check file size/type limits on the assignment page and try again. If it persists, clear cache or use another browser.",
+        "lastUpdated": "2025-06-13T14:25:00Z"
+    },
+    {
+        "question": "What file types are accepted for submissions?",
+        "answer": "Most assignments accept PDF, DOCX, and ZIP. Some labs may require code archives (ZIP) only.",
+        "lastUpdated": "2025-06-14T08:50:00Z"
+    },
+    {
+        "question": "How do I contact IT support?",
+        "answer": "Use Help Centre → 'Contact Support' or email support@portal.com with your username and issue details.",
+        "lastUpdated": "2025-06-14T10:10:00Z"
+    },
+    {
+        "question": "Where do I find the academic calendar?",
+        "answer": "Go to Dashboard → 'Academic Calendar' or Settings → 'Key Dates'.",
+        "lastUpdated": "2025-06-14T12:00:00Z"
+    },
+    {
+        "question": "Can I change my password without email access?",
+        "answer": "Yes, contact IT support with a valid ID. They can issue a temporary reset code.",
+        "lastUpdated": "2025-06-15T09:00:00Z"
+    },
+    {
+        "question": "How do group submissions work?",
+        "answer": "The group leader submits on behalf of the group. Members must be added under 'Group Members' before submission.",
+        "lastUpdated": "2025-06-15T11:30:00Z"
+    },
+    {
+        "question": "Why can’t I see my grades?",
+        "answer": "Grades appear once released by the lecturer. Check Assessments → 'Results' on the module page.",
+        "lastUpdated": "2025-06-15T14:05:00Z"
+    },
+    {
+        "question": "How do I enable dark mode?",
+        "answer": "Go to Settings → Appearance → toggle 'Dark Mode'.",
+        "lastUpdated": "2025-06-16T08:15:00Z"
+    },
+    {
+        "question": "Can I sync my calendar to Google/Outlook?",
+        "answer": "Yes, Settings → Integrations → 'Calendar Sync' provides iCal links for import.",
+        "lastUpdated": "2025-06-16T10:45:00Z"
+    },
+    {
+        "question": "How do I request special accommodations?",
+        "answer": "Contact your coordinator via Help Centre → 'Student Support'. Attach supporting documentation.",
+        "lastUpdated": "2025-06-16T13:20:00Z"
+    },
+    {
+        "question": "Why did my session time out?",
+        "answer": "For security, sessions expire after 30 minutes of inactivity. Log in again to continue.",
+        "lastUpdated": "2025-06-17T09:25:00Z"
+    },
+    {
+        "question": "How do I appeal an assessment mark?",
+        "answer": "Open the assessment page and click 'Request Review'. Provide reasons and evidence within 5 working days.",
+        "lastUpdated": "2025-06-17T11:00:00Z"
+    },
+    {
+        "question": "Can I view rubric criteria before submitting?",
+        "answer": "Yes, rubrics are visible on the assignment page under 'Assessment Criteria'.",
+        "lastUpdated": "2025-06-17T14:40:00Z"
+    },
+    {
+        "question": "How do I report plagiarism or misconduct?",
+        "answer": "Use Help Centre → 'Report an Issue' → 'Academic Integrity'.",
+        "lastUpdated": "2025-06-18T08:30:00Z"
+    },
+    {
+        "question": "Does the portal support multi-factor authentication (MFA)?",
+        "answer": "Yes. Enable MFA in Settings → Security.",
+        "lastUpdated": "2025-06-18T10:20:00Z"
+    },
+    {
+        "question": "Why can’t I see a module I registered for?",
+        "answer": "It may take up to 24 hours after registration. If missing afterward, contact your coordinator.",
+        "lastUpdated": "2025-06-18T12:10:00Z"
+    },
+    {
+        "question": "How do I export my transcript?",
+        "answer": "Go to Profile → Records → 'Download Transcript' (PDF).",
+        "lastUpdated": "2025-06-19T09:05:00Z"
+    },
+    {
+        "question": "What time zone does the portal use?",
+        "answer": "Times display in your profile time zone; update under Settings → Region if needed.",
+        "lastUpdated": "2025-06-19T11:35:00Z"
+    },
+    {
+        "question": "How do I join an online lecture from the portal?",
+        "answer": "Open the class in Scheduler and click 'Join Session' 5 minutes before start.",
+        "lastUpdated": "2025-06-19T14:15:00Z"
+    },
+    {
+        "question": "How do I get notified about changes to my timetable?",
+        "answer": "Enable notifications in Settings → Notifications → 'Schedule Changes'.",
+        "lastUpdated": "2025-06-20T08:25:00Z"
+    },
+    {
+        "question": "Can I see lab availability before booking?",
+        "answer": "Yes, Scheduler → Lab Schedule shows free/busy status for each lab.",
+        "lastUpdated": "2025-06-20T10:00:00Z"
+    },
+    {
+        "question": "What happens if the portal is down during submission?",
+        "answer": "We log outages. Submit as soon as service returns and open a support ticket to note the disruption.",
+        "lastUpdated": "2025-06-20T12:45:00Z"
+    },
+    {
+        "question": "How do I update my phone number?",
+        "answer": "Profile → Contact Info → 'Edit'. A verification code may be sent to confirm.",
+        "lastUpdated": "2025-06-21T08:10:00Z"
+    },
+    {
+        "question": "Where do I see upcoming deadlines?",
+        "answer": "Dashboard → 'Upcoming' widget, or Calendar view under Scheduler.",
+        "lastUpdated": "2025-06-21T10:20:00Z"
+    },
+    {
+        "question": "How do I enable email notifications?",
+        "answer": "Settings → Notifications → toggle email for assessments, forums, and schedule changes.",
+        "lastUpdated": "2025-06-21T13:00:00Z"
+    },
+    {
+        "question": "Why can’t I access a repository folder?",
+        "answer": "You may lack permission. Request access from the module lecturer or coordinator.",
+        "lastUpdated": "2025-06-22T09:30:00Z"
+    },
+    {
+        "question": "How do I check plagiarism reports?",
+        "answer": "Open the submission and click 'Similarity Report' if enabled for that assessment.",
+        "lastUpdated": "2025-06-22T11:55:00Z"
+    },
+    {
+        "question": "Can I change my display name?",
+        "answer": "Yes. Profile → Account → 'Display Name'. Changes are logged for audit.",
+        "lastUpdated": "2025-06-22T14:05:00Z"
+    },
+    {
+        "question": "How do I join a module discussion forum?",
+        "answer": "Go to the module page → Discussions. You’re auto-enrolled if you’re registered in the module.",
+        "lastUpdated": "2025-06-23T08:40:00Z"
+    },
+    {
+        "question": "What is the max upload size?",
+        "answer": "Single files up to 100 MB unless otherwise specified by the lecturer.",
+        "lastUpdated": "2025-06-23T11:10:00Z"
+    },
+    {
+        "question": "How do I request a reference letter?",
+        "answer": "Contact your coordinator/lecturer through Messages with your details and deadline.",
+        "lastUpdated": "2025-06-23T13:45:00Z"
+    },
+    {
+        "question": "Where can I see campus announcements?",
+        "answer": "Dashboard → 'Announcements'. You can filter by module or campus-wide.",
+        "lastUpdated": "2025-06-24T09:15:00Z"
+    }
+]

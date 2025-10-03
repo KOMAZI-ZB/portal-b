@@ -1,0 +1,30 @@
+/* Title underline (unchanged) */
+.lecturer-title {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.25rem;
+    color: #000 !important;
+    /* black */
+    font-weight: 700 !important;
+    /* bold */
+}
+
+.lecturer-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #0D6EFD;
+    border-radius: 2px;
+}
+
+/* NEW: Larger, black table text (scoped to this table only) */
+.lecturer-table th,
+.lecturer-table td {
+    font-size: 1rem;
+    /* increase size */
+    color: #000 !important;
+    /* force black text */
+}

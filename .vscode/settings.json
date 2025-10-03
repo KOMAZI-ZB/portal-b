@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/09b00a91-39b5-4819-a95a-519620f7fa21/resourceGroups/CSIPortal-Resources/providers/Microsoft.Web/sites/csi-portal-app",
+    "appService.deploySubpath": "API\\bin\\Publish"
+}

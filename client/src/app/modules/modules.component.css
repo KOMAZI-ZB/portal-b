@@ -1,0 +1,70 @@
+/* Title → filter spacing + underline (override .mb-0) */
+.modules-page>h2,
+.modules-page>h2.mb-0 {
+    margin-bottom: 2rem !important;
+    /* space under "Modules" */
+    display: inline-block;
+    /* shrink to text width */
+    position: relative;
+    padding-bottom: 0.25rem;
+    /* gap between text and line */
+    color: #000 !important;
+    /* black */
+    font-weight: 700 !important;
+    /* bold */
+}
+
+.modules-page>h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* full text width */
+    bottom: 0;
+    height: 2px;
+    background: #0D6EFD;
+    /* blue underline */
+    border-radius: 2px;
+
+}
+
+/* Semester filter inline (label + select side-by-side) */
+.modules-page .semester-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 5rem;
+    /* space under the Select Semester block */
+}
+
+/* Label: style like h5, lighter weight, black */
+.modules-page .semester-filter label {
+    margin: 0;
+    /* remove bottom gap so it sits inline */
+    font-size: 1.25rem;
+    /* h5 size */
+    font-weight: 400;
+    /* lighter than bold */
+    color: #000;
+
+}
+
+/* Select control typography + color (black) */
+.modules-page .semester-filter .form-select {
+    font-size: 1rem;
+    color: #000;
+}
+
+/* Optional: heading spacing inside sections */
+.modules-page .section-heading {
+    margin-top: 1.25rem;
+    /* space above "Assigned/Other Modules" headings */
+}
+
+/* Control Bootstrap row gutters for the card grids */
+.modules-page .modules-grid {
+    --bs-gutter-x: 1.25rem;
+    /* horizontal gap between cards */
+    --bs-gutter-y: 1.25rem;
+    /* vertical gap between cards */
+}

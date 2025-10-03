@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="section-title">Module Management</h2>
+        <button class="btn btn-primary" (click)="openAddModuleModal()">Add Module</button>
+    </div>
+
+    <div class="d-flex justify-content-end mb-3">
+        <input type="text" class="form-control w-25 search-input" [(ngModel)]="searchTerm" (input)="filterModules()"
+            placeholder="Search by code or name or semester ..." />
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Module Code</th>
+                <th>Module Name</th>
+                <th>Semester</th>
+                <th>Edit Module</th>
+                <th>Edit Details</th>
+                <th>Delete Module</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let mod of filteredModules; trackBy: trackById">
+                <td>{{ mod.moduleCode }}</td>
+                <td>{{ mod.moduleName }}</td>
+                <td>{{ mod.semester }}</td>
+                <td>
+                    <button class="btn btn-outline-secondary btn-sm" (click)="openEditModuleModal(mod)">Edit
+                        Module</button>
+                </td>
+                <td>
+                    <button class="btn btn-outline-secondary btn-sm" (click)="openEditDetailsModal(mod)">Edit
+                        Details</button>
+                </td>
+                <td>
+                    <button class="btn btn-outline-danger btn-sm" (click)="openDeleteModuleModal(mod)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

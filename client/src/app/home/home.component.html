@@ -1,0 +1,38 @@
+<!-- UFS logo below the navbar + centered login card on one screen -->
+<div class="home-hero">
+    <!-- UFS logo sits right under the fixed navbar, centered -->
+    <img src="assets/ufslogo2.png" alt="UFS Logo" class="ufs-logo-top" />
+
+    <!-- Centered card with comfortable spacing from the logo -->
+    <div class="login-card">
+        <h2 class="portal-title">Sign in with your Username and Password</h2>
+
+        <form (ngSubmit)="login()" #loginForm="ngForm" class="login-form">
+            <!-- Username -->
+            <div class="mb-3 input-group">
+                <span class="input-group-text">
+                    <i class="fas fa-user"></i>
+                </span>
+                <input name="userName" [(ngModel)]="model.userName" class="form-control" type="text"
+                    placeholder="Username" autocomplete="username" required />
+            </div>
+            <div class="text-danger mt-1" *ngIf="userNameError">{{ userNameError }}</div>
+
+            <!-- Password -->
+            <div class="mb-3 input-group">
+                <span class="input-group-text">
+                    <i class="fas fa-lock"></i>
+                </span>
+                <input [type]="showPassword ? 'text' : 'password'" name="password" [(ngModel)]="model.password"
+                    class="form-control" placeholder="Password" autocomplete="current-password" required />
+                <span class="input-group-text" (click)="togglePasswordVisibility()" style="cursor: pointer;">
+                    <i class="fas" [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"></i>
+                </span>
+            </div>
+
+            <div class="text-danger mt-1" *ngIf="passwordError">{{ passwordError }}</div>
+
+            <button class="btn btn-primary w-100" type="submit">Login</button>
+        </form>
+    </div>
+</div>

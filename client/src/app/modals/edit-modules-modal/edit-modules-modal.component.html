@@ -1,0 +1,36 @@
+<div class="modal-header">
+    <h5 class="modal-title">Edit Modules for {{ user.name }} {{ user.surname }}</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="attemptClose()"></button>
+</div>
+
+<!-- ✅ Everyone (including Admins) sees the full UI -->
+<div class="modal-body">
+    <h6>Semester 1 Modules</h6>
+    <small class="text-muted d-block mb-2">Year modules appear in both semester lists.</small>
+
+    <div *ngFor="let mod of semester1Modules; trackBy: trackById" class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" [checked]="selectedSemester1.includes(mod.id)"
+            (change)="toggleModule(mod.id, selectedSemester1, $event)" [id]="'sem1-' + mod.id" />
+        <label class="form-check-label" [for]="'sem1-' + mod.id">
+            {{ mod.moduleCode }} - {{ mod.moduleName }}
+        </label>
+    </div>
+
+    <hr />
+
+    <h6>Semester 2 Modules</h6>
+    <small class="text-muted d-block mb-2">Year modules appear in both semester lists.</small>
+
+    <div *ngFor="let mod of semester2Modules; trackBy: trackById" class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" [checked]="selectedSemester2.includes(mod.id)"
+            (change)="toggleModule(mod.id, selectedSemester2, $event)" [id]="'sem2-' + mod.id" />
+        <label class="form-check-label" [for]="'sem2-' + mod.id">
+            {{ mod.moduleCode }} - {{ mod.moduleName }}
+        </label>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-secondary" (click)="attemptClose()">Cancel</button>
+    <button class="btn btn-primary" (click)="submit()">Save Changes</button>
+</div>

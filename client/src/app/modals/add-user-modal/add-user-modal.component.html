@@ -1,0 +1,117 @@
+<div class="modal-header">
+    <h4 class="modal-title">Add New User</h4>
+    <button type="button" class="btn-close" (click)="cancel()" aria-label="Close"></button>
+</div>
+
+<div class="modal-body">
+    <form autocomplete="off" (submit)="$event.preventDefault()">
+        <!-- Username -->
+        <div class="mb-3">
+            <label>Username</label>
+            <input #usernameInput type="text" class="form-control" [ngClass]="{'is-invalid': usernameError}"
+                [(ngModel)]="userName" name="userName" required (ngModelChange)="onUsernameChange($event)"
+                autocomplete="off" autocapitalize="none" spellcheck="false" />
+            <div class="form-text" *ngIf="usernameStatus==='checking'">Checking availability…</div>
+            <div class="invalid-feedback" *ngIf="usernameError">{{ usernameError }}</div>
+        </div>
+
+        <!-- First Name -->
+        <div class="mb-3">
+            <label>First Name</label>
+            <input type="text" class="form-control" [ngClass]="{'is-invalid': !!firstNameError}" [(ngModel)]="firstName"
+                name="firstName" required (ngModelChange)="onFirstNameChange($event)" />
+            <div class="invalid-feedback" *ngIf="firstNameError">{{ firstNameError }}</div>
+        </div>
+
+        <!-- Last Name -->
+        <div class="mb-3">
+            <label>Last Name</label>
+            <input type="text" class="form-control" [ngClass]="{'is-invalid': !!lastNameError}" [(ngModel)]="lastName"
+                name="lastName" required (ngModelChange)="onLastNameChange($event)" />
+            <div class="invalid-feedback" *ngIf="lastNameError">{{ lastNameError }}</div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" [ngClass]="{'is-invalid': !!emailError}" [(ngModel)]="email"
+                name="email" required (ngModelChange)="onEmailChange($event)" autocomplete="off" />
+            <div class="invalid-feedback" *ngIf="emailError">
+                {{ emailError }}
+            </div>
+        </div>
+
+        <!-- Password + Live Checklist -->
+        <div class="mb-3">
+            <label>Password</label>
+            <div class="input-group">
+                <input [type]="showPassword ? 'text' : 'password'" class="form-control"
+                    [ngClass]="{'is-invalid': !!passwordError}" [(ngModel)]="password" name="newPassword"
+                    (ngModelChange)="onPasswordChange($event)" autocomplete="new-password" autocapitalize="none"
+                    spellcheck="false" />
+                <span class="input-group-text" (click)="togglePasswordVisibility()" style="cursor: pointer;">
+                    <i class="fas" [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"></i>
+                </span>
+                <div class="invalid-feedback" *ngIf="passwordError">{{ passwordError }}</div>
+            </div>
+
+            <!-- Checklist -->
+            <ul class="mt-2 mb-0 small" style="list-style:none; padding-left:0;">
+                <li>
+                    <span>{{ pwMinLen ? '✓' : '✗' }}</span> Minimum 8 characters
+                </li>
+                <li>
+                    <span>{{ pwUpper ? '✓' : '✗' }}</span> 1 uppercase letter
+                </li>
+                <li>
+                    <span>{{ pwLower ? '✓' : '✗' }}</span> 1 lowercase letter
+                </li>
+                <li>
+                    <span>{{ pwDigit ? '✓' : '✗' }}</span> 1 digit
+                </li>
+                <li>
+                    <span>{{ pwSymbol ? '✓' : '✗' }}</span> 1 symbol (non-alphanumeric)
+                </li>
+            </ul>
+        </div>
+
+        <!-- Role -->
+        <div class="mb-3">
+            <label>Role</label>
+            <select class="form-select" [(ngModel)]="role" name="role" (ngModelChange)="onRoleChange($event)">
+                <option *ngFor="let r of roles" [value]="r">{{ r }}</option>
+            </select>
+        </div>
+
+        <!-- Semester 1 Modules -->
+        <div class="mb-3">
+            <label>Semester 1 Modules</label>
+            <div *ngFor="let mod of semester1Modules" class="form-check">
+                <input class="form-check-input" type="checkbox" [checked]="selectedSemester1.includes(mod.id)"
+                    (change)="toggleModule(mod, 1, $event)" />
+                <label class="form-check-label">
+                    {{ mod.moduleCode }} - {{ mod.moduleName }}
+                    <small *ngIf="mod.isYearModule" class="text-muted">(Year)</small>
+                </label>
+            </div>
+        </div>
+
+        <!-- Semester 2 Modules -->
+        <div class="mb-3">
+            <label>Semester 2 Modules</label>
+            <div *ngFor="let mod of semester2Modules" class="form-check">
+                <input class="form-check-input" type="checkbox" [checked]="selectedSemester2.includes(mod.id)"
+                    (change)="toggleModule(mod, 2, $event)" />
+                <label class="form-check-label">
+                    {{ mod.moduleCode }} - {{ mod.moduleName }}
+                    <small *ngIf="mod.isYearModule" class="text-muted">(Year)</small>
+                </label>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="submit()" [disabled]="!formValid">Submit</button>
+</div>

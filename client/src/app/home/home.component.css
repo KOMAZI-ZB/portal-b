@@ -1,0 +1,145 @@
+/* One-screen hero area under the fixed navbar */
+.home-hero {
+    --nav-height: 0px;
+    /* was 64px */
+    margin-top: var(--nav-height);
+    height: calc(100vh - var(--nav-height));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Full-screen background */
+.home-hero::before {
+    content: "";
+    position: fixed;
+    top: var(--nav-height);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("/assets/background9.png") center/cover no-repeat;
+    opacity: 0.98;
+    /* UPDATED earlier */
+    pointer-events: none;
+    z-index: 0;
+}
+
+.home-hero>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* UFS logo (sit tight under the navbar) */
+/* UFS logo — pinned inside .home-hero, no clipping */
+.ufs-logo-top {
+    width: 600px;
+    max-width: min(92%, 900px);
+    height: auto;
+    display: block;
+
+    position: absolute;
+    /* position within .home-hero */
+    top: -150px;
+    /* adjust up/down to taste (>= 0 to avoid clipping) */
+    right: 0px;
+    /* adjust left/right to taste (0 = flush to edge) */
+
+    margin: 0;
+    /* ensure no extra shift */
+    transform: none;
+    /* no translate that could push it outside */
+    /* left: auto;  <-- implicitly removed by using right */
+}
+
+
+
+/* Card + rest — height increased & content vertically centered */
+.login-card {
+    margin-top: -300px;
+    width: fit-content;
+    /* grow to content (title) width */
+    max-width: 92vw;
+    /* guard against overflow on small screens */
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.40);
+    padding: 48px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* ▼ NEW: taller card and center its contents vertically */
+    min-height: clamp(400px, 30vh, 540px);
+    /* height only */
+    justify-content: center;
+    /* vertical centering */
+}
+
+/* Title bigger */
+/* Title */
+.portal-title {
+    font-size: 1.30rem;
+    font-weight: 700 !important;
+    /* keep bold */
+    margin-bottom: 50px;
+    color: #000 !important;
+    /* black */
+    text-align: center;
+    white-space: nowrap;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Inputs: larger font (height unchanged) */
+.login-form .form-control {
+    height: 56px;
+    font-size: 1.25rem;
+    /* ↑ was 1.125rem */
+    padding: 14px 16px;
+}
+
+.login-form .input-group .form-control {
+    height: 56px;
+}
+
+/* keep input-group addon aligned with taller input */
+.login-form .input-group .input-group-text {
+    height: 56px;
+}
+
+/* Button: larger font (height unchanged) */
+.login-form button {
+    height: 56px;
+    font-size: 1.60rem;
+    /* ↑ was 1.125rem */
+    font-weight: 700;
+}
+
+@media (max-width: 992px) {
+    .home-hero {
+        height: auto;
+        overflow: auto;
+    }
+
+    .login-card {
+        max-width: 92%;
+        padding: 32px 24px;
+    }
+}
+
+/* === ONE-LINE LOCAL FIX (offset global body padding for fixed navbar) === */
+:host {
+    display: block;
+    margin-top: -90px;
+    /* match your global body padding (64px). If yours is 56px, use -56px. */
+}

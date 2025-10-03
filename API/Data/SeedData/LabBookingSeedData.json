@@ -1,0 +1,842 @@
+[
+    {
+        "UserName": "2023000005",
+        "WeekDays": "Monday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-09-15",
+        "Description": "Project consultation (CS research stream)",
+        "FirstName": "Drake",
+        "LastName": "Zulu"
+    },
+    {
+        "UserName": "2023000006",
+        "WeekDays": "Monday",
+        "StartTime": "10:10:00",
+        "EndTime": "11:10:00",
+        "BookingDate": "2025-09-15",
+        "Description": "AI practical supervision (search & heuristics)",
+        "FirstName": "Esther",
+        "LastName": "Van Rooyen"
+    },
+    {
+        "UserName": "2023000007",
+        "WeekDays": "Tuesday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-09-16",
+        "Description": "Security up (crypto stations)",
+        "FirstName": "Felix",
+        "LastName": "Mabena"
+    },
+    {
+        "UserName": "2023000008",
+        "WeekDays": "Tuesday",
+        "StartTime": "13:10:00",
+        "EndTime": "14:10:00",
+        "BookingDate": "2025-09-16",
+        "Description": "Equipment calibration (robots & sensors)",
+        "FirstName": "Grace",
+        "LastName": "Peters"
+    },
+    {
+        "UserName": "2023000009",
+        "WeekDays": "Wednesday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-09-17",
+        "Description": "Coordinator timetable sync for semester",
+        "FirstName": "Hannah",
+        "LastName": "Williams"
+    },
+    {
+        "UserName": "2023000010",
+        "WeekDays": "Wednesday",
+        "StartTime": "14:10:00",
+        "EndTime": "15:10:00",
+        "BookingDate": "2025-09-17",
+        "Description": "Assessment moderation prep",
+        "FirstName": "Ivan",
+        "LastName": "Moloi"
+    },
+    {
+        "UserName": "2023000017",
+        "WeekDays": "Thursday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-09-18",
+        "Description": "Programming clinic (AP I/II)",
+        "FirstName": "Patrick",
+        "LastName": "Khoabane"
+    },
+    {
+        "UserName": "2023000018",
+        "WeekDays": "Thursday",
+        "StartTime": "10:10:00",
+        "EndTime": "11:10:00",
+        "BookingDate": "2025-09-18",
+        "Description": "Databases demo rehearsal",
+        "FirstName": "Queenie",
+        "LastName": "Jantjie"
+    },
+    {
+        "UserName": "2023000019",
+        "WeekDays": "Friday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-09-19",
+        "Description": "Digital forensics kit check",
+        "FirstName": "Riaan",
+        "LastName": "Botha"
+    },
+    {
+        "UserName": "2023000020",
+        "WeekDays": "Friday",
+        "StartTime": "13:10:00",
+        "EndTime": "14:10:00",
+        "BookingDate": "2025-09-19",
+        "Description": "Network racks audit & g",
+        "FirstName": "Sibongile",
+        "LastName": "Maseko"
+    },
+    {
+        "UserName": "2023000021",
+        "WeekDays": "Saturday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-09-20",
+        "Description": "Web app deployment test",
+        "FirstName": "Tariq",
+        "LastName": "Patel"
+    },
+    {
+        "UserName": "2023000022",
+        "WeekDays": "Saturday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-09-20",
+        "Description": "TA coordination & station setup",
+        "FirstName": "Yvonne",
+        "LastName": "Molefe"
+    },
+    {
+        "UserName": "2023000005",
+        "WeekDays": "Monday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-09-22",
+        "Description": "Research project consultations (round 2)",
+        "FirstName": "Drake",
+        "LastName": "Zulu"
+    },
+    {
+        "UserName": "2023000010",
+        "WeekDays": "Monday",
+        "StartTime": "14:10:00",
+        "EndTime": "15:10:00",
+        "BookingDate": "2025-09-22",
+        "Description": "Assessment moderation sync",
+        "FirstName": "Ivan",
+        "LastName": "Moloi"
+    },
+    {
+        "UserName": "2023000006",
+        "WeekDays": "Tuesday",
+        "StartTime": "10:10:00",
+        "EndTime": "11:10:00",
+        "BookingDate": "2025-09-23",
+        "Description": "AI practical demo prep (Bayes nets)",
+        "FirstName": "Esther",
+        "LastName": "Van Rooyen"
+    },
+    {
+        "UserName": "2023000018",
+        "WeekDays": "Tuesday",
+        "StartTime": "13:10:00",
+        "EndTime": "14:10:00",
+        "BookingDate": "2025-09-23",
+        "Description": "Query tuning rehearsal for class",
+        "FirstName": "Queenie",
+        "LastName": "Jantjie"
+    },
+    {
+        "UserName": "2023000007",
+        "WeekDays": "Wednesday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-09-24",
+        "Description": "Crypto tooling verification",
+        "FirstName": "Felix",
+        "LastName": "Mabena"
+    },
+    {
+        "UserName": "2023000009",
+        "WeekDays": "Wednesday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-09-24",
+        "Description": "Coordinator a adjustments",
+        "FirstName": "Hannah",
+        "LastName": "Williams"
+    },
+    {
+        "UserName": "2023000017",
+        "WeekDays": "Thursday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-09-25",
+        "Description": "Advanced Programming help-clinic",
+        "FirstName": "Patrick",
+        "LastName": "Khoabane"
+    },
+    {
+        "UserName": "2023000022",
+        "WeekDays": "Thursday",
+        "StartTime": "10:10:00",
+        "EndTime": "11:10:00",
+        "BookingDate": "2025-09-25",
+        "Description": "Front-desk TA shift & setup",
+        "FirstName": "Yvonne",
+        "LastName": "Molefe"
+    },
+    {
+        "UserName": "2023000019",
+        "WeekDays": "Friday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-09-26",
+        "Description": "Imaging workstation calibration",
+        "FirstName": "Riaan",
+        "LastName": "Botha"
+    },
+    {
+        "UserName": "2023000020",
+        "WeekDays": "Friday",
+        "StartTime": "13:10:00",
+        "EndTime": "14:10:00",
+        "BookingDate": "2025-09-26",
+        "Description": "Switch firmware updates",
+        "FirstName": "Sibongile",
+        "LastName": "Maseko"
+    },
+    {
+        "UserName": "2023000021",
+        "WeekDays": "Saturday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-09-27",
+        "Description": "End-to-end deployment dry-run",
+        "FirstName": "Tariq",
+        "LastName": "Patel"
+    },
+    {
+        "UserName": "2023000008",
+        "WeekDays": "Saturday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-09-27",
+        "Description": "Robotics rig maintenance",
+        "FirstName": "Grace",
+        "LastName": "Peters"
+    },
+    {
+        "UserName": "2023000006",
+        "WeekDays": "Monday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-09-29",
+        "Description": "AI tutorial dry-run (search & heuristics)",
+        "FirstName": "Esther",
+        "LastName": "Van Rooyen"
+    },
+    {
+        "UserName": "2023000019",
+        "WeekDays": "Monday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-09-29",
+        "Description": "Forensics workstation guideline update",
+        "FirstName": "Riaan",
+        "LastName": "Botha"
+    },
+    {
+        "UserName": "2023000005",
+        "WeekDays": "Tuesday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-09-30",
+        "Description": "Research project consultations (block booking)",
+        "FirstName": "Drake",
+        "LastName": "Zulu"
+    },
+    {
+        "UserName": "2023000022",
+        "WeekDays": "Tuesday",
+        "StartTime": "14:10:00",
+        "EndTime": "15:10:00",
+        "BookingDate": "2025-09-30",
+        "Description": "TA shift planning & handover",
+        "FirstName": "Yvonne",
+        "LastName": "Molefe"
+    },
+    {
+        "UserName": "2023000010",
+        "WeekDays": "Wednesday",
+        "StartTime": "10:10:00",
+        "EndTime": "11:10:00",
+        "BookingDate": "2025-10-01",
+        "Description": "Assessment moderation scheduling",
+        "FirstName": "Ivan",
+        "LastName": "Moloi"
+    },
+    {
+        "UserName": "2023000007",
+        "WeekDays": "Wednesday",
+        "StartTime": "14:10:00",
+        "EndTime": "15:10:00",
+        "BookingDate": "2025-10-01",
+        "Description": "Crypto tion verification",
+        "FirstName": "Felix",
+        "LastName": "Mabena"
+    },
+    {
+        "UserName": "2023000017",
+        "WeekDays": "Thursday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-10-02",
+        "Description": "Programming clinic (AP I/II)",
+        "FirstName": "Patrick",
+        "LastName": "Khoabane"
+    },
+    {
+        "UserName": "2023000018",
+        "WeekDays": "Thursday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-10-02",
+        "Description": "Indexing & query tuning demo prep",
+        "FirstName": "Queenie",
+        "LastName": "Jantjie"
+    },
+    {
+        "UserName": "2023000020",
+        "WeekDays": "Friday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-10-03",
+        "Description": "Switch config backups & audit",
+        "FirstName": "Sibongile",
+        "LastName": "Maseko"
+    },
+    {
+        "UserName": "2023000008",
+        "WeekDays": "Friday",
+        "StartTime": "13:10:00",
+        "EndTime": "14:10:00",
+        "BookingDate": "2025-10-03",
+        "Description": "Robotics rig test (arm calibration)",
+        "FirstName": "Grace",
+        "LastName": "Peters"
+    },
+    {
+        "UserName": "2023000021",
+        "WeekDays": "Saturday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-10-04",
+        "Description": "End-to-end deployment rehearsal",
+        "FirstName": "Tariq",
+        "LastName": "Patel"
+    },
+    {
+        "UserName": "2023000009",
+        "WeekDays": "Saturday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-10-04",
+        "Description": "Coordinator rota finalization",
+        "FirstName": "Hannah",
+        "LastName": "Williams"
+    },
+    {
+        "UserName": "2023000005",
+        "WeekDays": "Monday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-10-06",
+        "Description": "Research consultations (proposal feedback)",
+        "FirstName": "Drake",
+        "LastName": "Zulu"
+    },
+    {
+        "UserName": "2023000010",
+        "WeekDays": "Monday",
+        "StartTime": "14:10:00",
+        "EndTime": "15:10:00",
+        "BookingDate": "2025-10-06",
+        "Description": "Assessment moderation sync (round 2)",
+        "FirstName": "Ivan",
+        "LastName": "Moloi"
+    },
+    {
+        "UserName": "2023000006",
+        "WeekDays": "Tuesday",
+        "StartTime": "10:10:00",
+        "EndTime": "11:10:00",
+        "BookingDate": "2025-10-07",
+        "Description": "AI practical prep (probabilistic reasoning)",
+        "FirstName": "Esther",
+        "LastName": "Van Rooyen"
+    },
+    {
+        "UserName": "2023000018",
+        "WeekDays": "Tuesday",
+        "StartTime": "13:10:00",
+        "EndTime": "14:10:00",
+        "BookingDate": "2025-10-07",
+        "Description": "Query optimization demo rehearsal",
+        "FirstName": "Queenie",
+        "LastName": "Jantjie"
+    },
+    {
+        "UserName": "2023000007",
+        "WeekDays": "Wednesday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-10-08",
+        "Description": "Crypto tooling verification (hashing suite)",
+        "FirstName": "Felix",
+        "LastName": "Mabena"
+    },
+    {
+        "UserName": "2023000009",
+        "WeekDays": "Wednesday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-10-08",
+        "Description": "Coordinator rota adjustments & notices",
+        "FirstName": "Hannah",
+        "LastName": "Williams"
+    },
+    {
+        "UserName": "2023000017",
+        "WeekDays": "Thursday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-10-09",
+        "Description": "Programming clinic (AP I/II office hours)",
+        "FirstName": "Patrick",
+        "LastName": "Khoabane"
+    },
+    {
+        "UserName": "2023000022",
+        "WeekDays": "Thursday",
+        "StartTime": "10:10:00",
+        "EndTime": "11:10:00",
+        "BookingDate": "2025-10-09",
+        "Description": "TA shift planning & onboarding",
+        "FirstName": "Yvonne",
+        "LastName": "Molefe"
+    },
+    {
+        "UserName": "2023000020",
+        "WeekDays": "Friday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-10-10",
+        "Description": "Switch firmware updates & config backup",
+        "FirstName": "Sibongile",
+        "LastName": "Maseko"
+    },
+    {
+        "UserName": "2023000008",
+        "WeekDays": "Friday",
+        "StartTime": "13:10:00",
+        "EndTime": "14:10:00",
+        "BookingDate": "2025-10-10",
+        "Description": "Robotics rig calibration (arm & sensors)",
+        "FirstName": "Grace",
+        "LastName": "Peters"
+    },
+    {
+        "UserName": "2023000021",
+        "WeekDays": "Saturday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-10-11",
+        "Description": "Deployment pipeline E2E rehearsal",
+        "FirstName": "Tariq",
+        "LastName": "Patel"
+    },
+    {
+        "UserName": "2023000019",
+        "WeekDays": "Saturday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-10-11",
+        "Description": "Imaging & evidence chain checks",
+        "FirstName": "Riaan",
+        "LastName": "Botha"
+    },
+    {
+        "UserName": "2023000005",
+        "WeekDays": "Monday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-10-13",
+        "Description": "Project consultations (proposal feedback)",
+        "FirstName": "Drake",
+        "LastName": "Zulu"
+    },
+    {
+        "UserName": "2023000010",
+        "WeekDays": "Monday",
+        "StartTime": "14:10:00",
+        "EndTime": "15:10:00",
+        "BookingDate": "2025-10-13",
+        "Description": "Assessment moderation sync",
+        "FirstName": "Ivan",
+        "LastName": "Moloi"
+    },
+    {
+        "UserName": "2023000006",
+        "WeekDays": "Tuesday",
+        "StartTime": "10:10:00",
+        "EndTime": "11:10:00",
+        "BookingDate": "2025-10-14",
+        "Description": "AI practical prep (probabilistic reasoning)",
+        "FirstName": "Esther",
+        "LastName": "Van Rooyen"
+    },
+    {
+        "UserName": "2023000018",
+        "WeekDays": "Tuesday",
+        "StartTime": "13:10:00",
+        "EndTime": "14:10:00",
+        "BookingDate": "2025-10-14",
+        "Description": "Indexing & query tuning demo rehearsal",
+        "FirstName": "Queenie",
+        "LastName": "Jantjie"
+    },
+    {
+        "UserName": "2023000007",
+        "WeekDays": "Wednesday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-10-15",
+        "Description": "Crypto station verification (hashing suite)",
+        "FirstName": "Felix",
+        "LastName": "Mabena"
+    },
+    {
+        "UserName": "2023000009",
+        "WeekDays": "Wednesday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-10-15",
+        "Description": "Coordinator rota adjustments & notices",
+        "FirstName": "Hannah",
+        "LastName": "Williams"
+    },
+    {
+        "UserName": "2023000017",
+        "WeekDays": "Thursday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-10-16",
+        "Description": "Programming clinic (AP I/II office hours)",
+        "FirstName": "Patrick",
+        "LastName": "Khoabane"
+    },
+    {
+        "UserName": "2023000022",
+        "WeekDays": "Thursday",
+        "StartTime": "10:10:00",
+        "EndTime": "11:10:00",
+        "BookingDate": "2025-10-16",
+        "Description": "TA shift planning & onboarding",
+        "FirstName": "Yvonne",
+        "LastName": "Molefe"
+    },
+    {
+        "UserName": "2023000020",
+        "WeekDays": "Friday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-10-17",
+        "Description": "Switch firmware updates & config backup",
+        "FirstName": "Sibongile",
+        "LastName": "Maseko"
+    },
+    {
+        "UserName": "2023000008",
+        "WeekDays": "Friday",
+        "StartTime": "13:10:00",
+        "EndTime": "14:10:00",
+        "BookingDate": "2025-10-17",
+        "Description": "Robotics rig calibration (arm & sensors)",
+        "FirstName": "Grace",
+        "LastName": "Peters"
+    },
+    {
+        "UserName": "2023000021",
+        "WeekDays": "Saturday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-10-18",
+        "Description": "Deployment pipeline end-to-end rehearsal",
+        "FirstName": "Tariq",
+        "LastName": "Patel"
+    },
+    {
+        "UserName": "2023000019",
+        "WeekDays": "Saturday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-10-18",
+        "Description": "Imaging & evidence chain checks",
+        "FirstName": "Riaan",
+        "LastName": "Botha"
+    },
+    {
+        "UserName": "2023000005",
+        "WeekDays": "Monday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-10-20",
+        "Description": "Research consultations (methods review)",
+        "FirstName": "Drake",
+        "LastName": "Zulu"
+    },
+    {
+        "UserName": "2023000010",
+        "WeekDays": "Monday",
+        "StartTime": "14:10:00",
+        "EndTime": "15:10:00",
+        "BookingDate": "2025-10-20",
+        "Description": "Assessment moderation sync & rubric checks",
+        "FirstName": "Ivan",
+        "LastName": "Moloi"
+    },
+    {
+        "UserName": "2023000006",
+        "WeekDays": "Tuesday",
+        "StartTime": "10:10:00",
+        "EndTime": "11:10:00",
+        "BookingDate": "2025-10-21",
+        "Description": "AI demo prep (ML pipelines practical)",
+        "FirstName": "Esther",
+        "LastName": "Van Rooyen"
+    },
+    {
+        "UserName": "2023000018",
+        "WeekDays": "Tuesday",
+        "StartTime": "13:10:00",
+        "EndTime": "14:10:00",
+        "BookingDate": "2025-10-21",
+        "Description": "Query optimization walkthrough",
+        "FirstName": "Queenie",
+        "LastName": "Jantjie"
+    },
+    {
+        "UserName": "2023000007",
+        "WeekDays": "Wednesday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-10-22",
+        "Description": "Crypto station verification (signatures)",
+        "FirstName": "Felix",
+        "LastName": "Mabena"
+    },
+    {
+        "UserName": "2023000009",
+        "WeekDays": "Wednesday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-10-22",
+        "Description": "Coordinator rota & invigilation planning",
+        "FirstName": "Hannah",
+        "LastName": "Williams"
+    },
+    {
+        "UserName": "2023000017",
+        "WeekDays": "Thursday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-10-23",
+        "Description": "Programming clinic (concurrency focus)",
+        "FirstName": "Patrick",
+        "LastName": "Khoabane"
+    },
+    {
+        "UserName": "2023000022",
+        "WeekDays": "Thursday",
+        "StartTime": "10:10:00",
+        "EndTime": "11:10:00",
+        "BookingDate": "2025-10-23",
+        "Description": "TA onboarding & shift handover",
+        "FirstName": "Yvonne",
+        "LastName": "Molefe"
+    },
+    {
+        "UserName": "2023000020",
+        "WeekDays": "Friday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-10-24",
+        "Description": "Firmware updates & config backups",
+        "FirstName": "Sibongile",
+        "LastName": "Maseko"
+    },
+    {
+        "UserName": "2023000008",
+        "WeekDays": "Friday",
+        "StartTime": "13:10:00",
+        "EndTime": "14:10:00",
+        "BookingDate": "2025-10-24",
+        "Description": "Robotics rig calibration (vision sensors)",
+        "FirstName": "Grace",
+        "LastName": "Peters"
+    },
+    {
+        "UserName": "2023000021",
+        "WeekDays": "Saturday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-10-25",
+        "Description": "Deployment pipeline rehearsal",
+        "FirstName": "Tariq",
+        "LastName": "Patel"
+    },
+    {
+        "UserName": "2023000019",
+        "WeekDays": "Saturday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-10-25",
+        "Description": "Imaging & chain-of-custody checks",
+        "FirstName": "Riaan",
+        "LastName": "Botha"
+    },
+    {
+        "UserName": "2023000005",
+        "WeekDays": "Monday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-10-27",
+        "Description": "Research consultations (results checkpoint)",
+        "FirstName": "Drake",
+        "LastName": "Zulu"
+    },
+    {
+        "UserName": "2023000010",
+        "WeekDays": "Monday",
+        "StartTime": "14:10:00",
+        "EndTime": "15:10:00",
+        "BookingDate": "2025-10-27",
+        "Description": "Assessment moderation & invigilation brief",
+        "FirstName": "Ivan",
+        "LastName": "Moloi"
+    },
+    {
+        "UserName": "2023000006",
+        "WeekDays": "Tuesday",
+        "StartTime": "10:10:00",
+        "EndTime": "11:10:00",
+        "BookingDate": "2025-10-28",
+        "Description": "ML pipelines dry-run (practical test prep)",
+        "FirstName": "Esther",
+        "LastName": "Van Rooyen"
+    },
+    {
+        "UserName": "2023000018",
+        "WeekDays": "Tuesday",
+        "StartTime": "13:10:00",
+        "EndTime": "14:10:00",
+        "BookingDate": "2025-10-28",
+        "Description": "DB performance earsal",
+        "FirstName": "Queenie",
+        "LastName": "Jantjie"
+    },
+    {
+        "UserName": "2023000007",
+        "WeekDays": "Wednesday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-10-29",
+        "Description": "Crypto tooling verification (PKI)",
+        "FirstName": "Felix",
+        "LastName": "Mabena"
+    },
+    {
+        "UserName": "2023000009",
+        "WeekDays": "Wednesday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-10-29",
+        "Description": "Coordinator rota updates & notices",
+        "FirstName": "Hannah",
+        "LastName": "Williams"
+    },
+    {
+        "UserName": "2023000017",
+        "WeekDays": "Thursday",
+        "StartTime": "08:10:00",
+        "EndTime": "09:10:00",
+        "BookingDate": "2025-10-30",
+        "Description": "Programming clinic (concurrency Q&A)",
+        "FirstName": "Patrick",
+        "LastName": "Khoabane"
+    },
+    {
+        "UserName": "2023000022",
+        "WeekDays": "Thursday",
+        "StartTime": "10:10:00",
+        "EndTime": "11:10:00",
+        "BookingDate": "2025-10-30",
+        "Description": "TA onboarding & shift handover",
+        "FirstName": "Yvonne",
+        "LastName": "Molefe"
+    },
+    {
+        "UserName": "2023000020",
+        "WeekDays": "Friday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-10-31",
+        "Description": "Firmware updates & config backups",
+        "FirstName": "Sibongile",
+        "LastName": "Maseko"
+    },
+    {
+        "UserName": "2023000008",
+        "WeekDays": "Friday",
+        "StartTime": "13:10:00",
+        "EndTime": "14:10:00",
+        "BookingDate": "2025-10-31",
+        "Description": "Robotics rig calibration (vision sensors)",
+        "FirstName": "Grace",
+        "LastName": "Peters"
+    },
+    {
+        "UserName": "2023000021",
+        "WeekDays": "Saturday",
+        "StartTime": "09:10:00",
+        "EndTime": "10:10:00",
+        "BookingDate": "2025-11-01",
+        "Description": "Deployment pipeline rehearsal",
+        "FirstName": "Tariq",
+        "LastName": "Patel"
+    },
+    {
+        "UserName": "2023000019",
+        "WeekDays": "Saturday",
+        "StartTime": "11:10:00",
+        "EndTime": "12:10:00",
+        "BookingDate": "2025-11-01",
+        "Description": "Imaging & chain-of-custody checks",
+        "FirstName": "Riaan",
+        "LastName": "Botha"
+    }
+]

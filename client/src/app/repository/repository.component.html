@@ -1,0 +1,117 @@
+<div class="container mt-4 repo-page">
+    <!-- Page title matches Notifications (h2.mb-0) -->
+    <h2 class="mb-0">Repository</h2>
+
+    <!-- Top Section for Add Button -->
+    <div class="d-flex justify-content-between align-items-center mb-3 section-heading">
+        <h5 class="mb-0">External Repository Links</h5>
+        <button *ngIf="hasRepoManagementRights()" class="btn btn-outline-primary" type="button"
+            (click)="openAddRepositoryModal()">
+            + Add Repository
+        </button>
+    </div>
+
+    <!-- External Repository Cards -->
+    <div class="row repo-grid">
+        <ng-container *ngFor="let repo of externalRepos">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center shadow-sm position-relative">
+                    <a [href]="repo.linkUrl" target="_blank" rel="noopener noreferrer"
+                        class="text-decoration-none text-dark">
+                        <img [src]="repo.imageUrl || '/assets/database.png'" class="card-img-top mx-auto d-block p-3"
+                            style="max-height: 120px;" [alt]="repo.label + ' logo'" />
+                        <div class="card-body">
+                            <h5 class="card-title">{{ repo.label }}</h5>
+                            <p class="card-text text-muted">Visit {{ repo.label }}</p>
+                        </div>
+                    </a>
+
+                    <!-- Delete Button -->
+                    <button *ngIf="hasRepoManagementRights()"
+                        class="btn-delete-top-right position-absolute top-0 end-0 m-2" type="button"
+                        (click)="deleteExternalRepository(repo.id)" aria-label="Delete Repository">
+                        &times;
+                    </button>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+
+    <!-- ✅ External Pagination Controls -->
+    <nav *ngIf="externalPagination" class="mt-3 d-flex justify-content-center">
+        <ul class="pagination">
+            <li class="page-item" [class.disabled]="externalPagination.currentPage === 1">
+                <a class="page-link" (click)="pageChangedExternal(externalPagination.currentPage - 1)">Previous</a>
+            </li>
+
+            <li class="page-item" *ngFor="let page of [].constructor(externalPagination.totalPages); let i = index"
+                [class.active]="externalPagination.currentPage === i + 1">
+                <a class="page-link" (click)="pageChangedExternal(i + 1)">{{ i + 1 }}</a>
+            </li>
+
+            <li class="page-item" [class.disabled]="externalPagination.currentPage === externalPagination.totalPages">
+                <a class="page-link" (click)="pageChangedExternal(externalPagination.currentPage + 1)">Next</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Internal Repository Section -->
+    <div class="mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-3 section-heading">
+            <h5 class="mb-0">Internal Repository Documents</h5>
+            <button *ngIf="hasUploadRights()" class="btn btn-primary" type="button" (click)="openUploadModal()">
+                Upload Document
+            </button>
+        </div>
+
+        <table class="table table-bordered table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>Title</th>
+                    <th>Uploaded By</th>
+                    <th>Date</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let doc of internalDocuments">
+                    <td>{{ doc.title }}</td>
+                    <td>{{ doc.uploadedBy }}</td>
+                    <td>{{ doc.uploadedAt | date: 'medium' }}</td>
+                    <td class="text-center">
+                        <a [href]="doc.filePath" target="_blank" class="btn btn-sm btn-success me-2"
+                            rel="noopener noreferrer">
+                            Download
+                        </a>
+                        <button *ngIf="hasUploadRights()" class="btn btn-sm btn-danger" type="button"
+                            (click)="deleteDocument(doc.id)">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr *ngIf="internalDocuments.length === 0">
+                    <td colspan="4" class="text-center text-muted">No documents found.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ✅ Internal Pagination Controls -->
+        <nav *ngIf="internalPagination" class="mt-3 d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item" [class.disabled]="internalPagination.currentPage === 1">
+                    <a class="page-link" (click)="pageChangedInternal(internalPagination.currentPage - 1)">Previous</a>
+                </li>
+
+                <li class="page-item" *ngFor="let page of [].constructor(internalPagination.totalPages); let i = index"
+                    [class.active]="internalPagination.currentPage === i + 1">
+                    <a class="page-link" (click)="pageChangedInternal(i + 1)">{{ i + 1 }}</a>
+                </li>
+
+                <li class="page-item"
+                    [class.disabled]="internalPagination.currentPage === internalPagination.totalPages">
+                    <a class="page-link" (click)="pageChangedInternal(internalPagination.currentPage + 1)">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

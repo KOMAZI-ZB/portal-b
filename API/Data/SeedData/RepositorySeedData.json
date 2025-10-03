@@ -1,0 +1,32 @@
+[
+    {
+        "Label": "JoVE",
+        "ImageUrl": "/assets/jove.png",
+        "LinkUrl": "https://www.jove.com/"
+    },
+    {
+        "Label": "ProQuest",
+        "ImageUrl": "/assets/proquest.png",
+        "LinkUrl": "https://www.proquest.com/"
+    },
+    {
+        "Label": "ScienceDirect",
+        "ImageUrl": "/assets/sciencedirect.png",
+        "LinkUrl": "https://www.sciencedirect.com/"
+    },
+    {
+        "Label": "Scopus",
+        "ImageUrl": "/assets/scopus.png",
+        "LinkUrl": "https://www.scopus.com/"
+    },
+    {
+        "Label": "SpringerLink",
+        "ImageUrl": "/assets/springerlink.jpg",
+        "LinkUrl": "https://link.springer.com/"
+    },
+    {
+        "Label": "SpringerNature",
+        "ImageUrl": "/assets/springernature.png",
+        "LinkUrl": "https://www.springernature.com/"
+    }
+]

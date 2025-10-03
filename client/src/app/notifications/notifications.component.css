@@ -1,0 +1,66 @@
+/* --- spacing & type rhythm for notification cards --- */
+.card .card-topbar {
+    margin-bottom: 0.5rem;
+    /* space under TYPE/Audience row */
+}
+
+.card .card-title {
+    margin-top: 0.125rem;
+    /* small nudge away from topbar */
+    margin-bottom: 0.5rem;
+    /* extra space before message */
+    line-height: 1.25;
+    /* compact but readable heading */
+}
+
+.card .card-text {
+    margin-top: 0.125rem;
+    /* small gap after title */
+    margin-bottom: 0.75rem;
+    /* room before date/image */
+    line-height: 1.55;
+    /* friendlier reading for sentences */
+}
+
+/* Add a subtle affordance for deep-linkable cards */
+.card.clickable {
+    cursor: pointer;
+}
+
+.card.clickable:hover {
+    box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.15) inset;
+}
+
+/* Thumbnail (already present behavior kept) */
+.thumb-wrap .thumb-img {
+    max-height: 120px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* --- NEW: blue underline under "Notification Board" (text-width only) --- */
+.row.align-items-start.mb-3>.col-md-6>h2.mb-0 {
+    display: inline-block;
+    /* shrink underline to text width */
+    position: relative;
+    padding-bottom: 0.25rem;
+    /* gap between text and line */
+    color: #000 !important;
+    /* black */
+    font-weight: 700 !important;
+    /* bold */
+}
+
+.row.align-items-start.mb-3>.col-md-6>h2.mb-0::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* full width of the text */
+    bottom: 0;
+    height: 2px;
+    background: #0D6EFD;
+    /* blue */
+    border-radius: 2px;
+}

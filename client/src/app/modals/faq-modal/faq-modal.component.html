@@ -1,0 +1,30 @@
+<div class="modal-header">
+    <h5 class="modal-title">
+        {{ mode === 'edit' ? 'Edit FAQ' : 'Add New FAQ' }}
+    </h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="attemptClose()"></button>
+</div>
+
+<div class="modal-body">
+    <form #faqForm="ngForm">
+        <div class="mb-3">
+            <label for="question" class="form-label"><strong>Question</strong></label>
+            <textarea id="question" class="form-control" rows="3" [(ngModel)]="question" name="question"
+                placeholder="Type your question..."></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="answer" class="form-label"><strong>Answer</strong></label>
+            <textarea id="answer" class="form-control" rows="4" [(ngModel)]="answer" name="answer"
+                placeholder="Type your answer..."></textarea>
+        </div>
+
+        <div class="text-end">
+            <button type="button" class="btn btn-secondary me-2" (click)="attemptClose()">Cancel</button>
+            <button type="button" class="btn btn-success" (click)="submit()"
+                [disabled]="!question.trim() || !answer.trim()">
+                {{ mode === 'edit' ? 'Update FAQ' : 'Add FAQ' }}
+            </button>
+        </div>
+    </form>
+</div>

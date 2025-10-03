@@ -1,0 +1,36 @@
+<!-- scheduler.component.html -->
+<div class="scheduler-container">
+    <h2 class="mb-0">Scheduler</h2>
+
+    <!-- Mobile hamburger (shown on small screens) -->
+    <div class="mobile-menu">
+        <button class="btn btn-primary menu-toggle" (click)="toggleMenu()">
+            ☰ Menu
+        </button>
+        <div class="menu-panel" [class.open]="menuOpen">
+            <a routerLink="lab" (click)="closeMenu()">View Lab Schedule</a>
+            <a routerLink="class" (click)="closeMenu()">View Class Schedule</a>
+            <a routerLink="assessment" (click)="closeMenu()">View Assessment Schedule</a>
+        </div>
+    </div>
+
+    <!-- Card links (hidden on small screens) -->
+    <div class="card-container">
+        <a routerLink="lab" routerLinkActive="active" class="card">
+            <h3>View Lab Schedule</h3>
+            <p>View Lab Bookings</p>
+        </a>
+
+        <a routerLink="class" routerLinkActive="active" class="card">
+            <h3>View Class Schedule</h3>
+            <p>View Timetable and Class Slots</p>
+        </a>
+
+        <a routerLink="assessment" routerLinkActive="active" class="card assessment-card">
+            <h3>View Assessment Schedule</h3>
+            <p>All Upcoming Assessments</p>
+        </a>
+    </div>
+
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,82 @@
+<div class="container mt-4">
+    <!-- Controls (EXCLUDED from PDF) -->
+    <div class="d-flex justify-content-between align-items-center mb-3 no-print">
+        <div>
+            <label for="semester" class="filter-label">Semester:</label>
+            <select id="semester" class="form-select d-inline-block w-auto ms-2 filter-select" [(ngModel)]="semester"
+                (change)="onSemesterChange()">
+                <option [value]="1">Semester 1</option>
+                <option [value]="2">Semester 2</option>
+            </select>
+        </div>
+        <button class="btn btn-success" (click)="downloadScheduleAsPdf()" [disabled]="timeBlocks.length === 0">
+            Download (PDF)
+        </button>
+    </div>
+
+    <!-- Empty state -->
+    <div *ngIf="timeBlocks.length === 0" class="alert alert-info text-center py-4">
+        Nothing scheduled.
+    </div>
+
+    <!-- PDF Export Content Only -->
+    <div *ngIf="timeBlocks.length > 0" id="pdfContent" class="mt-3 p-4 bg-white">
+        <div class="logo-row keep-with-next">
+            <img src="assets/ufslogo.jpg" alt="UFS Logo" class="pdf-logo-top" />
+        </div>
+
+        <div class="table-topbar keep-with-next">
+            <div class="topbar-title">Class Schedule</div>
+            <div class="topbar-user">{{ userFullName }}</div>
+        </div>
+
+        <table class="table table-bordered text-center align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th colspan="2">Time</th>
+                    <th *ngFor="let day of weekdays" colspan="2">{{ day }}</th>
+                </tr>
+                <tr>
+                    <th>Start</th>
+                    <th>End</th>
+                    <ng-container *ngFor="let day of weekdays">
+                        <th>Code</th>
+                        <th>Venue</th>
+                    </ng-container>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let block of timeBlocks">
+                    <ng-container
+                        *ngFor="let row of [].constructor(getMaxEntriesForBlock(block)); let rowIndex = index">
+                        <tr class="avoid-break">
+                            <td *ngIf="rowIndex === 0" [attr.rowspan]="getMaxEntriesForBlock(block)">
+                                <strong>{{ formatTime(block.startTime) }}</strong>
+                            </td>
+                            <td *ngIf="rowIndex === 0" [attr.rowspan]="getMaxEntriesForBlock(block)">
+                                <strong>{{ formatTime(block.endTime) }}</strong>
+                            </td>
+
+                            <ng-container *ngFor="let day of weekdays">
+                                <ng-container *ngIf="getModulesByBlock(block, day).length > rowIndex">
+                                    <td
+                                        [ngStyle]="{'background-color': getColorForModule(getModulesByBlock(block, day)[rowIndex].moduleCode)}">
+                                        {{ getModulesByBlock(block, day)[rowIndex].moduleCode }}
+                                    </td>
+                                    <td
+                                        [ngStyle]="{'background-color': getColorForModule(getModulesByBlock(block, day)[rowIndex].moduleCode)}">
+                                        {{ getModulesByBlock(block, day)[rowIndex].venue || '-' }}
+                                    </td>
+                                </ng-container>
+                                <ng-container *ngIf="getModulesByBlock(block, day).length <= rowIndex">
+                                    <td>-</td>
+                                    <td>-</td>
+                                </ng-container>
+                            </ng-container>
+                        </tr>
+                    </ng-container>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+</div>

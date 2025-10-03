@@ -1,0 +1,92 @@
+/* Repository Card Hover */
+.card:hover {
+    transform: translateY(-3px);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Subtle shadow on cards */
+.card {
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+/* Upload/Delete button spacing */
+.btn-sm {
+    padding: 0.35rem 0.65rem;
+}
+
+/* Responsive fix for logo image */
+.card-img-top {
+    object-fit: scale-down;
+    height: 100px;
+}
+
+/* New: Delete Button Styling to Match Upload Button */
+.btn-delete-top-right {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 0.85rem;
+    line-height: 1;
+    width: 26px;
+    height: 26px;
+    border-radius: 5px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-delete-top-right:hover {
+    background-color: #0b5ed7;
+}
+
+/* =========================
+   Repository page title + spacing (resolved values)
+   ========================= */
+
+/* Page title spacing + blue underline (text width only) */
+.repo-page>h2,
+.repo-page>h2.mb-0 {
+    margin-bottom: 2rem !important;
+    /* override .mb-0 */
+    display: inline-block;
+    /* shrink to text width */
+    position: relative;
+    padding-bottom: 0.25rem;
+    /* gap between text and line */
+    color: #000 !important;
+    /* black */
+    font-weight: 700 !important;
+    /* bold */
+}
+
+.repo-page>h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* full width of the text */
+    bottom: 0;
+    height: 2px;
+    background: #0D6EFD;
+    /* blue */
+    border-radius: 2px;
+}
+
+/* Section heading spacing */
+.repo-page .section-heading {
+    margin-top: 1.25rem;
+}
+
+/* Control Bootstrap grid gutters for cards (Bootstrap expects these vars) */
+.repo-page .repo-grid {
+    --bs-gutter-x: 1.25rem;
+    --bs-gutter-y: 1.25rem;
+}
+
+/* Section titles: black + boldness (resolved) */
+.repo-page .section-heading h5 {
+    color: #000 !important;
+    font-weight: 700 !important;
+}

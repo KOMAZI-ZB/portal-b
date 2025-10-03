@@ -1,0 +1,64 @@
+<nav *ngIf="accountService.currentUser()" class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+    <div class="container">
+
+        <!-- Branding: centered when logged out, left-aligned when logged in -->
+        <a class="navbar-brand" [ngClass]="accountService.currentUser() ? 'brand-left' : 'brand-center'" routerLink="/"
+            routerLinkActive="active" (click)="closeNav()">
+            CSI HONORS PORTAL
+        </a>
+
+        <!-- Hamburger toggler (uses ngx-bootstrap collapse; no data-bs attributes) -->
+        <button *ngIf="accountService.currentUser()" class="navbar-toggler" type="button"
+            (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="mainNav"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible navigation -->
+        <div *ngIf="accountService.currentUser()" id="mainNav" class="collapse navbar-collapse" [collapse]="isCollapsed"
+            [isAnimated]="true">
+            <!-- Left nav links -->
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item" (click)="markNotificationsAsSeen(); closeNav()">
+                    <a routerLink="/notifications" routerLinkActive="active" class="nav-link">
+                        Notifications
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="!isAdmin()">
+                    <a routerLink="/modules" routerLinkActive="active" class="nav-link" (click)="closeNav()">Modules</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/repository" routerLinkActive="active" class="nav-link"
+                        (click)="closeNav()">Repository</a>
+                </li>
+                <li class="nav-item" *ngIf="!isAdmin()">
+                    <a routerLink="/scheduler" routerLinkActive="active" class="nav-link"
+                        (click)="closeNav()">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/faq" routerLinkActive="active" class="nav-link" (click)="closeNav()">FAQ</a>
+                </li>
+                <li *appHasRole="['Admin']" class="nav-item">
+                    <a routerLink="/admin" routerLinkActive="active" class="nav-link" (click)="closeNav()">Admin
+                        Panel</a>
+                </li>
+                <li *ngIf="showLecturerPanel" class="nav-item">
+                    <a routerLink="/lecturer" routerLinkActive="active" class="nav-link" (click)="closeNav()">Lecturer
+                        Panel</a>
+                </li>
+            </ul>
+
+            <!-- User Dropdown -->
+            <div dropdown class="dropdown ms-md-auto mt-2 mt-md-0 d-flex align-items-center">
+                <img class="me-2" src="./assets/user.png" alt="user icon" width="32" height="32" />
+                <a dropdownToggle class="dropdown-toggle text-light text-decoration-none">
+                    Welcome {{ accountService.currentUser()?.name }}
+                </a>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" (click)="logout()">Logout</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>

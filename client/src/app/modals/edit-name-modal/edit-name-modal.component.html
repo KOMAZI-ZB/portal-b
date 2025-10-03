@@ -1,0 +1,21 @@
+<form #nameForm="ngForm" class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title">Edit Module Name</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="attemptClose()"></button>
+    </div>
+
+    <div class="modal-body">
+        <div class="mb-3">
+            <label for="moduleNameInput" class="form-label">
+                Current Name: <strong>{{ module.moduleName }}</strong>
+            </label>
+            <input id="moduleNameInput" type="text" class="form-control" [(ngModel)]="newName" name="newName"
+                required />
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="attemptClose()">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="submit()">Save</button>
+    </div>
+</form>
