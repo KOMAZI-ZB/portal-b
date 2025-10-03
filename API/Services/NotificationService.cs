@@ -81,6 +81,7 @@ public class NotificationService : INotificationService
             query = query.Where(a => a.CreatedAt >= joinedAtUtc);
         }
 
+        // Base visibility: creator, global (no module), or any module the user is linked to (any role)
         query = query.Where(a =>
             a.CreatedBy == userName ||
             a.ModuleId == null ||
@@ -100,12 +101,14 @@ public class NotificationService : INotificationService
             }
         }
 
+        // Audience gates (keep existing behavior) + extend ModuleStudents to include staff linked to the module
         query = query.Where(a =>
             a.CreatedBy == userName ||
             a.Audience == "All" ||
             (a.Audience == "Students" && isStudent) ||
             (a.Audience == "Staff" && isStaff) ||
-            (a.Audience == "ModuleStudents" && isStudent && a.ModuleId != null && registeredModuleIds.Contains(a.ModuleId.Value))
+            // ⬇️ changed: allow any linked user (student/lecturer/coordinator) to see module-scoped items
+            (a.Audience == "ModuleStudents" && a.ModuleId != null && registeredModuleIds.Contains(a.ModuleId.Value))
         );
 
         var readsForUser = _context.NotificationReads.Where(r => r.UserId == userId);
@@ -199,13 +202,12 @@ public class NotificationService : INotificationService
             dto.Type != null &&
             dto.Type.Equals("RepositoryUpdate", StringComparison.OrdinalIgnoreCase);
 
-        // ⬇️⬇️ NEW: allow global ScheduleUpdate (lab bookings) without ModuleId for Lecturers
+        // allow global ScheduleUpdate (lab bookings) without ModuleId for Lecturers
         bool isScheduleUpdate =
             dto.Type != null &&
             dto.Type.Equals("ScheduleUpdate", StringComparison.OrdinalIgnoreCase);
 
         bool isModuleExempt = isRepositoryUpdate || isScheduleUpdate;
-        // ⬆️⬆️
 
         if (creatorRoles.Contains("Lecturer"))
         {

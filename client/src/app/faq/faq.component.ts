@@ -25,7 +25,7 @@ export class FaqComponent implements OnInit {
 
   pagination: Pagination | null = null;
   pageNumber = 1;
-  pageSize = 10;
+  pageSize = 20;
 
   bsModalRef?: BsModalRef;
   userRole: string = '';

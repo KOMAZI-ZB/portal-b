@@ -279,7 +279,11 @@ public class ModulesController(DataContext context) : BaseApiController
 
         if (module == null) return NotFound(new { message = "Module not found." });
 
-        // class sessions
+        // Capture originals for comparison
+        var originalCode = module.ModuleCode ?? string.Empty;
+        var originalName = module.ModuleName ?? string.Empty;
+
+        // class sessions (snapshot before replacement)
         var originalSessions = module.ClassSessions
             .Select(s => new { s.Venue, s.WeekDay, s.StartTime, s.EndTime })
             .OrderBy(x => x.Venue).ThenBy(x => x.WeekDay).ThenBy(x => x.StartTime).ThenBy(x => x.EndTime)
@@ -302,9 +306,9 @@ public class ModulesController(DataContext context) : BaseApiController
             .OrderBy(a => a.Date).ThenBy(a => a.Title)
             .ToListAsync();
 
-        // basic fields
-        module.ModuleCode = dto.ModuleCode ?? module.ModuleCode;
-        module.ModuleName = dto.ModuleName ?? module.ModuleName;
+        // Apply basic fields (metadata)
+        if (dto.ModuleCode is not null) module.ModuleCode = dto.ModuleCode;
+        if (dto.ModuleName is not null) module.ModuleName = dto.ModuleName;
 
         // Handle year / semester normalization
         if (dto.IsYearModule.HasValue)
@@ -366,9 +370,10 @@ public class ModulesController(DataContext context) : BaseApiController
             }
         }
 
+        // Persist updates to compare against DB state
         await context.SaveChangesAsync();
 
-        // compare sessions to decide CLASS schedule notification
+        // Compare sessions for CLASS schedule notification
         var currentSessions = await context.ClassSessions.Where(s => s.ModuleId == id)
             .Select(s => new { s.Venue, s.WeekDay, s.StartTime, s.EndTime })
             .OrderBy(x => x.Venue).ThenBy(x => x.WeekDay).ThenBy(x => x.StartTime).ThenBy(x => x.EndTime)
@@ -379,7 +384,7 @@ public class ModulesController(DataContext context) : BaseApiController
                 o.Venue != c.Venue || o.WeekDay != c.WeekDay || o.StartTime != c.StartTime || o.EndTime != c.EndTime)
                .Any(diff => diff);
 
-        // compare assessments to decide ASSESSMENT schedule notification
+        // Compare assessments for ASSESSMENT schedule notification
         var currentAssessments = await context.Assessments
             .Where(a => a.ModuleId == id)
             .Select(a => new
@@ -409,41 +414,78 @@ public class ModulesController(DataContext context) : BaseApiController
                    o.IsTimed != c.IsTimed)
                .Any(diff => diff);
 
-        //Create targeted notifications (ModuleStudents + author)
-        if (classScheduleChanged)
-        {
-            var n = new Notification
-            {
-                // Prepend module code
-                Title = $"[{module.ModuleCode}] Class schedule updated",
-                Message = $"The class timetable (venues/days/times) for {module.ModuleCode} has changed. Please check your schedule.",
-                Type = "ScheduleUpdate",
-                ModuleId = module.Id,
-                Audience = "ModuleStudents",          // target only students of this module (author also sees via CreatedBy)
-                CreatedBy = User.GetUsername(),
-                CreatedAt = DateTimeOffset.UtcNow     // <-- UTC with offset
-            };
-            context.Notifications.Add(n);
-        }
+        // Determine metadata-only changes
+        var codeChanged = (dto.ModuleCode is not null) && !string.Equals(originalCode, module.ModuleCode, StringComparison.Ordinal);
+        var nameChanged = (dto.ModuleName is not null) && !string.Equals(originalName, module.ModuleName, StringComparison.Ordinal);
+        var metadataChanged = codeChanged || nameChanged;
 
-        if (assessmentScheduleChanged)
+        // Consolidate schedule change flag (anything timetable-related)
+        var scheduleChanged = classScheduleChanged || assessmentScheduleChanged;
+
+        // ⚖️ Classification rule (single category per save):
+        // - If any timetable-related change occurred → ScheduleUpdate
+        // - Else if only metadata (code/name) changed → ModuleUpdate
+        // - Else → no auto item
+        var creator = User.GetUsername();
+
+        if (scheduleChanged)
         {
+            // Keep existing behaviour (may add both class & assessment schedule updates if both changed)
+            if (classScheduleChanged)
+            {
+                var n = new Notification
+                {
+                    Title = $"[{module.ModuleCode}] Class schedule updated",
+                    Message = $"The class timetable (venues/days/times) for {module.ModuleCode} has changed. Please check your schedule.",
+                    Type = "ScheduleUpdate",
+                    ModuleId = module.Id,
+                    Audience = "ModuleStudents",          // all users linked to the module will see it (students/lecturers/coordinators) + creator via CreatedBy
+                    CreatedBy = creator,
+                    CreatedAt = DateTimeOffset.UtcNow
+                };
+                context.Notifications.Add(n);
+            }
+
+            if (assessmentScheduleChanged)
+            {
+                var n = new Notification
+                {
+                    Title = $"[{module.ModuleCode}] Assessment schedule updated",
+                    Message = $"The assessment schedule for {module.ModuleCode} has changed. Please check your assessment dates.",
+                    Type = "ScheduleUpdate",
+                    ModuleId = module.Id,
+                    Audience = "ModuleStudents",
+                    CreatedBy = creator,
+                    CreatedAt = DateTimeOffset.UtcNow
+                };
+                context.Notifications.Add(n);
+            }
+
+            await context.SaveChangesAsync();
+        }
+        else if (metadataChanged)
+        {
+            // 🆕 MODULE UPDATE (metadata only)
+            // Build message with old → new details when available
+            var changes = new List<string>();
+            if (codeChanged) changes.Add($"{originalCode} → {module.ModuleCode}");
+            if (nameChanged) changes.Add($"{originalName} → {module.ModuleName}");
+
+            var changeText = changes.Count > 0
+                ? $"The code/name for {string.Join(" / ", changes)} has changed."
+                : "Module details were updated.";
+
             var n = new Notification
             {
-                // ⬅Prepend module code
-                Title = $"[{module.ModuleCode}] Assessment schedule updated",
-                Message = $"The assessment schedule for {module.ModuleCode} has changed. Please check your assessment dates.",
-                Type = "ScheduleUpdate",
+                Title = $"[{module.ModuleCode}] Module details updated",
+                Message = changeText,
+                Type = "ModuleUpdate",
                 ModuleId = module.Id,
-                Audience = "ModuleStudents",
-                CreatedBy = User.GetUsername(),
+                Audience = "ModuleStudents",           // visibility: all linked users + creator
+                CreatedBy = creator,
                 CreatedAt = DateTimeOffset.UtcNow
             };
             context.Notifications.Add(n);
-        }
-
-        if (classScheduleChanged || assessmentScheduleChanged)
-        {
             await context.SaveChangesAsync();
         }
 

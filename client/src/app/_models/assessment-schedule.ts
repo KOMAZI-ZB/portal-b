@@ -1,7 +1,7 @@
 export interface AssessmentSchedule {
     id: number;
     title: string;
-    // ✅ New: optional description for display/use where needed
+    //   New: optional description for display/use where needed
     description?: string | null;
 
     moduleCode: string;
@@ -11,5 +11,5 @@ export interface AssessmentSchedule {
     dueTime?: string | null;   // 'HH:mm:ss' or null
     venue?: string | null;
     semester: number;
-    isTimed: boolean;          // ✅ Indicates whether the assessment is a timed session or a submission
+    isTimed: boolean;          //   Indicates whether the assessment is a timed session or a submission
 }

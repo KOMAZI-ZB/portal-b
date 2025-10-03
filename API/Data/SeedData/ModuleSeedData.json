@@ -8,32 +8,32 @@
             {
                 "Venue": "EXR1",
                 "WeekDay": "Monday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "Research Hub",
                 "WeekDay": "Tuesday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "STABILIS",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "Research Hub",
                 "WeekDay": "Thursday",
-                "StartTime": "14:00:00",
-                "EndTime": "16:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "16:10:00"
             },
             {
                 "Venue": "EXR1",
                 "WeekDay": "Friday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             }
         ],
         "Assessments": [
@@ -42,7 +42,7 @@
                 "Description": "500–700 word abstract; PDF via portal.",
                 "IsTimed": false,
                 "Date": "2025-03-17",
-                "DueTime": "12:00:00",
+                "DueTime": "12:10:00",
                 "Venue": null
             },
             {
@@ -50,8 +50,8 @@
                 "Description": "Closed-book quiz on study design.",
                 "IsTimed": true,
                 "Date": "2025-04-08",
-                "StartTime": "10:00:00",
-                "EndTime": "10:30:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "STABILIS"
             },
             {
@@ -67,8 +67,8 @@
                 "Description": "Supervisor consultation slot (timed).",
                 "IsTimed": true,
                 "Date": "2025-08-13",
-                "StartTime": "11:00:00",
-                "EndTime": "11:20:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "Research Hub"
             },
             {
@@ -84,8 +84,8 @@
                 "Description": "Presentation + Q&A.",
                 "IsTimed": true,
                 "Date": "2025-10-21",
-                "StartTime": "13:00:00",
-                "EndTime": "14:30:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "EXR1"
             }
         ]
@@ -99,26 +99,26 @@
             {
                 "Venue": "B108",
                 "WeekDay": "Monday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "EXR2",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Thursday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Friday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             }
         ],
         "Assessments": [
@@ -127,8 +127,8 @@
                 "Description": "Ch.1–3; closed book.",
                 "IsTimed": true,
                 "Date": "2025-03-10",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "C1"
             },
             {
@@ -144,8 +144,8 @@
                 "Description": "Ch.4–6; calculators allowed.",
                 "IsTimed": true,
                 "Date": "2025-04-07",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "C2"
             },
             {
@@ -161,8 +161,8 @@
                 "Description": "Short-answer & MCQ.",
                 "IsTimed": true,
                 "Date": "2025-05-12",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "C3"
             },
             {
@@ -184,26 +184,26 @@
             {
                 "Venue": "FG",
                 "WeekDay": "Monday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "FG3",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "FG3",
                 "WeekDay": "Thursday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "FG",
                 "WeekDay": "Friday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             }
         ],
         "Assessments": [
@@ -212,8 +212,8 @@
                 "Description": "In-class quiz.",
                 "IsTimed": true,
                 "Date": "2025-03-20",
-                "StartTime": "10:00:00",
-                "EndTime": "10:30:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "FG3"
             },
             {
@@ -229,8 +229,8 @@
                 "Description": "Short-form test.",
                 "IsTimed": true,
                 "Date": "2025-04-10",
-                "StartTime": "09:30:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "FG"
             },
             {
@@ -246,8 +246,8 @@
                 "Description": "Notebook-based assessment.",
                 "IsTimed": true,
                 "Date": "2025-05-08",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "FG3"
             },
             {
@@ -269,26 +269,26 @@
             {
                 "Venue": "EXR2",
                 "WeekDay": "Monday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "Lab-3",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "Lab-3",
                 "WeekDay": "Thursday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "EXR2",
                 "WeekDay": "Friday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             }
         ],
         "Assessments": [
@@ -297,8 +297,8 @@
                 "Description": "Short-answer test.",
                 "IsTimed": true,
                 "Date": "2025-03-25",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "C4"
             },
             {
@@ -314,8 +314,8 @@
                 "Description": "In-lab practical assessment.",
                 "IsTimed": true,
                 "Date": "2025-04-18",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "Lab-3"
             },
             {
@@ -331,8 +331,8 @@
                 "Description": "Coverage of Weeks 1–10.",
                 "IsTimed": true,
                 "Date": "2025-05-23",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "EXR2"
             },
             {
@@ -354,26 +354,26 @@
             {
                 "Venue": "B108",
                 "WeekDay": "Monday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Thursday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Friday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             }
         ],
         "Assessments": [
@@ -382,8 +382,8 @@
                 "Description": "Short-answer test on core readings.",
                 "IsTimed": true,
                 "Date": "2025-03-10",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "B108"
             },
             {
@@ -399,8 +399,8 @@
                 "Description": "Ch.4–6; calculators allowed.",
                 "IsTimed": true,
                 "Date": "2025-04-07",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "B108"
             },
             {
@@ -416,8 +416,8 @@
                 "Description": "In-class test; closed book.",
                 "IsTimed": true,
                 "Date": "2025-05-12",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "B108"
             },
             {
@@ -439,26 +439,26 @@
             {
                 "Venue": "B108",
                 "WeekDay": "Monday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Wednesday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "Lab A",
                 "WeekDay": "Thursday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Friday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             }
         ],
         "Assessments": [
@@ -467,8 +467,8 @@
                 "Description": "DW/OLAP basics.",
                 "IsTimed": true,
                 "Date": "2025-03-11",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "B108"
             },
             {
@@ -484,8 +484,8 @@
                 "Description": "Hands-on ETL pipeline.",
                 "IsTimed": true,
                 "Date": "2025-04-08",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00",
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00",
                 "Venue": "Lab A"
             },
             {
@@ -501,8 +501,8 @@
                 "Description": "Star/Snowflake schemas.",
                 "IsTimed": true,
                 "Date": "2025-05-13",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "B108"
             },
             {
@@ -524,26 +524,26 @@
             {
                 "Venue": "B108",
                 "WeekDay": "Monday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Wednesday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "Lab A",
                 "WeekDay": "Thursday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Friday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             }
         ],
         "Assessments": [
@@ -552,8 +552,8 @@
                 "Description": "B-Tree/Hash indexes.",
                 "IsTimed": true,
                 "Date": "2025-03-12",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "B108"
             },
             {
@@ -569,8 +569,8 @@
                 "Description": "ACID/Isolation levels lab.",
                 "IsTimed": true,
                 "Date": "2025-04-09",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "Lab A"
             },
             {
@@ -586,8 +586,8 @@
                 "Description": "Comparative concepts.",
                 "IsTimed": true,
                 "Date": "2025-05-14",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "B108"
             },
             {
@@ -609,26 +609,26 @@
             {
                 "Venue": "B108",
                 "WeekDay": "Monday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Wednesday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "Lab B",
                 "WeekDay": "Thursday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Friday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             }
         ],
         "Assessments": [
@@ -637,8 +637,8 @@
                 "Description": "Kimball vs Inmon.",
                 "IsTimed": true,
                 "Date": "2025-03-13",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "B108"
             },
             {
@@ -654,8 +654,8 @@
                 "Description": "In-lab extraction & load.",
                 "IsTimed": true,
                 "Date": "2025-04-10",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "Lab B"
             },
             {
@@ -671,8 +671,8 @@
                 "Description": "Roll-up & drill-down.",
                 "IsTimed": true,
                 "Date": "2025-05-15",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "B108"
             },
             {
@@ -694,26 +694,26 @@
             {
                 "Venue": "C1",
                 "WeekDay": "Monday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "C1",
                 "WeekDay": "Wednesday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "C1",
                 "WeekDay": "Thursday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "C1",
                 "WeekDay": "Friday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             }
         ],
         "Assessments": [
@@ -722,8 +722,8 @@
                 "Description": "Production rules & inference.",
                 "IsTimed": true,
                 "Date": "2025-03-14",
-                "StartTime": "09:30:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "C1"
             },
             {
@@ -739,8 +739,8 @@
                 "Description": "Frames & ontologies.",
                 "IsTimed": true,
                 "Date": "2025-04-11",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "C1"
             },
             {
@@ -756,8 +756,8 @@
                 "Description": "Use a KB shell tool.",
                 "IsTimed": true,
                 "Date": "2025-05-16",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "C1"
             },
             {
@@ -779,26 +779,26 @@
             {
                 "Venue": "C2",
                 "WeekDay": "Monday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "C2",
                 "WeekDay": "Wednesday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "C2",
                 "WeekDay": "Thursday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "C2",
                 "WeekDay": "Friday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             }
         ],
         "Assessments": [
@@ -807,8 +807,8 @@
                 "Description": "IS types & strategy.",
                 "IsTimed": true,
                 "Date": "2025-03-17",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "C2"
             },
             {
@@ -824,8 +824,8 @@
                 "Description": "Enterprise systems overview.",
                 "IsTimed": true,
                 "Date": "2025-04-14",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "C2"
             },
             {
@@ -841,8 +841,8 @@
                 "Description": "COBIT/ITIL basics.",
                 "IsTimed": true,
                 "Date": "2025-05-19",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "C2"
             },
             {
@@ -864,26 +864,26 @@
             {
                 "Venue": "C3",
                 "WeekDay": "Monday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "C3",
                 "WeekDay": "Wednesday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "C3",
                 "WeekDay": "Thursday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "C3",
                 "WeekDay": "Friday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             }
         ],
         "Assessments": [
@@ -892,8 +892,8 @@
                 "Description": "Scope/time/cost.",
                 "IsTimed": true,
                 "Date": "2025-03-18",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "C3"
             },
             {
@@ -909,8 +909,8 @@
                 "Description": "Quiz on PMBOK areas.",
                 "IsTimed": true,
                 "Date": "2025-04-15",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "C3"
             },
             {
@@ -926,8 +926,8 @@
                 "Description": "Sprint planning exercise.",
                 "IsTimed": true,
                 "Date": "2025-05-20",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00",
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00",
                 "Venue": "C3"
             },
             {
@@ -949,26 +949,26 @@
             {
                 "Venue": "C4",
                 "WeekDay": "Monday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "C4",
                 "WeekDay": "Wednesday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "Lab B",
                 "WeekDay": "Thursday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "C4",
                 "WeekDay": "Friday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             }
         ],
         "Assessments": [
@@ -977,8 +977,8 @@
                 "Description": "Models & data for decisions.",
                 "IsTimed": true,
                 "Date": "2025-03-19",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "C4"
             },
             {
@@ -994,8 +994,8 @@
                 "Description": "Optimization with tools.",
                 "IsTimed": true,
                 "Date": "2025-04-16",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "Lab B"
             },
             {
@@ -1011,8 +1011,8 @@
                 "Description": "Multi-criteria decision analysis.",
                 "IsTimed": true,
                 "Date": "2025-05-21",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "C4"
             },
             {
@@ -1034,26 +1034,26 @@
             {
                 "Venue": "SEC-101",
                 "WeekDay": "Monday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "SEC-101",
                 "WeekDay": "Wednesday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "Lab C",
                 "WeekDay": "Thursday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "SEC-101",
                 "WeekDay": "Friday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             }
         ],
         "Assessments": [
@@ -1062,8 +1062,8 @@
                 "Description": "Foundations of InfoSec.",
                 "IsTimed": true,
                 "Date": "2025-03-10",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "SEC-101"
             },
             {
@@ -1079,8 +1079,8 @@
                 "Description": "Hashing & symmetric crypto.",
                 "IsTimed": true,
                 "Date": "2025-04-09",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00",
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00",
                 "Venue": "Lab C"
             },
             {
@@ -1096,8 +1096,8 @@
                 "Description": "Firewalls/IDS/Zero Trust.",
                 "IsTimed": true,
                 "Date": "2025-05-19",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "SEC-101"
             },
             {
@@ -1119,26 +1119,26 @@
             {
                 "Venue": "UX-201",
                 "WeekDay": "Monday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "UX-201",
                 "WeekDay": "Wednesday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "UX-Lab",
                 "WeekDay": "Thursday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "UX-201",
                 "WeekDay": "Friday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             }
         ],
         "Assessments": [
@@ -1147,8 +1147,8 @@
                 "Description": "Heuristics & affordances.",
                 "IsTimed": true,
                 "Date": "2025-03-11",
-                "StartTime": "10:00:00",
-                "EndTime": "10:30:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "UX-201"
             },
             {
@@ -1164,8 +1164,8 @@
                 "Description": "In-class evaluation.",
                 "IsTimed": true,
                 "Date": "2025-04-10",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "UX-Lab"
             },
             {
@@ -1181,8 +1181,8 @@
                 "Description": "Metrics & experiments.",
                 "IsTimed": true,
                 "Date": "2025-05-16",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "UX-201"
             },
             {
@@ -1204,26 +1204,26 @@
             {
                 "Venue": "ETH-1",
                 "WeekDay": "Monday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "ETH-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "ETH-1",
                 "WeekDay": "Thursday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "ETH-1",
                 "WeekDay": "Friday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             }
         ],
         "Assessments": [
@@ -1232,8 +1232,8 @@
                 "Description": "Utilitarianism, deontology, virtue.",
                 "IsTimed": true,
                 "Date": "2025-03-12",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "ETH-1"
             },
             {
@@ -1249,8 +1249,8 @@
                 "Description": "Short-answer test.",
                 "IsTimed": true,
                 "Date": "2025-04-14",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "ETH-1"
             },
             {
@@ -1266,8 +1266,8 @@
                 "Description": "In-class, timed debate notes.",
                 "IsTimed": true,
                 "Date": "2025-05-20",
-                "StartTime": "09:30:00",
-                "EndTime": "10:30:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "ETH-1"
             },
             {
@@ -1289,26 +1289,26 @@
             {
                 "Venue": "ALG-201",
                 "WeekDay": "Monday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "ALG-201",
                 "WeekDay": "Wednesday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "ALG-201",
                 "WeekDay": "Thursday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "ALG-201",
                 "WeekDay": "Friday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             }
         ],
         "Assessments": [
@@ -1317,8 +1317,8 @@
                 "Description": "Big-O/Ω/Θ basics.",
                 "IsTimed": true,
                 "Date": "2025-03-13",
-                "StartTime": "12:15:00",
-                "EndTime": "12:45:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "ALG-201"
             },
             {
@@ -1334,8 +1334,8 @@
                 "Description": "Short-answer test.",
                 "IsTimed": true,
                 "Date": "2025-04-11",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "ALG-201"
             },
             {
@@ -1351,8 +1351,8 @@
                 "Description": "Reductions practice.",
                 "IsTimed": true,
                 "Date": "2025-05-23",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00",
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00",
                 "Venue": "ALG-201"
             },
             {
@@ -1374,26 +1374,26 @@
             {
                 "Venue": "AUTO-1",
                 "WeekDay": "Monday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "AUTO-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "AUTO-1",
                 "WeekDay": "Thursday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "AUTO-1",
                 "WeekDay": "Friday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             }
         ],
         "Assessments": [
@@ -1402,8 +1402,8 @@
                 "Description": "Formal languages basics.",
                 "IsTimed": true,
                 "Date": "2025-03-14",
-                "StartTime": "10:00:00",
-                "EndTime": "10:30:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "AUTO-1"
             },
             {
@@ -1419,8 +1419,8 @@
                 "Description": "Short-answer test.",
                 "IsTimed": true,
                 "Date": "2025-04-15",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "AUTO-1"
             },
             {
@@ -1436,8 +1436,8 @@
                 "Description": "P, NP, co-NP overview.",
                 "IsTimed": true,
                 "Date": "2025-05-20",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "AUTO-1"
             },
             {
@@ -1459,26 +1459,26 @@
             {
                 "Venue": "NET-1",
                 "WeekDay": "Monday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "NET-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "Lab N",
                 "WeekDay": "Thursday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "NET-1",
                 "WeekDay": "Friday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             }
         ],
         "Assessments": [
@@ -1487,8 +1487,8 @@
                 "Description": "Monitoring foundations.",
                 "IsTimed": true,
                 "Date": "2025-03-17",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "NET-1"
             },
             {
@@ -1504,8 +1504,8 @@
                 "Description": "Hands-on parsing & alerts.",
                 "IsTimed": true,
                 "Date": "2025-04-17",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "Lab N"
             },
             {
@@ -1521,8 +1521,8 @@
                 "Description": "Cases & metrics.",
                 "IsTimed": true,
                 "Date": "2025-05-26",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "NET-1"
             },
             {
@@ -1544,26 +1544,26 @@
             {
                 "Venue": "NET-2",
                 "WeekDay": "Monday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "NET-2",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "Lab N",
                 "WeekDay": "Thursday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "NET-2",
                 "WeekDay": "Friday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             }
         ],
         "Assessments": [
@@ -1572,8 +1572,8 @@
                 "Description": "AIMD & fairness.",
                 "IsTimed": true,
                 "Date": "2025-03-18",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "NET-2"
             },
             {
@@ -1589,8 +1589,8 @@
                 "Description": "Mininet practical.",
                 "IsTimed": true,
                 "Date": "2025-04-18",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "Lab N"
             },
             {
@@ -1606,8 +1606,8 @@
                 "Description": "PHY/MAC concepts.",
                 "IsTimed": true,
                 "Date": "2025-05-27",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "NET-2"
             },
             {
@@ -1629,26 +1629,26 @@
             {
                 "Venue": "SE-101",
                 "WeekDay": "Monday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "SE-101",
                 "WeekDay": "Wednesday",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00"
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00"
             },
             {
                 "Venue": "SE-101",
                 "WeekDay": "Thursday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "SE-101",
                 "WeekDay": "Friday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             }
         ],
         "Assessments": [
@@ -1657,8 +1657,8 @@
                 "Description": "Principles & examples.",
                 "IsTimed": true,
                 "Date": "2025-03-19",
-                "StartTime": "09:15:00",
-                "EndTime": "09:45:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "SE-101"
             },
             {
@@ -1674,8 +1674,8 @@
                 "Description": "GoF basics.",
                 "IsTimed": true,
                 "Date": "2025-04-16",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "SE-101"
             },
             {
@@ -1691,8 +1691,8 @@
                 "Description": "Structural/Behavioral focus.",
                 "IsTimed": true,
                 "Date": "2025-05-21",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00",
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00",
                 "Venue": "SE-101"
             },
             {
@@ -1714,26 +1714,26 @@
             {
                 "Venue": "WEB-1",
                 "WeekDay": "Monday",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00"
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00"
             },
             {
                 "Venue": "WEB-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "Lab W",
                 "WeekDay": "Thursday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "WEB-1",
                 "WeekDay": "Friday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             }
         ],
         "Assessments": [
@@ -1742,8 +1742,8 @@
                 "Description": "Web protocols & APIs.",
                 "IsTimed": true,
                 "Date": "2025-03-20",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "WEB-1"
             },
             {
@@ -1759,8 +1759,8 @@
                 "Description": "Routing + state.",
                 "IsTimed": true,
                 "Date": "2025-04-17",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00",
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00",
                 "Venue": "Lab W"
             },
             {
@@ -1776,8 +1776,8 @@
                 "Description": "WebSocket/EventSource.",
                 "IsTimed": true,
                 "Date": "2025-05-22",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "WEB-1"
             },
             {
@@ -1799,26 +1799,26 @@
             {
                 "Venue": "CODE-1",
                 "WeekDay": "Monday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "CODE-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "CODE-1",
                 "WeekDay": "Thursday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "CODE-1",
                 "WeekDay": "Friday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             }
         ],
         "Assessments": [
@@ -1827,8 +1827,8 @@
                 "Description": "Generics, lambdas.",
                 "IsTimed": true,
                 "Date": "2025-03-21",
-                "StartTime": "08:15:00",
-                "EndTime": "08:45:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "CODE-1"
             },
             {
@@ -1844,8 +1844,8 @@
                 "Description": "Threads, tasks, sync.",
                 "IsTimed": true,
                 "Date": "2025-04-18",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "CODE-1"
             },
             {
@@ -1861,8 +1861,8 @@
                 "Description": "Performance tuning lab.",
                 "IsTimed": true,
                 "Date": "2025-05-30",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "CODE-1"
             },
             {
@@ -1884,26 +1884,26 @@
             {
                 "Venue": "CODE-2",
                 "WeekDay": "Monday",
-                "StartTime": "16:00:00",
-                "EndTime": "17:00:00"
+                "StartTime": "16:10:00",
+                "EndTime": "17:10:00"
             },
             {
                 "Venue": "CODE-2",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "CODE-2",
                 "WeekDay": "Thursday",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00"
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00"
             },
             {
                 "Venue": "CODE-2",
                 "WeekDay": "Friday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             }
         ],
         "Assessments": [
@@ -1912,8 +1912,8 @@
                 "Description": "Functional patterns.",
                 "IsTimed": true,
                 "Date": "2025-03-24",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "CODE-2"
             },
             {
@@ -1929,8 +1929,8 @@
                 "Description": "Reactive stream pipeline.",
                 "IsTimed": true,
                 "Date": "2025-04-24",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00",
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00",
                 "Venue": "CODE-2"
             },
             {
@@ -1946,8 +1946,8 @@
                 "Description": "Tuning & leaks.",
                 "IsTimed": true,
                 "Date": "2025-05-29",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "CODE-2"
             },
             {
@@ -1969,26 +1969,26 @@
             {
                 "Venue": "DF-1",
                 "WeekDay": "Monday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "DF-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00"
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00"
             },
             {
                 "Venue": "Lab F",
                 "WeekDay": "Thursday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "DF-1",
                 "WeekDay": "Friday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             }
         ],
         "Assessments": [
@@ -1997,8 +1997,8 @@
                 "Description": "Procedures & evidence.",
                 "IsTimed": true,
                 "Date": "2025-03-25",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "DF-1"
             },
             {
@@ -2014,8 +2014,8 @@
                 "Description": "Recover deleted files.",
                 "IsTimed": true,
                 "Date": "2025-04-22",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "Lab F"
             },
             {
@@ -2031,8 +2031,8 @@
                 "Description": "Acquisition & analysis.",
                 "IsTimed": true,
                 "Date": "2025-05-30",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "DF-1"
             },
             {
@@ -2054,26 +2054,26 @@
             {
                 "Venue": "DS-1",
                 "WeekDay": "Monday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "DS-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "Lab DS",
                 "WeekDay": "Thursday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "DS-1",
                 "WeekDay": "Friday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             }
         ],
         "Assessments": [
@@ -2082,8 +2082,8 @@
                 "Description": "Estimation & tests.",
                 "IsTimed": true,
                 "Date": "2025-03-26",
-                "StartTime": "09:15:00",
-                "EndTime": "09:45:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "DS-1"
             },
             {
@@ -2099,8 +2099,8 @@
                 "Description": "Cross-val & metrics.",
                 "IsTimed": true,
                 "Date": "2025-04-23",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "Lab DS"
             },
             {
@@ -2116,8 +2116,8 @@
                 "Description": "Ensembles & kernels.",
                 "IsTimed": true,
                 "Date": "2025-05-28",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "DS-1"
             },
             {
@@ -2139,26 +2139,26 @@
             {
                 "Venue": "AN-1",
                 "WeekDay": "Monday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "AN-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "Lab A",
                 "WeekDay": "Thursday",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00"
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00"
             },
             {
                 "Venue": "AN-1",
                 "WeekDay": "Friday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             }
         ],
         "Assessments": [
@@ -2167,8 +2167,8 @@
                 "Description": "Data wrangling basics.",
                 "IsTimed": true,
                 "Date": "2025-03-27",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "AN-1"
             },
             {
@@ -2184,8 +2184,8 @@
                 "Description": "Charts & EDA.",
                 "IsTimed": true,
                 "Date": "2025-04-24",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00",
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00",
                 "Venue": "Lab A"
             },
             {
@@ -2201,8 +2201,8 @@
                 "Description": "LP/gradient basics.",
                 "IsTimed": true,
                 "Date": "2025-05-29",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "AN-1"
             },
             {
@@ -2224,26 +2224,26 @@
             {
                 "Venue": "B108",
                 "WeekDay": "Monday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "EXR2",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Thursday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Friday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             }
         ],
         "Assessments": [
@@ -2252,8 +2252,8 @@
                 "Description": "Ch.1–3; closed book.",
                 "IsTimed": true,
                 "Date": "2025-07-14",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "B108"
             },
             {
@@ -2269,8 +2269,8 @@
                 "Description": "Short-answer test.",
                 "IsTimed": true,
                 "Date": "2025-08-18",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "EXR2"
             },
             {
@@ -2286,8 +2286,8 @@
                 "Description": "MCQ + short answers.",
                 "IsTimed": true,
                 "Date": "2025-10-06",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "B108"
             },
             {
@@ -2309,26 +2309,26 @@
             {
                 "Venue": "FG",
                 "WeekDay": "Monday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "FG3",
                 "WeekDay": "Wednesday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "FG3",
                 "WeekDay": "Thursday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "FG",
                 "WeekDay": "Friday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             }
         ],
         "Assessments": [
@@ -2337,8 +2337,8 @@
                 "Description": "In-class quiz.",
                 "IsTimed": true,
                 "Date": "2025-07-15",
-                "StartTime": "11:30:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "FG"
             },
             {
@@ -2354,8 +2354,8 @@
                 "Description": "Short test.",
                 "IsTimed": true,
                 "Date": "2025-08-19",
-                "StartTime": "13:00:00",
-                "EndTime": "13:30:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "FG3"
             },
             {
@@ -2371,8 +2371,8 @@
                 "Description": "Notebook assessment.",
                 "IsTimed": true,
                 "Date": "2025-10-10",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "FG3"
             },
             {
@@ -2394,26 +2394,26 @@
             {
                 "Venue": "EXR2",
                 "WeekDay": "Monday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "Lab-3",
                 "WeekDay": "Wednesday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "Lab-3",
                 "WeekDay": "Thursday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "EXR2",
                 "WeekDay": "Friday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             }
         ],
         "Assessments": [
@@ -2422,8 +2422,8 @@
                 "Description": "Kinematics & dynamics.",
                 "IsTimed": true,
                 "Date": "2025-07-22",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "EXR2"
             },
             {
@@ -2439,8 +2439,8 @@
                 "Description": "In-lab practical.",
                 "IsTimed": true,
                 "Date": "2025-08-21",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00",
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00",
                 "Venue": "Lab-3"
             },
             {
@@ -2456,8 +2456,8 @@
                 "Description": "Coverage Weeks 1–10.",
                 "IsTimed": true,
                 "Date": "2025-10-17",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "EXR2"
             },
             {
@@ -2479,26 +2479,26 @@
             {
                 "Venue": "B108",
                 "WeekDay": "Monday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Wednesday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Thursday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Friday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             }
         ],
         "Assessments": [
@@ -2507,8 +2507,8 @@
                 "Description": "Short-answer.",
                 "IsTimed": true,
                 "Date": "2025-07-23",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "B108"
             },
             {
@@ -2524,8 +2524,8 @@
                 "Description": "Ch.4–6.",
                 "IsTimed": true,
                 "Date": "2025-08-20",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "B108"
             },
             {
@@ -2541,8 +2541,8 @@
                 "Description": "In-class.",
                 "IsTimed": true,
                 "Date": "2025-10-15",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "B108"
             },
             {
@@ -2564,26 +2564,26 @@
             {
                 "Venue": "B108",
                 "WeekDay": "Monday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Wednesday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "Lab A",
                 "WeekDay": "Thursday",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00"
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Friday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             }
         ],
         "Assessments": [
@@ -2592,8 +2592,8 @@
                 "Description": "DW/OLAP basics.",
                 "IsTimed": true,
                 "Date": "2025-07-24",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "B108"
             },
             {
@@ -2609,8 +2609,8 @@
                 "Description": "Hands-on ETL.",
                 "IsTimed": true,
                 "Date": "2025-08-21",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00",
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00",
                 "Venue": "Lab A"
             },
             {
@@ -2626,8 +2626,8 @@
                 "Description": "Star/Snowflake.",
                 "IsTimed": true,
                 "Date": "2025-10-16",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "B108"
             },
             {
@@ -2649,26 +2649,26 @@
             {
                 "Venue": "B108",
                 "WeekDay": "Monday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Wednesday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "Lab A",
                 "WeekDay": "Thursday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Friday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             }
         ],
         "Assessments": [
@@ -2677,8 +2677,8 @@
                 "Description": "B-Tree/Hash.",
                 "IsTimed": true,
                 "Date": "2025-07-28",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "B108"
             },
             {
@@ -2694,8 +2694,8 @@
                 "Description": "ACID/Isolation lab.",
                 "IsTimed": true,
                 "Date": "2025-08-28",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "Lab A"
             },
             {
@@ -2711,8 +2711,8 @@
                 "Description": "Comparative concepts.",
                 "IsTimed": true,
                 "Date": "2025-10-20",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "B108"
             },
             {
@@ -2734,26 +2734,26 @@
             {
                 "Venue": "B108",
                 "WeekDay": "Monday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Wednesday",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00"
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00"
             },
             {
                 "Venue": "Lab B",
                 "WeekDay": "Thursday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "B108",
                 "WeekDay": "Friday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             }
         ],
         "Assessments": [
@@ -2762,8 +2762,8 @@
                 "Description": "Kimball vs Inmon.",
                 "IsTimed": true,
                 "Date": "2025-07-29",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "B108"
             },
             {
@@ -2779,8 +2779,8 @@
                 "Description": "In-lab ETL.",
                 "IsTimed": true,
                 "Date": "2025-08-29",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "Lab B"
             },
             {
@@ -2796,8 +2796,8 @@
                 "Description": "Roll-up & drill-down.",
                 "IsTimed": true,
                 "Date": "2025-10-21",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00",
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00",
                 "Venue": "B108"
             },
             {
@@ -2819,26 +2819,26 @@
             {
                 "Venue": "C1",
                 "WeekDay": "Monday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "C1",
                 "WeekDay": "Wednesday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "C1",
                 "WeekDay": "Thursday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "C1",
                 "WeekDay": "Friday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             }
         ],
         "Assessments": [
@@ -2847,8 +2847,8 @@
                 "Description": "Production rules.",
                 "IsTimed": true,
                 "Date": "2025-07-30",
-                "StartTime": "13:15:00",
-                "EndTime": "13:45:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "C1"
             },
             {
@@ -2864,8 +2864,8 @@
                 "Description": "Frames/ontologies.",
                 "IsTimed": true,
                 "Date": "2025-08-22",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "C1"
             },
             {
@@ -2881,8 +2881,8 @@
                 "Description": "KB shell lab.",
                 "IsTimed": true,
                 "Date": "2025-10-24",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "C1"
             },
             {
@@ -2904,26 +2904,26 @@
             {
                 "Venue": "C2",
                 "WeekDay": "Monday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "C2",
                 "WeekDay": "Wednesday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "C2",
                 "WeekDay": "Thursday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "C2",
                 "WeekDay": "Friday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             }
         ],
         "Assessments": [
@@ -2932,8 +2932,8 @@
                 "Description": "IS types & strategy.",
                 "IsTimed": true,
                 "Date": "2025-07-21",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "C2"
             },
             {
@@ -2949,8 +2949,8 @@
                 "Description": "Enterprise systems overview.",
                 "IsTimed": true,
                 "Date": "2025-08-25",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "C2"
             },
             {
@@ -2966,8 +2966,8 @@
                 "Description": "COBIT/ITIL basics.",
                 "IsTimed": true,
                 "Date": "2025-10-20",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "C2"
             },
             {
@@ -2989,26 +2989,26 @@
             {
                 "Venue": "C3",
                 "WeekDay": "Monday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "C3",
                 "WeekDay": "Wednesday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "C3",
                 "WeekDay": "Thursday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "C3",
                 "WeekDay": "Friday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             }
         ],
         "Assessments": [
@@ -3017,8 +3017,8 @@
                 "Description": "Scope/time/cost.",
                 "IsTimed": true,
                 "Date": "2025-07-22",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "C3"
             },
             {
@@ -3034,8 +3034,8 @@
                 "Description": "Quiz on PMBOK areas.",
                 "IsTimed": true,
                 "Date": "2025-08-26",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "C3"
             },
             {
@@ -3051,8 +3051,8 @@
                 "Description": "Sprint planning exercise.",
                 "IsTimed": true,
                 "Date": "2025-10-22",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00",
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00",
                 "Venue": "C3"
             },
             {
@@ -3074,26 +3074,26 @@
             {
                 "Venue": "C4",
                 "WeekDay": "Monday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "C4",
                 "WeekDay": "Wednesday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "Lab B",
                 "WeekDay": "Thursday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "C4",
                 "WeekDay": "Friday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             }
         ],
         "Assessments": [
@@ -3102,8 +3102,8 @@
                 "Description": "Models & data for decisions.",
                 "IsTimed": true,
                 "Date": "2025-07-23",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "C4"
             },
             {
@@ -3119,8 +3119,8 @@
                 "Description": "Optimization with tools.",
                 "IsTimed": true,
                 "Date": "2025-08-27",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "Lab B"
             },
             {
@@ -3136,8 +3136,8 @@
                 "Description": "Multi-criteria decision analysis.",
                 "IsTimed": true,
                 "Date": "2025-10-23",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "C4"
             },
             {
@@ -3159,26 +3159,26 @@
             {
                 "Venue": "SEC-101",
                 "WeekDay": "Monday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "SEC-101",
                 "WeekDay": "Wednesday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "Lab C",
                 "WeekDay": "Thursday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "SEC-101",
                 "WeekDay": "Friday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             }
         ],
         "Assessments": [
@@ -3187,8 +3187,8 @@
                 "Description": "Foundations of InfoSec.",
                 "IsTimed": true,
                 "Date": "2025-07-24",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "SEC-101"
             },
             {
@@ -3204,8 +3204,8 @@
                 "Description": "Hashing & symmetric crypto.",
                 "IsTimed": true,
                 "Date": "2025-08-28",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00",
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00",
                 "Venue": "Lab C"
             },
             {
@@ -3221,8 +3221,8 @@
                 "Description": "Firewalls/IDS/Zero Trust.",
                 "IsTimed": true,
                 "Date": "2025-10-27",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "SEC-101"
             },
             {
@@ -3244,26 +3244,26 @@
             {
                 "Venue": "UX-201",
                 "WeekDay": "Monday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "UX-201",
                 "WeekDay": "Wednesday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "UX-Lab",
                 "WeekDay": "Thursday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "UX-201",
                 "WeekDay": "Friday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             }
         ],
         "Assessments": [
@@ -3272,8 +3272,8 @@
                 "Description": "Heuristics & affordances.",
                 "IsTimed": true,
                 "Date": "2025-07-25",
-                "StartTime": "10:00:00",
-                "EndTime": "10:30:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "UX-201"
             },
             {
@@ -3289,8 +3289,8 @@
                 "Description": "In-class evaluation.",
                 "IsTimed": true,
                 "Date": "2025-08-29",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "UX-Lab"
             },
             {
@@ -3306,8 +3306,8 @@
                 "Description": "Metrics & experiments.",
                 "IsTimed": true,
                 "Date": "2025-10-24",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "UX-201"
             },
             {
@@ -3329,26 +3329,26 @@
             {
                 "Venue": "ETH-1",
                 "WeekDay": "Monday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "ETH-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "ETH-1",
                 "WeekDay": "Thursday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "ETH-1",
                 "WeekDay": "Friday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             }
         ],
         "Assessments": [
@@ -3357,8 +3357,8 @@
                 "Description": "Utilitarianism, deontology, virtue.",
                 "IsTimed": true,
                 "Date": "2025-07-28",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "ETH-1"
             },
             {
@@ -3374,8 +3374,8 @@
                 "Description": "Short-answer test.",
                 "IsTimed": true,
                 "Date": "2025-08-25",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "ETH-1"
             },
             {
@@ -3391,8 +3391,8 @@
                 "Description": "In-class, timed debate notes.",
                 "IsTimed": true,
                 "Date": "2025-10-27",
-                "StartTime": "09:30:00",
-                "EndTime": "10:30:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "ETH-1"
             },
             {
@@ -3414,26 +3414,26 @@
             {
                 "Venue": "ALG-201",
                 "WeekDay": "Monday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "ALG-201",
                 "WeekDay": "Wednesday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "ALG-201",
                 "WeekDay": "Thursday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "ALG-201",
                 "WeekDay": "Friday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             }
         ],
         "Assessments": [
@@ -3442,8 +3442,8 @@
                 "Description": "Big-O/Ω/Θ basics.",
                 "IsTimed": true,
                 "Date": "2025-07-29",
-                "StartTime": "12:15:00",
-                "EndTime": "12:45:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "ALG-201"
             },
             {
@@ -3459,8 +3459,8 @@
                 "Description": "Short-answer test.",
                 "IsTimed": true,
                 "Date": "2025-08-26",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "ALG-201"
             },
             {
@@ -3476,8 +3476,8 @@
                 "Description": "Reductions practice.",
                 "IsTimed": true,
                 "Date": "2025-10-28",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00",
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00",
                 "Venue": "ALG-201"
             },
             {
@@ -3499,26 +3499,26 @@
             {
                 "Venue": "AUTO-1",
                 "WeekDay": "Monday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "AUTO-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "AUTO-1",
                 "WeekDay": "Thursday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "AUTO-1",
                 "WeekDay": "Friday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             }
         ],
         "Assessments": [
@@ -3527,8 +3527,8 @@
                 "Description": "Formal languages basics.",
                 "IsTimed": true,
                 "Date": "2025-07-30",
-                "StartTime": "10:00:00",
-                "EndTime": "10:30:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "AUTO-1"
             },
             {
@@ -3544,8 +3544,8 @@
                 "Description": "Short-answer test.",
                 "IsTimed": true,
                 "Date": "2025-08-26",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "AUTO-1"
             },
             {
@@ -3561,8 +3561,8 @@
                 "Description": "P, NP, co-NP overview.",
                 "IsTimed": true,
                 "Date": "2025-10-28",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "AUTO-1"
             },
             {
@@ -3584,26 +3584,26 @@
             {
                 "Venue": "NET-2",
                 "WeekDay": "Monday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "NET-2",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "Lab N",
                 "WeekDay": "Thursday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "NET-2",
                 "WeekDay": "Friday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             }
         ],
         "Assessments": [
@@ -3612,8 +3612,8 @@
                 "Description": "AIMD & fairness.",
                 "IsTimed": true,
                 "Date": "2025-07-29",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "NET-2"
             },
             {
@@ -3629,8 +3629,8 @@
                 "Description": "Mininet practical.",
                 "IsTimed": true,
                 "Date": "2025-08-29",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "Lab N"
             },
             {
@@ -3646,8 +3646,8 @@
                 "Description": "PHY/MAC concepts.",
                 "IsTimed": true,
                 "Date": "2025-10-29",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "NET-2"
             },
             {
@@ -3669,26 +3669,26 @@
             {
                 "Venue": "SE-101",
                 "WeekDay": "Monday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "SE-101",
                 "WeekDay": "Wednesday",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00"
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00"
             },
             {
                 "Venue": "SE-101",
                 "WeekDay": "Thursday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "SE-101",
                 "WeekDay": "Friday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             }
         ],
         "Assessments": [
@@ -3697,8 +3697,8 @@
                 "Description": "Principles & examples.",
                 "IsTimed": true,
                 "Date": "2025-07-31",
-                "StartTime": "09:15:00",
-                "EndTime": "09:45:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "SE-101"
             },
             {
@@ -3714,8 +3714,8 @@
                 "Description": "GoF basics.",
                 "IsTimed": true,
                 "Date": "2025-08-27",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "SE-101"
             },
             {
@@ -3731,8 +3731,8 @@
                 "Description": "Structural/Behavioral focus.",
                 "IsTimed": true,
                 "Date": "2025-10-30",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00",
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00",
                 "Venue": "SE-101"
             },
             {
@@ -3754,26 +3754,26 @@
             {
                 "Venue": "WEB-1",
                 "WeekDay": "Monday",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00"
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00"
             },
             {
                 "Venue": "WEB-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "Lab W",
                 "WeekDay": "Thursday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "WEB-1",
                 "WeekDay": "Friday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             }
         ],
         "Assessments": [
@@ -3782,8 +3782,8 @@
                 "Description": "Web protocols & APIs.",
                 "IsTimed": true,
                 "Date": "2025-08-01",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "WEB-1"
             },
             {
@@ -3799,8 +3799,8 @@
                 "Description": "Routing + state.",
                 "IsTimed": true,
                 "Date": "2025-08-28",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00",
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00",
                 "Venue": "Lab W"
             },
             {
@@ -3816,8 +3816,8 @@
                 "Description": "WebSocket/EventSource.",
                 "IsTimed": true,
                 "Date": "2025-10-31",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "WEB-1"
             },
             {
@@ -3839,26 +3839,26 @@
             {
                 "Venue": "CODE-1",
                 "WeekDay": "Monday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "CODE-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "CODE-1",
                 "WeekDay": "Thursday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "CODE-1",
                 "WeekDay": "Friday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             }
         ],
         "Assessments": [
@@ -3867,8 +3867,8 @@
                 "Description": "Generics, lambdas.",
                 "IsTimed": true,
                 "Date": "2025-08-05",
-                "StartTime": "08:15:00",
-                "EndTime": "08:45:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "CODE-1"
             },
             {
@@ -3884,8 +3884,8 @@
                 "Description": "Threads, tasks, sync.",
                 "IsTimed": true,
                 "Date": "2025-09-02",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "CODE-1"
             },
             {
@@ -3901,8 +3901,8 @@
                 "Description": "Performance tuning lab.",
                 "IsTimed": true,
                 "Date": "2025-10-30",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "CODE-1"
             },
             {
@@ -3924,26 +3924,26 @@
             {
                 "Venue": "CODE-2",
                 "WeekDay": "Monday",
-                "StartTime": "16:00:00",
-                "EndTime": "17:00:00"
+                "StartTime": "16:10:00",
+                "EndTime": "17:10:00"
             },
             {
                 "Venue": "CODE-2",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "CODE-2",
                 "WeekDay": "Thursday",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00"
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00"
             },
             {
                 "Venue": "CODE-2",
                 "WeekDay": "Friday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             }
         ],
         "Assessments": [
@@ -3952,8 +3952,8 @@
                 "Description": "Functional patterns.",
                 "IsTimed": true,
                 "Date": "2025-08-06",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "CODE-2"
             },
             {
@@ -3969,8 +3969,8 @@
                 "Description": "Reactive stream pipeline.",
                 "IsTimed": true,
                 "Date": "2025-09-04",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00",
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00",
                 "Venue": "CODE-2"
             },
             {
@@ -3986,8 +3986,8 @@
                 "Description": "Tuning & leaks.",
                 "IsTimed": true,
                 "Date": "2025-10-31",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "CODE-2"
             },
             {
@@ -4009,26 +4009,26 @@
             {
                 "Venue": "DF-1",
                 "WeekDay": "Monday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             },
             {
                 "Venue": "DF-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00"
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00"
             },
             {
                 "Venue": "Lab F",
                 "WeekDay": "Thursday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "DF-1",
                 "WeekDay": "Friday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             }
         ],
         "Assessments": [
@@ -4037,8 +4037,8 @@
                 "Description": "Procedures & evidence.",
                 "IsTimed": true,
                 "Date": "2025-08-07",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "DF-1"
             },
             {
@@ -4054,8 +4054,8 @@
                 "Description": "Recover deleted files.",
                 "IsTimed": true,
                 "Date": "2025-09-05",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "Lab F"
             },
             {
@@ -4071,8 +4071,8 @@
                 "Description": "Acquisition & analysis.",
                 "IsTimed": true,
                 "Date": "2025-10-31",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "DF-1"
             },
             {
@@ -4094,26 +4094,26 @@
             {
                 "Venue": "NET-1",
                 "WeekDay": "Monday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "NET-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "Lab N",
                 "WeekDay": "Thursday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "NET-1",
                 "WeekDay": "Friday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             }
         ],
         "Assessments": [
@@ -4122,8 +4122,8 @@
                 "Description": "Monitoring foundations.",
                 "IsTimed": true,
                 "Date": "2025-08-04",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "NET-1"
             },
             {
@@ -4139,8 +4139,8 @@
                 "Description": "Parsing & alerts.",
                 "IsTimed": true,
                 "Date": "2025-09-04",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "Lab N"
             },
             {
@@ -4156,8 +4156,8 @@
                 "Description": "Cases & metrics.",
                 "IsTimed": true,
                 "Date": "2025-10-27",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "NET-1"
             },
             {
@@ -4179,26 +4179,26 @@
             {
                 "Venue": "AN-1",
                 "WeekDay": "Monday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             },
             {
                 "Venue": "AN-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "Lab A",
                 "WeekDay": "Thursday",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00"
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00"
             },
             {
                 "Venue": "AN-1",
                 "WeekDay": "Friday",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00"
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00"
             }
         ],
         "Assessments": [
@@ -4207,8 +4207,8 @@
                 "Description": "Data wrangling basics.",
                 "IsTimed": true,
                 "Date": "2025-08-05",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "AN-1"
             },
             {
@@ -4224,8 +4224,8 @@
                 "Description": "Charts & EDA.",
                 "IsTimed": true,
                 "Date": "2025-09-04",
-                "StartTime": "15:00:00",
-                "EndTime": "16:00:00",
+                "StartTime": "15:10:00",
+                "EndTime": "16:10:00",
                 "Venue": "Lab A"
             },
             {
@@ -4241,8 +4241,8 @@
                 "Description": "LP/gradient basics.",
                 "IsTimed": true,
                 "Date": "2025-10-30",
-                "StartTime": "08:00:00",
-                "EndTime": "09:00:00",
+                "StartTime": "08:10:00",
+                "EndTime": "09:10:00",
                 "Venue": "AN-1"
             },
             {
@@ -4264,26 +4264,26 @@
             {
                 "Venue": "DS-1",
                 "WeekDay": "Monday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "DS-1",
                 "WeekDay": "Wednesday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "Lab DS",
                 "WeekDay": "Thursday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "DS-1",
                 "WeekDay": "Friday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             }
         ],
         "Assessments": [
@@ -4292,8 +4292,8 @@
                 "Description": "Estimation & tests.",
                 "IsTimed": true,
                 "Date": "2025-08-06",
-                "StartTime": "09:15:00",
-                "EndTime": "09:45:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "DS-1"
             },
             {
@@ -4309,8 +4309,8 @@
                 "Description": "Cross-val & metrics.",
                 "IsTimed": true,
                 "Date": "2025-09-05",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "Lab DS"
             },
             {
@@ -4326,8 +4326,8 @@
                 "Description": "Ensembles & kernels.",
                 "IsTimed": true,
                 "Date": "2025-10-31",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "DS-1"
             },
             {
@@ -4349,26 +4349,26 @@
             {
                 "Venue": "B109",
                 "WeekDay": "Monday",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00"
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00"
             },
             {
                 "Venue": "B109",
                 "WeekDay": "Wednesday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "B109",
                 "WeekDay": "Thursday",
-                "StartTime": "13:00:00",
-                "EndTime": "14:00:00"
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00"
             },
             {
                 "Venue": "B109",
                 "WeekDay": "Friday",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00"
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00"
             }
         ],
         "Assessments": [
@@ -4377,8 +4377,8 @@
                 "Description": "Short-answer.",
                 "IsTimed": true,
                 "Date": "2025-08-07",
-                "StartTime": "12:00:00",
-                "EndTime": "13:00:00",
+                "StartTime": "12:10:00",
+                "EndTime": "13:10:00",
                 "Venue": "B109"
             },
             {
@@ -4394,8 +4394,8 @@
                 "Description": "Ch.4–6.",
                 "IsTimed": true,
                 "Date": "2025-09-04",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00",
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00",
                 "Venue": "B109"
             },
             {
@@ -4411,8 +4411,8 @@
                 "Description": "In-class.",
                 "IsTimed": true,
                 "Date": "2025-10-30",
-                "StartTime": "11:00:00",
-                "EndTime": "12:00:00",
+                "StartTime": "11:10:00",
+                "EndTime": "12:10:00",
                 "Venue": "B109"
             },
             {
@@ -4434,26 +4434,26 @@
             {
                 "Venue": "EXR1",
                 "WeekDay": "Monday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             },
             {
                 "Venue": "STABILIS",
                 "WeekDay": "Wednesday",
-                "StartTime": "10:00:00",
-                "EndTime": "11:00:00"
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00"
             },
             {
                 "Venue": "ResearchHub",
                 "WeekDay": "Thursday",
-                "StartTime": "14:00:00",
-                "EndTime": "15:00:00"
+                "StartTime": "14:10:00",
+                "EndTime": "15:10:00"
             },
             {
                 "Venue": "EXR1",
                 "WeekDay": "Friday",
-                "StartTime": "09:00:00",
-                "EndTime": "10:00:00"
+                "StartTime": "09:10:00",
+                "EndTime": "10:10:00"
             }
         ],
         "Assessments": [
@@ -4470,8 +4470,8 @@
                 "Description": "Study design basics.",
                 "IsTimed": true,
                 "Date": "2025-04-08",
-                "StartTime": "10:00:00",
-                "EndTime": "10:30:00",
+                "StartTime": "10:10:00",
+                "EndTime": "11:10:00",
                 "Venue": "STABILIS"
             },
             {
@@ -4503,8 +4503,8 @@
                 "Description": "Presentation + Q&A.",
                 "IsTimed": true,
                 "Date": "2025-11-18",
-                "StartTime": "13:00:00",
-                "EndTime": "14:30:00",
+                "StartTime": "13:10:00",
+                "EndTime": "14:10:00",
                 "Venue": "EXR1"
             }
         ]

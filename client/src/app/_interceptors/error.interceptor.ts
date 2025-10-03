@@ -26,7 +26,7 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
             }
             break;
           case 401:
-            // ✅ Suppress toast only for login endpoint
+            //   Suppress toast only for login endpoint
             if (!req.url.includes('/account/login')) {
               toastr.error('Unauthorised', error.status);
             }

@@ -7,7 +7,7 @@ namespace API.DTOs
         public int Id { get; set; }
         public string Title { get; set; } = string.Empty;
 
-        // ✅ New: optional description
+        //   New: optional description
         public string? Description { get; set; }
 
         public string Date { get; set; } = string.Empty;

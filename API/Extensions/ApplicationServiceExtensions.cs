@@ -18,7 +18,7 @@ public static class ApplicationServiceExtensions
         services.AddCors();
         services.AddControllers();
 
-        // ✅ Register AutoMapper
+        //   Register AutoMapper
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
         // Core Services
@@ -28,7 +28,7 @@ public static class ApplicationServiceExtensions
         services.AddScoped<INotificationService, NotificationService>();
         services.AddScoped<ILabBookingService, LabBookingService>();
         services.AddScoped<ISchedulerService, SchedulerService>();
-        services.AddScoped<IRepositoryService, RepositoryService>(); // ✅ NEW
+        services.AddScoped<IRepositoryService, RepositoryService>(); //   NEW
 
         // Cloudinary
         services.Configure<CloudinarySettings>(config.GetSection("CloudinarySettings"));

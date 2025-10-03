@@ -14,11 +14,11 @@ namespace API.DTOs
         public string[]? StartTimes { get; set; }
         public string[]? EndTimes { get; set; }
 
-        // ✅ New
+        //   New
         public List<ClassSessionDto>? ClassSessions { get; set; }
         public List<AssessmentDto>? Assessments { get; set; }
 
-        // ✅ NEW: allow toggling Year module explicitly from UI
+        //   NEW: allow toggling Year module explicitly from UI
         public bool? IsYearModule { get; set; } // true => Semester=0, false => requires Semester 1 or 2
     }
 }

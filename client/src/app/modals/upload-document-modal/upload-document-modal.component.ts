@@ -1,7 +1,7 @@
 import {
   Component, EventEmitter, Output, Input,
   OnInit, OnChanges, SimpleChanges,
-  AfterViewInit, OnDestroy, ElementRef
+  AfterViewInit, OnDestroy, ElementRef, ViewChild
 } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DocumentService } from '../../_services/document.service';
@@ -22,6 +22,8 @@ export class UploadDocumentModalComponent implements OnInit, OnChanges, AfterVie
   @Input() formData!: { source: 'Module' | 'Repository'; moduleId: number | null };
   @Output() onUpload = new EventEmitter<void>();
 
+  @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>;
+
   uploadForm: FormGroup;
 
   private originalHide!: () => void;
@@ -31,6 +33,17 @@ export class UploadDocumentModalComponent implements OnInit, OnChanges, AfterVie
   private modalEl: HTMLElement | null = null;
   private backdropCapture?: (ev: MouseEvent) => void;
   private escCapture?: (ev: KeyboardEvent) => void;
+
+  // Allowed types (front-end validation)
+  private readonly allowedExts = new Set<string>(['.pdf', '.docx', '.ppt', '.xlsx', '.txt']);
+  private readonly allowedMimes: Record<string, string> = {
+    '.pdf': 'application/pdf',
+    '.docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    '.ppt': 'application/vnd.ms-powerpoint',
+    '.xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    '.txt': 'text/plain'
+  };
+  fileTypeError: string | null = null;
 
   constructor(
     private fb: FormBuilder,
@@ -126,15 +139,71 @@ export class UploadDocumentModalComponent implements OnInit, OnChanges, AfterVie
     this.originalHide();
   }
 
+  private validateSelectedFile(file: File): string | null {
+    const name = file.name || '';
+    const ext = (name.substring(name.lastIndexOf('.')).toLowerCase()) || '';
+    const mime = file.type || '';
+
+    if (!this.allowedExts.has(ext)) {
+      return 'Unsupported file type. Allowed: PDF, DOCX, PPT, XLSX, TXT.';
+    }
+
+    const expectedMime = this.allowedMimes[ext];
+    // Enforce exact MIME match for allow-list (defensive, consistent with API)
+    if (mime !== expectedMime) {
+      return 'Unsupported file type. Allowed: PDF, DOCX, PPT, XLSX, TXT.';
+    }
+
+    return null;
+  }
+
   onFileSelected(event: Event) {
     const input = event.target as HTMLInputElement;
     const file = input.files?.[0];
-    if (file) this.uploadForm.get('file')?.setValue(file);
+
+    if (!file) {
+      this.fileTypeError = null;
+      this.uploadForm.get('file')?.setValue(null);
+      this.uploadForm.get('file')?.updateValueAndValidity();
+      return;
+    }
+
+    const error = this.validateSelectedFile(file);
+    if (error) {
+      // Invalid: clear input, set control error, toast, inline message
+      this.fileTypeError = error;
+      this.uploadForm.get('file')?.setErrors({ invalidType: true });
+      this.uploadForm.get('file')?.markAsTouched();
+      this.uploadForm.get('file')?.updateValueAndValidity();
+      if (this.fileInput?.nativeElement) {
+        this.fileInput.nativeElement.value = '';
+      }
+      this.toastr.error('Unsupported file type. Allowed: PDF, DOCX, PPT, XLSX, TXT.');
+      return;
+    }
+
+    // Valid
+    this.fileTypeError = null;
+    this.uploadForm.get('file')?.setValue(file);
+    // preserve required validator; clear invalidType error only
+    const currentErrors = this.uploadForm.get('file')?.errors || {};
+    delete currentErrors['invalidType'];
+    if (Object.keys(currentErrors).length === 0) {
+      this.uploadForm.get('file')?.setErrors(null);
+    } else {
+      this.uploadForm.get('file')?.setErrors(currentErrors);
+    }
+    this.uploadForm.get('file')?.updateValueAndValidity();
   }
 
   upload() {
     if (this.uploadForm.invalid) {
-      this.toastr.error('Please fill in all required fields.');
+      // if specific file error, surface it; else generic required
+      if (this.fileTypeError) {
+        this.toastr.error(this.fileTypeError);
+      } else {
+        this.toastr.error('Please fill in all required fields.');
+      }
       return;
     }
 
@@ -168,7 +237,12 @@ export class UploadDocumentModalComponent implements OnInit, OnChanges, AfterVie
       },
       error: (err) => {
         console.error('Upload error:', err);
-        this.toastr.error(err?.error || 'Upload failed. Please try again.');
+        // Show specific message if API sent one
+        const msg =
+          (typeof err?.error === 'string' && err.error) ||
+          err?.error?.message ||
+          'Upload failed. Please try again.';
+        this.toastr.error(msg);
       }
     });
   }

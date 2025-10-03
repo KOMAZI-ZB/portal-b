@@ -12,7 +12,7 @@ public class LabBookingDto
     public DateOnly BookingDate { get; set; }
     public string? Description { get; set; }
 
-    // ✅ NEW (for display)
+    //   NEW (for display)
     public string? FirstName { get; set; }
     public string? LastName { get; set; }
 }

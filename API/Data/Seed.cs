@@ -50,7 +50,7 @@ public class Seed
                 var userNameTrimmed = dto.UserName?.Trim();
                 var emailLower = dto.Email?.Trim().ToLowerInvariant();
 
-                // ✅ Ensure UserName and Email are not null/empty; skip invalid seed rows
+                //   Ensure UserName and Email are not null/empty; skip invalid seed rows
                 if (string.IsNullOrWhiteSpace(userNameTrimmed) || string.IsNullOrWhiteSpace(emailLower))
                     continue;
 
@@ -58,7 +58,7 @@ public class Seed
                 {
                     FirstName = dto.FirstName,
                     LastName = dto.LastName,
-                    UserName = userNameTrimmed,                              // ✅ never null
+                    UserName = userNameTrimmed,                              //   never null
                     Email = emailLower,
                     NormalizedEmail = emailLower.ToUpperInvariant(),
                     NormalizedUserName = userNameTrimmed.ToUpperInvariant(),

@@ -8,7 +8,7 @@ public class UserDto
     public string Email { get; set; } = string.Empty;
     public string Token { get; set; } = string.Empty;
     public string[] Roles { get; set; } = Array.Empty<string>();
-    public DateOnly? JoinDate { get; set; } // ✅ Added JoinDate
+    public DateOnly? JoinDate { get; set; } //   Added JoinDate
 
-    public List<ModuleDto> Modules { get; set; } = new(); // ✅ Use existing ModuleDto
+    public List<ModuleDto> Modules { get; set; } = new(); //   Use existing ModuleDto
 }

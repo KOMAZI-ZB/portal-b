@@ -8,11 +8,14 @@ import { AccountService } from '../_services/account.service';
 import { Pagination } from '../_models/pagination';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { ConfirmDeleteModalComponent } from '../modals/confirm-delete-modal/confirm-delete-modal.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @Component({
   selector: 'app-notifications',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, BsDropdownModule],
   templateUrl: './notifications.component.html',
   styleUrls: ['./notifications.component.css']
 })
@@ -39,7 +42,8 @@ export class NotificationsComponent implements OnInit {
     private notificationService: NotificationService,
     private modalService: BsModalService,
     private accountService: AccountService,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -98,8 +102,20 @@ export class NotificationsComponent implements OnInit {
     this.bsModalRef.onHidden?.subscribe(() => this.loadNotifications());
   }
 
-  formatBadgeLabel(type: string): string {
+  /** Render the blue badge/label at the top-left of the card.
+   *  Special rule: FAQ auto items and FaqUpdate type show "FAQ UPDATE NOTIFICATION". */
+  formatBadgeLabel(type: string, title?: string): string {
     const t = (type || '').toLowerCase();
+    const titleLc = (title || '').toLowerCase();
+
+    const looksLikeLegacyFaqAuto =
+      t === 'general' &&
+      (titleLc.startsWith('new faq announcement') || titleLc.startsWith('faq updated announcement'));
+
+    if (t === 'faqupdate' || looksLikeLegacyFaqAuto) {
+      return 'FAQ UPDATE NOTIFICATION';
+    }
+
     const readable = (type || '').replace(/([a-z])([A-Z])/g, '$1 $2').toUpperCase();
     const isAnnouncement = t === 'general' || t === 'system';
     return isAnnouncement ? `${readable} ANNOUNCEMENT` : `${readable} NOTIFICATION`;
@@ -150,23 +166,43 @@ export class NotificationsComponent implements OnInit {
     this.isZoomed = !this.isZoomed;
   }
 
-  // ======= NEW: Auto-click logic + deep-links =======
+  // ======= Auto-click logic + deep-links =======
 
   private lc(s?: string | null): string { return (s || '').toLowerCase(); }
 
-  /** Only auto-triggered items are interactive; manual System/General remain non-clickable.
-   *  Auto = DocumentUpload, RepositoryUpdate, ScheduleUpdate/SchedulerUpdate,
-   *  and FAQ auto-announcements (General with specific titles). */
-  isAutoInteractive(n: Notification): boolean {
+  /** Recognize legacy FAQ auto announcements (General with specific titles) */
+  private isLegacyFaqAuto(n: Notification): boolean {
     const t = this.lc(n.type);
-    if (t === 'documentupload' || t === 'repositoryupdate' || t === 'scheduleupdate' || t === 'schedulerupdate') {
-      return true;
+    const title = this.lc(n.title);
+    return t === 'general' && (title.startsWith('new faq announcement') || title.startsWith('faq updated announcement'));
+  }
+
+  /** Centralized rule for whether the current user may navigate from a card. */
+  private canNavigate(n: Notification, role: string): boolean {
+    if (role === 'Admin') {
+      const t = this.lc(n.type);
+      const isSchedule = t === 'scheduleupdate' || t === 'schedulerupdate';
+      const isModuleRelated = t === 'documentupload' || t === 'moduleupdate' || n.moduleId != null;
+      if (isSchedule || isModuleRelated) return false; // Admins: not clickable for module/schedule items
     }
-    if (t === 'general') {
-      const title = this.lc(n.title);
-      // These General items are auto posted by the system (FAQ create/update)
-      return title.startsWith('new faq announcement') || title.startsWith('faq updated announcement');
-    }
+    return true;
+  }
+
+  /** Role-aware card interactivity. */
+  isAutoInteractive(n: Notification): boolean {
+    if (!this.canNavigate(n, this.currentUserRole)) return false;
+
+    const t = this.lc(n.type);
+
+    // Always clickable:
+    if (t === 'repositoryupdate' || t === 'faqupdate' || this.isLegacyFaqAuto(n)) return true;
+
+    // ModuleUpdate: clickable for non-admin users → lands on Modules page
+    if (t === 'moduleupdate' && this.currentUserRole !== 'Admin') return true;
+
+    // Existing types
+    if (t === 'documentupload' || t === 'scheduleupdate' || t === 'schedulerupdate') return true;
+
     return false;
   }
 
@@ -182,6 +218,27 @@ export class NotificationsComponent implements OnInit {
     this.navigateFor(n);
   }
 
+  /** Try to extract module context (e.g., CSIS6809) from title/message. */
+  private extractModuleContext(n: Notification): { code?: string } {
+    const title = (n.title || '').trim();
+    const msg = (n.message || '').trim();
+    const hay = `${title} ${msg}`;
+
+    // 1) [CSIS6809] style
+    const bracket = hay.match(/\[([A-Za-z]{2,}\d{3,})\]/);
+    if (bracket?.[1]) return { code: bracket[1].toUpperCase() };
+
+    // 2) Bare token like CSIS6809
+    const bare = hay.match(/\b[A-Za-z]{2,}\d{3,}\b/);
+    if (bare?.[0]) return { code: bare[0].toUpperCase() };
+
+    // 3) "for CSIS6809" style
+    const forCode = hay.match(/\bfor\s+([A-Za-z]{2,}\d{3,})\b/i);
+    if (forCode?.[1]) return { code: forCode[1].toUpperCase() };
+
+    return {};
+  }
+
   /** Deep-link map to the correct destination based on type/title/moduleId. */
   private navigateFor(n: Notification) {
     const t = this.lc(n.type);
@@ -191,19 +248,19 @@ export class NotificationsComponent implements OnInit {
     // Module document uploads → Courses → [Module] → Documents
     if (t === 'documentupload') {
       if (n.moduleId != null) {
+        const ctx = this.extractModuleContext(n);
         this.router.navigate(['/modules', n.moduleId], {
-          // keep both state and query in case the target component uses either
-          state: { fromNotification: true },
-          queryParams: { from: 'notification', view: 'documents' }
+          state: { fromNotification: true, moduleCode: ctx.code },
+          queryParams: { from: 'notification', view: 'documents', code: ctx.code }
         });
       } else {
-        // Fallback: if no moduleId, send to repository documents
+        // Fallback: repository documents
         this.router.navigate(['/repository'], { state: { view: 'documents' }, queryParams: { view: 'documents' } });
       }
       return;
     }
 
-    // Repository updates → Repository (Documents by default)
+    // Repository updates → Repository
     if (t === 'repositoryupdate') {
       const looksLikeLinks = title.includes('link') || title.includes('external repository') || msg.includes('link');
       const view = looksLikeLinks ? 'links' : 'documents';
@@ -211,12 +268,8 @@ export class NotificationsComponent implements OnInit {
       return;
     }
 
-    // Schedule updates → Scheduler with correct tab preselected
+    // Schedule updates → Scheduler
     if (t === 'scheduleupdate' || t === 'schedulerupdate') {
-      // Heuristics:
-      // - Title mentioning "lab" or ModuleId == null (our lab updates) => lab tab
-      // - Title mentioning "assessment" or "assessments" => assessment tab
-      // - else => class tab
       let tab: 'lab' | 'assessment' | 'class' = 'class';
       if (title.includes('lab')) tab = 'lab';
       else if (title.includes('assessment') || msg.includes('assessment')) tab = 'assessment';
@@ -226,13 +279,54 @@ export class NotificationsComponent implements OnInit {
       return;
     }
 
-    // FAQ auto-announcements (General) → FAQ page
-    if (t === 'general') {
-      const isFaqAuto = title.startsWith('new faq announcement') || title.startsWith('faq updated announcement');
-      if (isFaqAuto) {
-        this.router.navigate(['/faq']);
-      }
+    // FAQ updates (new type) and legacy auto FAQ → FAQ page
+    if (t === 'faqupdate' || this.isLegacyFaqAuto(n)) {
+      this.router.navigate(['/faq']);
       return;
     }
+
+    // Module updates → Modules page (list)
+    if (t === 'moduleupdate') {
+      this.router.navigate(['/modules']);
+      return;
+    }
+  }
+
+  // ======= Owner-only delete for manually posted announcements =======
+
+  /** A "manually posted announcement" = General/System that is NOT an auto item (e.g., not FAQ auto). */
+  private isManualAnnouncement(n: Notification): boolean {
+    const t = this.lc(n.type);
+    return (t === 'general' || t === 'system') && !this.isLegacyFaqAuto(n);
+  }
+
+  /** UI should show Delete only if it's a manual announcement AND the current user is the creator. */
+  canShowDelete(n: Notification): boolean {
+    if (!this.isManualAnnouncement(n)) return false;
+    return (n.createdBy || '').toLowerCase() === this.currentUserName.toLowerCase();
+  }
+
+  openDeleteAnnouncement(n: Notification) {
+    const initialState = {
+      title: 'Delete announcement?',
+      message: 'Are you sure you want to delete this announcement?',
+      onConfirm: () => {
+        this.notificationService.delete(n.id).subscribe({
+          next: () => {
+            this.notifications = this.notifications.filter(x => x.id !== n.id);
+            this.filtered = this.filtered.filter(x => x.id !== n.id);
+            this.toastr.success('Announcement deleted.');
+          },
+          error: (err) => {
+            if (err?.status === 403 || err?.status === 401) {
+              this.toastr.error('You can only delete announcements you posted.');
+            } else {
+              this.toastr.error('Failed to delete announcement.');
+            }
+          }
+        });
+      }
+    };
+    this.modalService.show(ConfirmDeleteModalComponent, { initialState, class: 'modal-dialog-centered' });
   }
 }

@@ -28,7 +28,11 @@ public class NotificationsController : BaseApiController
     private static readonly string[] AllowedTypes = new[]
     {
         "General", "System",
-        "DocumentUpload", "RepositoryUpdate", "SchedulerUpdate", "ScheduleUpdate"
+        "DocumentUpload", "RepositoryUpdate", "SchedulerUpdate", "ScheduleUpdate",
+        // metadata-only module updates
+        "ModuleUpdate",
+        //   allow FAQ update notifications to appear in the feed (non-announcement)
+        "FaqUpdate"
     };
 
     private static readonly string[] AllowedAudiences = new[]

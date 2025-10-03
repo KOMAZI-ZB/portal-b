@@ -43,9 +43,9 @@
     <div class="card-body text-start">
         <!-- Top row: TYPE (left) | centered badges (absolute center) | actions (right) -->
         <div class="d-flex align-items-center justify-content-between card-topbar mb-2">
-            <!-- left: TYPE -->
+            <!-- left: TYPE (shows FAQ UPDATE for FAQ auto items) -->
             <span class="text-uppercase fw-bold text-primary small">
-                {{ formatBadgeLabel(ann.type) }}
+                {{ formatBadgeLabel(ann.type, ann.title) }}
             </span>
 
             <!-- center: Audience + Read/Unread (truly centered) -->
@@ -66,6 +66,21 @@
                 <button *ngIf="ann.isRead" class="btn btn-sm btn-outline-secondary" (click)="markAsUnread(ann)">
                     Mark as unread
                 </button>
+
+                <!-- Owner-only kebab using ngx-bootstrap dropdown -->
+                <div class="btn-group" dropdown *ngIf="canShowDelete(ann)">
+                    <button class="btn btn-sm btn-outline-secondary" dropdownToggle type="button" title="More actions"
+                        (click)="$event.stopPropagation()">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul *dropdownMenu class="dropdown-menu dropdown-menu-end" (click)="$event.stopPropagation()">
+                        <li>
+                            <button class="dropdown-item text-danger" (click)="openDeleteAnnouncement(ann)">
+                                Delete announcement
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 

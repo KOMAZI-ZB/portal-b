@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // ✅ FormsModule for ngModel
+import { FormsModule } from '@angular/forms'; //   FormsModule for ngModel
 import { User } from '../../_models/user';
 
 import { AddUserModalComponent } from '../../modals/add-user-modal/add-user-modal.component';
@@ -13,7 +13,7 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 @Component({
   selector: 'app-user-management',
   standalone: true,
-  imports: [CommonModule, FormsModule], // ✅ FormsModule for ngModel
+  imports: [CommonModule, FormsModule], //   FormsModule for ngModel
   templateUrl: './user-management.component.html',
   styleUrls: ['./user-management.component.css']
 })
@@ -45,7 +45,7 @@ export class UserManagementComponent implements OnInit {
   loadUsers() {
     this.adminService.getAllUsers().subscribe({
       next: users => {
-        this.users = this.applyDefaultUserSort(users);                 // ✅ Default: Surname A→Z
+        this.users = this.applyDefaultUserSort(users);                 //   Default: Surname A→Z
         this.filteredUsers = [...this.users];
       }
     });
@@ -59,7 +59,7 @@ export class UserManagementComponent implements OnInit {
       user.surname.toLowerCase().includes(term) ||
       user.roles.some(role => role.toLowerCase().includes(term))
     );
-    this.filteredUsers = this.applyDefaultUserSort(list);              // ✅ Keep Surname A→Z after filtering
+    this.filteredUsers = this.applyDefaultUserSort(list);              //   Keep Surname A→Z after filtering
   }
 
   trackByUserName(index: number, user: User): string {

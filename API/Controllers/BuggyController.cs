@@ -1,4 +1,4 @@
-// ✅ BuggyController.cs
+//   BuggyController.cs
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

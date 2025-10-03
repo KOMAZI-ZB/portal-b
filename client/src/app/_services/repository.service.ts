@@ -16,7 +16,7 @@ export class RepositoryService {
 
   constructor(private http: HttpClient) { }
 
-  // ✅ Get external academic repositories (paginated)
+  //   Get external academic repositories (paginated)
   getExternalRepositories(pageNumber: number, pageSize: number): Observable<HttpResponse<Repository[]>> {
     const params = setPaginationHeaders(pageNumber, pageSize);
     return this.http.get<Repository[]>(`${this.baseUrl}/external`, {
@@ -25,7 +25,7 @@ export class RepositoryService {
     });
   }
 
-  // ✅ Add a new external repository with optional image upload or fallback
+  //   Add a new external repository with optional image upload or fallback
   addExternalRepository(repo: Repository, useDefault: boolean = false): Observable<Repository> {
     const formData = new FormData();
     formData.append('label', repo.label);
@@ -39,12 +39,12 @@ export class RepositoryService {
     return this.http.post<Repository>(`${this.baseUrl}/external`, formData);
   }
 
-  // ✅ Delete an external repository by ID
+  //   Delete an external repository by ID
   deleteExternalRepository(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/external/${id}`);
   }
 
-  // ✅ Get internal repository documents (paginated)
+  //   Get internal repository documents (paginated)
   getInternalRepositoryDocs(pageNumber: number, pageSize: number): Observable<HttpResponse<Document[]>> {
     const params = setPaginationHeaders(pageNumber, pageSize);
     return this.http.get<Document[]>(`${this.baseUrl}`, {
@@ -53,12 +53,12 @@ export class RepositoryService {
     });
   }
 
-  // ✅ Upload document to internal repository
+  //   Upload document to internal repository
   uploadToRepository(formData: FormData): Observable<Document> {
     return this.http.post<Document>(`${this.baseUrl}/upload`, formData);
   }
 
-  // ✅ Delete document from internal repository
+  //   Delete document from internal repository
   deleteRepositoryDocument(documentId: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${documentId}`);
   }

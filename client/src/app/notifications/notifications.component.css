@@ -64,3 +64,11 @@
     /* blue */
     border-radius: 2px;
 }
+
+/* --- NEW: make dropdown item hover a subtle light grey instead of blue --- */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+    background-color: #f3f3f3 !important;
+    /* light grey */
+    color: inherit;
+}

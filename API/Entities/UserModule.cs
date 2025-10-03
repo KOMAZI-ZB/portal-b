@@ -8,5 +8,5 @@ public class UserModule
     public int ModuleId { get; set; }
     public Module Module { get; set; } = null!;
 
-    public string RoleContext { get; set; } = string.Empty; // ✅ Added for per-module role tracking
+    public string RoleContext { get; set; } = string.Empty; //   Added for per-module role tracking
 }

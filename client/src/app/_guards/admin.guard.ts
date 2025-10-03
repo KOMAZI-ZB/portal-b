@@ -10,7 +10,7 @@ export const adminGuard: CanActivateFn = (route, state) => {
 
   const roles = accountService.roles(); // ⛔ signal evaluation happens once here
 
-  // ✅ Check if roles contain "Admin"
+  //   Check if roles contain "Admin"
   const hasAdmin = Array.isArray(roles) ? roles.includes('Admin') : roles === 'Admin';
 
   if (hasAdmin) {

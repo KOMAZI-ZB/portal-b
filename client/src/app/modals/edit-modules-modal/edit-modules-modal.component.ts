@@ -67,7 +67,7 @@ export class EditModulesModalComponent implements OnInit, AfterViewInit, OnDestr
     this.originalHide = ref.hide.bind(ref);
     ref.hide = () => this.attemptClose();
 
-    // ✅ Admins are now allowed — don't block loading anymore
+    //   Admins are now allowed — don't block loading anymore
     this.moduleService.getAllModules().subscribe({
       next: modules => {
         this.allModules = modules;

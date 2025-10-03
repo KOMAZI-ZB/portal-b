@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 
@@ -10,9 +10,11 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./confirm-delete-modal.component.css']
 })
 export class ConfirmDeleteModalComponent {
-  title: string = 'Confirm Deletion';
-  message: string = 'Are you sure you want to delete this notification?';
-  onConfirm: () => void = () => { };
+  @Input() title: string = 'Confirm Deletion';
+  @Input() message: string = 'Are you sure you want to delete this item?';
+  @Input() confirmText: string = 'Delete';
+  @Input() cancelText: string = 'No';
+  @Input() onConfirm: () => void = () => { };
 
   constructor(public bsModalRef: BsModalRef) { }
 

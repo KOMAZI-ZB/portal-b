@@ -67,7 +67,7 @@
     border: 1px dashed #aaa;
 }
 
-/* ✅ Fix overflow: allow wrapping for long titles */
+/*   Fix overflow: allow wrapping for long titles */
 .assessment-card h3 {
     white-space: normal;
     /* was nowrap causing overflow */

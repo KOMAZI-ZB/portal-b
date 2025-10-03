@@ -12,7 +12,7 @@ namespace API.Interfaces
         Task<PagedList<RepositoryDto>> GetPaginatedExternalAsync(QueryParams queryParams);
         Task<RepositoryDto> AddAsync(RepositoryDto dto);
         Task<bool> DeleteAsync(int id);
-        Task<string> UploadImageAsync(IFormFile file); // ✅ For uploading image to Cloudinary
+        Task<string> UploadImageAsync(IFormFile file); //   For uploading image to Cloudinary
 
         // Internal Repository Documents (stored under "Repository" source)
         Task<PagedList<DocumentDto>> GetPaginatedInternalDocsAsync(QueryParams queryParams);

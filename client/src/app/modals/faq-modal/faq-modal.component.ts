@@ -30,6 +30,10 @@ export class FaqModalComponent implements OnInit, AfterViewInit, OnDestroy {
   private backdropCapture?: (ev: MouseEvent) => void;
   private escCapture?: (ev: KeyboardEvent) => void;
 
+  // Validation rules (character-based)
+  readonly MIN_CHARS = 5;
+  readonly MAX_CHARS = 5000;
+
   constructor(
     public bsModalRef: BsModalRef<FaqModalComponent>,
     private faqService: FaqService,
@@ -93,6 +97,37 @@ export class FaqModalComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
+  // ---- validation helpers (character-based) ----
+  private charCount(s: string): number {
+    return (s || '').trim().length;
+  }
+
+  get questionBlank(): boolean { return this.charCount(this.question) === 0; }
+  get answerBlank(): boolean { return this.charCount(this.answer) === 0; }
+
+  get questionTooShort(): boolean {
+    const len = this.charCount(this.question);
+    return len > 0 && len < this.MIN_CHARS;
+  }
+  get answerTooShort(): boolean {
+    const len = this.charCount(this.answer);
+    return len > 0 && len < this.MIN_CHARS;
+  }
+
+  get questionTooLong(): boolean { return this.charCount(this.question) > this.MAX_CHARS; }
+  get answerTooLong(): boolean { return this.charCount(this.answer) > this.MAX_CHARS; }
+
+  get formInvalid(): boolean {
+    return (
+      this.questionBlank ||
+      this.answerBlank ||
+      this.questionTooShort ||
+      this.answerTooShort ||
+      this.questionTooLong ||
+      this.answerTooLong
+    );
+  }
+
   async attemptClose() {
     if (this.hasUnsavedChanges()) {
       const discard = await this.openConfirm();
@@ -102,22 +137,22 @@ export class FaqModalComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   submit() {
-    if (!this.question.trim() || !this.answer.trim()) {
-      this.toastr.error('Both question and answer are required.');
+    if (this.formInvalid) {
+      this.toastr.error('Please fix the highlighted errors before submitting.');
       return;
     }
 
-    const faqData = { question: this.question, answer: this.answer };
+    const faqData = { question: this.question.trim(), answer: this.answer.trim() };
 
     if (this.mode === 'edit' && this.faq) {
       this.faqService.updateFaq(this.faq.id, faqData).subscribe({
         next: () => { this.toastr.success('FAQ updated successfully.'); this.justSaved = true; this.originalHide(); },
-        error: () => this.toastr.error('Failed to update FAQ.')
+        error: (err) => this.toastr.error(err?.error ?? 'Failed to update FAQ.')
       });
     } else {
       this.faqService.createFaq(faqData).subscribe({
         next: () => { this.toastr.success('FAQ created successfully.'); this.justSaved = true; this.originalHide(); },
-        error: () => this.toastr.error('Failed to create FAQ.')
+        error: (err) => this.toastr.error(err?.error ?? 'Failed to create FAQ.')
       });
     }
   }

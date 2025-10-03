@@ -51,13 +51,13 @@ public class AccountController(
 
         return new UserDto
         {
-            UserName = user.UserName ?? string.Empty, // ✅ guard
+            UserName = user.UserName ?? string.Empty, //   guard
             Name = user.FirstName,
             Surname = user.LastName,
             Email = user.Email ?? string.Empty,
             Roles = roles.ToArray(),
             Token = await tokenService.CreateToken(user),
-            JoinDate = user.JoinDate, // ✅ include JoinDate for consistency
+            JoinDate = user.JoinDate, //   include JoinDate for consistency
             Modules = user.UserModules.Select(um => new ModuleDto
             {
                 Id = um.Module.Id,

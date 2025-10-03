@@ -23,9 +23,9 @@ public class QueryParams
     public int PageNumber { get; set; } = 1;
     public int PageSize { get; set; } = 10;
 
-    // ✅ NEW: Required to filter based on user's join date
+    //   NEW: Required to filter based on user's join date
     public string? CurrentUserName { get; set; }
 
-    // ✅ NEW: Filter by type e.g. Notification, Notification
+    //   NEW: Filter by type e.g. Notification, Notification
     public string? TypeFilter { get; set; }
 }

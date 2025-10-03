@@ -5,7 +5,7 @@ using API.Helpers;
 using API.Middleware;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Text.Json.Serialization; // ✅ Needed for ReferenceHandler
+using System.Text.Json.Serialization; //   Needed for ReferenceHandler
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,16 +13,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddIdentityServices(builder.Configuration);
 
-// ✅ Global support for TimeOnly and DateOnly serialization + prevent object cycles
+//   Global support for TimeOnly and DateOnly serialization + prevent object cycles
 builder.Services.AddControllers()
     .AddJsonOptions(opts =>
     {
         opts.JsonSerializerOptions.Converters.Add(new TimeOnlyJsonConverter());
         opts.JsonSerializerOptions.Converters.Add(new DateOnlyJsonConverter());
-        opts.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles; // ✅ Prevent cycles
+        opts.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles; //   Prevent cycles
     });
 
-// ✅ CORS: allow local dev + deployed Angular app origin
+//   CORS: allow local dev + deployed Angular app origin
 const string CorsPolicyName = "AppCors";
 builder.Services.AddCors(options =>
 {
@@ -32,7 +32,7 @@ builder.Services.AddCors(options =>
             .WithOrigins(
                 "http://localhost:4200",
                 "https://localhost:4200",
-                "https://csi-portal-app.azurewebsites.net" // ✅ add your deployed frontend origin
+                "https://csi-portal-app.azurewebsites.net" //   add your deployed frontend origin
             )
             .AllowAnyHeader()
             .AllowAnyMethod()
@@ -45,7 +45,7 @@ var app = builder.Build();
 // Middleware pipeline
 app.UseMiddleware<ExceptionMiddleware>();
 
-app.UseCors(CorsPolicyName); // ✅ use named policy
+app.UseCors(CorsPolicyName); //   use named policy
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -67,14 +67,14 @@ try
 
     await context.Database.MigrateAsync();
 
-    // ✅ Seeding all supported tables
+    //   Seeding all supported tables
     await Seed.SeedModules(context);
     await Seed.SeedUsers(userManager, roleManager, context);
     await Seed.SeedFaqs(context);
     await Seed.SeedNotifications(context);
     await Seed.SeedLabBookings(context);
-    await Seed.SeedRepositories(context); // ✅ NEW: Seeding recommended repositories
-    await Seed.SeedAssessments(context); // ✅ NEW: Seeding assessments
+    await Seed.SeedRepositories(context); //   NEW: Seeding recommended repositories
+    await Seed.SeedAssessments(context); //   NEW: Seeding assessments
 
 }
 catch (Exception ex)

@@ -7,5 +7,5 @@ export interface User {
     email: string;
     token: string;
     roles: string[];
-    modules: Module[]; // ✅ This line fixes the error
+    modules: Module[]; //   This line fixes the error
 }

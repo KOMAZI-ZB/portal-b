@@ -10,6 +10,6 @@ namespace API.Interfaces
         Task<bool> DeleteAsync(int id, string requesterUserName, bool isAdmin);
 
         Task<bool> MarkAsReadAsync(int notificationId, int userId);
-        Task<bool> UnmarkAsReadAsync(int notificationId, int userId); // 🆕
+        Task<bool> UnmarkAsReadAsync(int notificationId, int userId);
     }
 }

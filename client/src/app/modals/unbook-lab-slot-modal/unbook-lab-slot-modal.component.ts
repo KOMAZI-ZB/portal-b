@@ -10,8 +10,8 @@ import { LabBooking } from '../../_models/labbooking';
   styleUrls: ['./unbook-lab-slot-modal.component.css']
 })
 export class UnbookLabSlotModalComponent {
-  @Input() booking!: LabBooking; // ✅ Accept a single booking
-  @Output() confirmUnbooking = new EventEmitter<void>(); // ✅ No ID needed
+  @Input() booking!: LabBooking; //   Accept a single booking
+  @Output() confirmUnbooking = new EventEmitter<void>(); //   No ID needed
   @Output() cancel = new EventEmitter<void>();
 
   submit() {

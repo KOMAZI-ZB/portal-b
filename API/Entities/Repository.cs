@@ -8,7 +8,7 @@ namespace API.Entities
 
         public string LinkUrl { get; set; } = string.Empty;
 
-        // ✅ Cloudinary-secured final URL for display
+        //   Cloudinary-secured final URL for display
         public string? ImageUrl { get; set; }
     }
 }

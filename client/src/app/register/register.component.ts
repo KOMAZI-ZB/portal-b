@@ -10,21 +10,21 @@ import {
 import { Router } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { TextInputComponent } from '../_forms/text-input/text-input.component';
-import { AdminService } from '../_services/admin.service'; // ✅ Use AdminService for registration
+import { AdminService } from '../_services/admin.service'; //   Use AdminService for registration
 
 @Component({
   selector: 'app-register',
   standalone: true,
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'], // ✅ fixed typo
+  styleUrls: ['./register.component.css'], //   fixed typo
   imports: [ReactiveFormsModule, TextInputComponent]
 })
 export class RegisterComponent implements OnInit {
-  private adminService = inject(AdminService); // ✅ Inject correct service
+  private adminService = inject(AdminService); //   Inject correct service
   private fb = inject(FormBuilder);
   private router = inject(Router);
 
-  @Output() cancelRegister = new EventEmitter<boolean>(); // ✅ Correct output
+  @Output() cancelRegister = new EventEmitter<boolean>(); //   Correct output
 
   registerForm: FormGroup = new FormGroup({});
   validationErrors: string[] | undefined;

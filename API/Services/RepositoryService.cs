@@ -32,13 +32,13 @@ public class RepositoryService : IRepositoryService
         _cloudinary = new Cloudinary(acc);
     }
 
-    // ✅ Return all external repositories (legacy use only)
+    //   Return all external repositories (legacy use only)
     public async Task<IEnumerable<Repository>> GetAllAsync()
     {
         return await _context.Repositories.ToListAsync();
     }
 
-    // ✅ Return paginated external repositories
+    //   Return paginated external repositories
     public async Task<PagedList<RepositoryDto>> GetPaginatedExternalAsync(QueryParams queryParams)
     {
         var query = _context.Repositories
@@ -49,7 +49,7 @@ public class RepositoryService : IRepositoryService
         return await PagedList<RepositoryDto>.CreateAsync(query, queryParams.PageNumber, queryParams.PageSize);
     }
 
-    // ✅ Add new repository (with fallback if no image is provided)
+    //   Add new repository (with fallback if no image is provided)
     public async Task<RepositoryDto> AddAsync(RepositoryDto dto)
     {
         var repo = new Repository
@@ -67,7 +67,7 @@ public class RepositoryService : IRepositoryService
         return _mapper.Map<RepositoryDto>(repo);
     }
 
-    // ✅ Upload repository image to Cloudinary
+    //   Upload repository image to Cloudinary
     public async Task<string> UploadImageAsync(IFormFile file)
     {
         using var stream = file.OpenReadStream();
@@ -85,7 +85,7 @@ public class RepositoryService : IRepositoryService
         return uploadResult.SecureUrl.AbsoluteUri;
     }
 
-    // ✅ Delete external repository
+    //   Delete external repository
     public async Task<bool> DeleteAsync(int id)
     {
         var repo = await _context.Repositories.FindAsync(id);
@@ -95,7 +95,7 @@ public class RepositoryService : IRepositoryService
         return await _context.SaveChangesAsync() > 0;
     }
 
-    // ✅ Paginated internal documents where Source = "Repository"
+    //   Paginated internal documents where Source = "Repository"
     public async Task<PagedList<DocumentDto>> GetPaginatedInternalDocsAsync(QueryParams queryParams)
     {
         var isSqlite = _context.Database.IsSqlite();

@@ -18,7 +18,7 @@ public class AdminController(
     DataContext context
 ) : BaseApiController
 {
-    // ✅ Quick existence check for username/student number (for real-time validation)
+    //   Quick existence check for username/student number (for real-time validation)
     [Authorize(Policy = "RequireAdminRole")]
     [HttpGet("exists/{userName}")]
     public async Task<ActionResult> UsernameExists(string userName)
@@ -106,7 +106,7 @@ public class AdminController(
 
             await userManager.AddToRoleAsync(user, dto.Role);
 
-            // ✅ De-dupe across both semester lists so we never add the same (user,module) twice
+            //   De-dupe across both semester lists so we never add the same (user,module) twice
             var moduleIds = (dto.Semester1ModuleIds ?? new List<int>())
                 .Concat(dto.Semester2ModuleIds ?? new List<int>())
                 .Distinct()

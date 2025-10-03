@@ -8,7 +8,7 @@ export interface Notification {
     createdAt: string;
     moduleId?: number | null;
 
-    // 🆕 Targeting + read receipts
+    // Targeting + read receipts
     audience?: string;    // 'All' | 'Students' | 'Staff' | 'ModuleStudents'
     isRead?: boolean;
 }

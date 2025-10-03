@@ -22,7 +22,7 @@ export class DocumentService {
     return this.http.get<Document[]>(`${this.baseUrl}documents/module/${moduleId}`);
   }
 
-  // ✅ Paginated module documents
+  //   Paginated module documents
   getDocumentsByModulePaged(moduleId: number, pageNumber: number, pageSize: number): Observable<HttpResponse<Document[]>> {
     const params = setPaginationHeaders(pageNumber, pageSize);
     return this.http.get<Document[]>(`${this.baseUrl}documents/module/${moduleId}/paged`, {
@@ -47,7 +47,7 @@ export class DocumentService {
   // 🔹 Internal Repository Documents (General)
   // =============================
 
-  // ✅ Paginated internal repository documents
+  //   Paginated internal repository documents
   getInternalRepositoryDocuments(pageNumber: number, pageSize: number): Observable<HttpResponse<Document[]>> {
     const params = setPaginationHeaders(pageNumber, pageSize);
     return this.http.get<Document[]>(`${this.baseUrl}repository`, {

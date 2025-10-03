@@ -7,7 +7,7 @@ export interface Module {
     moduleName: string;
 
     semester: number;
-    // ✅ NEW
+    //   NEW
     isYearModule?: boolean;
 
     // Legacy (no longer used by timetable rendering; safe to keep during transition)
@@ -16,7 +16,7 @@ export interface Module {
     startTimes?: string[];  // e.g. ['08:00:00', '10:00:00']
     endTimes?: string[];    // e.g. ['09:00:00', '11:00:00']
 
-    // ✅ New: sessions per venue/day/time
+    //   New: sessions per venue/day/time
     classSessions?: ClassSession[];
 
     assessments?: AssessmentSchedule[];

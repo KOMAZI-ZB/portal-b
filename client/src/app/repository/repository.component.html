@@ -37,7 +37,7 @@
         </ng-container>
     </div>
 
-    <!-- ✅ External Pagination Controls -->
+    <!--   External Pagination Controls -->
     <nav *ngIf="externalPagination" class="mt-3 d-flex justify-content-center">
         <ul class="pagination">
             <li class="page-item" [class.disabled]="externalPagination.currentPage === 1">
@@ -95,7 +95,7 @@
             </tbody>
         </table>
 
-        <!-- ✅ Internal Pagination Controls -->
+        <!--   Internal Pagination Controls -->
         <nav *ngIf="internalPagination" class="mt-3 d-flex justify-content-center">
             <ul class="pagination">
                 <li class="page-item" [class.disabled]="internalPagination.currentPage === 1">

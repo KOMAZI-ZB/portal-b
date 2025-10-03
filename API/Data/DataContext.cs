@@ -11,39 +11,39 @@ namespace API.Data
     {
         public DataContext(DbContextOptions options) : base(options) { }
 
-        // ✅ Phase 2 Tables
+        //   Phase 2 Tables
         public DbSet<Module> Modules { get; set; }
         public DbSet<UserModule> UserModules { get; set; }
 
-        // ✅ NEW: Per-venue/day/time sessions for classes
+        //   NEW: Per-venue/day/time sessions for classes
         public DbSet<ClassSession> ClassSessions { get; set; }
 
-        // ✅ Phase 3 Tables
+        //   Phase 3 Tables
         public DbSet<Document> Documents { get; set; }
 
-        // ✅ Phase 4 Tables
+        //   Phase 4 Tables
         public DbSet<FaqEntry> FaqEntries { get; set; }
 
-        // ✅ Phase 5 Tables
+        //   Phase 5 Tables
         public DbSet<Notification> Notifications { get; set; }
 
-        // ✅ NEW: Notification read receipts
+        //   NEW: Notification read receipts
         public DbSet<NotificationRead> NotificationReads { get; set; }
 
-        // ✅ Phase 6 Tables
+        //   Phase 6 Tables
         public DbSet<LabBooking> LabBookings { get; set; }
 
-        // ✅ NEW: External Repository Links
+        //   NEW: External Repository Links
         public DbSet<Repository> Repositories { get; set; }
 
-        // ✅ NEW: Dynamic Assessment Schedule
+        //   NEW: Dynamic Assessment Schedule
         public DbSet<Assessment> Assessments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
-            // ✅ AppUser ↔ AppUserRole
+            //   AppUser ↔ AppUserRole
             builder.Entity<AppUser>(b =>
             {
                 b.HasMany(u => u.UserRoles)
@@ -57,7 +57,7 @@ namespace API.Data
                  .IsRequired();
             });
 
-            // ✅ AppRole ↔ AppUserRole
+            //   AppRole ↔ AppUserRole
             builder.Entity<AppRole>(b =>
             {
                 b.HasMany(r => r.UserRoles)
@@ -66,7 +66,7 @@ namespace API.Data
                  .IsRequired();
             });
 
-            // ✅ Module ↔ UserModule
+            //   Module ↔ UserModule
             builder.Entity<Module>(b =>
             {
                 b.HasMany(m => m.UserModules)
@@ -74,7 +74,7 @@ namespace API.Data
                  .HasForeignKey(um => um.ModuleId)
                  .IsRequired();
 
-                // ✅ Module ↔ ClassSession
+                //   Module ↔ ClassSession
                 b.HasMany(m => m.ClassSessions)
                  .WithOne(s => s.Module)
                  .HasForeignKey(s => s.ModuleId)
@@ -82,11 +82,11 @@ namespace API.Data
                  .OnDelete(DeleteBehavior.Cascade);
             });
 
-            // ✅ Composite Key for UserModule
+            //   Composite Key for UserModule
             builder.Entity<UserModule>()
                 .HasKey(um => new { um.AppUserId, um.ModuleId });
 
-            // ✅ Constraints for ClassSession
+            //   Constraints for ClassSession
             builder.Entity<ClassSession>(b =>
             {
                 b.Property(s => s.Venue).IsRequired();
@@ -98,7 +98,7 @@ namespace API.Data
                  .IsUnique();
             });
 
-            // ✅ Constraints for FAQ
+            //   Constraints for FAQ
             builder.Entity<FaqEntry>(b =>
             {
                 b.Property(f => f.Question).IsRequired();
@@ -106,7 +106,7 @@ namespace API.Data
                 b.Property(f => f.LastUpdated).IsRequired();
             });
 
-            // ✅ Constraints for Notifications
+            //   Constraints for Notifications
             builder.Entity<Notification>(b =>
             {
                 b.Property(a => a.Type).IsRequired();
@@ -116,7 +116,7 @@ namespace API.Data
                 b.Property(a => a.Audience).IsRequired(); // NEW
             });
 
-            // ✅ NotificationRead receipts (unique per user/notification)
+            //   NotificationRead receipts (unique per user/notification)
             builder.Entity<NotificationRead>(b =>
             {
                 b.HasIndex(x => new { x.UserId, x.NotificationId }).IsUnique();
@@ -130,7 +130,7 @@ namespace API.Data
                  .OnDelete(DeleteBehavior.Cascade);
             });
 
-            // ✅ Constraints for Lab Bookings
+            //   Constraints for Lab Bookings
             builder.Entity<LabBooking>(b =>
             {
                 b.Property(lb => lb.UserName).IsRequired().HasMaxLength(20);
@@ -140,7 +140,7 @@ namespace API.Data
                 b.Property(lb => lb.EndTime).IsRequired();
             });
 
-            // ✅ Constraints for Repository Links
+            //   Constraints for Repository Links
             builder.Entity<Repository>(b =>
             {
                 b.Property(r => r.Label).IsRequired();
@@ -148,7 +148,7 @@ namespace API.Data
                 b.Property(r => r.LinkUrl).IsRequired();
             });
 
-            // ✅ Constraints for Assessments
+            //   Constraints for Assessments
             builder.Entity<Assessment>(b =>
             {
                 b.Property(a => a.Title).IsRequired();

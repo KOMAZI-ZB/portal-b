@@ -6,23 +6,44 @@
 </div>
 
 <div class="modal-body">
-    <form #faqForm="ngForm">
+    <form #faqForm="ngForm" novalidate>
         <div class="mb-3">
             <label for="question" class="form-label"><strong>Question</strong></label>
             <textarea id="question" class="form-control" rows="3" [(ngModel)]="question" name="question"
                 placeholder="Type your question..."></textarea>
+
+            <!-- Inline validation for Question -->
+            <div class="mt-1 small text-danger" *ngIf="questionBlank">
+                Question cannot be empty or whitespace.
+            </div>
+            <div class="mt-1 small text-danger" *ngIf="!questionBlank && questionTooShort">
+                Minimum {{MIN_CHARS}} characters required.
+            </div>
+            <div class="mt-1 small text-danger" *ngIf="questionTooLong">
+                Maximum {{MAX_CHARS}} characters allowed.
+            </div>
         </div>
 
         <div class="mb-3">
             <label for="answer" class="form-label"><strong>Answer</strong></label>
             <textarea id="answer" class="form-control" rows="4" [(ngModel)]="answer" name="answer"
                 placeholder="Type your answer..."></textarea>
+
+            <!-- Inline validation for Answer -->
+            <div class="mt-1 small text-danger" *ngIf="answerBlank">
+                Answer cannot be empty or whitespace.
+            </div>
+            <div class="mt-1 small text-danger" *ngIf="!answerBlank && answerTooShort">
+                Minimum {{MIN_CHARS}} characters required.
+            </div>
+            <div class="mt-1 small text-danger" *ngIf="answerTooLong">
+                Maximum {{MAX_CHARS}} characters allowed.
+            </div>
         </div>
 
         <div class="text-end">
             <button type="button" class="btn btn-secondary me-2" (click)="attemptClose()">Cancel</button>
-            <button type="button" class="btn btn-success" (click)="submit()"
-                [disabled]="!question.trim() || !answer.trim()">
+            <button type="button" class="btn btn-success" (click)="submit()" [disabled]="formInvalid">
                 {{ mode === 'edit' ? 'Update FAQ' : 'Add FAQ' }}
             </button>
         </div>

@@ -64,7 +64,7 @@ public class SchedulerController(
         var success = await _bookingService.CreateBookingAsync(userName, dto);
         if (!success) return BadRequest("Booking overlaps with an existing entry.");
 
-        // 🔔 Broadcast lab schedule updates to everyone
+        //   Broadcast lab schedule updates to everyone
         var createdBy = User.GetUsername();
         await _notificationService.CreateAsync(new CreateNotificationDto
         {

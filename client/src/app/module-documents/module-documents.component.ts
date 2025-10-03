@@ -45,12 +45,12 @@ export class ModuleDocumentsComponent implements OnInit {
     this.roles = this.accountService.roles();
     this.moduleId = +this.route.snapshot.paramMap.get('id')!;
 
-    // ✅ 1) Read from router state if present
+    //   1) Read from router state if present
     const s = (history && history.state) ? (history.state as any) : {};
     if (s?.moduleCode) this.moduleCode = s.moduleCode;
     if (s?.moduleName) this.moduleName = s.moduleName;
 
-    // ✅ 2) Read from query params (persists across refresh)
+    //   2) Read from query params (persists across refresh)
     const qp = this.route.snapshot.queryParamMap;
     this.moduleCode = qp.get('code') ?? this.moduleCode;
     this.moduleName = qp.get('name') ?? this.moduleName;
@@ -63,7 +63,7 @@ export class ModuleDocumentsComponent implements OnInit {
       if (name) this.moduleName = name;
     });
 
-    // ✅ 3) Staff fetch confirmed details (students already have header via params)
+    //   3) Staff fetch confirmed details (students already have header via params)
     if (this.hasUploadRights()) {
       this.loadHeaderContext();
     }

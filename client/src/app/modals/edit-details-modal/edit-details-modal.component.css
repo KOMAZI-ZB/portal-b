@@ -4,19 +4,19 @@
     overflow-y: auto;
 }
 
-/* ✅ thicker divider between assessment items (unchanged) */
+/*   thicker divider between assessment items (unchanged) */
 .assessment-divider {
     border: 0;
     border-top: 2px solid #6c757d;
     margin: 0.75rem 0 1rem 0;
 }
 
-/* ✅ assessment card border (unchanged) */
+/*   assessment card border (unchanged) */
 .assessment-card {
     border: 2px solid #dee2e6 !important;
 }
 
-/* ✅ UPDATED: make the outer border of each venue block thicker */
+/*   UPDATED: make the outer border of each venue block thicker */
 .venue-card {
     border: 3px solid #dee2e6 !important;
     /* was 2px #dee2e6 */

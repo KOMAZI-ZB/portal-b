@@ -10,7 +10,7 @@ namespace API.DTOs
 
         public int Semester { get; set; }
 
-        // ✅ NEW: carries year-module flag to the client
+        //   NEW: carries year-module flag to the client
         public bool IsYearModule { get; set; }
 
         // Legacy (unused by schedule; may be dropped later)
@@ -19,7 +19,7 @@ namespace API.DTOs
         public string[]? StartTimes { get; set; }
         public string[]? EndTimes { get; set; }
 
-        // ✅ New
+        //   New
         public List<ClassSessionDto>? ClassSessions { get; set; }
 
         // Existing

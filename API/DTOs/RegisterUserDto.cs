@@ -8,7 +8,7 @@ public class RegisterUserDto
     public string Email { get; set; } = string.Empty;
     public string Password { get; set; } = string.Empty;
     public string Role { get; set; } = string.Empty;
-    public DateOnly? JoinDate { get; set; } // ✅ Added JoinDate
+    public DateOnly? JoinDate { get; set; } //   Added JoinDate
     public List<int> Semester1ModuleIds { get; set; } = new();
     public List<int> Semester2ModuleIds { get; set; } = new();
 }

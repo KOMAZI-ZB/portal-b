@@ -21,7 +21,7 @@ public class RepositoryController(
     private readonly IMapper _mapper = mapper;
 
     // ============================
-    // ✅ Internal Repository Documents
+    //   Internal Repository Documents
     // ============================
 
     [Authorize(Roles = "Lecturer,Coordinator,Admin")]
@@ -72,7 +72,7 @@ public class RepositoryController(
     }
 
     // ============================
-    // ✅ External Repository Links
+    //   External Repository Links
     // ============================
 
     [AllowAnonymous]
@@ -100,7 +100,7 @@ public class RepositoryController(
 
         var created = await _repositoryService.AddAsync(dto);
 
-        // 🔔 NEW: Fire a clickable notification that routes to Repository → Links
+        //   NEW: Fire a clickable notification that routes to Repository → Links
         var createdBy = User.GetUsername();
         await _notificationService.CreateAsync(new CreateNotificationDto
         {

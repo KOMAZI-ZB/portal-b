@@ -12,7 +12,7 @@ export class FaqService {
 
   constructor(private http: HttpClient) { }
 
-  // ✅ GET /faq?pageNumber=1&pageSize=5 (with full response for pagination header)
+  //   GET /faq?pageNumber=1&pageSize=5 (with full response for pagination header)
   getAllFaqs(pageParams: { pageNumber: number; pageSize: number }): Observable<HttpResponse<FaqEntry[]>> {
     const params = new HttpParams()
       .set('pageNumber', pageParams.pageNumber.toString())
@@ -24,17 +24,17 @@ export class FaqService {
     });
   }
 
-  // ✅ POST /faq/create
+  //   POST /faq/create
   createFaq(body: { question: string; answer: string }): Observable<any> {
     return this.http.post(`${this.baseUrl}faq/create`, body);
   }
 
-  // ✅ PUT /faq/update/{id}
+  //   PUT /faq/update/{id}
   updateFaq(id: number, body: { question: string; answer: string }): Observable<any> {
     return this.http.put(`${this.baseUrl}faq/update/${id}`, body);
   }
 
-  // ✅ DELETE /faq/{id}
+  //   DELETE /faq/{id}
   deleteFaq(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}faq/${id}`);
   }
