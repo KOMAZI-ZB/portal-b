@@ -5,14 +5,38 @@ using API.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Linq; // (existing)
-using System;      // (existing)
+using System.Linq;
+using System;
 
 namespace API.Controllers;
 
 [Authorize]
 public class ModulesController(DataContext context) : BaseApiController
 {
+    // === Helper: validate assessment dates against semester rules ===
+    private static (bool ok, string? message) ValidateAssessmentMonths(
+        IEnumerable<AssessmentDto> items,
+        int semester,
+        bool isYearModule)
+    {
+        if (isYearModule || semester == 0) return (true, null);
+
+        foreach (var a in items ?? Array.Empty<AssessmentDto>())
+        {
+            if (string.IsNullOrWhiteSpace(a.Date)) return (false, "Assessment date is required.");
+            DateOnly d;
+            try { d = DateOnly.Parse(a.Date); }
+            catch { return (false, $"Invalid assessment date format: {a.Date}"); }
+
+            var m = d.Month;
+            if (semester == 1 && !(m >= 1 && m <= 6))
+                return (false, $"Assessment date {d:yyyy-MM-dd} is out of range for Semester 1 (Jan–Jun).");
+            if (semester == 2 && !(m >= 7 && m <= 12))
+                return (false, $"Assessment date {d:yyyy-MM-dd} is out of range for Semester 2 (Jul–Dec).");
+        }
+        return (true, null);
+    }
+
     [Authorize(Policy = "RequireAdminRole")]
     [HttpPost]
     public async Task<ActionResult> AddModule(ModuleDto dto)
@@ -20,6 +44,10 @@ public class ModulesController(DataContext context) : BaseApiController
         // Normalize: any year module => Semester = 0
         var isYear = dto.IsYearModule || dto.Semester == 0;
         var semester = isYear ? 0 : dto.Semester;
+
+        // ❗ Server-side validation for assessment windows
+        var (ok, msg) = ValidateAssessmentMonths(dto.Assessments ?? Enumerable.Empty<AssessmentDto>(), semester, isYear);
+        if (!ok) return BadRequest(msg);
 
         var module = new Module
         {
@@ -322,6 +350,10 @@ public class ModulesController(DataContext context) : BaseApiController
             module.Semester = dto.Semester;
         }
 
+        // ❗ Server-side validation for assessment windows (use effective module.Semester after normalization)
+        var (ok, msg) = ValidateAssessmentMonths(dto.Assessments ?? Enumerable.Empty<AssessmentDto>(), module.Semester, module.IsYearModule);
+        if (!ok) return BadRequest(msg);
+
         // legacy fields (kept writable)
         module.ClassVenue = dto.ClassVenue;
         module.WeekDays = dto.WeekDays != null ? string.Join(",", dto.WeekDays) : null;
@@ -465,7 +497,7 @@ public class ModulesController(DataContext context) : BaseApiController
         }
         else if (metadataChanged)
         {
-            // 🆕 MODULE UPDATE (metadata only)
+            // MODULE UPDATE (metadata only)
             // Build message with old → new details when available
             var changes = new List<string>();
             if (codeChanged) changes.Add($"{originalCode} → {module.ModuleCode}");

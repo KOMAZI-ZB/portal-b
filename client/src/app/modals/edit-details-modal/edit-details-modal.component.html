@@ -105,9 +105,12 @@
                             <div class="mb-2">
                                 <label>Date</label>
                                 <input type="date" class="form-control" [(ngModel)]="assessment.date"
-                                    [name]="'date' + i" (ngModelChange)="markDirty()"
-                                    [class.is-invalid]="!(assessment.date||'').trim()" />
-                                <div class="invalid-feedback">Date is required.</div>
+                                    [name]="'date' + i" [attr.min]="dateMin" [attr.max]="dateMax"
+                                    (ngModelChange)="markDirty()"
+                                    [class.is-invalid]="!(assessment.date||'').trim() || !!dateViolation(assessment)" />
+                                <div class="invalid-feedback">
+                                    {{ dateViolation(assessment) || 'Date is required.' }}
+                                </div>
                             </div>
 
                             <div class="mb-2">

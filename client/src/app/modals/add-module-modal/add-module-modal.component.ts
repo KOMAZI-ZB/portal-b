@@ -82,7 +82,6 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
     if (this.venues.length === 0) return true; // optional overall
     for (const v of this.venues) {
       const venueName = (v.venue || '').trim();
-      // If user added a block (it exists), venue is required
       if (!venueName) return false;
       for (const day of this.weekDays) {
         const st = v.days[day];
@@ -95,14 +94,55 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
     return true;
   }
 
-  /** Assessments optional. If any assessment exists, Title & Description & Date required.
-   * If timed => Venue, Start, End required. If not timed => DueTime required. */
+  // ===== Semester-aware date validation helpers =====
+  private isYearModule(): boolean {
+    return this.semesterChoice === 'year';
+  }
+
+  private isMonthAllowed(month: number): boolean {
+    if (this.isYearModule()) return true;
+    if (this.semesterChoice === '1') return month >= 1 && month <= 6;
+    if (this.semesterChoice === '2') return month >= 7 && month <= 12;
+    return true;
+  }
+
+  private isDateAllowedForSemester(dateStr: string): boolean {
+    if (!dateStr) return false;
+    // Accept any year; enforce MONTH window only
+    const d = new Date(dateStr + 'T00:00:00');
+    if (isNaN(d.getTime())) return false;
+    const month = d.getMonth() + 1;
+    return this.isMonthAllowed(month);
+  }
+
+  // Hints for the browser datepicker (uses current year only)
+  get dateMin(): string | null {
+    const y = new Date().getFullYear();
+    if (this.isYearModule()) return `${y}-01-01`;
+    return this.semesterChoice === '1' ? `${y}-01-01` : `${y}-07-01`;
+  }
+  get dateMax(): string | null {
+    const y = new Date().getFullYear();
+    if (this.isYearModule()) return `${y}-12-31`;
+    return this.semesterChoice === '1' ? `${y}-06-30` : `${y}-12-31`;
+  }
+
+  dateViolation(a: Assessment): string | null {
+    if (!a.date?.trim()) return null;
+    return this.isDateAllowedForSemester(a.date)
+      ? null
+      : (this.semesterChoice === '1'
+        ? 'For Semester 1, pick a date between Jan 1 and Jun 30.'
+        : 'For Semester 2, pick a date between Jul 1 and Dec 31.');
+  }
+
+  /** Assessments optional. If any exists, enforce required fields + semester window */
   get areAssessmentsValid(): boolean {
     for (const a of this.assessments) {
       if (!a) continue;
       const titleOk = (a.title || '').trim().length > 0;
       const descOk = (a.description || '').trim().length > 0;
-      const dateOk = (a.date || '').trim().length > 0;
+      const dateOk = (a.date || '').trim().length > 0 && this.isDateAllowedForSemester(a.date);
       if (!(titleOk && descOk && dateOk)) return false;
 
       if (a.isTimed) {
@@ -125,7 +165,6 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     setTimeout(() => this.moduleCodeInput?.nativeElement.focus(), 0);
 
-    // NOTE: Do NOT auto-add a venue block. Wait for the admin to click "Add Venue".
     const contentEl = this.elRef.nativeElement.closest('.modal-content') as HTMLElement | null;
     const modalEl = contentEl?.closest('.modal') as HTMLElement | null;
     this.modalEl = modalEl;
@@ -219,12 +258,11 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
         if (!st?.checked) continue;
         const start = this.formatTimeString(st.startTime);
         const end = this.formatTimeString(st.endTime);
-        if (!start || !end) continue; // inline validation handles messaging
+        if (!start || !end) continue;
         sessions.push({ venue: venueName, weekDay: d, startTime: start, endTime: end });
       }
     }
     return sessions;
-    // NOTE: We no longer send legacy ClassVenue/WeekDays arrays; API accepts ClassSessions (kept contract).
   }
 
   private buildAssessmentsPayload() {
@@ -243,8 +281,20 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
   submit(): void {
     // Final guard — show specific toast on failure
     if (!this.isDetailsValid || !this.areVenuesValid || !this.areAssessmentsValid) {
+      // Pinpoint if semester-window is the cause
+      const bad = this.assessments.find(x => x?.date && !this.isDateAllowedForSemester(x.date));
+      if (bad) {
+        this.toastr.error(
+          this.semesterChoice === '1'
+            ? 'Semester 1 assessments must be dated between Jan 1 and Jun 30.'
+            : this.isYearModule()
+              ? 'Please fix the highlighted fields.'
+              : 'Semester 2 assessments must be dated between Jul 1 and Dec 31.'
+        );
+        this.activeTab = 'assessments';
+        return;
+      }
       this.toastr.error('Please fix the highlighted fields.');
-      // Jump user to first failing tab for convenience
       if (!this.isDetailsValid) this.activeTab = 'details';
       else if (!this.areVenuesValid) this.activeTab = 'contact';
       else this.activeTab = 'assessments';
@@ -268,7 +318,7 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
         this.originalHide();
       },
       error: err => {
-        this.toastr.error('Failed to add module');
+        this.toastr.error(err?.error ?? 'Failed to add module');
         console.error(err);
       }
     });

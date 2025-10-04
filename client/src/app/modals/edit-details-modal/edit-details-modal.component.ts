@@ -180,12 +180,52 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
 
   removeAssessment(index: number) { this.assessments.splice(index, 1); this.markDirty(); }
 
-  // ===== Validation parity with Add =====
+  // ===== Semester-aware helpers =====
+  private isYearModule(): boolean {
+    return !!this.module?.isYearModule || this.module?.semester === 0;
+  }
+
+  private isMonthAllowed(month: number): boolean {
+    if (this.isYearModule()) return true;
+    if (this.module?.semester === 1) return month >= 1 && month <= 6;
+    if (this.module?.semester === 2) return month >= 7 && month <= 12;
+    return true;
+  }
+
+  private isDateAllowedForSemester(dateStr: string): boolean {
+    if (!dateStr) return false;
+    const d = new Date(dateStr + 'T00:00:00');
+    if (isNaN(d.getTime())) return false;
+    const month = d.getMonth() + 1;
+    return this.isMonthAllowed(month);
+  }
+
+  get dateMin(): string | null {
+    const y = new Date().getFullYear();
+    if (this.isYearModule()) return `${y}-01-01`;
+    return this.module?.semester === 1 ? `${y}-01-01` : `${y}-07-01`;
+  }
+  get dateMax(): string | null {
+    const y = new Date().getFullYear();
+    if (this.isYearModule()) return `${y}-12-31`;
+    return this.module?.semester === 1 ? `${y}-06-30` : `${y}-12-31`;
+  }
+
+  dateViolation(a: Assessment): string | null {
+    if (!a.date?.trim()) return null;
+    return this.isDateAllowedForSemester(a.date)
+      ? null
+      : (this.module?.semester === 1
+        ? 'For Semester 1, pick a date between Jan 1 and Jun 30.'
+        : 'For Semester 2, pick a date between Jul 1 and Dec 31.');
+  }
+
+  // ===== Validation parity with Add + semester window =====
   private venuesValid(): boolean {
-    if (this.venues.length === 0) return true; // optional overall
+    if (this.venues.length === 0) return true;
     for (const v of this.venues) {
       const vn = (v.venue || '').trim();
-      if (!vn) return false; // Venue is required once a block exists
+      if (!vn) return false;
       for (const d of this.weekDays) {
         const st = v.days[d];
         if (st?.checked) {
@@ -201,7 +241,7 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
     for (const a of this.assessments) {
       const titleOk = (a.title || '').trim().length > 0;
       const descOk = (a.description || '').trim().length > 0;
-      const dateOk = (a.date || '').trim().length > 0;
+      const dateOk = (a.date || '').trim().length > 0 && this.isDateAllowedForSemester(a.date);
       if (!(titleOk && descOk && dateOk)) return false;
 
       if (a.isTimed) {
@@ -246,7 +286,18 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
     }
     if (!this.assessmentsValid()) {
       this.activeTab = 'assessments';
-      this.toastr.error('Please fix the highlighted fields.');
+      const bad = this.assessments.find(x => x?.date && !this.isDateAllowedForSemester(x.date));
+      if (bad) {
+        this.toastr.error(
+          this.isYearModule()
+            ? 'Please fix the highlighted fields.'
+            : (this.module?.semester === 1
+              ? 'Semester 1 assessments must be dated between Jan 1 and Jun 30.'
+              : 'Semester 2 assessments must be dated between Jul 1 and Dec 31.')
+        );
+      } else {
+        this.toastr.error('Please fix the highlighted fields.');
+      }
       return;
     }
 
@@ -283,7 +334,7 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
         this.justSaved = true;
         this.originalHide();
       },
-      error: err => { this.toastr.error('Failed to update module'); console.error(err); }
+      error: err => { this.toastr.error(err?.error ?? 'Failed to update module'); console.error(err); }
     });
   }
 }
