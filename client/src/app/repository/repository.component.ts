@@ -33,6 +33,7 @@ export class RepositoryComponent implements OnInit {
 
   bsModalRef?: BsModalRef;
   roles: string[] = [];
+  private currentUserName: string = '';
 
   constructor(
     private router: Router,
@@ -45,6 +46,7 @@ export class RepositoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.roles = this.accountService.roles();
+    this.currentUserName = this.accountService.currentUser()?.userName ?? '';
     this.loadInternalDocuments();
     this.loadExternalRepositories();
   }
@@ -106,6 +108,25 @@ export class RepositoryComponent implements OnInit {
   openAddRepositoryModal() {
     this.bsModalRef = this.modalService.show(AddRepositoryModalComponent);
     this.bsModalRef.content.onAdd.subscribe(() => this.loadExternalRepositories());
+  }
+
+  // NEW: Only allow delete if current user originally uploaded the document.
+  // Uses `as any` to avoid changing the shared Document interface elsewhere.
+  canDelete(doc: Document): boolean {
+    const uploader = (doc as any)?.uploadedByUserName as string | undefined;
+    return !!uploader && uploader === this.currentUserName;
+  }
+
+  // NEW: Confirm before deleting internal repository documents.
+  confirmDeleteInternalDoc(docId: number) {
+    const initialState: Partial<ConfirmDeleteModalComponent> = {
+      title: 'Confirm Deletion',
+      message: 'Are you sure you want to delete this document?',
+      confirmText: 'Delete',
+      cancelText: 'No',
+      onConfirm: () => this.deleteDocument(docId)
+    };
+    this.bsModalRef = this.modalService.show(ConfirmDeleteModalComponent, { initialState });
   }
 
   deleteDocument(docId: number) {

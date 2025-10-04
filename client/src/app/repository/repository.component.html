@@ -83,8 +83,9 @@
                             rel="noopener noreferrer">
                             Download
                         </a>
-                        <button *ngIf="hasUploadRights()" class="btn btn-sm btn-danger" type="button"
-                            (click)="deleteDocument(doc.id)">
+                        <!-- Delete must be visible ONLY to the original uploader -->
+                        <button *ngIf="canDelete(doc)" class="btn btn-sm btn-danger" type="button"
+                            (click)="confirmDeleteInternalDoc(doc.id)">
                             Delete
                         </button>
                     </td>

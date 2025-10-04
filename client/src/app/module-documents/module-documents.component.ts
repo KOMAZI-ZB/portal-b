@@ -9,6 +9,7 @@ import { Pagination } from '../_models/pagination';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModuleService } from '../_services/module.service';
 import { Module } from '../_models/module';
+import { ConfirmDeleteModalComponent } from '../modals/confirm-delete-modal/confirm-delete-modal.component';
 
 @Component({
   selector: 'app-module-documents',
@@ -24,10 +25,11 @@ export class ModuleDocumentsComponent implements OnInit {
   documents: Document[] = [];
   bsModalRef?: BsModalRef;
   roles: string[] = [];
+  private currentUserName: string = '';
 
   pagination: Pagination = {
     currentPage: 1,
-    itemsPerPage: 5,
+    itemsPerPage: 10,
     totalItems: 0,
     totalPages: 0
   };
@@ -43,19 +45,19 @@ export class ModuleDocumentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.roles = this.accountService.roles();
+    this.currentUserName = this.accountService.currentUser()?.userName ?? '';
     this.moduleId = +this.route.snapshot.paramMap.get('id')!;
 
-    //   1) Read from router state if present
+    // 1) Router state
     const s = (history && history.state) ? (history.state as any) : {};
     if (s?.moduleCode) this.moduleCode = s.moduleCode;
     if (s?.moduleName) this.moduleName = s.moduleName;
 
-    //   2) Read from query params (persists across refresh)
+    // 2) Query params
     const qp = this.route.snapshot.queryParamMap;
     this.moduleCode = qp.get('code') ?? this.moduleCode;
     this.moduleName = qp.get('name') ?? this.moduleName;
 
-    // Also handle client-side param changes (rare but safe)
     this.route.queryParamMap.subscribe(p => {
       const code = p.get('code');
       const name = p.get('name');
@@ -63,7 +65,7 @@ export class ModuleDocumentsComponent implements OnInit {
       if (name) this.moduleName = name;
     });
 
-    //   3) Staff fetch confirmed details (students already have header via params)
+    // 3) Staff fetch confirmed details
     if (this.hasUploadRights()) {
       this.loadHeaderContext();
     }
@@ -77,7 +79,7 @@ export class ModuleDocumentsComponent implements OnInit {
         this.moduleCode = m?.moduleCode ?? this.moduleCode;
         this.moduleName = m?.moduleName ?? this.moduleName;
       },
-      error: () => { /* ignore; keep whatever we have */ }
+      error: () => { /* ignore */ }
     });
   }
 
@@ -122,10 +124,28 @@ export class ModuleDocumentsComponent implements OnInit {
     }, 0);
   }
 
-  deleteDocument(docId: number) {
+  // Uploader-only check for Delete visibility
+  canDelete(doc: Document): boolean {
+    return !!doc.uploadedByUserName && doc.uploadedByUserName === this.currentUserName;
+  }
+
+  // Show confirm modal before deleting
+  confirmDelete(docId: number) {
+    const initialState: Partial<ConfirmDeleteModalComponent> = {
+      title: 'Confirm Deletion',
+      message: 'Are you sure you want to delete this document?',
+      confirmText: 'Delete',
+      cancelText: 'No',
+      onConfirm: () => this.performDelete(docId)
+    };
+    this.modalService.show(ConfirmDeleteModalComponent, { initialState, class: 'modal-dialog-centered' });
+  }
+
+  private performDelete(docId: number) {
     this.documentService.deleteModuleDocument(docId).subscribe({
       next: () => {
         this.documents = this.documents.filter((d) => d.id !== docId);
+        // keep pagination state; no other changes
       },
       error: (err) => console.error('Failed to delete document', err)
     });

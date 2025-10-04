@@ -5,4 +5,5 @@ export interface Document {
     uploadedAt: string;
     uploadedBy: string;
     moduleId?: number | null;
+    uploadedByUserName?: string;
 }

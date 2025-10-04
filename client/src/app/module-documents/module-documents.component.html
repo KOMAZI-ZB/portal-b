@@ -22,7 +22,6 @@
         </button>
     </div>
 
-    <!-- (table + pagination unchanged) -->
     <table class="table table-bordered table-hover align-middle">
         <thead class="table-light">
             <tr>
@@ -40,8 +39,10 @@
                 <td class="text-center">
                     <a [href]="doc.filePath" target="_blank" rel="noopener noreferrer" download
                         class="btn btn-sm btn-success me-2">Download</a>
-                    <button *ngIf="hasUploadRights()" class="btn btn-sm btn-danger"
-                        (click)="deleteDocument(doc.id)">Delete</button>
+
+                    <!-- Delete shown only to original uploader -->
+                    <button *ngIf="canDelete(doc)" class="btn btn-sm btn-danger"
+                        (click)="confirmDelete(doc.id)">Delete</button>
                 </td>
             </tr>
             <tr *ngIf="documents.length === 0">

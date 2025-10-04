@@ -184,7 +184,8 @@ namespace API.Services
             var document = await _context.Documents.FindAsync(documentId);
             if (document == null) return false;
 
-            if (document.UploadedByUserName != requesterUserName && !isAdminOrCoordinator)
+            // ⛔ Uploader-only rule: ignore any admin/coordinator overrides
+            if (!string.Equals(document.UploadedByUserName, requesterUserName, StringComparison.Ordinal))
                 return false;
 
             _context.Documents.Remove(document);
