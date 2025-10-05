@@ -5,6 +5,8 @@ using API.Helpers;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using API.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
 
@@ -13,12 +15,14 @@ public class RepositoryController(
     IDocumentService documentService,
     INotificationService notificationService,
     IRepositoryService repositoryService,
-    IMapper mapper) : BaseApiController
+    IMapper mapper,
+    DataContext context) : BaseApiController
 {
     private readonly IDocumentService _documentService = documentService;
     private readonly INotificationService _notificationService = notificationService;
     private readonly IRepositoryService _repositoryService = repositoryService;
     private readonly IMapper _mapper = mapper;
+    private readonly DataContext _context = context;
 
     // ============================
     //   Internal Repository Documents
@@ -36,11 +40,51 @@ public class RepositoryController(
         if (result == null)
             return BadRequest("Upload failed.");
 
+        // Resolve FirstName + LastName + Role for notification
+        var userRecord = await _context.Users
+            .Where(u => u.UserName == userName)
+            .Select(u => new { u.Id, u.FirstName, u.LastName })
+            .SingleOrDefaultAsync();
+
+        string displayName = userName;
+        if (userRecord != null)
+        {
+            var first = (userRecord.FirstName ?? string.Empty).Trim();
+            var last = (userRecord.LastName ?? string.Empty).Trim();
+            var combined = string.Join(" ", new[] { first, last }.Where(s => !string.IsNullOrWhiteSpace(s)));
+            if (!string.IsNullOrWhiteSpace(combined))
+                displayName = combined;
+        }
+
+        // Pull roles and choose a label (Coordinator > Lecturer > Admin)
+        string? roleLabel = null;
+        if (userRecord != null)
+        {
+            var roles = await _context.UserRoles
+                .Include(ur => ur.Role)
+                .Where(ur => ur.UserId == userRecord.Id)
+                .Select(ur => ur.Role.Name)
+                .ToListAsync();
+
+            if (roles.Contains("Coordinator")) roleLabel = "Coordinator";
+            else if (roles.Contains("Lecturer")) roleLabel = "Lecturer";
+            else if (roles.Contains("Admin")) roleLabel = "Admin";
+        }
+
+        // Build final display text:
+        // - Admin => "Admin" (role only)
+        // - Coordinator/Lecturer => "Role First Last"
+        // - Fallback => name or username
+        string displayWithRole =
+            roleLabel == "Admin" ? "Admin"
+            : !string.IsNullOrWhiteSpace(roleLabel) ? $"{roleLabel} {displayName}"
+            : displayName;
+
         var notification = new CreateNotificationDto
         {
             Type = "RepositoryUpdate",
             Title = "Internal Repository Updated",
-            Message = $"A new document was uploaded by {userName} to the internal repository.",
+            Message = $"A new document was uploaded by {displayWithRole} to the internal repository.",
             Image = null,
             ModuleId = null
         };

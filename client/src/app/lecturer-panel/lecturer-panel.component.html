@@ -1,31 +1,75 @@
 <div class="row">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="mb-0 lecturer-title">My Assigned Modules</h2>
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4 w-100">
+            <h2 class="mb-0 lecturer-title">My Assigned Modules</h2>
+
+            <!-- NEW: Funnel icon filter -->
+            <div class="d-flex align-items-center gap-2 ms-auto">
+                <div #filterMenu class="position-relative">
+                    <button type="button" class="btn btn-outline-secondary btn-sm" (click)="toggleFilterMenu()"
+                        [attr.aria-expanded]="isFilterOpen" aria-haspopup="true" aria-label="Filter modules by semester"
+                        title="Filter modules by semester">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <path d="M3 4h18l-7.5 9v5.5l-3 1.5V13L3 4z" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                        </svg>
+                    </button>
+
+                    <!-- Simple dropdown menu -->
+                    <ul class="dropdown-menu dropdown-menu-end show" *ngIf="isFilterOpen"
+                        style="min-width: 220px; right: 0; left: auto;">
+                        <li>
+                            <button class="dropdown-item" (click)="applyFilter('all')"
+                                [class.active]="selectedSemesterFilter==='all'">All</button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" (click)="applyFilter(1)"
+                                [class.active]="selectedSemesterFilter===1">S1</button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" (click)="applyFilter(2)"
+                                [class.active]="selectedSemesterFilter===2">S2</button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" (click)="applyFilter(0)"
+                                [class.active]="selectedSemesterFilter===0">Year</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- added .lecturer-table to scope the styling -->
-    <table class="table table-striped lecturer-table">
-        <thead>
-            <tr>
-                <th>Module Code</th>
-                <th>Module Name</th>
-                <th>Semester</th>
-                <th>Edit Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            @for (mod of modules; track mod.id) {
-            <tr>
-                <td>{{ mod.moduleCode }}</td>
-                <td>{{ mod.moduleName }}</td>
-                <td>{{ mod.semester }}</td>
-                <td>
-                    <button class="btn btn-outline-secondary btn-sm" (click)="openEditDetailsModal(mod)">
-                        Edit Details
-                    </button>
-                </td>
-            </tr>
-            }
-        </tbody>
-    </table>
+    <div class="col-12">
+        <!-- scoped table -->
+        <table class="table table-striped lecturer-table">
+            <thead>
+                <tr>
+                    <th>Module Code</th>
+                    <th>Module Name</th>
+                    <th>Semester</th>
+                    <th>Edit Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (mod of viewModules; track mod.id) {
+                <tr>
+                    <td>{{ mod.moduleCode }}</td>
+                    <td>{{ mod.moduleName }}</td>
+                    <td>{{ mod.semester }}</td>
+                    <td>
+                        <button class="btn btn-outline-secondary btn-sm" (click)="openEditDetailsModal(mod)">
+                            Edit Details
+                        </button>
+                    </td>
+                </tr>
+                } @empty {
+                <tr>
+                    <td colspan="4" class="text-center text-muted">No modules to show.</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

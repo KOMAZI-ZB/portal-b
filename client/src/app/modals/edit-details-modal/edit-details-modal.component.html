@@ -8,7 +8,8 @@
         <!-- Tabs -->
         <ul class="nav nav-tabs mb-3">
             <li class="nav-item">
-                <a class="nav-link" [class.active]="activeTab==='contact'" (click)="setTab('contact')">Class Venues</a>
+                <a class="nav-link" [class.active]="activeTab==='contact'" (click)="setTab('contact')">Class
+                    Sessions</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" [class.active]="activeTab==='assessments'"
@@ -20,7 +21,7 @@
             <!-- Venues tab -->
             <div [hidden]="activeTab!=='contact'">
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h6 class="mb-0">Class Venues</h6>
+                    <h6 class="mb-0">Class Sessions</h6>
                     <button type="button" class="btn btn-outline-primary btn-sm" (click)="addVenue()">+ Add
                         Venue</button>
                 </div>
@@ -28,7 +29,7 @@
                 <div *ngFor="let v of venues; let vi = index" class="border rounded p-2 mb-3 venue-card">
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <div class="flex-grow-1 me-2">
-                            <label class="form-label">Venue</label>
+                            <label class="form-label">📘 Venue</label>
                             <input class="form-control" [(ngModel)]="v.venue" [name]="'venue-'+vi"
                                 placeholder="e.g., B108" (ngModelChange)="markDirty()"
                                 [class.is-invalid]="((v.venue||'').trim().length===0)" />

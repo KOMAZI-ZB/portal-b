@@ -311,7 +311,7 @@ public class ModulesController(DataContext context) : BaseApiController
         var originalCode = module.ModuleCode ?? string.Empty;
         var originalName = module.ModuleName ?? string.Empty;
 
-        // class sessions (snapshot before replacement)
+        // class sessions (snapshot before potential replacement)
         var originalSessions = module.ClassSessions
             .Select(s => new { s.Venue, s.WeekDay, s.StartTime, s.EndTime })
             .OrderBy(x => x.Venue).ThenBy(x => x.WeekDay).ThenBy(x => x.StartTime).ThenBy(x => x.EndTime)
@@ -360,13 +360,16 @@ public class ModulesController(DataContext context) : BaseApiController
         module.StartTimes = dto.StartTimes != null ? string.Join(",", dto.StartTimes) : null;
         module.EndTimes = dto.EndTimes != null ? string.Join(",", dto.EndTimes) : null;
 
-        // replace sessions
-        var existing = await context.ClassSessions.Where(s => s.ModuleId == id).ToListAsync();
-        context.ClassSessions.RemoveRange(existing);
+        // --- Only touch schedules if the payload provided them ---
+        var touchedClassSchedule = dto.ClassSessions != null;
+        var touchedAssessmentSchedule = dto.Assessments != null;
 
-        if (dto.ClassSessions != null)
+        if (touchedClassSchedule)
         {
-            foreach (var s in dto.ClassSessions)
+            var existing = await context.ClassSessions.Where(s => s.ModuleId == id).ToListAsync();
+            context.ClassSessions.RemoveRange(existing);
+
+            foreach (var s in dto.ClassSessions!)
             {
                 context.ClassSessions.Add(new ClassSession
                 {
@@ -379,13 +382,12 @@ public class ModulesController(DataContext context) : BaseApiController
             }
         }
 
-        // replace assessments (NOW includes Description)
-        var existingAssessments = await context.Assessments.Where(a => a.ModuleId == id).ToListAsync();
-        context.Assessments.RemoveRange(existingAssessments);
-
-        if (dto.Assessments != null)
+        if (touchedAssessmentSchedule)
         {
-            foreach (var a in dto.Assessments)
+            var existingAssessments = await context.Assessments.Where(a => a.ModuleId == id).ToListAsync();
+            context.Assessments.RemoveRange(existingAssessments);
+
+            foreach (var a in dto.Assessments!)
             {
                 context.Assessments.Add(new Assessment
                 {
@@ -402,56 +404,64 @@ public class ModulesController(DataContext context) : BaseApiController
             }
         }
 
-        // Persist updates to compare against DB state
+        // Persist updates
         await context.SaveChangesAsync();
 
-        // Compare sessions for CLASS schedule notification
-        var currentSessions = await context.ClassSessions.Where(s => s.ModuleId == id)
-            .Select(s => new { s.Venue, s.WeekDay, s.StartTime, s.EndTime })
-            .OrderBy(x => x.Venue).ThenBy(x => x.WeekDay).ThenBy(x => x.StartTime).ThenBy(x => x.EndTime)
-            .ToListAsync();
+        // Compare sessions for CLASS schedule notification (only if we touched them)
+        bool classScheduleChanged = false;
+        if (touchedClassSchedule)
+        {
+            var currentSessions = await context.ClassSessions.Where(s => s.ModuleId == id)
+                .Select(s => new { s.Venue, s.WeekDay, s.StartTime, s.EndTime })
+                .OrderBy(x => x.Venue).ThenBy(x => x.WeekDay).ThenBy(x => x.StartTime).ThenBy(x => x.EndTime)
+                .ToListAsync();
 
-        bool classScheduleChanged = originalSessions.Count != currentSessions.Count
-            || originalSessions.Zip(currentSessions, (o, c) =>
-                o.Venue != c.Venue || o.WeekDay != c.WeekDay || o.StartTime != c.StartTime || o.EndTime != c.EndTime)
-               .Any(diff => diff);
+            classScheduleChanged = originalSessions.Count != currentSessions.Count
+                || originalSessions.Zip(currentSessions, (o, c) =>
+                    o.Venue != c.Venue || o.WeekDay != c.WeekDay || o.StartTime != c.StartTime || o.EndTime != c.EndTime)
+                   .Any(diff => diff);
+        }
 
-        // Compare assessments for ASSESSMENT schedule notification
-        var currentAssessments = await context.Assessments
-            .Where(a => a.ModuleId == id)
-            .Select(a => new
-            {
-                a.Title,
-                a.Description,
-                a.Date,
-                a.StartTime,
-                a.EndTime,
-                a.DueTime,
-                a.Venue,
-                a.IsTimed
-            })
-            .OrderBy(a => a.Date).ThenBy(a => a.Title)
-            .ToListAsync();
+        // Compare assessments for ASSESSMENT schedule notification (only if we touched them)
+        bool assessmentScheduleChanged = false;
+        if (touchedAssessmentSchedule)
+        {
+            var currentAssessments = await context.Assessments
+                .Where(a => a.ModuleId == id)
+                .Select(a => new
+                {
+                    a.Title,
+                    a.Description,
+                    a.Date,
+                    a.StartTime,
+                    a.EndTime,
+                    a.DueTime,
+                    a.Venue,
+                    a.IsTimed
+                })
+                .OrderBy(a => a.Date).ThenBy(a => a.Title)
+                .ToListAsync();
 
-        bool assessmentScheduleChanged =
-            originalAssessments.Count != currentAssessments.Count
-            || originalAssessments.Zip(currentAssessments, (o, c) =>
-                   o.Title != c.Title ||
-                   o.Description != c.Description ||
-                   o.Date != c.Date ||
-                   o.StartTime != c.StartTime ||
-                   o.EndTime != c.EndTime ||
-                   o.DueTime != c.DueTime ||
-                   o.Venue != c.Venue ||
-                   o.IsTimed != c.IsTimed)
-               .Any(diff => diff);
+            assessmentScheduleChanged =
+                originalAssessments.Count != currentAssessments.Count
+                || originalAssessments.Zip(currentAssessments, (o, c) =>
+                       o.Title != c.Title ||
+                       o.Description != c.Description ||
+                       o.Date != c.Date ||
+                       o.StartTime != c.StartTime ||
+                       o.EndTime != c.EndTime ||
+                       o.DueTime != c.DueTime ||
+                       o.Venue != c.Venue ||
+                       o.IsTimed != c.IsTimed)
+                   .Any(diff => diff);
+        }
 
         // Determine metadata-only changes
         var codeChanged = (dto.ModuleCode is not null) && !string.Equals(originalCode, module.ModuleCode, StringComparison.Ordinal);
         var nameChanged = (dto.ModuleName is not null) && !string.Equals(originalName, module.ModuleName, StringComparison.Ordinal);
         var metadataChanged = codeChanged || nameChanged;
 
-        // Consolidate schedule change flag (anything timetable-related)
+        // Consolidate schedule change flag (anything timetable-related AND actually touched)
         var scheduleChanged = classScheduleChanged || assessmentScheduleChanged;
 
         // ⚖️ Classification rule (single category per save):
@@ -462,7 +472,6 @@ public class ModulesController(DataContext context) : BaseApiController
 
         if (scheduleChanged)
         {
-            // Keep existing behaviour (may add both class & assessment schedule updates if both changed)
             if (classScheduleChanged)
             {
                 var n = new Notification
@@ -471,7 +480,7 @@ public class ModulesController(DataContext context) : BaseApiController
                     Message = $"The class timetable (venues/days/times) for {module.ModuleCode} has changed. Please check your schedule.",
                     Type = "ScheduleUpdate",
                     ModuleId = module.Id,
-                    Audience = "ModuleStudents",          // all users linked to the module will see it (students/lecturers/coordinators) + creator via CreatedBy
+                    Audience = "ModuleStudents",
                     CreatedBy = creator,
                     CreatedAt = DateTimeOffset.UtcNow
                 };
@@ -498,7 +507,6 @@ public class ModulesController(DataContext context) : BaseApiController
         else if (metadataChanged)
         {
             // MODULE UPDATE (metadata only)
-            // Build message with old → new details when available
             var changes = new List<string>();
             if (codeChanged) changes.Add($"{originalCode} → {module.ModuleCode}");
             if (nameChanged) changes.Add($"{originalName} → {module.ModuleName}");
@@ -513,7 +521,7 @@ public class ModulesController(DataContext context) : BaseApiController
                 Message = changeText,
                 Type = "ModuleUpdate",
                 ModuleId = module.Id,
-                Audience = "ModuleStudents",           // visibility: all linked users + creator
+                Audience = "ModuleStudents",
                 CreatedBy = creator,
                 CreatedAt = DateTimeOffset.UtcNow
             };
