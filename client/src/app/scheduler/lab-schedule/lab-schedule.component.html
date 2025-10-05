@@ -12,7 +12,7 @@
         </div>
 
         <div class="ms-auto">
-            <span *ngIf="isPastWeekView()" class="badge bg-secondary">Past week • View only</span>
+            <!-- Removed past-week badge per request -->
         </div>
     </div>
 
@@ -47,7 +47,6 @@
         </button>
     </div>
 
-
     <!-- Weekly Grid Table (PDF content) -->
     <div *ngIf="hasBookingsThisWeek()" id="labScheduleTable" class="table-responsive mt-3 p-4 bg-white">
         <!-- Logo -->
@@ -58,7 +57,13 @@
         <!-- Table top bar (kept tight to the table, like your original) -->
         <div class="table-topbar">
             <div class="topbar-title">
-                Lab Schedule: {{ getWeekRangeLabelShort().replace('Week:', 'Week') }}
+                Lab Schedule: {{
+                getWeekRangeLabelShort()
+                .replace('Week:', 'Week')
+                .split(' ')
+                .slice(0, -1)
+                .join(' ')
+                }}
             </div>
             <div class="topbar-user">{{ userFullName }}</div>
         </div>

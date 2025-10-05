@@ -55,12 +55,20 @@
     padding: 20px;
     border-radius: 10px;
     overflow: visible;
+
+    /* Adjustable colors for body Start/End columns */
+    --time-col-bg: #f1f3f5;
+    /* change to adjust background */
+    --time-col-color: #000;
+    /* change to adjust text color */
 }
 
 /* Table */
 #pdfContent table {
     width: 100%;
     table-layout: fixed;
+    border-collapse: collapse;
+    /* helps remove seam artifacts */
 }
 
 #pdfContent th,
@@ -68,15 +76,41 @@
     word-break: break-word;
 }
 
+/* Body Start/End cells only (not the header) */
+#pdfContent td.time-col {
+    position: relative;
+    background-color: var(--time-col-bg) !important;
+    color: var(--time-col-color) !important;
+}
+
+/* Mask any cross-row borders inside the rowspan cell with the same color */
+#pdfContent td.time-col::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    /* keep the outer 1px border visible */
+    background: var(--time-col-bg);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Keep the time text above the overlay */
+#pdfContent td.time-col>* {
+    position: relative;
+    z-index: 2;
+}
+
+/* Table grid lines */
 .table-bordered td,
 .table-bordered th {
     vertical-align: middle;
     text-align: center;
     border: 1px solid #000;
     padding: 12px;
-    font-size: 16px;
+    font-size: 15px;
 }
 
+/* Header color */
 .table thead th {
     background-color: #007bff;
     color: white;

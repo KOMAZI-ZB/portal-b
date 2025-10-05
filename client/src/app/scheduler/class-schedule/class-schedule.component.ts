@@ -4,7 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { ClassSchedule } from '../../_models/class-schedule';
 import { SchedulerService } from '../../_services/scheduler.service';
 import { AccountService } from '../../_services/account.service';
-import html2pdf from 'html2pdf.js';
+
+// Exact-render screenshot pipeline
+import html2canvas from 'html2canvas';
+import { jsPDF } from 'jspdf';
 
 interface TimeBlock { startTime: string; endTime: string; }
 interface CellEntry { moduleCode: string; venue?: string; }
@@ -111,18 +114,101 @@ export class ClassScheduleComponent implements OnInit {
     return colors[hash % colors.length];
   }
 
-  downloadScheduleAsPdf(): void {
+  /**
+   * Pixel-perfect screenshot → PDF (multipage) with:
+   * - Page breaks aligned to <tr> boundaries
+   * - Uniform margins so content isn't at page edges
+   */
+  async downloadScheduleAsPdf(): Promise<void> {
     const content = document.getElementById('pdfContent');
     if (!content) return;
-    html2pdf().set({
-      margin: 0.5,
-      filename: 'Class_Schedule.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' },
-      // Use CSS hints and legacy handling (no aggressive "avoid-all")
-      pagebreak: { mode: ['css', 'legacy'] }
-    } as any).from(content).save();
+
+    // Collect row top offsets (relative to content) BEFORE rendering canvas
+    const contentRect = content.getBoundingClientRect();
+    const rowNodes = Array.from(
+      content.querySelectorAll<HTMLTableRowElement>('table tbody tr')
+    );
+    const rowTopsCssPx = rowNodes.map(r => {
+      const rTop = r.getBoundingClientRect().top - contentRect.top;
+      return Math.max(0, Math.floor(rTop));
+    });
+    rowTopsCssPx.unshift(0);
+
+    // Render high-DPI canvas of the content
+    const SCALE = 2;
+    const canvas = await html2canvas(content, {
+      scale: SCALE,
+      useCORS: true,
+      backgroundColor: '#ffffff',
+      logging: false,
+      windowWidth: content.scrollWidth,
+      windowHeight: content.scrollHeight,
+      scrollY: -window.scrollY
+    });
+
+    // Map row tops from CSS px → canvas px
+    const rowTopsCanvasPx = rowTopsCssPx.map(v => Math.round(v * SCALE));
+
+    const pdf = new jsPDF({
+      orientation: 'landscape',
+      unit: 'px',
+      format: 'a4'
+    });
+
+    const pageW = pdf.internal.pageSize.getWidth();
+    const pageH = pdf.internal.pageSize.getHeight();
+
+    // Margins so content isn't glued to edges
+    const PAGE_MARGIN_X = 24; // px
+    const PAGE_MARGIN_Y = 24; // px
+    const usableW = pageW - 2 * PAGE_MARGIN_X;
+    const usableH = pageH - 2 * PAGE_MARGIN_Y;
+
+    // Scale to fit usable width
+    const imgScale = usableW / canvas.width;
+    const canvasPerPage = Math.floor(usableH / imgScale); // canvas px per page vertically
+
+    let rendered = 0;
+    const total = canvas.height;
+
+    while (rendered < total) {
+      const idealBreak = rendered + canvasPerPage;
+
+      // Snap break to the previous row boundary
+      let breakAt = total;
+      for (let i = 0; i < rowTopsCanvasPx.length; i++) {
+        const y = rowTopsCanvasPx[i];
+        if (y > idealBreak) {
+          breakAt = Math.max(rendered + 1, rowTopsCanvasPx[i - 1] ?? idealBreak);
+          break;
+        }
+      }
+      if (breakAt === total && idealBreak < total) {
+        breakAt = idealBreak;
+      }
+
+      const sliceH = Math.min(breakAt - rendered, total - rendered);
+
+      const slice = document.createElement('canvas');
+      slice.width = canvas.width;
+      slice.height = sliceH;
+      const sctx = slice.getContext('2d')!;
+      sctx.drawImage(
+        canvas,
+        0, rendered, canvas.width, sliceH,
+        0, 0, canvas.width, sliceH
+      );
+
+      const data = slice.toDataURL('image/png'); // PNG avoids seam artifacts
+      const renderH = sliceH * imgScale;
+
+      pdf.addImage(data, 'PNG', PAGE_MARGIN_X, PAGE_MARGIN_Y, usableW, renderH);
+
+      rendered += sliceH;
+      if (rendered < total) pdf.addPage('a4', 'landscape');
+    }
+
+    pdf.save('Class_Schedule.pdf');
   }
 
   formatTime(time: string): string {

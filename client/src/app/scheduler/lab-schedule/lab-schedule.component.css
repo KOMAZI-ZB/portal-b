@@ -1,3 +1,5 @@
+/* src/app/schedule/lab-schedule.component.css */
+
 /* Buttons (unchanged) */
 .btn-outline-primary {
     border-radius: 20px;
@@ -11,14 +13,45 @@
     cursor: default !important;
 }
 
-/* Student booked-slot color override (unchanged) */
+/* Student booked-slot color override (UPDATED to requested colour + shadow) */
 .non-interactive.cell-btn.btn-dark,
 .non-interactive.cell-btn.btn-dark:focus,
 .non-interactive.cell-btn.btn-dark:active {
-    background-color: #CAF5F6 !important;
-    border-color: #CAF5F6 !important;
+    background-color: #b3d4ff !important;
+    border-color: #b3d4ff !important;
     color: #000 !important;
-    box-shadow: none !important;
+    box-shadow: 0 0 0 2px rgba(19, 102, 241, 0.15) !important;
+}
+
+/* Stronger, ID-scoped guarantee for student buttons inside the PDF root */
+#labScheduleTable .cell-btn.non-interactive,
+#labScheduleTable .cell-btn.non-interactive:focus,
+#labScheduleTable .cell-btn.non-interactive:active {
+    background-color: #b3d4ff !important;
+    border-color: #b3d4ff !important;
+    color: #000 !important;
+    box-shadow: 0 0 0 2px rgba(19, 102, 241, 0.15) !important;
+}
+
+/* NEW: globally controllable colour for "Booked by:" */
+:root {
+    /* Change this to control the "Booked by:" text colour app-wide */
+    --booked-by-color: #000;
+}
+
+/* Ensure the 1-line variant used in the template is explicitly controllable and overrides .text-muted */
+#labScheduleTable .booked-by-1line {
+    color: var(--booked-by-color) !important;
+}
+
+/* NEW: subtle hover for interactive (staff) booking buttons */
+.cell-btn:not(.non-interactive):hover,
+.cell-btn:not(.non-interactive):focus {
+    background-color: #f2f2f2 !important;
+    /* subtle light grey */
+    color: #000 !important;
+    /* keep text visible */
+    border-color: #adb5bd !important;
 }
 
 /* Prev/Next row above the logo (outside the PDF root) */
@@ -44,7 +77,6 @@
     height: 36px;
     border-radius: 50%;
     background: #0D6EFD;
-    /* same blue */
     color: #fff;
     display: inline-flex;
     align-items: center;
@@ -56,14 +88,11 @@
 
 .nav-text {
     color: #000;
-    /* black text */
     font-weight: 600;
-    /* same weight as Back to Modules */
 }
 
 .nav-btn[disabled] .nav-circle {
     background: #93c5fd;
-    /* soften when disabled */
     box-shadow: none;
     opacity: .7;
 }
@@ -118,14 +147,12 @@
     display: inline-block !important;
     color: #000 !important;
     font-weight: 400 !important;
-    /* not bold */
 }
 
 /* Semester label appearance */
 .weekbar .sem-label {
     color: #000 !important;
     font-weight: 600 !important;
-    /* keep your existing weight */
 }
 
 /* PDF/table container */
@@ -136,10 +163,33 @@
     overflow: visible !important;
 }
 
-/* Ensure everything inside the capture root stays white (fixes grey blocks) */
-#labScheduleTable,
-#labScheduleTable * {
+/* Keep table chrome white but DO NOT force descendants like buttons to white */
+#labScheduleTable thead,
+#labScheduleTable tbody,
+#labScheduleTable tr,
+#labScheduleTable th,
+#labScheduleTable td {
     background: #fff !important;
+}
+
+/*FIX: Let the time-cell text inherit the cell’s colour (remove white tile) */
+#labScheduleTable .time-cell * {
+    background: transparent !important;
+}
+
+/* Make sure hover still works inside the capture root (overrides rule above) */
+#labScheduleTable .cell-btn:not(.non-interactive):hover,
+#labScheduleTable .cell-btn:not(.non-interactive):focus {
+    background-color: #b3d4ff !important;
+    color: #000 !important;
+    border-color: #b3d4ff !important;
+    box-shadow: 0 0 0 2px rgba(19, 102, 241, 0.15);
+}
+
+/* FIX: Restore visible column headers (blue background with white text) */
+#labScheduleTable thead th {
+    background-color: #007bff !important;
+    color: #fff !important;
 }
 
 /* Force table layout */
@@ -182,12 +232,13 @@
     font-weight: bold;
 }
 
-.table tbody td:first-child {
+/* Time column body cells (below the header) */
+#labScheduleTable tbody .time-cell {
     font-weight: bold;
-    background-color: #f8f9fa;
+    background-color: #f1f5f2 !important;
 }
 
-/* Booked by text */
+/* Legacy booked-by (unused by template, retained unchanged) */
 .booked-by {
     white-space: nowrap;
     overflow: hidden;

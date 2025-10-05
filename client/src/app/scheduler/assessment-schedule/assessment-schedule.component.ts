@@ -92,9 +92,9 @@ export class AssessmentScheduleComponent implements OnInit {
     if (!tableElement) return;
 
     const options = {
-      margin: 0.5,
+      margin: 0.2,
       filename: 'Assessment_Schedule.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
+      image: { type: 'jpeg', quality: 1 },
       html2canvas: { scale: 2, useCORS: true },
       jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' },
       // Use CSS hints without forcing "avoid-all"

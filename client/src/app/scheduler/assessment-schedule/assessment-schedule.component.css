@@ -62,8 +62,8 @@
     vertical-align: middle;
     text-align: center;
     border: 1px solid #000;
-    padding: 12px;
-    font-size: 16px;
+    padding: 10px;
+    font-size: 15px;
 }
 
 /* Blue header (kept) */
@@ -85,6 +85,39 @@ th,
 .avoid-break {
     break-inside: avoid;
     page-break-inside: avoid;
+}
+
+/* ========= NEW: Value-only formatting by column ========= */
+/* Single-line values (no wrapping) for columns:
+   1 Module Code, 2 Start Time, 3 End Time, 4 Venue, 5 Date, 8 Submission Deadline */
+#pdfContent table tbody td:nth-child(1),
+#pdfContent table tbody td:nth-child(2),
+#pdfContent table tbody td:nth-child(3),
+#pdfContent table tbody td:nth-child(4),
+#pdfContent table tbody td:nth-child(5),
+#pdfContent table tbody td:nth-child(8) {
+    white-space: nowrap;
+    /* keep on one line */
+    overflow: hidden;
+    /* clip overflow */
+    text-overflow: ellipsis;
+    /* show … if too long */
+}
+
+/* Wrapped & justified values for:
+   6 Title, 7 Description (not centered) */
+#pdfContent table tbody td:nth-child(6),
+#pdfContent table tbody td:nth-child(7) {
+    white-space: normal;
+    /* allow wrapping */
+    word-break: break-word;
+    /* break long words if needed */
+    hyphens: auto;
+    /* nicer breaks where supported */
+    text-align: left;
+    /* justify text for neat edges */
+    text-justify: inter-word;
+    /* headings remain centered; this override applies to values only via tbody */
 }
 
 /* Print mode */

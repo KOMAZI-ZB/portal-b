@@ -1,3 +1,4 @@
+// src/app/schedule/lab-schedule.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -6,7 +7,10 @@ import { AccountService } from '../../_services/account.service';
 import { LabbookingService } from '../../_services/labbooking.service';
 import { BookLabSlotModalComponent } from '../../modals/book-lab-slot-modal/book-lab-slot-modal.component';
 import { UnbookLabSlotModalComponent } from '../../modals/unbook-lab-slot-modal/unbook-lab-slot-modal.component';
-import html2pdf from 'html2pdf.js';
+
+// ✨ Exact-render screenshot pipeline (replaces html2pdf)
+import html2canvas from 'html2canvas';
+import { jsPDF } from 'jspdf';
 
 @Component({
   selector: 'app-lab-schedule',
@@ -88,6 +92,9 @@ export class LabScheduleComponent implements OnInit {
     x.setDate(x.getDate() - x.getDay());
     return x;
   }
+  weekStartOfDate(d: Date): Date {
+    return this.startOfWeekSunday(d);
+  }
   addDays(d: Date, n: number): Date {
     const x = new Date(d);
     x.setDate(x.getDate() + n);
@@ -115,14 +122,51 @@ export class LabScheduleComponent implements OnInit {
     return ws;
   }
 
-  /** Semester change */
-  onSemesterChange() {
-    // Re-clamp week around TODAY for the chosen semester
+  /** Find first week in the selected semester that actually has bookings */
+  private firstBookedWeekStart(sem: 1 | 2, year: number): Date | null {
+    const { start, end } = this.semesterBounds(sem, year);
+    const candidates = (this.bookings || [])
+      .map(b => this.normalizeApiDateString(b.bookingDate))
+      .filter(s => !!s)
+      .map(s => new Date(s as string))
+      .filter(d => d >= start && d <= end)
+      .map(d => this.weekStartOfDate(d))
+      .sort((a, b) => +a - +b);
+
+    return candidates.length ? candidates[0] : null;
+  }
+
+  /** Snap to nearest booked week inside the semester if current week is empty */
+  private snapToNearestBookedWeekInSemester(): void {
+    if (this.hasBookingsThisWeek()) return;
     const today = new Date();
     const year = today.getFullYear();
-    const { start, end } = this.semesterBounds(this.selectedSemester, year);
-    const target = (today >= start && today <= end) ? today : start;
+    const first = this.firstBookedWeekStart(this.selectedSemester, year);
+    if (first) {
+      this.currentWeekStart = this.clampWeekToSemester(first, this.selectedSemester, year);
+    } else {
+      // Fallback to semester start if no bookings exist at all
+      const { start } = this.semesterBounds(this.selectedSemester, year);
+      this.currentWeekStart = this.clampWeekToSemester(start, this.selectedSemester, year);
+    }
+  }
+
+  /** Semester change */
+  onSemesterChange() {
+    const today = new Date();
+    const year = today.getFullYear();
+
+    // Prefer jumping to the first booked week within the chosen semester (if any).
+    const first = this.firstBookedWeekStart(this.selectedSemester, year);
+    const target = first ?? (() => {
+      const { start, end } = this.semesterBounds(this.selectedSemester, year);
+      return (today >= start && today <= end) ? today : start;
+    })();
+
     this.currentWeekStart = this.clampWeekToSemester(this.startOfWeekSunday(target), this.selectedSemester, year);
+
+    // If the chosen week is still empty, snap again safely
+    this.snapToNearestBookedWeekInSemester();
   }
 
   /** Week nav + state */
@@ -250,7 +294,11 @@ export class LabScheduleComponent implements OnInit {
 
   loadBookings() {
     this.labbookingService.getAllBookings().subscribe({
-      next: (res: LabBooking[]) => this.bookings = res || [],
+      next: (res: LabBooking[]) => {
+        this.bookings = res || [];
+        // If current week is empty, try snapping to the first booked week in this semester
+        this.snapToNearestBookedWeekInSemester();
+      },
       error: err => { console.error('Failed to load lab bookings', err); this.bookings = []; }
     });
   }
@@ -311,18 +359,83 @@ export class LabScheduleComponent implements OnInit {
     });
   }
 
-  /** Export */
-  downloadScheduleAsPdf() {
-    const tableElement = document.getElementById('labScheduleTable');
-    if (!tableElement) return;
-    const options = {
-      margin: 0.5,
-      filename: 'Lab_Schedule.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2pdf: { scale: 2 },
-      jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' },
-      pagebreak: { mode: ['css', 'avoid-all'] }
-    } as any;
-    html2pdf().set(options).from(tableElement).save();
+  /** Export: exact screenshot → multi-page PDF with row-aligned page breaks */
+  async downloadScheduleAsPdf(): Promise<void> {
+    const root = document.getElementById('labScheduleTable');
+    if (!root) return;
+
+    // Capture row top offsets (relative to root) BEFORE canvas render
+    const rootRect = root.getBoundingClientRect();
+    const rows = Array.from(root.querySelectorAll<HTMLTableRowElement>('table tbody tr'));
+    const rowTopCss = rows.map(r => Math.max(0, Math.floor(r.getBoundingClientRect().top - rootRect.top)));
+    rowTopCss.unshift(0); // ensure 0 is included
+
+    // High-DPI render of the root
+    const SCALE = 2;
+    const canvas = await html2canvas(root, {
+      scale: SCALE,
+      useCORS: true,
+      backgroundColor: '#ffffff',
+      logging: false,
+      windowWidth: root.scrollWidth,
+      windowHeight: root.scrollHeight,
+      scrollY: -window.scrollY
+    });
+
+    // Convert CSS px to canvas px for row boundaries
+    const rowTopCanvas = rowTopCss.map(v => Math.round(v * SCALE));
+
+    const pdf = new jsPDF({ orientation: 'landscape', unit: 'px', format: 'a4' });
+    const pageW = pdf.internal.pageSize.getWidth();
+    const pageH = pdf.internal.pageSize.getHeight();
+
+    // Margins so content isn’t glued to edges
+    const PAGE_MARGIN_X = 24; // px
+    const PAGE_MARGIN_Y = 24; // px
+    const usableW = pageW - 2 * PAGE_MARGIN_X;
+    const usableH = pageH - 2 * PAGE_MARGIN_Y;
+
+    // Scale canvas to fit usable width
+    const scaleToWidth = usableW / canvas.width;
+    const canvasPxPerPage = Math.floor(usableH / scaleToWidth);
+
+    let rendered = 0;
+    const total = canvas.height;
+
+    while (rendered < total) {
+      const ideal = rendered + canvasPxPerPage;
+
+      // Choose nearest prior row top to avoid splitting rows
+      let breakAt = total;
+      for (let i = 0; i < rowTopCanvas.length; i++) {
+        const y = rowTopCanvas[i];
+        if (y > ideal) {
+          breakAt = Math.max(rendered + 1, rowTopCanvas[i - 1] ?? ideal);
+          break;
+        }
+      }
+      if (breakAt === total && ideal < total) {
+        breakAt = ideal;
+      }
+
+      const sliceH = Math.min(breakAt - rendered, total - rendered);
+
+      const slice = document.createElement('canvas');
+      slice.width = canvas.width;
+      slice.height = sliceH;
+      const sctx = slice.getContext('2d')!;
+      sctx.drawImage(canvas, 0, rendered, canvas.width, sliceH, 0, 0, canvas.width, sliceH);
+
+      // PNG avoids faint seams
+      const dataUrl = slice.toDataURL('image/png');
+      const renderH = sliceH * scaleToWidth;
+
+      pdf.addImage(dataUrl, 'PNG', PAGE_MARGIN_X, PAGE_MARGIN_Y, usableW, renderH);
+
+      rendered += sliceH;
+      if (rendered < total) pdf.addPage('a4', 'landscape');
+    }
+
+    pdf.save('Lab_Schedule.pdf');
   }
 }

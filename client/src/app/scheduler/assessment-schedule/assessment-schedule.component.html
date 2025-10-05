@@ -40,26 +40,26 @@
                             <th colspan="8" class="text-center fs-5">{{ month }}</th>
                         </tr>
                         <tr class="table-light">
-                            <th>Module Code</th>
-                            <th>Title</th>
-                            <th>Description</th>
                             <th>Date</th>
+                            <th>Module Code</th>
                             <th>Start Time</th>
                             <th>End Time</th>
-                            <th>Submission Deadline</th>
                             <th>Venue</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Submission Deadline</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let item of groupedAssessments[month]" class="avoid-break">
+                            <td>{{ item.date | date: 'dd-MM-yyyy' }}</td>
                             <td>{{ item.moduleCode }}</td>
-                            <td>{{ item.title }}</td>
-                            <td>{{ item.description || '-' }}</td>
-                            <td>{{ item.date | date: 'fullDate' }}</td>
                             <td>{{ formatTime(item.startTime) }}</td>
                             <td>{{ formatTime(item.endTime) }}</td>
-                            <td>{{ formatTime(item.dueTime) }}</td>
                             <td>{{ item.venue || '-' }}</td>
+                            <td>{{ item.title }}</td>
+                            <td>{{ item.description || '-' }}</td>
+                            <td>{{ formatTime(item.dueTime) }}</td>
                         </tr>
                     </tbody>
                 </table>

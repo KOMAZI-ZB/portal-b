@@ -50,10 +50,11 @@
                     <ng-container
                         *ngFor="let row of [].constructor(getMaxEntriesForBlock(block)); let rowIndex = index">
                         <tr class="avoid-break">
-                            <td *ngIf="rowIndex === 0" [attr.rowspan]="getMaxEntriesForBlock(block)">
+                            <!-- add time-col class to style these two cells only -->
+                            <td *ngIf="rowIndex === 0" class="time-col" [attr.rowspan]="getMaxEntriesForBlock(block)">
                                 <strong>{{ formatTime(block.startTime) }}</strong>
                             </td>
-                            <td *ngIf="rowIndex === 0" [attr.rowspan]="getMaxEntriesForBlock(block)">
+                            <td *ngIf="rowIndex === 0" class="time-col" [attr.rowspan]="getMaxEntriesForBlock(block)">
                                 <strong>{{ formatTime(block.endTime) }}</strong>
                             </td>
 
