@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { ToastrService } from 'ngx-toastr';
 import { ConfirmCloseModalComponent } from '../confirm-close-modal/confirm-close-modal.component';
+import { CollapseModule } from 'ngx-bootstrap/collapse'; // Match Edit UI
 
 type Assessment = {
   title: string;
@@ -24,7 +25,7 @@ type VenueConfig = { venue: string; days: { [day: string]: DayState } };
 @Component({
   selector: 'app-add-module-modal',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, CollapseModule], // ✅ add CollapseModule
   templateUrl: './add-module-modal.component.html',
   styleUrls: ['./add-module-modal.component.css']
 })
@@ -54,12 +55,16 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
   moduleName = '';
   semesterChoice: '1' | '2' | 'year' = '1';
 
-  // Venues & contact sessions (Mon–Fri like Edit Details)
+  // Venues & sessions
   weekDays: string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   venues: VenueConfig[] = [];
 
   // Assessments
   assessments: Assessment[] = [];
+
+  // ✅ UI collapse state to mirror Edit modal
+  venueOpen: boolean[] = [];
+  assessmentOpen: boolean[] = [];
 
   // Modal housekeeping
   private formDirty = false;
@@ -68,7 +73,7 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
   private backdropCapture?: (ev: MouseEvent) => void;
   private escCapture?: (ev: KeyboardEvent) => void;
 
-  // ===== Derived validity =====
+  // ===== Derived validity (unchanged) =====
   get isDetailsValid(): boolean {
     const code = (this.moduleCode || '').trim();
     const name = (this.moduleName || '').trim();
@@ -76,10 +81,8 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
     return code.length > 0 && name.length > 0 && ['1', '2', 'year'].includes(sem);
   }
 
-  /** Venues optional. If any venue block exists, venue text is required.
-   * For each checked day, Start and End are both required. */
   get areVenuesValid(): boolean {
-    if (this.venues.length === 0) return true; // optional overall
+    if (this.venues.length === 0) return true;
     for (const v of this.venues) {
       const venueName = (v.venue || '').trim();
       if (!venueName) return false;
@@ -94,28 +97,22 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
     return true;
   }
 
-  // ===== Semester-aware date validation helpers =====
   private isYearModule(): boolean {
     return this.semesterChoice === 'year';
   }
-
   private isMonthAllowed(month: number): boolean {
     if (this.isYearModule()) return true;
     if (this.semesterChoice === '1') return month >= 1 && month <= 6;
     if (this.semesterChoice === '2') return month >= 7 && month <= 12;
     return true;
   }
-
   private isDateAllowedForSemester(dateStr: string): boolean {
     if (!dateStr) return false;
-    // Accept any year; enforce MONTH window only
     const d = new Date(dateStr + 'T00:00:00');
     if (isNaN(d.getTime())) return false;
     const month = d.getMonth() + 1;
     return this.isMonthAllowed(month);
   }
-
-  // Hints for the browser datepicker (uses current year only)
   get dateMin(): string | null {
     const y = new Date().getFullYear();
     if (this.isYearModule()) return `${y}-01-01`;
@@ -126,7 +123,6 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
     if (this.isYearModule()) return `${y}-12-31`;
     return this.semesterChoice === '1' ? `${y}-06-30` : `${y}-12-31`;
   }
-
   dateViolation(a: Assessment): string | null {
     if (!a.date?.trim()) return null;
     return this.isDateAllowedForSemester(a.date)
@@ -135,8 +131,6 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
         ? 'For Semester 1, pick a date between Jan 1 and Jun 30.'
         : 'For Semester 2, pick a date between Jul 1 and Dec 31.');
   }
-
-  /** Assessments optional. If any exists, enforce required fields + semester window */
   get areAssessmentsValid(): boolean {
     for (const a of this.assessments) {
       if (!a) continue;
@@ -155,8 +149,6 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
     }
     return true;
   }
-
-  /** Global form validity for enabling the submit button */
   get isFormValid(): boolean {
     return this.isDetailsValid && this.areVenuesValid && this.areAssessmentsValid;
   }
@@ -214,13 +206,19 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
 
   addVenue(): void {
     this.venues.push({ venue: '', days: this.makeEmptyDays() });
+    this.venueOpen.push(true); // ✅ keep UI state in sync
     this.markDirty();
   }
 
   removeVenue(index: number): void {
     this.venues.splice(index, 1);
+    this.venueOpen.splice(index, 1); // ✅ keep UI state in sync
     this.markDirty();
   }
+
+  // ✅ collapse toggles to mirror Edit modal
+  toggleVenue(i: number) { this.venueOpen[i] = !this.venueOpen[i]; }
+  toggleAssessment(i: number) { this.assessmentOpen[i] = !this.assessmentOpen[i]; }
 
   toggleDay(vIndex: number, day: string) {
     const st = this.venues[vIndex].days[day];
@@ -239,20 +237,22 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
       endTime: '',
       venue: ''
     });
+    this.assessmentOpen.push(true); // ✅ default expanded like Edit
     this.markDirty();
   }
 
   removeAssessment(i: number) {
     this.assessments.splice(i, 1);
+    this.assessmentOpen.splice(i, 1); // ✅ keep UI state in sync
     this.markDirty();
   }
 
-  // ===== Submit =====
+  // ===== Submit (unchanged) =====
   private buildClassSessionsFromVenues() {
     const sessions: Array<{ venue: string; weekDay: string; startTime: string; endTime: string }> = [];
     for (const v of this.venues) {
       const venueName = (v.venue || '').trim();
-      if (!venueName) continue; // optional overall
+      if (!venueName) continue;
       for (const d of this.weekDays) {
         const st = v.days[d];
         if (!st?.checked) continue;
@@ -269,7 +269,7 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
     return this.assessments.map(a => ({
       title: a.title.trim(),
       description: a.description.trim(),
-      date: a.date, // yyyy-MM-dd
+      date: a.date,
       isTimed: a.isTimed,
       startTime: a.isTimed ? this.formatTimeString(a.startTime) : null,
       endTime: a.isTimed ? this.formatTimeString(a.endTime) : null,
@@ -279,9 +279,7 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
   }
 
   submit(): void {
-    // Final guard — show specific toast on failure
     if (!this.isDetailsValid || !this.areVenuesValid || !this.areAssessmentsValid) {
-      // Pinpoint if semester-window is the cause
       const bad = this.assessments.find(x => x?.date && !this.isDateAllowedForSemester(x.date));
       if (bad) {
         this.toastr.error(
@@ -324,7 +322,7 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
     });
   }
 
-  // ===== Close guards =====
+  // ===== Close guards (unchanged) =====
   private openConfirm(): Promise<boolean> {
     return new Promise<boolean>((resolve) => {
       this.bsModalService.show(ConfirmCloseModalComponent, {

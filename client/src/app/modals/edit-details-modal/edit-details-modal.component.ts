@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, ViewChild, AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { Module } from '../../_models/module';
 import { ClassSession } from '../../_models/class-session';
 import { HttpClient } from '@angular/common/http';
@@ -28,7 +29,7 @@ interface VenueConfig { venue: string; days: { [day: string]: DayState }; }
   standalone: true,
   templateUrl: './edit-details-modal.component.html',
   styleUrls: ['./edit-details-modal.component.css'],
-  imports: [CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule, CollapseModule]
 })
 export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() module!: Module;
@@ -41,6 +42,10 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
   weekDays: string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   venues: VenueConfig[] = [];
   assessments: Assessment[] = [];
+
+  // UI collapse state
+  venueOpen: boolean[] = [];
+  assessmentOpen: boolean[] = [];
 
   activeTab: 'contact' | 'assessments' = 'contact';
   setTab(t: 'contact' | 'assessments') { this.activeTab = t; }
@@ -103,6 +108,10 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
           venue: a.venue || ''
         }));
 
+        // Initialize collapse state (collapsed by default)
+        this.venueOpen = this.venues.map(() => false);
+        this.assessmentOpen = this.assessments.map(() => false);
+
         this.justSaved = false;
         this.locallyDirty = false;
         setTimeout(() => this.detailsForm?.form.markAsPristine());
@@ -111,6 +120,7 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
         console.error('❌ Failed to fetch module data:', err);
         this.addVenue();
         this.assessments = [];
+        this.assessmentOpen = [];
       }
     });
   }
@@ -158,13 +168,17 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
     const days: { [d: string]: DayState } = {};
     this.weekDays.forEach(d => days[d] = { checked: false, startTime: '', endTime: '' });
     this.venues.push({ venue: '', days });
+    this.venueOpen.push(false); // start collapsed
     this.markDirty();
   }
 
   removeVenue(index: number): void {
     this.venues.splice(index, 1);
+    this.venueOpen.splice(index, 1);
     this.markDirty();
   }
+
+  toggleVenue(i: number) { this.venueOpen[i] = !this.venueOpen[i]; }
 
   toggleDay(vIndex: number, day: string): void {
     const state = this.venues[vIndex].days[day];
@@ -175,10 +189,17 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
 
   addAssessment() {
     this.assessments.push({ title: '', description: '', date: '', isTimed: true, startTime: '', endTime: '', venue: '' });
+    this.assessmentOpen.push(false); // start collapsed
     this.markDirty();
   }
 
-  removeAssessment(index: number) { this.assessments.splice(index, 1); this.markDirty(); }
+  removeAssessment(index: number) {
+    this.assessments.splice(index, 1);
+    this.assessmentOpen.splice(index, 1);
+    this.markDirty();
+  }
+
+  toggleAssessment(i: number) { this.assessmentOpen[i] = !this.assessmentOpen[i]; }
 
   // ===== Semester-aware helpers =====
   private isYearModule(): boolean {
