@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h5 class="modal-title">Post New Announcement</h5>
+    <h5 class="modal-title clean-title">Post New Announcement</h5>
     <button type="button" class="btn-close" aria-label="Close" (click)="cancel()"></button>
 </div>
 
@@ -36,14 +36,10 @@
         <div class="mb-3">
             <label class="form-label">Target Audience</label>
             <select class="form-select" formControlName="audience">
-                <!-- Display label fix: show "Module Students" while keeping value "ModuleStudents" -->
                 <option *ngFor="let a of audiences" [value]="a">
                     {{ a === 'ModuleStudents' ? 'Module Students' : a }}
                 </option>
             </select>
-            <div class="form-text" *ngIf="isLecturer">
-                Lecturers may only post to students of a specific module.
-            </div>
         </div>
 
         <!-- Module -->

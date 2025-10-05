@@ -1,0 +1,113 @@
+/* =========================
+   Square corners + soft shadow
+   ========================= */
+:host ::ng-deep .modal {
+    /* Kill Bootstrap's radius variable for modals (BS v5+) */
+    --bs-modal-border-radius: 0 !important;
+}
+
+:host ::ng-deep .modal .modal-dialog {
+    border-radius: 0 !important;
+    /* A bit more breathing room to the viewport edges */
+    margin: 2.5rem auto !important;
+}
+
+:host ::ng-deep .modal .modal-dialog .modal-content {
+    border-radius: 0 !important;
+    /* force square */
+    background: #ffffff !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22) !important;
+}
+
+/* If any Bootstrap rounded utility sneaks in, zero it out */
+:host ::ng-deep .modal .rounded,
+:host ::ng-deep .modal .rounded-1,
+:host ::ng-deep .modal .rounded-2,
+:host ::ng-deep .modal .rounded-3,
+:host ::ng-deep .modal .rounded-4,
+:host ::ng-deep .modal .rounded-5 {
+    border-radius: 0 !important;
+}
+
+/* =========================
+   Close button: solid black
+   ========================= */
+:host ::ng-deep .modal .btn-close {
+    --bs-btn-close-color: #000;
+    /* BS 5.3 variable */
+    filter: none !important;
+    /* ensure not inverted */
+    opacity: 1 !important;
+}
+
+/* =========================
+   Header/body/footer spacing
+   ========================= */
+:host ::ng-deep .modal .modal-header {
+    border-bottom: none !important;
+    /* no grey separator */
+    padding: 1.75rem 2rem !important;
+    /* MORE padding (top/bottom & sides) */
+    margin-bottom: 0.5rem;
+    /* breathing space before content */
+}
+
+:host ::ng-deep .modal .modal-body {
+    padding: 1.75rem 2rem !important;
+    /* MORE padding on all sides */
+}
+
+:host ::ng-deep .modal .modal-footer {
+    border-top: none !important;
+    padding: 1.25rem 2rem !important;
+    /* keep footer aligned with body sides */
+}
+
+/* =========================
+   Title: black + blue underline
+   ========================= */
+.clean-title {
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.25rem;
+    /* larger than body */
+    line-height: 1.2;
+    display: inline-block;
+    /* underline matches text width */
+    position: relative;
+    padding-bottom: 0.25rem;
+    margin: 0;
+}
+
+.clean-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* exactly the title width */
+    bottom: 0;
+    height: 2px;
+    background: #0d6efd;
+    /* thin blue underline */
+}
+
+/* =========================
+   Form text rules
+   ========================= */
+.form-label {
+    color: #000000 !important;
+    /* labels pure black */
+}
+
+.form-text {
+    color: #6c757d !important;
+    /* helper notes grey */
+}
+
+.form-control::placeholder,
+textarea.form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+/* Buttons stay as-is */

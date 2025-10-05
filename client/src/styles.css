@@ -1,3 +1,4 @@
+/* ===== Your existing global styles (kept as-is) ===== */
 .tab-panel {
     border: 1px solid #ddd;
     padding: 10px;
@@ -28,7 +29,7 @@
 
 .member-tabset>.nav-tabs>li.active {
     border-bottom: 4px solid #0d6efd;
-    /* Changed from #E95420 to Bootstrap blue */
+    /* Bootstrap blue */
     position: relative;
 }
 
@@ -61,4 +62,139 @@
     border-radius: 0px;
     padding: 4px 10px;
     display: inline-block;
+}
+
+/* ===== Global modal look (applies to all ngx-bootstrap/Bootstrap modals) ===== */
+
+/* Zero out every radius token Bootstrap may use */
+.modal {
+    --bs-modal-border-radius: 0 !important;
+    --bs-border-radius: 0 !important;
+    --bs-border-radius-sm: 0 !important;
+    --bs-border-radius-lg: 0 !important;
+}
+
+.modal .modal-dialog,
+.modal .modal-content,
+.modal .modal-header,
+.modal .modal-body,
+.modal .modal-footer,
+.modal .rounded,
+.modal .rounded-1,
+.modal .rounded-2,
+.modal .rounded-3,
+.modal .rounded-4,
+.modal .rounded-5 {
+    border-radius: 0 !important;
+    /* truly square corners */
+}
+
+/* Surface */
+.modal .modal-content {
+    background: #ffffff !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22) !important;
+    /* soft shadow */
+}
+
+/* Close button must be black */
+.modal .btn-close {
+    --bs-btn-close-color: #000;
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+/* Comfortable spacing and no grey separators */
+.modal .modal-header {
+    border-bottom: none !important;
+    /* remove default divider */
+    padding: 1rem 2rem !important;
+    /* generous padding */
+    margin-bottom: 0.2rem;
+    /* breathing room before body */
+}
+
+.modal .modal-body {
+    padding: 1.75rem 2rem !important;
+    /* generous padding */
+}
+
+.modal .modal-footer {
+    border-top: none !important;
+    padding: 1.25rem 2rem !important;
+    /* align with body sides */
+}
+
+/* Optional: a bit more offset from viewport edges */
+.modal .modal-dialog {
+    margin: 2.5rem auto !important;
+}
+
+/* Title: black with thin blue underline sized to the text */
+.clean-title {
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    display: inline-block;
+    /* underline matches text width */
+    position: relative;
+    padding-bottom: 0.25rem;
+    margin: 0;
+}
+
+.clean-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* exactly the title width */
+    bottom: 0;
+    height: 2px;
+    background: #0d6efd;
+    /* Bootstrap primary blue */
+}
+
+/* Form text rules inside modals only */
+.modal .form-label {
+    color: #000000 !important;
+    /* labels pure black */
+}
+
+.modal .form-text {
+    color: #6c757d !important;
+    /* helper notes grey */
+}
+
+.modal .form-control::placeholder,
+.modal textarea.form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+/* === Modal title: black, bold, larger, underline exactly text width === */
+.modal .modal-header .modal-title {
+    /* prevent flex from stretching the title to full width */
+    flex: 0 0 auto;
+    display: inline-block;
+    /* lets the underline match the text width */
+    position: relative;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin: 0;
+    padding-bottom: 0.25rem;
+    /* space for underline */
+}
+
+.modal .modal-header .modal-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* exactly the element’s width (i.e., the text width) */
+    bottom: 0;
+    height: 2px;
+    background: #0d6efd;
+    /* thin blue underline */
 }
