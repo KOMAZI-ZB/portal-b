@@ -1,3 +1,9 @@
+/* square corners only for INTERNAL repository document cards */
+.doc-card {
+    --bs-card-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
 /* Repository Card Hover */
 .card:hover {
     transform: translateY(-3px);
@@ -9,18 +15,13 @@
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
 }
 
-/* Upload/Delete button spacing */
-.btn-sm {
-    padding: 0.35rem 0.65rem;
-}
-
 /* Responsive fix for logo image */
 .card-img-top {
     object-fit: scale-down;
     height: 100px;
 }
 
-/* New: Delete Button Styling to Match Upload Button */
+/* Delete Button Styling for external repo cards */
 .btn-delete-top-right {
     background-color: #ffffff;
     border: none;
@@ -41,24 +42,15 @@
     background-color: #0b5ed7;
 }
 
-/* =========================
-   Repository page title + spacing (resolved values)
-   ========================= */
-
-/* Page title spacing + blue underline (text width only) */
+/* ===== Page title / section spacing ===== */
 .repo-page>h2,
 .repo-page>h2.mb-0 {
     margin-bottom: 2rem !important;
-    /* override .mb-0 */
     display: inline-block;
-    /* shrink to text width */
     position: relative;
     padding-bottom: 0.25rem;
-    /* gap between text and line */
     color: #000 !important;
-    /* black */
     font-weight: 700 !important;
-    /* bold */
 }
 
 .repo-page>h2::after {
@@ -66,27 +58,118 @@
     position: absolute;
     left: 0;
     right: 0;
-    /* full width of the text */
     bottom: 0;
     height: 2px;
     background: #0D6EFD;
-    /* blue */
     border-radius: 2px;
 }
 
-/* Section heading spacing */
 .repo-page .section-heading {
     margin-top: 1.25rem;
 }
 
-/* Control Bootstrap grid gutters for cards (Bootstrap expects these vars) */
 .repo-page .repo-grid {
     --bs-gutter-x: 1.25rem;
     --bs-gutter-y: 1.25rem;
 }
 
-/* Section titles: black + boldness (resolved) */
 .repo-page .section-heading h5 {
     color: #000 !important;
     font-weight: 700 !important;
+}
+
+/* ===== Internal document cards (match Module Documents) ===== */
+:host {
+    --doc-logo-size: 100px;
+    --download-icon-size: 2rem;
+    --download-hitpad: 8px;
+    --kebab-offset: 44px;
+    --card-vpad: 1px;
+    --meta-gap: 1px;
+
+    /* NEW: neon tokens to match Notifications */
+    --date-neon: #5c5c5c;
+    --date-neon-shadow:
+        0 0 2px rgba(85, 147, 239, 0.1),
+        0 0 2px rgba(13, 110, 253, 0.10);
+}
+
+.doc-card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.doc-card {
+    position: relative;
+}
+
+.doc-card .card-body {
+    padding: var(--card-vpad) 16px;
+}
+
+.top-row {
+    gap: 12px;
+    padding-right: calc(var(--kebab-offset) + 6px);
+    margin-top: 1px;
+}
+
+.doc-logo {
+    width: var(--doc-logo-size);
+    height: var(--doc-logo-size);
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+.doc-title {
+    font-weight: 600;
+    color: #111;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 8px;
+}
+
+.download-icon {
+    font-size: var(--download-icon-size);
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--download-hitpad);
+    border-radius: 8px;
+    text-decoration: none !important;
+}
+
+.download-icon:hover {
+    background: rgba(13, 110, 253, 0.10);
+}
+
+.meta-row {
+    margin-top: var(--meta-gap);
+    margin-bottom: var(--meta-gap) !important;
+}
+
+.kebab {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 1;
+}
+
+.kebab-btn {
+    padding: 2px 6px;
+}
+
+/* Pagination cursor */
+.pagination .page-link {
+    cursor: pointer;
+}
+
+/* NEW: neon style for "Uploaded by … | date, time" */
+.neon-meta small,
+.neon-meta span {
+    color: var(--date-neon) !important;
+    text-shadow: var(--date-neon-shadow);
+    font-weight: 600;
 }

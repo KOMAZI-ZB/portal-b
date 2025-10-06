@@ -16,17 +16,33 @@ public class DocumentsController(
     private readonly IDocumentService _documentService = documentService;
     private readonly INotificationService _notificationService = notificationService;
 
+    // Allow-list of extensions
     private static readonly HashSet<string> AllowedExts = new(StringComparer.OrdinalIgnoreCase)
-        { ".pdf", ".docx", ".ppt", ".xlsx", ".txt" };
+        { ".pdf", ".docx", ".ppt", ".pptx", ".xlsx", ".txt" };
 
-    private static readonly Dictionary<string, string> AllowedMimeByExt = new(StringComparer.OrdinalIgnoreCase)
-    {
-        [".pdf"] = "application/pdf",
-        [".docx"] = "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        [".ppt"] = "application/vnd.ms-powerpoint",
-        [".xlsx"] = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        [".txt"] = "text/plain"
-    };
+    // Allow multiple common/real-world MIME encodings per extension
+    private static readonly Dictionary<string, HashSet<string>> AllowedMimeByExt =
+        new(StringComparer.OrdinalIgnoreCase)
+        {
+            [".pdf"] = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+                        { "application/pdf" },
+
+            [".docx"] = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+                        { "application/vnd.openxmlformats-officedocument.wordprocessingml.document" },
+
+            [".ppt"] = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+                        { "application/vnd.ms-powerpoint" },
+
+            [".pptx"] = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+                        { "application/vnd.openxmlformats-officedocument.presentationml.presentation" },
+
+            [".xlsx"] = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+                        { "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" },
+
+            // We'll also accept any "text/*" via logic below.
+            [".txt"] = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+                        { "text/plain" },
+        };
 
     private static string StripModuleSuffix(string? message)
     {
@@ -41,14 +57,26 @@ public class DocumentsController(
 
         var ext = Path.GetExtension(file.FileName ?? string.Empty);
         if (string.IsNullOrWhiteSpace(ext) || !AllowedExts.Contains(ext))
-            return (false, "Only PDF, DOCX, PPT, XLSX, TXT are allowed.");
+            return (false, "Only PDF, DOCX, PPT, PPTX, XLSX, TXT are allowed.");
 
-        // Enforce MIME to match allow-list exactly
         var contentType = file.ContentType ?? string.Empty;
-        if (!AllowedMimeByExt.TryGetValue(ext, out var expected) || !string.Equals(contentType, expected, StringComparison.OrdinalIgnoreCase))
-            return (false, "Only PDF, DOCX, PPT, XLSX, TXT are allowed.");
 
-        // NOTE: .pptx is intentionally NOT allowed unless already supported; we only accept .ppt here.
+        // Many platforms/browsers give empty or octet-stream; allow by extension in that case.
+        if (string.IsNullOrWhiteSpace(contentType) ||
+            contentType.Equals("application/octet-stream", StringComparison.OrdinalIgnoreCase))
+            return (true, null);
+
+        // ✅ Special-case TXT: allow any "text/*" (covers text/plain; charset=..., text/markdown, etc.)
+        if (ext.Equals(".txt", StringComparison.OrdinalIgnoreCase) &&
+            contentType.StartsWith("text/", StringComparison.OrdinalIgnoreCase))
+            return (true, null);
+
+        if (!AllowedMimeByExt.TryGetValue(ext, out var allowedSet) || allowedSet.Count == 0)
+            return (false, "Only PDF, DOCX, PPT, PPTX, XLSX, TXT are allowed.");
+
+        if (!allowedSet.Contains(contentType))
+            return (false, "Only PDF, DOCX, PPT, PPTX, XLSX, TXT are allowed.");
+
         return (true, null);
     }
 
@@ -57,9 +85,9 @@ public class DocumentsController(
     public async Task<ActionResult<DocumentDto>> Upload([FromForm] UploadDocumentDto dto)
     {
         // Defensive API-level allow-list enforcement (extension AND MIME)
-        var (ok, error) = ValidateFile(dto.File);
+        var (ok, _error) = ValidateFile(dto.File);
         if (!ok)
-            return StatusCode(415, "Only PDF, DOCX, PPT, XLSX, TXT are allowed.");
+            return StatusCode(415, "Only PDF, DOCX, PPT, PPTX, XLSX, TXT are allowed.");
 
         var userName = User.GetUsername();
         var result = await _documentService.UploadDocumentAsync(dto, userName);

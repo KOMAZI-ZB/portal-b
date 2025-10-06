@@ -75,7 +75,7 @@
                     </button>
                     <ul *dropdownMenu class="dropdown-menu dropdown-menu-end" (click)="$event.stopPropagation()">
                         <li>
-                            <button class="dropdown-item text-danger" (click)="openDeleteAnnouncement(ann)">
+                            <button class="dropdown-item" (click)="openDeleteAnnouncement(ann)">
                                 Delete announcement
                             </button>
                         </li>
@@ -120,9 +120,9 @@
     </ul>
 </nav>
 
-<!-- Fullscreen Image Modal (Bootstrap 5) -->
-<div class="modal fade show d-block" tabindex="-1" aria-modal="true" role="dialog" *ngIf="showImageModal"
-    style="background-color: rgba(0, 0, 0, 0.85); z-index: 1055;" (click)="closeImageModal()">
+<!-- Fullscreen Image Modal (uses global styles via .image-viewer-modal) -->
+<div class="modal fade show d-block image-viewer-modal" tabindex="-1" aria-modal="true" role="dialog"
+    *ngIf="showImageModal" (click)="closeImageModal()">
     <div class="modal-dialog modal-fullscreen" role="document" (click)="$event.stopPropagation()">
         <div class="modal-content bg-transparent border-0 pop-in">
             <div class="modal-body p-0 d-flex align-items-center justify-content-center">
@@ -132,7 +132,7 @@
             </div>
 
             <div class="modal-footer justify-content-center border-0">
-                <button class="btn btn-light" (click)="closeImageModal()">Close</button>
+                <button class="btn btn-primary" (click)="closeImageModal()">Close</button>
             </div>
         </div>
     </div>

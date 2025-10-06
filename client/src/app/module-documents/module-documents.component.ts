@@ -10,11 +10,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ModuleService } from '../_services/module.service';
 import { Module } from '../_models/module';
 import { ConfirmDeleteModalComponent } from '../modals/confirm-delete-modal/confirm-delete-modal.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @Component({
   selector: 'app-module-documents',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BsDropdownModule],
   templateUrl: './module-documents.component.html',
   styleUrls: ['./module-documents.component.css']
 })
@@ -29,7 +30,7 @@ export class ModuleDocumentsComponent implements OnInit {
 
   pagination: Pagination = {
     currentPage: 1,
-    itemsPerPage: 10,
+    itemsPerPage: 5,
     totalItems: 0,
     totalPages: 0
   };
@@ -132,7 +133,7 @@ export class ModuleDocumentsComponent implements OnInit {
   // Show confirm modal before deleting
   confirmDelete(docId: number) {
     const initialState: Partial<ConfirmDeleteModalComponent> = {
-      title: 'Confirm Deletion',
+      title: 'Delete document?',
       message: 'Are you sure you want to delete this document?',
       confirmText: 'Delete',
       cancelText: 'No',
@@ -145,7 +146,6 @@ export class ModuleDocumentsComponent implements OnInit {
     this.documentService.deleteModuleDocument(docId).subscribe({
       next: () => {
         this.documents = this.documents.filter((d) => d.id !== docId);
-        // keep pagination state; no other changes
       },
       error: (err) => console.error('Failed to delete document', err)
     });
@@ -161,5 +161,31 @@ export class ModuleDocumentsComponent implements OnInit {
 
   goBack(): void {
     this.router.navigate(['/modules']);
+  }
+
+  // ---------- UI helpers ----------
+  private fileExt(path: string): string {
+    const q = path?.split('?')[0] ?? '';
+    const hash = q.split('#')[0] ?? '';
+    const dot = hash.lastIndexOf('.');
+    return dot >= 0 ? hash.substring(dot).toLowerCase() : '';
+  }
+
+  /** Picks the correct PNG in /assets using your names:
+   *  pdffile, docxfile, pptfile, excelfile, txtfile
+   */
+  getIconPath(doc: Document): string {
+    const ext = this.fileExt(doc.filePath);
+    switch (ext) {
+      case '.pdf': return 'assets/pdffile.png';
+      case '.doc':
+      case '.docx': return 'assets/docxfile.png';
+      case '.ppt':
+      case '.pptx': return 'assets/pptfile.png';
+      case '.xls':
+      case '.xlsx': return 'assets/excelfile.png';
+      case '.txt': return 'assets/txtfile.png';
+      default: return 'assets/docxfile.png'; // safe fallback
+    }
   }
 }

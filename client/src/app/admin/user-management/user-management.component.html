@@ -4,7 +4,17 @@
         <button class="btn btn-primary" (click)="openAddUserModal()">Add User</button>
     </div>
 
-    <div class="d-flex justify-content-end mb-3">
+    <!-- Search row with sort icon to the LEFT of the search field -->
+    <div class="d-flex justify-content-end align-items-center mb-3 gap-2">
+        <button class="sort-btn" (click)="cycleSort()" [attr.title]="'Sort by ' + sortLabel + ' (click to change)'"
+            aria-label="Sort users">
+            <span class="sort-icon" aria-hidden="true">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </span>
+        </button>
+
         <input type="text" class="form-control w-25 search-input" [(ngModel)]="searchTerm" (input)="filterUsers()"
             placeholder="Search by username, name, or role..." />
     </div>

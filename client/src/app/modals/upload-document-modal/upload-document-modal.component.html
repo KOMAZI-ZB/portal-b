@@ -16,18 +16,18 @@
 
         <div class="mb-3">
             <label for="file" class="form-label">Select File</label>
-            <input #fileInput type="file" id="file" class="form-control" accept=".pdf,.docx,.ppt,.xlsx,.txt"
+            <input #fileInput type="file" id="file" class="form-control" accept=".pdf,.docx,.ppt,.pptx,.xlsx,.txt"
                 (change)="onFileSelected($event)"
                 [ngClass]="{ 'is-invalid': (uploadForm.get('file')?.touched && (uploadForm.get('file')?.invalid || fileTypeError)) }" />
             <div class="invalid-feedback"
                 *ngIf="uploadForm.get('file')?.touched && (uploadForm.get('file')?.hasError('invalidType'))">
-                Unsupported file type. Allowed: PDF, DOCX, PPT, XLSX, TXT.
+                Unsupported file type. Allowed: PDF, DOCX, PPT, PPTX, XLSX, TXT.
             </div>
             <div class="invalid-feedback"
                 *ngIf="uploadForm.get('file')?.touched && uploadForm.get('file')?.hasError('required') && !uploadForm.get('file')?.hasError('invalidType')">
                 A file is required.
             </div>
-            <div class="form-text">Accepted formats: PDF,DOCX,PPT,XLSX,TXT</div>
+            <div class="form-text">Accepted formats: PDF, DOCX, PPT, PPTX, XLSX, TXT</div>
         </div>
     </div>
 

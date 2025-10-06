@@ -1,8 +1,8 @@
 <div class="container mt-4 repo-page">
-    <!-- Page title matches Notifications (h2.mb-0) -->
+    <!-- Page title -->
     <h2 class="mb-0">Repository</h2>
 
-    <!-- Top Section for Add Button -->
+    <!-- ==================== External Links (UNCHANGED) ==================== -->
     <div class="d-flex justify-content-between align-items-center mb-3 section-heading">
         <h5 class="mb-0">External Repository Links</h5>
         <button *ngIf="hasRepoManagementRights()" class="btn btn-outline-primary" type="button"
@@ -11,7 +11,6 @@
         </button>
     </div>
 
-    <!-- External Repository Cards -->
     <div class="row repo-grid">
         <ng-container *ngFor="let repo of externalRepos">
             <div class="col-md-4 mb-4">
@@ -37,25 +36,22 @@
         </ng-container>
     </div>
 
-    <!--   External Pagination Controls -->
     <nav *ngIf="externalPagination" class="mt-3 d-flex justify-content-center">
         <ul class="pagination">
             <li class="page-item" [class.disabled]="externalPagination.currentPage === 1">
                 <a class="page-link" (click)="pageChangedExternal(externalPagination.currentPage - 1)">Previous</a>
             </li>
-
             <li class="page-item" *ngFor="let page of [].constructor(externalPagination.totalPages); let i = index"
                 [class.active]="externalPagination.currentPage === i + 1">
                 <a class="page-link" (click)="pageChangedExternal(i + 1)">{{ i + 1 }}</a>
             </li>
-
             <li class="page-item" [class.disabled]="externalPagination.currentPage === externalPagination.totalPages">
                 <a class="page-link" (click)="pageChangedExternal(externalPagination.currentPage + 1)">Next</a>
             </li>
         </ul>
     </nav>
 
-    <!-- Internal Repository Section -->
+    <!-- ==================== Internal Repository Documents (UPDATED) ==================== -->
     <div class="mt-5">
         <div class="d-flex justify-content-between align-items-center mb-3 section-heading">
             <h5 class="mb-0">Internal Repository Documents</h5>
@@ -64,50 +60,60 @@
             </button>
         </div>
 
-        <table class="table table-bordered table-hover align-middle">
-            <thead class="table-light">
-                <tr>
-                    <th>Title</th>
-                    <th>Uploaded By</th>
-                    <th>Date</th>
-                    <th class="text-center">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let doc of internalDocuments">
-                    <td>{{ doc.title }}</td>
-                    <td>{{ doc.uploadedBy }}</td>
-                    <td>{{ doc.uploadedAt | date: 'medium' }}</td>
-                    <td class="text-center">
-                        <a [href]="doc.filePath" target="_blank" class="btn btn-sm btn-success me-2"
-                            rel="noopener noreferrer">
-                            Download
-                        </a>
-                        <!-- Delete must be visible ONLY to the original uploader -->
-                        <button *ngIf="canDelete(doc)" class="btn btn-sm btn-danger" type="button"
-                            (click)="confirmDeleteInternalDoc(doc.id)">
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr *ngIf="internalDocuments.length === 0">
-                    <td colspan="4" class="text-center text-muted">No documents found.</td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- Card grid same as Module Documents -->
+        <div class="doc-card-grid">
+            <div class="card doc-card shadow-sm" *ngFor="let doc of internalDocuments">
+                <!-- Kebab (uploader only) -->
+                <div class="kebab" dropdown *ngIf="canDelete(doc)">
+                    <button class="btn btn-sm btn-outline-secondary kebab-btn" dropdownToggle type="button"
+                        title="More actions">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul *dropdownMenu class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <button class="dropdown-item" (click)="confirmDeleteInternalDoc(doc.id)">Delete</button>
+                        </li>
+                    </ul>
+                </div>
 
-        <!--   Internal Pagination Controls -->
+                <div class="card-body">
+                    <!-- Meta line — neon green + no seconds -->
+                    <div class="meta-row neon-meta d-flex justify-content-center align-items-center mb-2">
+                        <small>Uploaded by: {{ doc.uploadedBy }}</small>
+                        <span class="mx-2">|</span>
+                        <small>
+                            {{ doc.uploadedAt | date: 'mediumDate' }}, {{ doc.uploadedAt | date: 'h:mm a' }}
+                        </small>
+                    </div>
+
+                    <div class="top-row d-flex align-items-center">
+                        <img [src]="getIconPath(doc)" alt="file type" class="doc-logo" />
+                        <div class="doc-title flex-grow-1" [title]="doc.title">{{ doc.title }}</div>
+
+                        <!-- Download icon -->
+                        <a [href]="doc.filePath" target="_blank" rel="noopener noreferrer" download
+                            class="download-icon" aria-label="Download document" title="Download">
+                            <i class="bi bi-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="internalDocuments.length === 0" class="text-center text-muted py-5">
+                No documents found.
+            </div>
+        </div>
+
+        <!-- Internal Pagination -->
         <nav *ngIf="internalPagination" class="mt-3 d-flex justify-content-center">
             <ul class="pagination">
                 <li class="page-item" [class.disabled]="internalPagination.currentPage === 1">
                     <a class="page-link" (click)="pageChangedInternal(internalPagination.currentPage - 1)">Previous</a>
                 </li>
-
                 <li class="page-item" *ngFor="let page of [].constructor(internalPagination.totalPages); let i = index"
                     [class.active]="internalPagination.currentPage === i + 1">
                     <a class="page-link" (click)="pageChangedInternal(i + 1)">{{ i + 1 }}</a>
                 </li>
-
                 <li class="page-item"
                     [class.disabled]="internalPagination.currentPage === internalPagination.totalPages">
                     <a class="page-link" (click)="pageChangedInternal(internalPagination.currentPage + 1)">Next</a>

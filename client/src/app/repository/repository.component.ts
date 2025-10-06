@@ -13,11 +13,12 @@ import { Repository } from '../_models/repository';
 import { AddRepositoryModalComponent } from '../modals/add-repository-modal/add-repository-modal.component';
 import { Pagination } from '../_models/pagination';
 import { ConfirmDeleteModalComponent } from '../modals/confirm-delete-modal/confirm-delete-modal.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown'; // NEW
 
 @Component({
   selector: 'app-repository',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BsDropdownModule], // ⬅️ Add dropdown for kebab menu
   templateUrl: './repository.component.html',
   styleUrls: ['./repository.component.css']
 })
@@ -110,14 +111,12 @@ export class RepositoryComponent implements OnInit {
     this.bsModalRef.content.onAdd.subscribe(() => this.loadExternalRepositories());
   }
 
-  // NEW: Only allow delete if current user originally uploaded the document.
-  // Uses `as any` to avoid changing the shared Document interface elsewhere.
+  // Only allow delete if the current user originally uploaded the document.
   canDelete(doc: Document): boolean {
     const uploader = (doc as any)?.uploadedByUserName as string | undefined;
     return !!uploader && uploader === this.currentUserName;
   }
 
-  // NEW: Confirm before deleting internal repository documents.
   confirmDeleteInternalDoc(docId: number) {
     const initialState: Partial<ConfirmDeleteModalComponent> = {
       title: 'Confirm Deletion',
@@ -182,5 +181,29 @@ export class RepositoryComponent implements OnInit {
 
   openInternalRepository() {
     this.router.navigate(['/repository']);
+  }
+
+  // ---------- UI helpers (match Module Documents) ----------
+  private fileExt(path: string): string {
+    const q = path?.split('?')[0] ?? '';
+    const hash = q.split('#')[0] ?? '';
+    const dot = hash.lastIndexOf('.');
+    return dot >= 0 ? hash.substring(dot).toLowerCase() : '';
+  }
+
+  /** Use the same assets as module documents */
+  getIconPath(doc: Document): string {
+    const ext = this.fileExt(doc.filePath);
+    switch (ext) {
+      case '.pdf': return 'assets/pdffile.png';
+      case '.doc':
+      case '.docx': return 'assets/docxfile.png';
+      case '.ppt':
+      case '.pptx': return 'assets/pptfile.png';
+      case '.xls':
+      case '.xlsx': return 'assets/excelfile.png';
+      case '.txt': return 'assets/txtfile.png';
+      default: return 'assets/docxfile.png';
+    }
   }
 }

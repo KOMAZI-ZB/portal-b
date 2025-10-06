@@ -21,3 +21,46 @@
     color: #000 !important;
     font-size: 1rem;
 }
+
+/* === NEW: Three-line sort icon button (left of search) === */
+.sort-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #000;
+    background: #fff;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.sort-icon {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* left-aligned bars */
+    gap: 4px;
+}
+
+.sort-icon .bar {
+    display: block;
+    height: 4px;
+    background: #5f5f5f;
+    border-radius: 3px;
+    /* rounded ends */
+}
+
+/* bar widths: top longest, bottom shortest */
+.sort-icon .bar1 {
+    width: 22px;
+}
+
+.sort-icon .bar2 {
+    width: 16px;
+}
+
+.sort-icon .bar3 {
+    width: 10px;
+}

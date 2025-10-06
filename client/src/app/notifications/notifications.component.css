@@ -31,12 +31,59 @@
     box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.15) inset;
 }
 
-/* Thumbnail (already present behavior kept) */
+/* === Uniform thumbnail size inside notification cards === */
+:host {
+    --notif-thumb-w: 250px;
+    /* fixed width */
+    --notif-thumb-h: 150px;
+    /* fixed height */
+    --notif-thumb-radius: 6px;
+    /* border radius */
+    --notif-thumb-shadow:
+        /* <— tweak shadow strength here */
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        0 6px 16px rgba(0, 0, 0, 0.10);
+    --notif-thumb-bg: rgba(255, 255, 255, 0.18);
+    /* <-- transparency */
+
+    /* === Neon date/time tokens === */
+    --date-neon: #166615;
+    /* blue text */
+    --date-neon-shadow:
+        0 0 2px rgba(13, 110, 253, 0.10),
+        0 0 2px rgba(13, 110, 253, 0.10),
+
+}
+
+/* Fixed-size wrapper so every card shows the same-sized image */
+.thumb-wrap {
+    width: var(--notif-thumb-w);
+    height: var(--notif-thumb-h);
+    overflow: hidden;
+    /* crop overflow */
+    border-radius: var(--notif-thumb-radius);
+    display: inline-block;
+    /* keep inline with text */
+    border: 1px solid #ffffff;
+    /* visible border box */
+    box-sizing: border-box;
+    /* include border in size */
+    background: #fff;
+    /* neutral bg behind image */
+    box-shadow: var(--notif-thumb-shadow);
+    /* box shadoiwing  */
+}
+
+/* The image fills the wrapper and is neatly cropped */
 .thumb-wrap .thumb-img {
-    max-height: 120px;
-    width: auto;
-    object-fit: cover;
-    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: scale-down;
+    /* fill & crop to 100x100 */
+    object-position: center;
+    /* center the crop */
+    border-radius: var(--notif-thumb-radius);
 }
 
 /* --- NEW: blue underline under "Notification Board" (text-width only) --- */
@@ -71,4 +118,18 @@
     background-color: #f3f3f3 !important;
     /* light grey */
     color: inherit;
+}
+
+.dropdown-item {
+    color: #000000 !important;
+}
+
+/* === Neon green date/time (glow) === */
+.date-bottom {
+    color: var(--date-neon) !important;
+    /* override .text-muted */
+    text-shadow: var(--date-neon-shadow);
+    /* glow effect */
+    font-weight: 600;
+    /* optional emphasis */
 }

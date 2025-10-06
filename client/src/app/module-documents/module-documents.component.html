@@ -22,35 +22,51 @@
         </button>
     </div>
 
-    <table class="table table-bordered table-hover align-middle">
-        <thead class="table-light">
-            <tr>
-                <th>Title</th>
-                <th>Uploaded By</th>
-                <th>Date</th>
-                <th class="text-center">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let doc of documents">
-                <td>{{ doc.title }}</td>
-                <td>{{ doc.uploadedBy }}</td>
-                <td>{{ doc.uploadedAt | date: 'medium' }}</td>
-                <td class="text-center">
-                    <a [href]="doc.filePath" target="_blank" rel="noopener noreferrer" download
-                        class="btn btn-sm btn-success me-2">Download</a>
+    <!-- Cards -->
+    <div class="doc-card-grid">
+        <div class="card doc-card shadow-sm" *ngFor="let doc of documents">
+            <!-- Kebab (uploader only) -->
+            <div class="kebab" dropdown *ngIf="canDelete(doc)">
+                <button class="btn btn-sm btn-outline-secondary kebab-btn" dropdownToggle type="button"
+                    title="More actions">
+                    <i class="bi bi-three-dots-vertical"></i>
+                </button>
+                <ul *dropdownMenu class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <button class="dropdown-item" (click)="confirmDelete(doc.id)">Delete</button>
+                    </li>
+                </ul>
+            </div>
 
-                    <!-- Delete shown only to original uploader -->
-                    <button *ngIf="canDelete(doc)" class="btn btn-sm btn-danger"
-                        (click)="confirmDelete(doc.id)">Delete</button>
-                </td>
-            </tr>
-            <tr *ngIf="documents.length === 0">
-                <td colspan="4" class="text-center text-muted">No documents found.</td>
-            </tr>
-        </tbody>
-    </table>
+            <div class="card-body">
+                <!-- Meta moved to TOP CENTER — now neon green + no seconds -->
+                <div class="meta-row neon-meta d-flex justify-content-center align-items-center mb-2">
+                    <small>Uploaded by: {{ doc.uploadedBy }}</small>
+                    <span class="mx-2">|</span>
+                    <small>
+                        {{ doc.uploadedAt | date: 'mediumDate' }}, {{ doc.uploadedAt | date: 'h:mm a' }}
+                    </small>
+                </div>
 
+                <div class="top-row d-flex align-items-center">
+                    <img [src]="getIconPath(doc)" alt="file type" class="doc-logo" />
+                    <div class="doc-title flex-grow-1" [title]="doc.title">{{ doc.title }}</div>
+
+                    <!-- Download icon -->
+                    <a [href]="doc.filePath" target="_blank" rel="noopener noreferrer" download class="download-icon"
+                        aria-label="Download document" title="Download">
+                        <i class="bi bi-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="documents.length === 0" class="text-center text-muted py-5">
+            No documents found.
+        </div>
+    </div>
+
+    <!-- Pagination -->
     <nav *ngIf="pagination.totalPages > 1" class="d-flex justify-content-center mt-3">
         <ul class="pagination">
             <li class="page-item" [class.disabled]="pagination.currentPage === 1">

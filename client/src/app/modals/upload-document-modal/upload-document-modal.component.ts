@@ -29,17 +29,17 @@ export class UploadDocumentModalComponent implements OnInit, OnChanges, AfterVie
   private originalHide!: () => void;
   private justSaved = false;
 
-  // backdrop/Esc guards
   private modalEl: HTMLElement | null = null;
   private backdropCapture?: (ev: MouseEvent) => void;
   private escCapture?: (ev: KeyboardEvent) => void;
 
   // Allowed types (front-end validation)
-  private readonly allowedExts = new Set<string>(['.pdf', '.docx', '.ppt', '.xlsx', '.txt']);
+  private readonly allowedExts = new Set<string>(['.pdf', '.docx', '.ppt', '.pptx', '.xlsx', '.txt']);
   private readonly allowedMimes: Record<string, string> = {
     '.pdf': 'application/pdf',
     '.docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     '.ppt': 'application/vnd.ms-powerpoint',
+    '.pptx': 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
     '.xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
     '.txt': 'text/plain'
   };
@@ -141,20 +141,30 @@ export class UploadDocumentModalComponent implements OnInit, OnChanges, AfterVie
 
   private validateSelectedFile(file: File): string | null {
     const name = file.name || '';
-    const ext = (name.substring(name.lastIndexOf('.')).toLowerCase()) || '';
-    const mime = file.type || '';
+    const idx = name.lastIndexOf('.');
+    const ext = (idx >= 0 ? name.substring(idx) : '').toLowerCase();
+    const mime = (file.type || '').toLowerCase();
 
     if (!this.allowedExts.has(ext)) {
-      return 'Unsupported file type. Allowed: PDF, DOCX, PPT, XLSX, TXT.';
+      return 'Unsupported file type. Allowed: PDF, DOCX, PPT, PPTX, XLSX, TXT.';
     }
 
-    const expectedMime = this.allowedMimes[ext];
-    // Enforce exact MIME match for allow-list (defensive, consistent with API)
-    if (mime !== expectedMime) {
-      return 'Unsupported file type. Allowed: PDF, DOCX, PPT, XLSX, TXT.';
+    // Many browsers/OSes provide empty or octet-stream; allow by extension in that case.
+    if (!mime || mime === 'application/octet-stream') {
+      return null;
     }
 
-    return null;
+    // ✅ Accept any text/* for .txt (covers text/plain; charset=..., text/markdown, etc.)
+    if (ext === '.txt' && mime.startsWith('text/')) {
+      return null;
+    }
+
+    const expected = (this.allowedMimes[ext] || '').toLowerCase();
+    if (expected && mime === expected) {
+      return null;
+    }
+
+    return 'Unsupported file type. Allowed: PDF, DOCX, PPT, PPTX, XLSX, TXT.';
   }
 
   onFileSelected(event: Event) {
@@ -170,7 +180,6 @@ export class UploadDocumentModalComponent implements OnInit, OnChanges, AfterVie
 
     const error = this.validateSelectedFile(file);
     if (error) {
-      // Invalid: clear input, set control error, toast, inline message
       this.fileTypeError = error;
       this.uploadForm.get('file')?.setErrors({ invalidType: true });
       this.uploadForm.get('file')?.markAsTouched();
@@ -178,14 +187,12 @@ export class UploadDocumentModalComponent implements OnInit, OnChanges, AfterVie
       if (this.fileInput?.nativeElement) {
         this.fileInput.nativeElement.value = '';
       }
-      this.toastr.error('Unsupported file type. Allowed: PDF, DOCX, PPT, XLSX, TXT.');
+      this.toastr.error(error);
       return;
     }
 
-    // Valid
     this.fileTypeError = null;
     this.uploadForm.get('file')?.setValue(file);
-    // preserve required validator; clear invalidType error only
     const currentErrors = this.uploadForm.get('file')?.errors || {};
     delete currentErrors['invalidType'];
     if (Object.keys(currentErrors).length === 0) {
@@ -198,7 +205,6 @@ export class UploadDocumentModalComponent implements OnInit, OnChanges, AfterVie
 
   upload() {
     if (this.uploadForm.invalid) {
-      // if specific file error, surface it; else generic required
       if (this.fileTypeError) {
         this.toastr.error(this.fileTypeError);
       } else {
@@ -237,7 +243,6 @@ export class UploadDocumentModalComponent implements OnInit, OnChanges, AfterVie
       },
       error: (err) => {
         console.error('Upload error:', err);
-        // Show specific message if API sent one
         const msg =
           (typeof err?.error === 'string' && err.error) ||
           err?.error?.message ||
