@@ -1,62 +1,65 @@
 <div class="container mt-4 modules-page">
     <h2 class="mb-0">Modules</h2>
 
-    <!-- Semester Filter -->
-    <div class="mb-3 semester-filter">
-        <label for="semester" class="h5 fw-normal mb-0">Select Semester:</label>
-        <select id="semester" class="form-select w-auto" name="semester" [(ngModel)]="selectedSemester"
-            (change)="onSemesterChange()">
-            <option [value]="1">Semester 1</option>
-            <option [value]="2">Semester 2</option>
-        </select>
+    <!-- Top row: Assigned Modules (left) | Select Semester (right) -->
+    <div class="top-row">
+        <h5 class="mb-0 section-title">Assigned Modules</h5>
+
+        <div class="semester-filter">
+            <label for="semester" class="h5 mb-0 section-title">Select Semester:</label>
+            <select id="semester" class="form-select w-auto" name="semester" [(ngModel)]="selectedSemester"
+                (change)="onSemesterChange()">
+                <option [value]="1">Semester 1</option>
+                <option [value]="2">Semester 2</option>
+            </select>
+        </div>
     </div>
 
     <!-- Coordinator grouped view -->
     <ng-container *ngIf="isCoordinator; else defaultList">
-        <div class="mb-2 d-flex align-items-center section-heading">
-            <h5 class="mb-0">Assigned Modules</h5>
-        </div>
-        <div class="row modules-grid">
-            <div class="col-md-4 mb-3" *ngFor="let module of assignedModules">
-                <div class="card h-100" (click)="openModule(module)" style="cursor: pointer;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ module.moduleCode }}</h5>
-                        <p class="card-text">{{ module.moduleName }}</p>
-                    </div>
-                </div>
+        <!-- Assigned modules grid (title now sits in the top row) -->
+        <div class="modules-grid" role="list">
+            <div class="module-card" role="listitem" *ngFor="let module of assignedModules" (click)="openModule(module)"
+                tabindex="0">
+                <div class="module-card__code">{{ module.moduleCode }}</div>
+                <div class="module-card__name">{{ module.moduleName }}</div>
             </div>
-            <div *ngIf="assignedModules.length === 0" class="text-muted">No modules assigned to you for this semester.
+
+            <div *ngIf="assignedModules.length === 0" class="text-muted grid-empty">
+                No modules assigned to you for this semester.
             </div>
         </div>
 
+        <!-- Other Modules (coordinator only) -->
         <div class="mt-4 mb-2 d-flex align-items-center section-heading">
             <h5 class="mb-0">Other Modules</h5>
         </div>
-        <div class="row modules-grid">
-            <div class="col-md-4 mb-3" *ngFor="let module of otherModules">
-                <div class="card h-100" (click)="openModule(module)" style="cursor: pointer;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ module.moduleCode }}</h5>
-                        <p class="card-text">{{ module.moduleName }}</p>
-                    </div>
-                </div>
+
+        <div class="modules-grid" role="list">
+            <div class="module-card" role="listitem" *ngFor="let module of otherModules" (click)="openModule(module)"
+                tabindex="0">
+                <div class="module-card__code">{{ module.moduleCode }}</div>
+                <div class="module-card__name">{{ module.moduleName }}</div>
             </div>
-            <div *ngIf="otherModules.length === 0" class="text-muted">No other modules found for this semester.</div>
+
+            <div *ngIf="otherModules.length === 0" class="text-muted grid-empty">
+                No other modules found for this semester.
+            </div>
         </div>
     </ng-container>
 
-    <!-- Original list for non-coordinators -->
+    <!-- Original list for non-coordinators (Lecturers & Students) -->
     <ng-template #defaultList>
-        <div class="row modules-grid">
-            <div class="col-md-4 mb-3" *ngFor="let module of modules">
-                <div class="card h-100" (click)="openModule(module)" style="cursor: pointer;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ module.moduleCode }}</h5>
-                        <p class="card-text">{{ module.moduleName }}</p>
-                    </div>
-                </div>
+        <div class="modules-grid" role="list">
+            <div class="module-card" role="listitem" *ngFor="let module of modules" (click)="openModule(module)"
+                tabindex="0">
+                <div class="module-card__code">{{ module.moduleCode }}</div>
+                <div class="module-card__name">{{ module.moduleName }}</div>
             </div>
-            <div *ngIf="modules.length === 0" class="text-muted">No modules found for this semester.</div>
+
+            <div *ngIf="modules.length === 0" class="text-muted grid-empty">
+                No modules found for this semester.
+            </div>
         </div>
     </ng-template>
 </div>

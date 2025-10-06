@@ -1,17 +1,35 @@
-/* Title → filter spacing + underline (override .mb-0) */
+.modules-page {
+    /* Card size (square). Change these to your liking. */
+    --module-card-size: 200px;
+
+    /* Gap between cards */
+    --module-card-gap-x: 1rem;
+    --module-card-gap-y: 1rem;
+
+    /* Typography */
+    --module-code-font-size: 1.35rem;
+    --module-name-font-size: rem;
+
+    /* Border & shadow */
+    --module-card-border-color: #000;
+    --module-card-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    --module-card-shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.16);
+    --module-card-bg: #fff;
+    --module-card-bg-hover: #f3f4f6;
+    /* subtle grey */
+}
+
+/* ===============================
+   Title underline
+   =============================== */
 .modules-page>h2,
 .modules-page>h2.mb-0 {
-    margin-bottom: 2rem !important;
-    /* space under "Modules" */
+    margin-bottom: 1.25rem !important;
     display: inline-block;
-    /* shrink to text width */
     position: relative;
     padding-bottom: 0.25rem;
-    /* gap between text and line */
     color: #000 !important;
-    /* black */
     font-weight: 700 !important;
-    /* bold */
 }
 
 .modules-page>h2::after {
@@ -19,52 +37,138 @@
     position: absolute;
     left: 0;
     right: 0;
-    /* full text width */
     bottom: 0;
     height: 2px;
-    background: #0D6EFD;
-    /* blue underline */
-    border-radius: 2px;
-
+    background: #0d6efd;
 }
 
-/* Semester filter inline (label + select side-by-side) */
+/* ===============================
+   Top row (Assigned Modules | Select Semester)
+   =============================== */
+.modules-page .top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* left label | right filter */
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.modules-page .top-row .section-title {
+    color: #000;
+    /* black text */
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ===============================
+   Semester filter — right aligned
+   =============================== */
 .modules-page .semester-filter {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    /* stay on the right within top-row */
     gap: 0.75rem;
-    margin-bottom: 5rem;
-    /* space under the Select Semester block */
+    margin-bottom: 0;
+    /* remove big spacing so it sits on same row */
 }
 
-/* Label: style like h5, lighter weight, black */
 .modules-page .semester-filter label {
     margin: 0;
-    /* remove bottom gap so it sits inline */
-    font-size: 1.25rem;
-    /* h5 size */
-    font-weight: 400;
-    /* lighter than bold */
-    color: #000;
-
+    /* inherit size/weight/color from .section-title */
 }
 
-/* Select control typography + color (black) */
 .modules-page .semester-filter .form-select {
     font-size: 1rem;
     color: #000;
+    /* black text */
 }
 
-/* Optional: heading spacing inside sections */
+/* ===============================
+   Cards grid (exactly 4 per row)
+   =============================== */
+.modules-page .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(4, var(--module-card-size));
+    grid-auto-rows: var(--module-card-size);
+    /* squares */
+    gap: var(--module-card-gap-y) var(--module-card-gap-x);
+    align-items: start;
+    justify-content: center;
+    /* ⬅ center the grid */
+}
+
+.modules-page .grid-empty {
+    grid-column: 1 / -1;
+    /* span full row */
+}
+
+/* Optional responsiveness on smaller screens (keeps intent) */
+@media (max-width: 991.98px) {
+    .modules-page .modules-grid {
+        grid-template-columns: repeat(2, var(--module-card-size));
+    }
+}
+
+/* ===============================
+   Card look & content layout
+   =============================== */
+.modules-page .module-card {
+    width: var(--module-card-size);
+    height: var(--module-card-size);
+    border: 1px solid var(--module-card-border-color);
+    border-radius: 0;
+    /* straight corners */
+    background: var(--module-card-bg);
+    box-shadow: var(--module-card-shadow);
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 120ms ease, box-shadow 120ms ease, transform 120ms ease;
+    padding: 0.75rem 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    outline: none;
+}
+
+/* Hover / focus styles */
+.modules-page .module-card:hover,
+.modules-page .module-card:focus-visible {
+    background: var(--module-card-bg-hover);
+    box-shadow: var(--module-card-shadow-hover);
+}
+
+/* Module code: top, big, bold, centered, black */
+.modules-page .module-card__code {
+    text-align: center;
+    color: #000;
+    font-weight: 800;
+    font-size: var(--module-code-font-size);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    word-break: break-word;
+}
+
+/* Module name: centered, wraps if long */
+.modules-page .module-card__name {
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    /* code is the bold focus */
+    font-size: var(--module-name-font-size);
+    line-height: 1.25rem;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    margin-top: 0.25rem;
+}
+
+/* Section heading spacing */
 .modules-page .section-heading {
     margin-top: 1.25rem;
-    /* space above "Assigned/Other Modules" headings */
 }
 
-/* Control Bootstrap row gutters for the card grids */
-.modules-page .modules-grid {
-    --bs-gutter-x: 1.25rem;
-    /* horizontal gap between cards */
-    --bs-gutter-y: 1.25rem;
-    /* vertical gap between cards */
+/* NEW: Force the "Other Modules" heading to black (coordinator section) */
+.modules-page .section-heading h5 {
+    color: #000 !important;
 }
