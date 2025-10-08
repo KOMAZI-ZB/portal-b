@@ -8,7 +8,7 @@ import { LabbookingService } from '../../_services/labbooking.service';
 import { BookLabSlotModalComponent } from '../../modals/book-lab-slot-modal/book-lab-slot-modal.component';
 import { UnbookLabSlotModalComponent } from '../../modals/unbook-lab-slot-modal/unbook-lab-slot-modal.component';
 
-// ✨ Exact-render screenshot pipeline (replaces html2pdf)
+// Exact-render screenshot pipeline (replaces html2pdf)
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 

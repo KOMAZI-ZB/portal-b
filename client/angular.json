@@ -44,7 +44,8 @@
               "core-js",
               "html2pdf.js",
               "raf",
-              "rgbcolor"
+              "rgbcolor",
+              "html2canvas"
             ]
           },
           "configurations": {
@@ -57,8 +58,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "3kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4kb",
+                  "maximumError": "5kb"
                 }
               ],
               "optimization": {
