@@ -40,7 +40,7 @@ export class ModulesComponent implements OnInit {
 
   loadModules() {
     if (this.isCoordinator) {
-      //   Coordinator grouped endpoint
+      // Coordinator grouped endpoint
       this.http
         .get<CoordinatorGroups>(`${environment.apiUrl}modules/semester/${this.selectedSemester}/grouped`)
         .subscribe({
@@ -66,11 +66,28 @@ export class ModulesComponent implements OnInit {
   }
 
   openModule(module: Module) {
-    //   Send both state and query params so the next page can render the header
+    // Send both state and query params so the next page can render the header
     // and also survive a refresh (query params).
     this.router.navigate(['/modules', module.id], {
       state: { moduleCode: module.moduleCode, moduleName: module.moduleName },
       queryParams: { code: module.moduleCode, name: module.moduleName }
     });
+  }
+
+  // ===== UI helpers for coordinator view =====
+
+  /** True when coordinator has at least one assigned module */
+  get showAssignedSection(): boolean {
+    return this.isCoordinator && (this.assignedModules?.length ?? 0) > 0;
+  }
+
+  /** When coordinator has 0 assigned modules, the top-left title becomes "All Modules" */
+  get topRowTitle(): string {
+    return this.isCoordinator && !this.showAssignedSection ? 'All Modules' : 'Assigned Modules';
+  }
+
+  /** Whether the lower grid is acting as the "All Modules" list (no assigned) */
+  get isAllModulesMode(): boolean {
+    return this.isCoordinator && !this.showAssignedSection;
   }
 }

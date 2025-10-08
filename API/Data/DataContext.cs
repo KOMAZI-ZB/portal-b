@@ -141,26 +141,22 @@ namespace API.Data
             });
 
             //   Constraints for Repository Links
-            builder.Entity<Repository>(b =>
-            {
-                b.Property(r => r.Label).IsRequired();
-                b.Property(r => r.ImageUrl).IsRequired();
-                b.Property(r => r.LinkUrl).IsRequired();
-            });
-
-            //   Constraints for Assessments
             builder.Entity<Assessment>(b =>
-            {
-                b.Property(a => a.Title).IsRequired();
-                b.Property(a => a.Date).IsRequired();
-                b.Property(a => a.IsTimed).IsRequired();
+             {
+                 b.Property(a => a.Title).IsRequired();
+                 b.Property(a => a.Date).IsRequired();
+                 b.Property(a => a.IsTimed).IsRequired();
 
-                b.HasOne(a => a.Module)
-                 .WithMany(m => m.Assessments)
-                 .HasForeignKey(a => a.ModuleId)
-                 .IsRequired()
-                 .OnDelete(DeleteBehavior.Cascade);
-            });
+                 b.HasOne(a => a.Module)
+                  .WithMany(m => m.Assessments)
+                  .HasForeignKey(a => a.ModuleId)
+                  .IsRequired()
+                  .OnDelete(DeleteBehavior.Cascade);
+
+                 // NEW: prevent duplicate assessments across runs
+                 b.HasIndex(a => new { a.ModuleId, a.Title, a.Date })
+                  .IsUnique();
+             });
         }
     }
 }

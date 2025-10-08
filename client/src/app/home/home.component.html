@@ -1,18 +1,22 @@
-<!-- UFS logo below the navbar + centered login card on one screen -->
+<!-- One-screen hero under the navbar -->
 <div class="home-hero">
-    <!-- UFS logo sits right under the fixed navbar, centered -->
-    <img src="assets/ufslogo2.png" alt="UFS Logo" class="ufs-logo-top" />
+    <!-- Banner OUTSIDE the card -->
+    <h1 class="portal-banner">CSI HONOURS PORTAL</h1>
 
-    <!-- Centered card with comfortable spacing from the logo -->
+    <!-- Login card BELOW the banner -->
     <div class="login-card">
+        <!-- UFS logo INSIDE the card in a fixed-height box (prevents tall gaps) -->
+        <div class="logo-box">
+            <img src="assets/ufslogo2.png" alt="UFS Logo" class="ufs-logo-top" />
+        </div>
+
+        <!-- Sign-in title (kept black) -->
         <h2 class="portal-title">Sign in with your Username and Password</h2>
 
         <form (ngSubmit)="login()" #loginForm="ngForm" class="login-form">
             <!-- Username -->
             <div class="mb-3 input-group">
-                <span class="input-group-text">
-                    <i class="fas fa-user"></i>
-                </span>
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
                 <input name="userName" [(ngModel)]="model.userName" class="form-control" type="text"
                     placeholder="Username" autocomplete="username" required />
             </div>
@@ -20,9 +24,7 @@
 
             <!-- Password -->
             <div class="mb-3 input-group">
-                <span class="input-group-text">
-                    <i class="fas fa-lock"></i>
-                </span>
+                <span class="input-group-text"><i class="fas fa-lock"></i></span>
                 <input [type]="showPassword ? 'text' : 'password'" name="password" [(ngModel)]="model.password"
                     class="form-control" placeholder="Password" autocomplete="current-password" required />
                 <span class="input-group-text" (click)="togglePasswordVisibility()" style="cursor: pointer;">

@@ -1,25 +1,135 @@
+/* ========= Adjustable spacing for the filters row =========
+   Tweak these three variables to control spacing/size:
+   --notif-filters-gap: gap between each filter block (Type/Status/Semester)
+   --notif-add-gap:    extra left gap before the + button
+   --notif-controls-h: uniform control height (selects + add button)
+*/
+:host {
+    --notif-filters-gap: 12px;
+    --notif-add-gap: 12px;
+    --notif-controls-h: 38px;
+    --notif-controls-w: 50px;
+    --notif-thumb-w: 250px;
+    --notif-thumb-h: 150px;
+    --notif-thumb-radius: 6px;
+    --notif-thumb-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        0 6px 16px rgba(0, 0, 0, 0.10);
+    --notif-thumb-bg: rgba(255, 255, 255, 0.18);
+
+    --add-radius: 50%;
+    /* 50% = circle, e.g. 10px = rounded pill, 0 = square */
+    /* ...existing vars... */
+    --add-size: 44px;
+    /* circle diameter */
+    --plus-size: 18px;
+    /* plus icon size */
+    --plus-stroke: 1px;
+    /* thickness of the + outline */
+
+    --add-bg: #0D6EFD;
+    /* button background */
+    --add-bg-hover: #1d4ed8;
+    /* hover background */
+    --add-bg-active: #1e40af;
+    /* active/pressed background */
+    --add-fg: #ffffff;
+    /* icon (plus) color */
+    --add-shadow-hover: 0 10px 20px rgba(13, 110, 253, .33), 0 4px 12px rgba(0, 0, 0, .16);
+
+    --date-neon: #166615;
+    --date-neon-shadow:
+        0 0 2px rgba(13, 110, 253, 0.10),
+        0 0 2px rgba(13, 110, 253, 0.10);
+}
+
+/* Filters bar (right side of header) */
+.filters-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* keep on one line when possible */
+    gap: var(--notif-filters-gap);
+    /* even spacing between items */
+}
+
+.filter-item {
+    display: inline-flex;
+    align-items: center;
+}
+
+.filter-label {
+    color: #000 !important;
+    /* make labels black */
+}
+
+/* Keep selects a consistent height */
+.filter-select {
+    height: var(--notif-controls-h);
+    line-height: 1.25;
+}
+
+/* Icon-only add button sized to match selects */
+.add-btn {
+    width: var(--add-size);
+    height: var(--add-size);
+    min-width: var(--add-size);
+    /* prevent flex shrink */
+    min-height: var(--add-size);
+    flex: 0 0 var(--add-size);
+    /* keep fixed in the flex row */
+    border-radius: 50% !important;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: var(--notif-add-gap);
+    transition: box-shadow .15s ease;
+}
+
+.add-btn .bi {
+    font-size: var(--plus-size);
+    /* icon size */
+    line-height: 1;
+    -webkit-text-stroke: var(--plus-stroke) currentColor;
+    /* thickness */
+}
+
+.add-btn.btn-primary {
+    /* text/icon color */
+    --bs-btn-color: var(--add-fg);
+    --bs-btn-hover-color: var(--add-fg);
+    --bs-btn-active-color: var(--add-fg);
+
+    /* background + border per state */
+    --bs-btn-bg: var(--add-bg);
+    --bs-btn-border-color: var(--add-bg);
+    --bs-btn-hover-bg: var(--add-bg-hover);
+    --bs-btn-hover-border-color: var(--add-bg-hover);
+    --bs-btn-active-bg: var(--add-bg-active);
+    --bs-btn-active-border-color: var(--add-bg-active);
+
+    /* disabled (optional) */
+    --bs-btn-disabled-bg: var(--add-bg);
+    --bs-btn-disabled-border-color: var(--add-bg);
+}
+
 /* --- spacing & type rhythm for notification cards --- */
 .card .card-topbar {
     margin-bottom: 0.5rem;
-    /* space under TYPE/Audience row */
 }
 
 .card .card-title {
     margin-top: 0.125rem;
-    /* small nudge away from topbar */
     margin-bottom: 0.5rem;
-    /* extra space before message */
     line-height: 1.25;
-    /* compact but readable heading */
 }
 
 .card .card-text {
     margin-top: 0.125rem;
-    /* small gap after title */
     margin-bottom: 0.75rem;
-    /* room before date/image */
     line-height: 1.55;
-    /* friendlier reading for sentences */
 }
 
 /* Add a subtle affordance for deep-linkable cards */
@@ -32,71 +142,34 @@
 }
 
 /* === Uniform thumbnail size inside notification cards === */
-:host {
-    --notif-thumb-w: 250px;
-    /* fixed width */
-    --notif-thumb-h: 150px;
-    /* fixed height */
-    --notif-thumb-radius: 6px;
-    /* border radius */
-    --notif-thumb-shadow:
-        /* <— tweak shadow strength here */
-        0 1px 3px rgba(0, 0, 0, 0.08),
-        0 6px 16px rgba(0, 0, 0, 0.10);
-    --notif-thumb-bg: rgba(255, 255, 255, 0.18);
-    /* <-- transparency */
-
-    /* === Neon date/time tokens === */
-    --date-neon: #166615;
-    /* blue text */
-    --date-neon-shadow:
-        0 0 2px rgba(13, 110, 253, 0.10),
-        0 0 2px rgba(13, 110, 253, 0.10),
-
-}
-
-/* Fixed-size wrapper so every card shows the same-sized image */
 .thumb-wrap {
     width: var(--notif-thumb-w);
     height: var(--notif-thumb-h);
     overflow: hidden;
-    /* crop overflow */
     border-radius: var(--notif-thumb-radius);
     display: inline-block;
-    /* keep inline with text */
     border: 1px solid #ffffff;
-    /* visible border box */
     box-sizing: border-box;
-    /* include border in size */
     background: #fff;
-    /* neutral bg behind image */
     box-shadow: var(--notif-thumb-shadow);
-    /* box shadoiwing  */
 }
 
-/* The image fills the wrapper and is neatly cropped */
 .thumb-wrap .thumb-img {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: scale-down;
-    /* fill & crop to 100x100 */
     object-position: center;
-    /* center the crop */
     border-radius: var(--notif-thumb-radius);
 }
 
-/* --- NEW: blue underline under "Notification Board" (text-width only) --- */
+/* --- blue underline under "Notification Board" (text-width only) --- */
 .row.align-items-start.mb-3>.col-md-6>h2.mb-0 {
     display: inline-block;
-    /* shrink underline to text width */
     position: relative;
     padding-bottom: 0.25rem;
-    /* gap between text and line */
     color: #000 !important;
-    /* black */
     font-weight: 700 !important;
-    /* bold */
 }
 
 .row.align-items-start.mb-3>.col-md-6>h2.mb-0::after {
@@ -104,19 +177,16 @@
     position: absolute;
     left: 0;
     right: 0;
-    /* full width of the text */
     bottom: 0;
     height: 2px;
     background: #0D6EFD;
-    /* blue */
     border-radius: 2px;
 }
 
-/* --- NEW: make dropdown item hover a subtle light grey instead of blue --- */
+/* --- lighten dropdown hover --- */
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus {
     background-color: #f3f3f3 !important;
-    /* light grey */
     color: inherit;
 }
 
@@ -127,9 +197,6 @@
 /* === Neon green date/time (glow) === */
 .date-bottom {
     color: var(--date-neon) !important;
-    /* override .text-muted */
     text-shadow: var(--date-neon-shadow);
-    /* glow effect */
     font-weight: 600;
-    /* optional emphasis */
 }

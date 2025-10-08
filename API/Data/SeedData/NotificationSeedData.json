@@ -1,47 +1,1422 @@
 [
     {
-        "type": "GENERAL",
-        "title": "Welcome to the Portal",
-        "message": "The academic portal is now live. Please explore the features.",
-        "imagePath": null,
+        "type": "General",
+        "title": "ITSA Welcome & Semester 1 Kick-off",
+        "message": "Join the ITSA welcome session and tool walk-through for Honours modules (CSIS6813, CSII6833, CSID6853, CSII6813, CSIP6853, CSIP6833, CSIA6813, EFMN6814).",
+        "imagePath": "/assets/ufslogo.jpg",
         "createdBy": "admin",
-        "createdAt": "2025-06-10T09:00:00Z",
-        "moduleId": null
+        "createdAt": "2025-01-12T08:30:00Z",
+        "moduleId": null,
+        "audience": "All"
     },
     {
-        "type": "SYSTEM",
-        "title": "System Maintenance",
-        "message": "Portal will be under maintenance on June 15 from 01:00–03:00.",
+        "type": "System",
+        "title": "Portal Rollout Complete",
+        "message": "Semester 1 features (Schedules, Repository, FAQ) are live. Please report issues via Help → Support.",
         "imagePath": null,
         "createdBy": "admin",
-        "createdAt": "2025-06-11T10:00:00Z",
-        "moduleId": null
+        "createdAt": "2025-01-12T07:30:00Z",
+        "moduleId": null,
+        "audience": "All"
     },
     {
-        "type": "DOCUMENT UPLOAD",
-        "title": "Assignment 1 Uploaded",
-        "message": "Assignment 1 has been added to the course materials for CSC101.",
+        "type": "FaqUpdate",
+        "title": "FAQ: Module vs Repository Files",
+        "message": "New article explains the difference between Module Documents and the global Repository, with examples from CSIP6833 and CSIA6813.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-01-20T09:00:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "Templates: Research & Coding Standards",
+        "message": "Added Honours research report template and coding style guides relevant to CSIP6853, CSIP6833, and CSII6813.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-01-22T11:10:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Hackathon: Data & Mobile Apps",
+        "message": "Weekend hackathon focusing on datasets (CSIA6813) and Android builds (CSIP6853). Teams of 3–5; prizes for best HCI (CSII6833) design.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-02-05T14:00:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "System",
+        "title": "Planned Maintenance",
+        "message": "Portal maintenance on Feb 8, 21:00–22:30. Schedules and Repository may be intermittent.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-02-06T10:15:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "FaqUpdate",
+        "title": "FAQ: Booking Labs & After-Hours Access",
+        "message": "Step-by-step guide for lab policies and after-hours requests, with examples for CSIP6853 mobile builds.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-02-10T08:40:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "Past Exam Packs Uploaded",
+        "message": "HCI patterns (CSII6833) and Information Security case studies (CSII6813) exam packs now available.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-02-18T12:20:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Android Dev Clinics (CSIP6853)",
+        "message": "Weekly drop-in for Gradle woes, emulator issues, and Compose basics. Bring your laptop.",
+        "imagePath": null,
+        "createdBy": "2023000010",
+        "createdAt": "2025-02-11T14:10:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Advanced Internet Programming Code Review (CSIP6833)",
+        "message": "Peer review on API design, error handling, and auth flows before your first sprint demo.",
+        "imagePath": null,
+        "createdBy": "2023000010",
+        "createdAt": "2025-02-21T08:00:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Career Expo: Software, Data & FinTech",
+        "message": "Meet employers hiring for roles aligned to CSIA6813 (Data) and CSIP6833/CSIP6853 (Full-stack/Mobile).",
+        "imagePath": "/assets/career-expo.jpg",
+        "createdBy": "2023000010",
+        "createdAt": "2025-03-04T11:30:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Git & Team Workflows Workshop",
+        "message": "Hands-on session covering PR etiquette, code reviews, and trunk-based development for team projects.",
+        "imagePath": null,
+        "createdBy": "2023000010",
+        "createdAt": "2025-03-13T15:45:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Data Science Reading Group (CSIA6813)",
+        "message": "We’ll discuss recent papers on feature stores and model monitoring; sign up on the portal.",
+        "imagePath": null,
+        "createdBy": "2023000010",
+        "createdAt": "2025-03-26T10:05:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "EFMN6814: Finance for Tech Leads",
+        "message": "Short talk on budgeting and cost awareness for project proposals tied to EFMN6814 concepts.",
+        "imagePath": null,
+        "createdBy": "2023000010",
+        "createdAt": "2025-04-18T09:10:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Department Hackathon: Full-Stack + Data",
+        "message": "24-hour build sprint; best use of HCI patterns (CSII6833) and clean API design (CSIP6833) gets prizes.",
+        "imagePath": "/assets/hackathon.jpg",
+        "createdBy": "2023000010",
+        "createdAt": "2025-05-03T08:40:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Exam Prep: Security & Warehousing",
+        "message": "Group Q&A for CSII6813 (crypto, auth) and CSID6853 (ETL, dimensional design).",
+        "imagePath": null,
+        "createdBy": "2023000010",
+        "createdAt": "2025-05-20T14:30:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Consultation Week Sign-ups",
+        "message": "Book consultation slots with lecturers for CSIS6813 proposals, mobile build reviews, and AIP debugging.",
+        "imagePath": null,
+        "createdBy": "2023000010",
+        "createdAt": "2025-06-05T07:50:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Lab Etiquette & After-Hours Access",
+        "message": "Reminder on lab policies during project crunch weeks; request after-hours access via the portal.",
+        "imagePath": null,
+        "createdBy": "2023000010",
+        "createdAt": "2025-06-18T16:10:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Semester 1 Kick-off: Tools & Expectations",
+        "message": "Briefing on portal use, timelines, and expectations for CSIS6809, BCIS6809, CSIS6813, and CSIP6833.",
+        "imagePath": null,
+        "createdBy": "2023000009",
+        "createdAt": "2025-01-12T08:30:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "ScheduleUpdate",
+        "title": "[BCIS6809] Progress Check-in Windows",
+        "message": "Two recurring progress touchpoints added to Schedule for Weeks 7 and 10.",
+        "imagePath": null,
+        "createdBy": "2023000009",
+        "createdAt": "2025-04-15T16:05:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[CSIS6809] Year-Project Review Slots",
+        "message": "Reserve 20-min checkpoint reviews with the coordination team via Scheduler (Week 9).",
+        "imagePath": null,
+        "createdBy": "2023000009",
+        "createdAt": "2025-03-25T13:05:00Z",
+        "moduleId": 1,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[BCIS6809] Proposal Checklist & Gantt",
+        "message": "Module docs updated with a supervisor checklist and a Gantt chart template (editable).",
+        "imagePath": "/assets/gantt.png",
+        "createdBy": "2023000009",
+        "createdAt": "2025-03-13T08:55:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[CSII6833] Project Brief v1.1",
+        "message": "Minor clarifications to deliverables and HCI heuristic expectations for the first studio.",
         "imagePath": null,
         "createdBy": "2023000005",
-        "createdAt": "2025-06-12T08:30:00Z",
-        "moduleId": 9
+        "createdAt": "2025-01-22T13:25:00Z",
+        "moduleId": 4,
+        "audience": "ModuleStudents"
     },
     {
-        "type": "REPOSITORY UPDATE",
-        "title": "New Research Paper Added",
-        "message": "A new PDF has been uploaded to the Internal Repository.",
+        "type": "DocumentUpload",
+        "title": "[CSII6833] HCI Heuristics Checklist",
+        "message": "Nielsen heuristics checklist and example usability tasks added for pre-studio review.",
+        "imagePath": null,
+        "createdBy": "2023000005",
+        "createdAt": "2025-01-27T14:05:00Z",
+        "moduleId": 4,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[CSIS6813] Supervisor Speed-Meet Slots Open",
+        "message": "Reserve short sessions to match topics with available supervisors via Scheduler.",
+        "imagePath": null,
+        "createdBy": "2023000005",
+        "createdAt": "2025-02-03T08:20:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Git & Team Workflow Clinic",
+        "message": "Hands-on session covering PR etiquette, code reviews, and branching strategies used in CSII6833.",
+        "imagePath": null,
+        "createdBy": "2023000005",
+        "createdAt": "2025-02-13T15:00:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Exam Prep Open Labs",
+        "message": "Open lab sessions for research writing polish (CSIS6813) and HCI prototype critiques (CSII6833).",
+        "imagePath": null,
+        "createdBy": "2023000005",
+        "createdAt": "2025-05-20T14:30:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Semester 1 Kick-off & Portal Walkthrough",
+        "message": "Overview of timelines and how we’ll use the portal for CSIS6809, BCIS6809, CSIS6813, and Data Warehousing.",
         "imagePath": null,
         "createdBy": "2023000006",
-        "createdAt": "2025-06-12T12:00:00Z",
-        "moduleId": null
+        "createdAt": "2025-01-12T08:30:00Z",
+        "moduleId": null,
+        "audience": "All"
     },
     {
-        "type": "SCHEDULE UPDATE",
-        "title": "Updated Test Schedule",
-        "message": "Test 1 for MTH102 has been moved to July 1. Please check the scheduler.",
+        "type": "ModuleUpdate",
+        "title": "[CSIS6809] Year-Module Syllabus Published",
+        "message": "Assessment weights, milestones, and consultation times are now available in Module Documents.",
+        "imagePath": null,
+        "createdBy": "2023000006",
+        "createdAt": "2025-01-15T09:10:00Z",
+        "moduleId": 1,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[CSIS6813] Research Proposal Template",
+        "message": "Topic selection guide and structured proposal template uploaded to help you start strong.",
+        "imagePath": null,
+        "createdBy": "2023000006",
+        "createdAt": "2025-01-18T10:00:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[BCIS6809] Proposal Consult Slots Open",
+        "message": "Book a 15-minute supervisor consultation for Week 3 using the Scheduler.",
+        "imagePath": null,
+        "createdBy": "2023000006",
+        "createdAt": "2025-01-24T13:15:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ScheduleUpdate",
+        "title": "[CSIS6813] Seminar Time Confirmed",
+        "message": "Research seminar set for the usual weekly slot; please check Schedule for room and time.",
+        "imagePath": null,
+        "createdBy": "2023000006",
+        "createdAt": "2025-01-27T14:05:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Git & Team Workflow Clinic",
+        "message": "Hands-on session covering PR etiquette, code reviews, and trunk-based development.",
+        "imagePath": null,
+        "createdBy": "2023000006",
+        "createdAt": "2025-02-03T08:20:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[BCIS6809] Proposal Rubric Clarified",
+        "message": "Updated notes on scope, feasibility, and supervisor engagement added to the rubric.",
+        "imagePath": null,
+        "createdBy": "2023000006",
+        "createdAt": "2025-02-07T09:50:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[CSIS6813] Literature Matrix Example",
+        "message": "Example synthesis matrix and annotation tips to support your first literature review.",
+        "imagePath": null,
+        "createdBy": "2023000006",
+        "createdAt": "2025-02-14T15:30:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[CSID6853] ETL Demo Bookings",
+        "message": "Reserve 10-minute ETL pipeline demo slots for Week 6 via Scheduler (teams need one slot).",
+        "imagePath": null,
+        "createdBy": "2023000006",
+        "createdAt": "2025-02-18T09:25:00Z",
+        "moduleId": 5,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Semester 1 Kick-off & Portal Walkthrough",
+        "message": "Overview of timelines and how we’ll use the portal for CSIS6809, BCIS6809, CSIS6813, and Information Security.",
         "imagePath": null,
         "createdBy": "2023000007",
-        "createdAt": "2025-06-13T10:00:00Z",
-        "moduleId": 13
+        "createdAt": "2025-01-12T08:30:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[CSIS6809] Year-Module Syllabus Published",
+        "message": "Assessment weights, milestones, and consultation hours are now available in Module Documents.",
+        "imagePath": null,
+        "createdBy": "2023000007",
+        "createdAt": "2025-01-15T09:10:00Z",
+        "moduleId": 1,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[CSIS6813] Research Proposal Template",
+        "message": "Topic selection guide and structured proposal template uploaded to help you start strong.",
+        "imagePath": null,
+        "createdBy": "2023000007",
+        "createdAt": "2025-01-18T10:00:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[CSIS6809] Writing & Referencing Kit",
+        "message": "Report structure template and Harvard referencing quick guide added for year projects.",
+        "imagePath": null,
+        "createdBy": "2023000007",
+        "createdAt": "2025-01-22T11:20:00Z",
+        "moduleId": 1,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[BCIS6809] Supervisor Meeting Log Sheet",
+        "message": "Editable meeting log and progress tracker uploaded for consistent supervision records.",
+        "imagePath": null,
+        "createdBy": "2023000007",
+        "createdAt": "2025-04-16T10:45:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[CSII6813] Security Lab Resources",
+        "message": "Added cheat-sheets for TLS, hashing pitfalls, and JWT validation strategies.",
+        "imagePath": null,
+        "createdBy": "2023000007",
+        "createdAt": "2025-04-20T09:35:00Z",
+        "moduleId": 6,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[CSIS6813] Speed-Meet: Supervisor Matching",
+        "message": "Short sessions opened to align topics with available supervisors-book early.",
+        "imagePath": null,
+        "createdBy": "2023000007",
+        "createdAt": "2025-05-03T08:40:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Semester 1 Kick-off & Portal Walkthrough",
+        "message": "Overview of timelines and how we’ll use the portal for CSIS6809, BCIS6809, CSIS6813, and Advanced Programming I (Mobile).",
+        "imagePath": null,
+        "createdBy": "2023000008",
+        "createdAt": "2025-01-12T08:30:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Git & Team Workflow Clinic",
+        "message": "Hands-on session covering PR etiquette, code reviews, and trunk-based development for AIP teams.",
+        "imagePath": null,
+        "createdBy": "2023000008",
+        "createdAt": "2025-02-03T08:20:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Career Expo: Software, Data & Mobile",
+        "message": "Recruiters on campus with roles aligned to research (CSIS6813) and Android development (CSIP6853).",
+        "imagePath": "/assets/career-expo.jpg",
+        "createdBy": "2023000008",
+        "createdAt": "2025-03-04T11:30:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[BCIS6809] Gantt & Risk Templates",
+        "message": "Sample Gantt charts and risk breakdown structures uploaded for planning.",
+        "imagePath": "/assets/gantt.png",
+        "createdBy": "2023000008",
+        "createdAt": "2025-03-18T07:55:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[CSIP6853] CI/CD Pipeline Samples",
+        "message": "Added GitHub Actions examples for build, test, and deploy; includes artifact retention.",
+        "imagePath": null,
+        "createdBy": "2023000008",
+        "createdAt": "2025-04-20T09:35:00Z",
+        "moduleId": 7,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[CSIS6813] Research Proposal Template",
+        "message": "Topic selection guide and structured proposal template uploaded to help you start strong.",
+        "imagePath": null,
+        "createdBy": "2023000008",
+        "createdAt": "2025-01-18T10:00:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[CSIS6809] Milestone Pack",
+        "message": "Year-project milestone schedule, feedback form, and example abstracts uploaded.",
+        "imagePath": null,
+        "createdBy": "2023000008",
+        "createdAt": "2025-02-12T10:10:00Z",
+        "moduleId": 1,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[CSIP6853] Starter Android Project",
+        "message": "Baseline Compose project with navigation and testing harness added to Module Documents.",
+        "imagePath": null,
+        "createdBy": "2023000008",
+        "createdAt": "2025-03-12T08:45:00Z",
+        "moduleId": 7,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[CSIA6813] Model Review Sign-ups",
+        "message": "Reserve 10-minute model review slots for Week 6 (teams need one slot).",
+        "imagePath": null,
+        "createdBy": "2023000017",
+        "createdAt": "2025-03-12T08:45:00Z",
+        "moduleId": 9,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[CSIS6813] Research Proposal Template",
+        "message": "Topic selection guide and structured proposal template uploaded to help you start strong.",
+        "imagePath": null,
+        "createdBy": "2023000017",
+        "createdAt": "2025-01-18T10:00:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[CSIS6809] Milestone Pack",
+        "message": "Year-project milestone schedule, feedback form, and example abstracts uploaded.",
+        "imagePath": null,
+        "createdBy": "2023000017",
+        "createdAt": "2025-02-12T10:10:00Z",
+        "moduleId": 1,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[BCIS6809] Supervisor Meeting Log Sheet",
+        "message": "Editable meeting log and progress tracker uploaded for consistent supervision records.",
+        "imagePath": null,
+        "createdBy": "2023000017",
+        "createdAt": "2025-04-16T10:45:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[CSIA6813] Dataset & Notebook Starter Kit",
+        "message": "Baseline EDA notebook and sample dataset card uploaded to Module Documents.",
+        "imagePath": null,
+        "createdBy": "2023000017",
+        "createdAt": "2025-02-28T09:35:00Z",
+        "moduleId": 9,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[CSIS6813] Literature Matrix Example",
+        "message": "Example synthesis matrix and annotation tips to support your first literature review.",
+        "imagePath": null,
+        "createdBy": "2023000017",
+        "createdAt": "2025-02-14T15:30:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[BCIS6809] Gantt & Risk Templates",
+        "message": "Sample Gantt charts and risk breakdown structures uploaded for planning.",
+        "imagePath": "/assets/gantt.png",
+        "createdBy": "2023000017",
+        "createdAt": "2025-03-18T07:55:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[CSIA6813] MLOps Patterns & Checklists",
+        "message": "Deployment checklists, model card template, and monitoring pointers added to the Repository.",
+        "imagePath": null,
+        "createdBy": "2023000017",
+        "createdAt": "2025-04-20T09:35:00Z",
+        "moduleId": 9,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Semester 1 Kick-off & Portal Walkthrough",
+        "message": "Overview of timelines and how we’ll use the portal for CSIS6809, BCIS6809, CSIS6813, and EFMN6814.",
+        "imagePath": null,
+        "createdBy": "2023000018",
+        "createdAt": "2025-01-12T08:30:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[CSIS6813] Research Proposal Template",
+        "message": "Topic selection guide and structured proposal template uploaded to help you start strong.",
+        "imagePath": null,
+        "createdBy": "2023000018",
+        "createdAt": "2025-01-18T10:00:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[BCIS6809] Proposal Consult Slots Open",
+        "message": "Book a 15-minute supervisor consultation for Week 3 using the Scheduler.",
+        "imagePath": null,
+        "createdBy": "2023000018",
+        "createdAt": "2025-01-24T13:15:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ScheduleUpdate",
+        "title": "[CSIS6813] Seminar Time Confirmed",
+        "message": "Research seminar set for the weekly slot; check Schedule for room and time.",
+        "imagePath": null,
+        "createdBy": "2023000018",
+        "createdAt": "2025-01-27T14:05:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[CSIS6809] Writing & Referencing Kit",
+        "message": "Report structure template and Harvard referencing quick guide added for year projects.",
+        "imagePath": null,
+        "createdBy": "2023000018",
+        "createdAt": "2025-01-30T11:20:00Z",
+        "moduleId": 1,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Git & Team Workflow Clinic",
+        "message": "Hands-on session covering PR etiquette, code reviews, and trunk-based development.",
+        "imagePath": null,
+        "createdBy": "2023000018",
+        "createdAt": "2025-02-06T08:20:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[BCIS6809] Proposal Rubric Clarified",
+        "message": "Updated notes on scope, feasibility, and supervisor engagement added to the rubric.",
+        "imagePath": null,
+        "createdBy": "2023000018",
+        "createdAt": "2025-02-10T09:50:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[CSIS6813] Supervisor Speed-Meet Slots Open",
+        "message": "Reserve short sessions to match topics with available supervisors via Scheduler.",
+        "imagePath": null,
+        "createdBy": "2023000018",
+        "createdAt": "2025-02-17T08:25:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ScheduleUpdate",
+        "title": "[BCIS6809] Progress Touchpoints Added",
+        "message": "Two recurring progress check-ins added to Schedule for Weeks 7 and 10.",
+        "imagePath": null,
+        "createdBy": "2023000018",
+        "createdAt": "2025-02-22T12:00:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[CSIS6813] Literature Matrix Example",
+        "message": "Example synthesis matrix and annotation tips to support your first literature review.",
+        "imagePath": null,
+        "createdBy": "2023000018",
+        "createdAt": "2025-02-26T15:30:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Career Expo: Software, Data & FinTech",
+        "message": "Recruiters on campus with roles aligned to research and finance-in-tech pathways.",
+        "imagePath": "/assets/career-expo.jpg",
+        "createdBy": "2023000018",
+        "createdAt": "2025-03-04T11:30:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[CSIS6813] Ethics & Turnitin Thresholds",
+        "message": "Guidance added on ethics clearance timing and similarity limits—review before submissions.",
+        "imagePath": null,
+        "createdBy": "2023000018",
+        "createdAt": "2025-03-19T08:10:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[EFMN6814] Budgeting Toolkit for Tech Projects",
+        "message": "CAPEX/OPEX templates and sample cost models uploaded for proposal budgeting.",
+        "imagePath": null,
+        "createdBy": "2023000018",
+        "createdAt": "2025-03-21T09:45:00Z",
+        "moduleId": 10,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[CSIS6813] Ethics & Turnitin Thresholds",
+        "message": "Guidance added on ethics clearance timing and similarity limits—review before submissions.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-03-19T08:10:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[BCIS6809] Supervisor Meeting Log Sheet",
+        "message": "Editable meeting log and progress tracker uploaded for consistent supervision records.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-04-16T10:45:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[BCIS6809] Gantt & Risk Templates",
+        "message": "Sample Gantt charts and risk breakdown structures uploaded for planning.",
+        "imagePath": "/assets/gantt.png",
+        "createdBy": "2023000020",
+        "createdAt": "2025-03-18T07:55:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Bursaries & Winter Internships Briefing",
+        "message": "Funding opportunities and internship timelines for research-focused students.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-04-09T12:20:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[CSIS6813] Supervisor Speed-Meet Slots Open",
+        "message": "Reserve short sessions to match topics with available supervisors via Scheduler.",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-02-12T08:25:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[CSIS6813] Literature Matrix Example",
+        "message": "Example synthesis matrix and annotation tips to support your first literature review.",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-02-14T15:30:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ScheduleUpdate",
+        "title": "[BCIS6809] Progress Touchpoints Added",
+        "message": "Two recurring progress check-ins added to Schedule for Weeks 7 and 10.",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-02-18T12:00:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Career Expo: Software, Data & Research",
+        "message": "Recruiters on campus with roles aligned to research and data science pathways.",
+        "imagePath": "/assets/career-expo.jpg",
+        "createdBy": "2023000021",
+        "createdAt": "2025-03-04T11:30:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[BCIS6809] Supervisor Meeting Log Sheet",
+        "message": "Editable meeting log and progress tracker uploaded for consistent supervision records.",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-03-06T08:45:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[CSIS6813] Ethics & Turnitin Thresholds",
+        "message": "Guidance added on ethics clearance timing and similarity limits—review before submissions.",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-03-19T08:10:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[BCIS6809] Gantt & Risk Templates",
+        "message": "Sample Gantt charts and risk breakdown structures uploaded for planning.",
+        "imagePath": "/assets/gantt.png",
+        "createdBy": "2023000021",
+        "createdAt": "2025-03-28T09:15:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ScheduleUpdate",
+        "title": "[CSIS6813] Seminar Shifted by 30 Minutes",
+        "message": "Time adjusted to accommodate venue availability. See updated Schedule for details.",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-04-04T10:25:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[CSIS6813] Literature Review Pack",
+        "message": "Reading checklist, exemplar synthesis paragraphs, and citation style notes uploaded.",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-04-16T11:10:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[CSIS6813] Draft Review Slots",
+        "message": "Book 10-minute slots for feedback on your proposal draft ahead of submission.",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-05-14T14:10:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[CSIS6813] Poster & Presentation Templates",
+        "message": "Slide and poster templates with presenter notes added to the Repository.",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-05-20T09:25:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Exam Prep Open Labs",
+        "message": "Open lab sessions for research writing polish (CSIS6813) and project progress checks (CSIS6809/BCIS6809).",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-06-05T08:40:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[BCIS6809] Proposal Checklist & Timeline",
+        "message": "Submission checklist and week-by-week planning timeline uploaded to Module Documents.",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-06-07T10:55:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Semester 1 Kick-off & Portal Walkthrough",
+        "message": "Overview of timelines and how we’ll use the portal for CSIS6809, BCIS6809, and CSIS6813.",
+        "imagePath": null,
+        "createdBy": "2023000022",
+        "createdAt": "2025-01-12T08:30:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[BCIS6809] Proposal Consult Slots Open",
+        "message": "Book a 15-minute supervisor consultation for Week 3 using the Scheduler.",
+        "imagePath": null,
+        "createdBy": "2023000022",
+        "createdAt": "2025-01-22T13:15:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[BCIS6809] Gantt & Risk Templates",
+        "message": "Sample Gantt charts and risk breakdown structures uploaded for planning.",
+        "imagePath": "/assets/gantt.png",
+        "createdBy": "2023000022",
+        "createdAt": "2025-03-28T09:15:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ScheduleUpdate",
+        "title": "[CSIS6813] Seminar Shifted by 30 Minutes",
+        "message": "Time adjusted to accommodate venue availability. See updated Schedule for details.",
+        "imagePath": null,
+        "createdBy": "2023000022",
+        "createdAt": "2025-04-04T10:25:00Z",
+        "moduleId": 3,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[CSIA6843] Analytical Programming: Dataset Refresh",
+        "message": "New Kaggle corpus mirrored under Resources. Use v2.1 for Assignment 1 baselines.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-07-29T09:10:00Z",
+        "moduleId": 14,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ScheduleUpdate",
+        "title": "[EVEN6824] Venture Pitches Rescheduled",
+        "message": "Moved to 2 September, 10:10–12:10, WWG212. Mentor feedback slots updated accordingly.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-08-23T09:35:00Z",
+        "moduleId": 18,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "System",
+        "title": "Performance Upgrade",
+        "message": "Static asset CDN enabled; portal loads ~30% faster off-campus.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-08-26T06:50:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "FaqUpdate",
+        "title": "FAQ: VPN & Git Access",
+        "message": "Step-by-step for VPN + Git over SSH from residences/labs, with troubleshooting tips.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-08-28T15:25:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "Supervisor Report Template",
+        "message": "New DOCX/LaTeX templates for CSIS6809/BCIS6809 progress reviews added.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-09-01T08:20:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "Public Holiday Closure (24 Sep)",
+        "message": "All lab slots for Heritage Day removed. Existing bookings auto-cancelled with email notices.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-09-03T09:00:00Z",
+        "moduleId": 11,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[BCIS6809] Year Project Milestone 2",
+        "message": "Submit prototype demo links by 13 Sep. Marking rubric and demo checklist posted.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-09-05T11:10:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Tutor Recruitment (S2)",
+        "message": "Honours students may apply to tutor first-year labs. Induction on 10 Sep, WWG213.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-09-06T13:45:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "ScheduleUpdate",
+        "title": "[CSIA6843] Code Clinic Slots Added",
+        "message": "Extra clinics on Mon 16:10–17:10 for the next three weeks. Booking required.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-09-09T07:20:00Z",
+        "moduleId": 14,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "Exam Archive (S2 Past Papers)",
+        "message": "For CSID6823, CSID6843, CSIN6843—papers with memos added under Exam Prep.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-09-12T10:55:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "FaqUpdate",
+        "title": "FAQ: Module Registration Changes",
+        "message": "Explained add/drop deadlines and special permission requests for S2 modules.",
+        "imagePath": null,
+        "createdBy": "admin",
+        "createdAt": "2025-09-16T12:05:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Consultation & Tutoring Slots (S2)",
+        "message": "Weekly tutoring for Advanced Databases, BI, Networks, and PM. Book via the Consultation page.",
+        "imagePath": null,
+        "createdBy": "2023000010",
+        "createdAt": "2025-07-29T14:05:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Bursaries & Scholarships Roundup",
+        "message": "Latest calls for S2: research grants and industry bursaries relevant to BI/Databases/Networks.",
+        "imagePath": null,
+        "createdBy": "2023000010",
+        "createdAt": "2025-08-01T07:55:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Git & CI Quickstart Workshop",
+        "message": "Hands-on basics for CI pipelines; helpful for CSID6823/CSID6843 project automation.",
+        "imagePath": null,
+        "createdBy": "2023000010",
+        "createdAt": "2025-08-08T11:40:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Lab Etiquette & Hardware Access",
+        "message": "Reminder: book WWG211/212/213 slots, no food/drinks near machines, and sign out specialist kits.",
+        "imagePath": null,
+        "createdBy": "2023000010",
+        "createdAt": "2025-08-14T09:25:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[EOCC6824] Case Study Pack A",
+        "message": "Retail omnichannel case PDF + data dictionary available for Assignment 1.",
+        "imagePath": null,
+        "createdBy": "2023000009",
+        "createdAt": "2025-08-08T12:35:00Z",
+        "moduleId": 17,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "Past Papers: BI & Databases",
+        "message": "Exam archives with memos for CSID6823/CSID6843 added under Exam Prep.",
+        "imagePath": null,
+        "createdBy": "2023000009",
+        "createdAt": "2025-08-12T07:45:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "Public Holiday Closure (24 Sep)",
+        "message": "All lab slots removed for Heritage Day; bookings auto-cancelled with email notices.",
+        "imagePath": null,
+        "createdBy": "2023000009",
+        "createdAt": "2025-08-15T15:15:00Z",
+        "moduleId": 17,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ScheduleUpdate",
+        "title": "[EOCC6824] Industry Guest Talk",
+        "message": "Moved to Thu 14:10–15:10 (WWG211). Attendance counts toward participation.",
+        "imagePath": null,
+        "createdBy": "2023000009",
+        "createdAt": "2025-08-20T09:05:00Z",
+        "moduleId": 17,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Tutor Recruitment (S2)",
+        "message": "Honours students may apply to tutor first-year IT labs. Induction on 6 Sep, WWG213.",
+        "imagePath": null,
+        "createdBy": "2023000009",
+        "createdAt": "2025-08-29T13:40:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[BCIS6809] Lab Maintenance (WWG213)",
+        "message": "Morning slots on 12 Aug moved to WWG212 due to equipment checks.",
+        "imagePath": null,
+        "createdBy": "2023000005",
+        "createdAt": "2025-08-12T06:55:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[BCIS6809] Milestone 2 Requirements Clarified",
+        "message": "Updated rubric with API demo expectations and logging requirements.",
+        "imagePath": null,
+        "createdBy": "2023000005",
+        "createdAt": "2025-08-20T14:15:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[BCIS6809] Supervisor Report Templates v2.1",
+        "message": "Updated DOCX/LaTeX templates aligned to rubric anchors added to Repository.",
+        "imagePath": null,
+        "createdBy": "2023000008",
+        "createdAt": "2025-07-14T11:15:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[CSIE6863] Evening Lab Slots Pilot",
+        "message": "18:10–20:10 slots on Wed/Thu opened for project teams-book via Scheduler.",
+        "imagePath": null,
+        "createdBy": "2023000008",
+        "createdAt": "2025-07-15T16:35:00Z",
+        "moduleId": 15,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[BCIS6809] Prototype Demo Checklist",
+        "message": "Pre-demo criteria and common pitfalls. Read before your Milestone 2 slot.",
+        "imagePath": null,
+        "createdBy": "2023000017",
+        "createdAt": "2025-07-23T09:25:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[BCIS6809] WWG213 Maintenance (29 Jul)",
+        "message": "Morning slots shifted to WWG212; affected bookings auto-moved.",
+        "imagePath": null,
+        "createdBy": "2023000017",
+        "createdAt": "2025-07-28T06:30:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[BCIS6809] Milestone 2 Brief Released",
+        "message": "Prototype demo requirements and checklist posted under Assessments.",
+        "imagePath": null,
+        "createdBy": "2023000017",
+        "createdAt": "2025-08-02T09:40:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[BCIS6809] Prototype Demo Checklist",
+        "message": "Pre-demo criteria and common pitfalls—review before Milestone 2.",
+        "imagePath": null,
+        "createdBy": "2023000018",
+        "createdAt": "2025-07-25T13:05:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Career Expo: Cloud & Data (31 July Recap)",
+        "message": "Slides and contact list posted on Careers page; book mock interviews.",
+        "imagePath": "/assets/career-expo.jpg",
+        "createdBy": "2023000019",
+        "createdAt": "2025-08-05T10:45:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[CSID6843] Assignment 1 Pack",
+        "message": "Schema, starter scripts, and marking rubric uploaded to Module Documents.",
+        "imagePath": null,
+        "createdBy": "2023000019",
+        "createdAt": "2025-08-07T12:10:00Z",
+        "moduleId": 12,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[CSID6843] Sample Datasets (Clickstream & POS)",
+        "message": "Anonymised logs for practice queries available under Datasets folder.",
+        "imagePath": null,
+        "createdBy": "2023000019",
+        "createdAt": "2025-08-09T08:55:00Z",
+        "moduleId": 12,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[BCIS6809] Public Holiday Closure (24 Sep)",
+        "message": "Heritage Day: all lab slots removed; rebook for the following week.",
+        "imagePath": null,
+        "createdBy": "2023000019",
+        "createdAt": "2025-08-12T09:05:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Consultation & Tutoring Slots (S2)",
+        "message": "Weekly support for Analytical Programming and year modules-book via Consultation page.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-08-12T07:50:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[CSIA6843] Starter Pack: NumPy/Pandas Lab 1",
+        "message": "Notebook, dataset, and quickstart guide uploaded to Module Documents.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-08-14T11:35:00Z",
+        "moduleId": 14,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[CSIA6843] Starter Datasets (CSV/Parquet)",
+        "message": "Clean datasets for vectorisation and algorithm analysis added to Repository.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-08-16T08:40:00Z",
+        "moduleId": 14,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[BCIS6809] Public Holiday Closure (24 Sep)",
+        "message": "Heritage Day: all lab slots removed; rebook for the following week.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-08-20T08:10:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ScheduleUpdate",
+        "title": "[CSIA6843] Workshop Time Shift",
+        "message": "Moved to Thu 13:10–14:10 (WWG213) for the next two weeks due to venue clash.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-08-27T13:00:00Z",
+        "moduleId": 14,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[BCIS6809] Milestone 2 Requirements Clarified",
+        "message": "Updated rubric with demo expectations and logging requirements.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-08-30T10:45:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[CSIS6809] Results Chapter Exemplars",
+        "message": "Anonymised examples showing tables, figures, and narrative flow.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-09-09T07:35:00Z",
+        "moduleId": 1,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "RepositoryUpdate",
+        "title": "[BCIS6809] Poster & Abstract Templates",
+        "message": "A1 poster template and 250-word abstract guide added to Repository.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-09-12T09:35:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "SchedulerUpdate",
+        "title": "[CSIA6843] Exam-Week Quiet Hours",
+        "message": "Labs are quiet zones 08:00–17:00 from 6–10 Oct. Headphones for videos.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-09-16T08:05:00Z",
+        "moduleId": 14,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ScheduleUpdate",
+        "title": "[BCIS6809] Demo Week Slots Open",
+        "message": "15-minute prototype demos scheduled for 18–20 Sep. Book your slot.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-09-18T12:10:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Exam Prep: Tips to prepare for exams",
+        "message": "Exam Prep section.",
+        "imagePath": "/assets/exam-prep.jpg",
+        "createdBy": "2023000020",
+        "createdAt": "2025-09-26T11:30:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "DocumentUpload",
+        "title": "[BCIS6809] Final Report Formatting Guide",
+        "message": "APA/Harvard tips, figure labelling, and appendix structure guidance uploaded.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-10-03T08:00:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[BCIS6809] Final Submission Checklist",
+        "message": "Originality report, PDF/A export, and repository link-verify each item before upload.",
+        "imagePath": null,
+        "createdBy": "2023000020",
+        "createdAt": "2025-10-08T09:10:00Z",
+        "moduleId": 2,
+        "audience": "ModuleStudents"
+    },
+    {
+        "type": "General",
+        "title": "Semester 2 Kickoff & Expectations",
+        "message": "Overview of S2 timelines, assessment map, and support for year modules.",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-07-10T09:00:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "ITSA Winter Hackathon Registration",
+        "message": "48-hour build: campus ops assistant. Teams of 3–5; register by 22 July.",
+        "imagePath": "/assets/hackathon.jpg",
+        "createdBy": "2023000021",
+        "createdAt": "2025-07-22T12:30:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "General",
+        "title": "Consultation & Tutoring Slots (S2)",
+        "message": "Weekly support for Advanced Networks and year modules-book via Consultation page.",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-08-12T08:00:00Z",
+        "moduleId": null,
+        "audience": "All"
+    },
+    {
+        "type": "ModuleUpdate",
+        "title": "[CSIS6809] Ethics Clearance Pack Posted",
+        "message": "Consent forms, gatekeeper letters, and risk checklist now under Resources.",
+        "imagePath": null,
+        "createdBy": "2023000021",
+        "createdAt": "2025-08-08T10:20:00Z",
+        "moduleId": 1,
+        "audience": "ModuleStudents"
     }
 ]

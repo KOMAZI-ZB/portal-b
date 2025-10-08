@@ -3,13 +3,15 @@
     <div class="col-md-6">
         <h2 class="mb-0">Notification Board</h2>
     </div>
+
     <div class="col-md-6 text-end">
-        <div class="d-flex justify-content-end align-items-center gap-2">
+        <!-- Filters bar: same line, nice spacing, adjustable via CSS vars -->
+        <div class="filters-bar">
             <!-- Type Filter -->
-            <div>
-                <label for="filterSelect" class="form-label fw-semibold me-2">Type:</label>
-                <select id="filterSelect" class="form-select d-inline-block w-auto" [(ngModel)]="typeFilter"
-                    (change)="onTypeFilterChanged()">
+            <div class="filter-item">
+                <label for="filterSelect" class="filter-label fw-semibold me-2">Type:</label>
+                <select id="filterSelect" class="form-select d-inline-block w-auto filter-select"
+                    [(ngModel)]="typeFilter" (change)="onTypeFilterChanged()">
                     <option value="">All</option>
                     <option value="announcements">Announcements</option>
                     <option value="notifications">Notifications</option>
@@ -17,9 +19,9 @@
             </div>
 
             <!-- Status Filter -->
-            <div>
-                <label for="readFilter" class="form-label fw-semibold me-2">Status:</label>
-                <select id="readFilter" class="form-select d-inline-block w-auto" [(ngModel)]="readFilter"
+            <div class="filter-item">
+                <label for="readFilter" class="filter-label fw-semibold me-2">Status:</label>
+                <select id="readFilter" class="form-select d-inline-block w-auto filter-select" [(ngModel)]="readFilter"
                     (change)="onReadFilterChanged()">
                     <option value="">All</option>
                     <option value="unread">Unread</option>
@@ -27,16 +29,27 @@
                 </select>
             </div>
 
-            <!-- Compose button -->
-            <button *ngIf="currentUserRole !== 'Student'" class="btn btn-primary" (click)="openPostModal()">
-                Post Announcement
+            <!-- Semester Filter (no "All") -->
+            <div class="filter-item">
+                <label for="semFilter" class="filter-label fw-semibold me-2">Semester:</label>
+                <select id="semFilter" class="form-select d-inline-block w-auto filter-select"
+                    [(ngModel)]="semesterFilter" (change)="onSemesterFilterChanged()">
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                </select>
+            </div>
+
+            <!-- Add button (icon only) -->
+            <button *ngIf="currentUserRole !== 'Student'" class="btn btn-primary add-btn" (click)="openPostModal()"
+                title="Add" aria-label="Add">
+                <i class="bi bi-plus-lg"></i>
             </button>
         </div>
     </div>
 </div>
 
 <!-- Feed -->
-<div *ngFor="let ann of filtered" class="card mb-3 shadow-sm" [ngClass]="{ 'clickable': isAutoInteractive(ann) }"
+<div *ngFor="let ann of visible" class="card mb-3 shadow-sm" [ngClass]="{ 'clickable': isAutoInteractive(ann) }"
     (click)="handleCardClick($event, ann)" [attr.aria-role]="isAutoInteractive(ann) ? 'button' : null"
     [attr.tabindex]="isAutoInteractive(ann) ? '0' : null"
     [attr.title]="isAutoInteractive(ann) ? 'Click to open' : null">
@@ -104,18 +117,18 @@
     </div>
 </div>
 
-<!-- Pagination -->
-<nav *ngIf="pagination" class="mt-4 d-flex justify-content-center">
+<!-- Pagination (semester-aware, client side) -->
+<nav *ngIf="clientTotalPages > 1" class="mt-4 d-flex justify-content-center">
     <ul class="pagination">
-        <li class="page-item" [class.disabled]="pagination.currentPage === 1">
-            <a class="page-link" (click)="pageChanged(pagination.currentPage - 1)">Previous</a>
+        <li class="page-item" [class.disabled]="pageNumber === 1">
+            <a class="page-link" (click)="pageChanged(pageNumber - 1)">Previous</a>
         </li>
-        <li class="page-item" *ngFor="let page of [].constructor(pagination.totalPages); let i = index"
-            [class.active]="pagination.currentPage === i + 1">
+        <li class="page-item" *ngFor="let _ of [].constructor(clientTotalPages); let i = index"
+            [class.active]="pageNumber === i + 1">
             <a class="page-link" (click)="pageChanged(i + 1)">{{ i + 1 }}</a>
         </li>
-        <li class="page-item" [class.disabled]="pagination.currentPage === pagination.totalPages">
-            <a class="page-link" (click)="pageChanged(pagination.currentPage + 1)">Next</a>
+        <li class="page-item" [class.disabled]="pageNumber === clientTotalPages">
+            <a class="page-link" (click)="pageChanged(pageNumber + 1)">Next</a>
         </li>
     </ul>
 </nav>

@@ -1,9 +1,10 @@
 <div class="container mt-4 modules-page">
     <h2 class="mb-0">Modules</h2>
 
-    <!-- Top row: Assigned Modules (left) | Select Semester (right) -->
+    <!-- Top row: Title (left) | Select Semester (right) -->
     <div class="top-row">
-        <h5 class="mb-0 section-title">Assigned Modules</h5>
+        <!-- Title lives here; becomes "All Modules" when a coordinator has no assigned modules -->
+        <h5 class="mb-0 section-title">{{ topRowTitle }}</h5>
 
         <div class="semester-filter">
             <label for="semester" class="h5 mb-0 section-title">Select Semester:</label>
@@ -17,24 +18,24 @@
 
     <!-- Coordinator grouped view -->
     <ng-container *ngIf="isCoordinator; else defaultList">
-        <!-- Assigned modules grid (title now sits in the top row) -->
-        <div class="modules-grid" role="list">
-            <div class="module-card" role="listitem" *ngFor="let module of assignedModules" (click)="openModule(module)"
-                tabindex="0">
-                <div class="module-card__code">{{ module.moduleCode }}</div>
-                <div class="module-card__name">{{ module.moduleName }}</div>
+
+        <!-- Assigned modules grid (only when there are assigned modules) -->
+        <ng-container *ngIf="showAssignedSection">
+            <div class="modules-grid" role="list">
+                <div class="module-card" role="listitem" *ngFor="let module of assignedModules"
+                    (click)="openModule(module)" tabindex="0">
+                    <div class="module-card__code">{{ module.moduleCode }}</div>
+                    <div class="module-card__name">{{ module.moduleName }}</div>
+                </div>
             </div>
 
-            <div *ngIf="assignedModules.length === 0" class="text-muted grid-empty">
-                No modules assigned to you for this semester.
+            <!-- Only show this heading if there *are* assigned modules -->
+            <div class="section-heading">
+                <h5 class="mb-0 section-title">Other Modules</h5>
             </div>
-        </div>
+        </ng-container>
 
-        <!-- Other Modules (coordinator only) -->
-        <div class="mt-4 mb-2 d-flex align-items-center section-heading">
-            <h5 class="mb-0">Other Modules</h5>
-        </div>
-
+        <!-- Lower grid: shows "other" when assigned exist; otherwise this is effectively "All Modules" -->
         <div class="modules-grid" role="list">
             <div class="module-card" role="listitem" *ngFor="let module of otherModules" (click)="openModule(module)"
                 tabindex="0">
@@ -43,7 +44,8 @@
             </div>
 
             <div *ngIf="otherModules.length === 0" class="text-muted grid-empty">
-                No other modules found for this semester.
+                {{ isAllModulesMode ? 'No modules found for this semester.' : 'No other modules found for this
+                semester.' }}
             </div>
         </div>
     </ng-container>

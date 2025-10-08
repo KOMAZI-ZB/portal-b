@@ -3,7 +3,7 @@
     --module-card-size: 200px;
 
     /* Gap between cards */
-    --module-card-gap-x: 1rem;
+    --module-card-gap-x: 2rem;
     --module-card-gap-y: 1rem;
 
     /* Typography */
@@ -16,7 +16,12 @@
     --module-card-shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.16);
     --module-card-bg: #fff;
     --module-card-bg-hover: #f3f4f6;
-    /* subtle grey */
+
+    /* Shared gaps */
+    --section-to-grid-gap: 3rem;
+    /* heading → its grid (below) */
+    --grid-to-heading-gap: 3rem;
+    /* upper grid → “Other Modules” heading */
 }
 
 /* ===============================
@@ -24,7 +29,7 @@
    =============================== */
 .modules-page>h2,
 .modules-page>h2.mb-0 {
-    margin-bottom: 1.25rem !important;
+    margin-bottom: 2rem !important;
     display: inline-block;
     position: relative;
     padding-bottom: 0.25rem;
@@ -51,7 +56,8 @@
     justify-content: space-between;
     /* left label | right filter */
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: var(--section-to-grid-gap);
+    /* unified with "Other Modules" */
 }
 
 .modules-page .top-row .section-title {
@@ -86,11 +92,11 @@
 }
 
 /* ===============================
-   Cards grid (exactly 4 per row)
+   Cards grid (exactly 5 per row)
    =============================== */
 .modules-page .modules-grid {
     display: grid;
-    grid-template-columns: repeat(4, var(--module-card-size));
+    grid-template-columns: repeat(5, var(--module-card-size));
     grid-auto-rows: var(--module-card-size);
     /* squares */
     gap: var(--module-card-gap-y) var(--module-card-gap-x);
@@ -163,12 +169,20 @@
     margin-top: 0.25rem;
 }
 
-/* Section heading spacing */
+/* ===============================
+   Section heading (Other Modules)
+   =============================== */
 .modules-page .section-heading {
-    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    margin-top: var(--grid-to-heading-gap);
+    /* ↑ increased space above heading */
+    margin-bottom: var(--section-to-grid-gap);
+    /* match heading → grid spacing */
 }
 
-/* NEW: Force the "Other Modules" heading to black (coordinator section) */
 .modules-page .section-heading h5 {
     color: #000 !important;
+    font-weight: 600;
+    margin: 0;
 }

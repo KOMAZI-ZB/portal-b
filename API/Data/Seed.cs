@@ -162,20 +162,31 @@ public class Seed
         await context.SaveChangesAsync();
     }
 
+    // ---- UPDATED: idempotent re-seeding (adds only missing rows) ----
     public static async Task SeedAssessments(DataContext context)
     {
-        if (await context.Assessments.AnyAsync()) return;
-
         var path = Path.Combine(Directory.GetCurrentDirectory(), "Data", "SeedData", "AssessmentSeedData.json");
         if (!File.Exists(path)) return;
 
         var json = await File.ReadAllTextAsync(path);
         var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-        var assessments = JsonSerializer.Deserialize<List<Assessment>>(json, options);
+        var incoming = JsonSerializer.Deserialize<List<Assessment>>(json, options) ?? new();
 
-        if (assessments is null) return;
+        // Build a set of existing "keys" to avoid duplicates
+        var existingKeys = (await context.Assessments
+                .Select(a => new { a.ModuleId, a.Title, a.Date })
+                .ToListAsync())
+            .Select(x => $"{x.ModuleId}|{x.Title}|{x.Date.ToString("yyyy-MM-dd")}")
+            .ToHashSet(StringComparer.OrdinalIgnoreCase);
 
-        context.Assessments.AddRange(assessments);
+        var toAdd = incoming
+            .Where(a => a.ModuleId != 0 && !string.IsNullOrWhiteSpace(a.Title))
+            .Where(a => !existingKeys.Contains($"{a.ModuleId}|{a.Title}|{a.Date.ToString("yyyy-MM-dd")}"))
+            .ToList();
+
+        if (toAdd.Count == 0) return;
+
+        await context.Assessments.AddRangeAsync(toAdd);
         await context.SaveChangesAsync();
     }
 }

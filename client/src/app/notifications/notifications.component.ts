@@ -22,15 +22,24 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 export class NotificationsComponent implements OnInit {
   notifications: Notification[] = [];
   filtered: Notification[] = [];
+  visible: Notification[] = [];
+
+  // server header (still read) — but UI pagination is client-side after Semester filter
   pagination: Pagination | null = null;
+
   pageNumber = 1;
   pageSize = 10;
+  clientTotalPages = 1;
+
   bsModalRef?: BsModalRef;
   currentUserRole: string = '';
   currentUserName: string = '';
 
   typeFilter: string = '';
   readFilter: '' | 'read' | 'unread' = '';
+
+  // Semester filter now only supports '1' or '2' (no "All")
+  semesterFilter: '1' | '2' = '1';
 
   selectedImageUrl: string | null = null;
   showImageModal: boolean = false;
@@ -50,56 +59,115 @@ export class NotificationsComponent implements OnInit {
     const user = this.accountService.currentUser();
     this.currentUserName = user?.userName || '';
     this.currentUserRole = this.accountService.getUserRole();
-    this.loadNotifications();
+
+    // ✅ Auto-select semester based on today's month
+    const month = new Date().getMonth() + 1; // 1..12
+    this.semesterFilter = month >= 1 && month <= 6 ? '1' : '2';
+
+    this.loadAllNotifications();
   }
 
-  loadNotifications() {
-    this.notificationService
-      .getPaginatedNotifications(this.pageNumber, this.pageSize, this.typeFilter, this.readFilter)
-      .subscribe({
-        next: response => {
-          const items = response.body ?? [];
-          this.pagination = JSON.parse(response.headers.get('Pagination')!);
+  /** Pull ALL pages for current type/status filters, then paginate locally per Semester filter. */
+  private loadAllNotifications() {
+    this.notifications = [];
+    const size = this.pageSize;
 
-          this.notifications = [...items].sort(
-            (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-          );
+    const fetchPage = (page: number, totalPages?: number) => {
+      this.notificationService
+        .getPaginatedNotifications(page, size, this.typeFilter, this.readFilter)
+        .subscribe({
+          next: response => {
+            const items = response.body ?? [];
+            const header = response.headers.get('Pagination');
+            this.pagination = header ? JSON.parse(header) : null;
 
-          this.applyFilters();
-        },
-        error: err => console.error(err)
-      });
+            // determine total pages from the first page
+            const tp = totalPages ?? (this.pagination?.totalPages || 1);
+
+            this.notifications.push(...items);
+
+            if (page < tp) {
+              fetchPage(page + 1, tp);
+            } else {
+              // sort newest first once we have everything
+              this.notifications.sort(
+                (a, b) =>
+                  new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+              );
+              this.pageNumber = 1; // reset page when (re)loading
+              this.applyFilters();
+            }
+          },
+          error: err => console.error(err)
+        });
+    };
+
+    fetchPage(1);
   }
 
-  applyFilters() {
+  /** Helper: check if a date falls in the selected semester by month number. */
+  private passesSemester(createdAt: string | Date | undefined | null): boolean {
+    if (!createdAt) return false;
+    const d = new Date(createdAt);
+    if (isNaN(d.getTime())) return false;
+    const m = d.getMonth() + 1; // 1..12
+    if (this.semesterFilter === '1') return m >= 1 && m <= 6;   // Jan–Jun
+    if (this.semesterFilter === '2') return m >= 7 && m <= 12;  // Jul–Dec
+    return true;
+  }
+
+  /** Apply read + semester filters; then compute client-side pagination. */
+  private applyFilters() {
     let list = [...this.notifications];
 
+    // extra safety: allow local status filter even if server already did it
     if (this.readFilter === 'read') list = list.filter(x => !!x.isRead);
     else if (this.readFilter === 'unread') list = list.filter(x => !x.isRead);
 
+    // semester filter (by createdAt month)
+    list = list.filter(n => this.passesSemester(n.createdAt));
+
     this.filtered = list;
+
+    // client pagination (semester-aware)
+    this.clientTotalPages = Math.max(1, Math.ceil(this.filtered.length / this.pageSize));
+    if (this.pageNumber > this.clientTotalPages) this.pageNumber = this.clientTotalPages;
+    if (this.pageNumber < 1) this.pageNumber = 1;
+
+    const start = (this.pageNumber - 1) * this.pageSize;
+    const end = start + this.pageSize;
+    this.visible = this.filtered.slice(start, end);
   }
 
+  // === filter handlers ===
   onTypeFilterChanged() {
     this.pageNumber = 1;
-    this.loadNotifications();
+    this.loadAllNotifications();
   }
 
   onReadFilterChanged() {
     this.pageNumber = 1;
-    this.loadNotifications();
+    this.loadAllNotifications();
   }
 
+  onSemesterFilterChanged() {
+    this.pageNumber = 1;
+    this.applyFilters(); // no server reload needed
+  }
+
+  // === pagination ===
   pageChanged(newPage: number) {
+    if (newPage < 1 || newPage > this.clientTotalPages) return;
     this.pageNumber = newPage;
-    this.loadNotifications();
+    this.applyFilters();
   }
 
+  // === compose modal ===
   openPostModal() {
     this.bsModalRef = this.modalService.show(CreateNotificationModalComponent, {
       class: 'modal-lg'
     });
-    this.bsModalRef.onHidden?.subscribe(() => this.loadNotifications());
+    this.bsModalRef.onHidden?.subscribe(() => this.loadAllNotifications());
   }
 
   /** Render the blue badge/label at the top-left of the card.
@@ -314,8 +382,10 @@ export class NotificationsComponent implements OnInit {
         this.notificationService.delete(n.id).subscribe({
           next: () => {
             this.notifications = this.notifications.filter(x => x.id !== n.id);
+            // also remove from filtered/visible and recompute
             this.filtered = this.filtered.filter(x => x.id !== n.id);
             this.toastr.success('Announcement deleted.');
+            this.applyFilters();
           },
           error: (err) => {
             if (err?.status === 403 || err?.status === 401) {

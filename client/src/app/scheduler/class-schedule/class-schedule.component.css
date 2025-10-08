@@ -29,12 +29,14 @@
 
 .topbar-title,
 .topbar-user {
+    color: #000 !important;
     font-size: 24px;
     font-weight: 600;
     white-space: nowrap;
 }
 
 .topbar-user {
+    color: #000 !important;
     text-align: right;
 }
 

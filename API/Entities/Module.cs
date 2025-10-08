@@ -15,7 +15,7 @@ namespace API.Entities
         //   NEW: Year module flag (appears in both semester filters)
         public bool IsYearModule { get; set; } = false;
 
-        // ❌ Legacy single-venue/parallel arrays (kept temporarily for compatibility; no longer used for schedule)
+        // Legacy single-venue/parallel arrays (kept temporarily for compatibility; no longer used for schedule)
         public string? ClassVenue { get; set; }
         public string? WeekDays { get; set; }   // e.g. "Monday,Wednesday"
         public string? StartTimes { get; set; } // e.g. "08:00:00,10:00:00"

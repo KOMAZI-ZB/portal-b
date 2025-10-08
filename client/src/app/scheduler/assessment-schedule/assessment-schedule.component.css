@@ -29,12 +29,14 @@
 
 .topbar-title,
 .topbar-user {
+    color: #000 !important;
     font-size: 24px;
     font-weight: 600;
     white-space: nowrap;
 }
 
 .topbar-user {
+    color: #000 !important;
     text-align: right;
 }
 
@@ -54,6 +56,17 @@
     background-color: white;
     padding: 20px;
     border-radius: 10px;
+    overflow: visible !important;
+    /* ensure no clipping of borders/shadows */
+}
+
+/* Ensure clean grid lines without double borders */
+#pdfContent table {
+    width: 100%;
+    border-collapse: collapse;
+    /* important for clean borders at joins */
+    table-layout: auto;
+    /* don't change column sizes */
 }
 
 /* Table grid lines */

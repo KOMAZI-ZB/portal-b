@@ -116,7 +116,7 @@ namespace API.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Label = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LinkUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -235,7 +235,7 @@ namespace API.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Date = table.Column<DateOnly>(type: "date", nullable: false),
                     StartTime = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -427,9 +427,10 @@ namespace API.Data.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Assessments_ModuleId",
+                name: "IX_Assessments_ModuleId_Title_Date",
                 table: "Assessments",
-                column: "ModuleId");
+                columns: new[] { "ModuleId", "Title", "Date" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_ClassSessions_ModuleId_Venue_WeekDay_StartTime_EndTime",

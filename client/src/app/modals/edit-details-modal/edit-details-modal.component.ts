@@ -94,8 +94,8 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
           }
         }
 
+        // Do NOT auto-create a venue; only use existing ones
         this.venues = Array.from(byVenue.values());
-        if (this.venues.length === 0) this.addVenue();
 
         this.assessments = (updated.assessments || []).map(a => ({
           title: a.title,
@@ -108,7 +108,7 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
           venue: a.venue || ''
         }));
 
-        // Initialize collapse state (collapsed by default)
+        // Start collapsed
         this.venueOpen = this.venues.map(() => false);
         this.assessmentOpen = this.assessments.map(() => false);
 
@@ -118,8 +118,9 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
       },
       error: (err) => {
         console.error('❌ Failed to fetch module data:', err);
-        this.addVenue();
+        this.venues = [];
         this.assessments = [];
+        this.venueOpen = [];
         this.assessmentOpen = [];
       }
     });
@@ -164,12 +165,36 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
     return time.length === 5 ? time + ':00' : time;
   }
 
+  /** Helper: open and scroll a card into view (venue/assessment). */
+  private openAndScroll(kind: 'venue' | 'assessment', index: number) {
+    if (kind === 'venue') {
+      this.activeTab = 'contact';
+      this.venueOpen[index] = true;
+    } else {
+      this.activeTab = 'assessments';
+      this.assessmentOpen[index] = true;
+    }
+    setTimeout(() => {
+      const container = this.elRef.nativeElement.querySelector('.modal-body') as HTMLElement | null;
+      const cards = this.elRef.nativeElement.querySelectorAll(kind === 'venue' ? '.venue-card' : '.assessment-card');
+      const card = cards[index] as HTMLElement | undefined;
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const firstInput = card.querySelector('input, textarea, select') as HTMLElement | null;
+        if (firstInput) firstInput.focus();
+      } else if (container) {
+        container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' });
+      }
+    });
+  }
+
   addVenue(): void {
     const days: { [d: string]: DayState } = {};
     this.weekDays.forEach(d => days[d] = { checked: false, startTime: '', endTime: '' });
     this.venues.push({ venue: '', days });
-    this.venueOpen.push(false); // start collapsed
+    this.venueOpen.push(true);
     this.markDirty();
+    this.openAndScroll('venue', this.venues.length - 1);
   }
 
   removeVenue(index: number): void {
@@ -189,8 +214,9 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
 
   addAssessment() {
     this.assessments.push({ title: '', description: '', date: '', isTimed: true, startTime: '', endTime: '', venue: '' });
-    this.assessmentOpen.push(false); // start collapsed
+    this.assessmentOpen.push(true);
     this.markDirty();
+    this.openAndScroll('assessment', this.assessments.length - 1);
   }
 
   removeAssessment(index: number) {
@@ -330,7 +356,7 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
         const st = v.days[day];
         if (!st.checked) continue;
         const start = this.formatTimeString(st.startTime) || '';
-        const end = this.formatTimeString(st.endTime) || '';
+        const end = this.formatTimeString(st.endTime) || ''; // ✅ fixed
         if (!start || !end) continue;
         classSessions.push({ venue: venueName, weekDay: day, startTime: start, endTime: end });
       }
