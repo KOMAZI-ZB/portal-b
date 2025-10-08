@@ -21,8 +21,8 @@
     },
     {
         "type": "FaqUpdate",
-        "title": "FAQ: Module vs Repository Files",
-        "message": "New article explains the difference between Module Documents and the global Repository, with examples from CSIP6833 and CSIA6813.",
+        "title": "FAQ Created",
+        "message": "A new FAQ was posted: Module vs Repository Files.",
         "imagePath": null,
         "createdBy": "admin",
         "createdAt": "2025-01-20T09:00:00Z",
@@ -31,8 +31,8 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "Templates: Research & Coding Standards",
-        "message": "Added Honours research report template and coding style guides relevant to CSIP6853, CSIP6833, and CSII6813.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "admin",
         "createdAt": "2025-01-22T11:10:00Z",
@@ -61,8 +61,8 @@
     },
     {
         "type": "FaqUpdate",
-        "title": "FAQ: Booking Labs & After-Hours Access",
-        "message": "Step-by-step guide for lab policies and after-hours requests, with examples for CSIP6853 mobile builds.",
+        "title": "FAQ Created",
+        "message": "A new FAQ was posted: Booking Labs & After-Hours Access.",
         "imagePath": null,
         "createdBy": "admin",
         "createdAt": "2025-02-10T08:40:00Z",
@@ -71,8 +71,8 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "Past Exam Packs Uploaded",
-        "message": "HCI patterns (CSII6833) and Information Security case studies (CSII6813) exam packs now available.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "admin",
         "createdAt": "2025-02-18T12:20:00Z",
@@ -191,8 +191,8 @@
     },
     {
         "type": "ScheduleUpdate",
-        "title": "[BCIS6809] Progress Check-in Windows",
-        "message": "Two recurring progress touchpoints added to Schedule for Weeks 7 and 10.",
+        "title": "[BCIS6809] Class schedule updated",
+        "message": "The assessment schedule for BCIS6809 has changed. Please check your assessment dates.",
         "imagePath": null,
         "createdBy": "2023000009",
         "createdAt": "2025-04-15T16:05:00Z",
@@ -210,19 +210,9 @@
         "audience": "ModuleStudents"
     },
     {
-        "type": "DocumentUpload",
-        "title": "[BCIS6809] Proposal Checklist & Gantt",
-        "message": "Module docs updated with a supervisor checklist and a Gantt chart template (editable).",
-        "imagePath": "/assets/gantt.png",
-        "createdBy": "2023000009",
-        "createdAt": "2025-03-13T08:55:00Z",
-        "moduleId": 2,
-        "audience": "ModuleStudents"
-    },
-    {
         "type": "ModuleUpdate",
-        "title": "[CSII6833] Project Brief v1.1",
-        "message": "Minor clarifications to deliverables and HCI heuristic expectations for the first studio.",
+        "title": "[CSII6833] Module details updated",
+        "message": "Module details for CSII6833 have been updated.",
         "imagePath": null,
         "createdBy": "2023000005",
         "createdAt": "2025-01-22T13:25:00Z",
@@ -231,8 +221,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[CSII6833] HCI Heuristics Checklist",
-        "message": "Nielsen heuristics checklist and example usability tasks added for pre-studio review.",
+        "title": "[CSII6833] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: HCI Heuristics Checklist.",
         "imagePath": null,
         "createdBy": "2023000005",
         "createdAt": "2025-01-27T14:05:00Z",
@@ -281,8 +271,8 @@
     },
     {
         "type": "ModuleUpdate",
-        "title": "[CSIS6809] Year-Module Syllabus Published",
-        "message": "Assessment weights, milestones, and consultation times are now available in Module Documents.",
+        "title": "[CSIS6809] Module details updated",
+        "message": "Module details for CSIS6809 have been updated.",
         "imagePath": null,
         "createdBy": "2023000006",
         "createdAt": "2025-01-15T09:10:00Z",
@@ -291,8 +281,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[CSIS6813] Research Proposal Template",
-        "message": "Topic selection guide and structured proposal template uploaded to help you start strong.",
+        "title": "[CSIS6813] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Research Proposal Template.",
         "imagePath": null,
         "createdBy": "2023000006",
         "createdAt": "2025-01-18T10:00:00Z",
@@ -311,8 +301,8 @@
     },
     {
         "type": "ScheduleUpdate",
-        "title": "[CSIS6813] Seminar Time Confirmed",
-        "message": "Research seminar set for the usual weekly slot; please check Schedule for room and time.",
+        "title": "[CSIS6813] Class schedule updated",
+        "message": "The assessment schedule for CSIS6813 has changed. Please check your assessment dates.",
         "imagePath": null,
         "createdBy": "2023000006",
         "createdAt": "2025-01-27T14:05:00Z",
@@ -331,8 +321,8 @@
     },
     {
         "type": "ModuleUpdate",
-        "title": "[BCIS6809] Proposal Rubric Clarified",
-        "message": "Updated notes on scope, feasibility, and supervisor engagement added to the rubric.",
+        "title": "[BCIS6809] Module details updated",
+        "message": "Module details for BCIS6809 have been updated.",
         "imagePath": null,
         "createdBy": "2023000006",
         "createdAt": "2025-02-07T09:50:00Z",
@@ -341,13 +331,13 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "[CSIS6813] Literature Matrix Example",
-        "message": "Example synthesis matrix and annotation tips to support your first literature review.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "2023000006",
         "createdAt": "2025-02-14T15:30:00Z",
         "moduleId": 3,
-        "audience": "ModuleStudents"
+        "audience": "All"
     },
     {
         "type": "SchedulerUpdate",
@@ -370,39 +360,19 @@
         "audience": "All"
     },
     {
-        "type": "ModuleUpdate",
-        "title": "[CSIS6809] Year-Module Syllabus Published",
-        "message": "Assessment weights, milestones, and consultation hours are now available in Module Documents.",
-        "imagePath": null,
-        "createdBy": "2023000007",
-        "createdAt": "2025-01-15T09:10:00Z",
-        "moduleId": 1,
-        "audience": "ModuleStudents"
-    },
-    {
-        "type": "DocumentUpload",
-        "title": "[CSIS6813] Research Proposal Template",
-        "message": "Topic selection guide and structured proposal template uploaded to help you start strong.",
-        "imagePath": null,
-        "createdBy": "2023000007",
-        "createdAt": "2025-01-18T10:00:00Z",
-        "moduleId": 3,
-        "audience": "ModuleStudents"
-    },
-    {
         "type": "RepositoryUpdate",
-        "title": "[CSIS6809] Writing & Referencing Kit",
-        "message": "Report structure template and Harvard referencing quick guide added for year projects.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "2023000007",
         "createdAt": "2025-01-22T11:20:00Z",
         "moduleId": 1,
-        "audience": "ModuleStudents"
+        "audience": "All"
     },
     {
         "type": "DocumentUpload",
-        "title": "[BCIS6809] Supervisor Meeting Log Sheet",
-        "message": "Editable meeting log and progress tracker uploaded for consistent supervision records.",
+        "title": "[BCIS6809] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Supervisor Meeting Log Sheet.",
         "imagePath": null,
         "createdBy": "2023000007",
         "createdAt": "2025-04-16T10:45:00Z",
@@ -411,13 +381,13 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "[CSII6813] Security Lab Resources",
-        "message": "Added cheat-sheets for TLS, hashing pitfalls, and JWT validation strategies.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "2023000007",
         "createdAt": "2025-04-20T09:35:00Z",
         "moduleId": 6,
-        "audience": "ModuleStudents"
+        "audience": "All"
     },
     {
         "type": "SchedulerUpdate",
@@ -460,29 +430,9 @@
         "audience": "All"
     },
     {
-        "type": "RepositoryUpdate",
-        "title": "[BCIS6809] Gantt & Risk Templates",
-        "message": "Sample Gantt charts and risk breakdown structures uploaded for planning.",
-        "imagePath": "/assets/gantt.png",
-        "createdBy": "2023000008",
-        "createdAt": "2025-03-18T07:55:00Z",
-        "moduleId": 2,
-        "audience": "ModuleStudents"
-    },
-    {
-        "type": "RepositoryUpdate",
-        "title": "[CSIP6853] CI/CD Pipeline Samples",
-        "message": "Added GitHub Actions examples for build, test, and deploy; includes artifact retention.",
-        "imagePath": null,
-        "createdBy": "2023000008",
-        "createdAt": "2025-04-20T09:35:00Z",
-        "moduleId": 7,
-        "audience": "ModuleStudents"
-    },
-    {
         "type": "DocumentUpload",
-        "title": "[CSIS6813] Research Proposal Template",
-        "message": "Topic selection guide and structured proposal template uploaded to help you start strong.",
+        "title": "[CSIS6813] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Research Proposal Template.",
         "imagePath": null,
         "createdBy": "2023000008",
         "createdAt": "2025-01-18T10:00:00Z",
@@ -491,8 +441,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[CSIS6809] Milestone Pack",
-        "message": "Year-project milestone schedule, feedback form, and example abstracts uploaded.",
+        "title": "[CSIS6809] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Milestone Pack.",
         "imagePath": null,
         "createdBy": "2023000008",
         "createdAt": "2025-02-12T10:10:00Z",
@@ -501,8 +451,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[CSIP6853] Starter Android Project",
-        "message": "Baseline Compose project with navigation and testing harness added to Module Documents.",
+        "title": "[CSIP6853] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Starter Android Project.",
         "imagePath": null,
         "createdBy": "2023000008",
         "createdAt": "2025-03-12T08:45:00Z",
@@ -521,8 +471,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[CSIS6813] Research Proposal Template",
-        "message": "Topic selection guide and structured proposal template uploaded to help you start strong.",
+        "title": "[CSIS6813] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Research Proposal Template.",
         "imagePath": null,
         "createdBy": "2023000017",
         "createdAt": "2025-01-18T10:00:00Z",
@@ -531,8 +481,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[CSIS6809] Milestone Pack",
-        "message": "Year-project milestone schedule, feedback form, and example abstracts uploaded.",
+        "title": "[CSIS6809] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Milestone Pack.",
         "imagePath": null,
         "createdBy": "2023000017",
         "createdAt": "2025-02-12T10:10:00Z",
@@ -541,8 +491,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[BCIS6809] Supervisor Meeting Log Sheet",
-        "message": "Editable meeting log and progress tracker uploaded for consistent supervision records.",
+        "title": "[BCIS6809] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Supervisor Meeting Log Sheet.",
         "imagePath": null,
         "createdBy": "2023000017",
         "createdAt": "2025-04-16T10:45:00Z",
@@ -551,8 +501,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[CSIA6813] Dataset & Notebook Starter Kit",
-        "message": "Baseline EDA notebook and sample dataset card uploaded to Module Documents.",
+        "title": "[CSIA6813] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Dataset & Notebook Starter Kit.",
         "imagePath": null,
         "createdBy": "2023000017",
         "createdAt": "2025-02-28T09:35:00Z",
@@ -561,33 +511,13 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "[CSIS6813] Literature Matrix Example",
-        "message": "Example synthesis matrix and annotation tips to support your first literature review.",
-        "imagePath": null,
-        "createdBy": "2023000017",
-        "createdAt": "2025-02-14T15:30:00Z",
-        "moduleId": 3,
-        "audience": "ModuleStudents"
-    },
-    {
-        "type": "RepositoryUpdate",
-        "title": "[BCIS6809] Gantt & Risk Templates",
-        "message": "Sample Gantt charts and risk breakdown structures uploaded for planning.",
-        "imagePath": "/assets/gantt.png",
-        "createdBy": "2023000017",
-        "createdAt": "2025-03-18T07:55:00Z",
-        "moduleId": 2,
-        "audience": "ModuleStudents"
-    },
-    {
-        "type": "RepositoryUpdate",
-        "title": "[CSIA6813] MLOps Patterns & Checklists",
-        "message": "Deployment checklists, model card template, and monitoring pointers added to the Repository.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "2023000017",
         "createdAt": "2025-04-20T09:35:00Z",
         "moduleId": 9,
-        "audience": "ModuleStudents"
+        "audience": "All"
     },
     {
         "type": "General",
@@ -601,8 +531,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[CSIS6813] Research Proposal Template",
-        "message": "Topic selection guide and structured proposal template uploaded to help you start strong.",
+        "title": "[CSIS6813] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Research Proposal Template.",
         "imagePath": null,
         "createdBy": "2023000018",
         "createdAt": "2025-01-18T10:00:00Z",
@@ -621,8 +551,8 @@
     },
     {
         "type": "ScheduleUpdate",
-        "title": "[CSIS6813] Seminar Time Confirmed",
-        "message": "Research seminar set for the weekly slot; check Schedule for room and time.",
+        "title": "[CSIS6813] Class schedule updated",
+        "message": "The assessment schedule for CSIS6813 has changed. Please check your assessment dates.",
         "imagePath": null,
         "createdBy": "2023000018",
         "createdAt": "2025-01-27T14:05:00Z",
@@ -631,13 +561,13 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "[CSIS6809] Writing & Referencing Kit",
-        "message": "Report structure template and Harvard referencing quick guide added for year projects.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "2023000018",
         "createdAt": "2025-01-30T11:20:00Z",
         "moduleId": 1,
-        "audience": "ModuleStudents"
+        "audience": "All"
     },
     {
         "type": "General",
@@ -651,8 +581,8 @@
     },
     {
         "type": "ModuleUpdate",
-        "title": "[BCIS6809] Proposal Rubric Clarified",
-        "message": "Updated notes on scope, feasibility, and supervisor engagement added to the rubric.",
+        "title": "[BCIS6809] Module details updated",
+        "message": "Module details for BCIS6809 have been updated.",
         "imagePath": null,
         "createdBy": "2023000018",
         "createdAt": "2025-02-10T09:50:00Z",
@@ -671,22 +601,12 @@
     },
     {
         "type": "ScheduleUpdate",
-        "title": "[BCIS6809] Progress Touchpoints Added",
-        "message": "Two recurring progress check-ins added to Schedule for Weeks 7 and 10.",
+        "title": "[BCIS6809] Class schedule updated",
+        "message": "The assessment schedule for BCIS6809 has changed. Please check your assessment dates.",
         "imagePath": null,
         "createdBy": "2023000018",
         "createdAt": "2025-02-22T12:00:00Z",
         "moduleId": 2,
-        "audience": "ModuleStudents"
-    },
-    {
-        "type": "RepositoryUpdate",
-        "title": "[CSIS6813] Literature Matrix Example",
-        "message": "Example synthesis matrix and annotation tips to support your first literature review.",
-        "imagePath": null,
-        "createdBy": "2023000018",
-        "createdAt": "2025-02-26T15:30:00Z",
-        "moduleId": 3,
         "audience": "ModuleStudents"
     },
     {
@@ -701,8 +621,8 @@
     },
     {
         "type": "ModuleUpdate",
-        "title": "[CSIS6813] Ethics & Turnitin Thresholds",
-        "message": "Guidance added on ethics clearance timing and similarity limits—review before submissions.",
+        "title": "[CSIS6813] Module details updated",
+        "message": "Module details for CSIS6813 have been updated.",
         "imagePath": null,
         "createdBy": "2023000018",
         "createdAt": "2025-03-19T08:10:00Z",
@@ -711,8 +631,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[EFMN6814] Budgeting Toolkit for Tech Projects",
-        "message": "CAPEX/OPEX templates and sample cost models uploaded for proposal budgeting.",
+        "title": "[EFMN6814] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Budgeting Toolkit for Tech Projects.",
         "imagePath": null,
         "createdBy": "2023000018",
         "createdAt": "2025-03-21T09:45:00Z",
@@ -720,32 +640,12 @@
         "audience": "ModuleStudents"
     },
     {
-        "type": "ModuleUpdate",
-        "title": "[CSIS6813] Ethics & Turnitin Thresholds",
-        "message": "Guidance added on ethics clearance timing and similarity limits—review before submissions.",
-        "imagePath": null,
-        "createdBy": "2023000020",
-        "createdAt": "2025-03-19T08:10:00Z",
-        "moduleId": 3,
-        "audience": "ModuleStudents"
-    },
-    {
         "type": "DocumentUpload",
-        "title": "[BCIS6809] Supervisor Meeting Log Sheet",
-        "message": "Editable meeting log and progress tracker uploaded for consistent supervision records.",
+        "title": "[BCIS6809] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Supervisor Meeting Log Sheet.",
         "imagePath": null,
         "createdBy": "2023000020",
         "createdAt": "2025-04-16T10:45:00Z",
-        "moduleId": 2,
-        "audience": "ModuleStudents"
-    },
-    {
-        "type": "RepositoryUpdate",
-        "title": "[BCIS6809] Gantt & Risk Templates",
-        "message": "Sample Gantt charts and risk breakdown structures uploaded for planning.",
-        "imagePath": "/assets/gantt.png",
-        "createdBy": "2023000020",
-        "createdAt": "2025-03-18T07:55:00Z",
         "moduleId": 2,
         "audience": "ModuleStudents"
     },
@@ -771,18 +671,18 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "[CSIS6813] Literature Matrix Example",
-        "message": "Example synthesis matrix and annotation tips to support your first literature review.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "2023000021",
         "createdAt": "2025-02-14T15:30:00Z",
         "moduleId": 3,
-        "audience": "ModuleStudents"
+        "audience": "All"
     },
     {
         "type": "ScheduleUpdate",
-        "title": "[BCIS6809] Progress Touchpoints Added",
-        "message": "Two recurring progress check-ins added to Schedule for Weeks 7 and 10.",
+        "title": "[BCIS6809] Class schedule updated",
+        "message": "The assessment schedule for BCIS6809 has changed. Please check your assessment dates.",
         "imagePath": null,
         "createdBy": "2023000021",
         "createdAt": "2025-02-18T12:00:00Z",
@@ -801,8 +701,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[BCIS6809] Supervisor Meeting Log Sheet",
-        "message": "Editable meeting log and progress tracker uploaded for consistent supervision records.",
+        "title": "[BCIS6809] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Supervisor Meeting Log Sheet.",
         "imagePath": null,
         "createdBy": "2023000021",
         "createdAt": "2025-03-06T08:45:00Z",
@@ -811,8 +711,8 @@
     },
     {
         "type": "ModuleUpdate",
-        "title": "[CSIS6813] Ethics & Turnitin Thresholds",
-        "message": "Guidance added on ethics clearance timing and similarity limits—review before submissions.",
+        "title": "[CSIS6813] Module details updated",
+        "message": "Module details for CSIS6813 have been updated.",
         "imagePath": null,
         "createdBy": "2023000021",
         "createdAt": "2025-03-19T08:10:00Z",
@@ -820,19 +720,9 @@
         "audience": "ModuleStudents"
     },
     {
-        "type": "RepositoryUpdate",
-        "title": "[BCIS6809] Gantt & Risk Templates",
-        "message": "Sample Gantt charts and risk breakdown structures uploaded for planning.",
-        "imagePath": "/assets/gantt.png",
-        "createdBy": "2023000021",
-        "createdAt": "2025-03-28T09:15:00Z",
-        "moduleId": 2,
-        "audience": "ModuleStudents"
-    },
-    {
         "type": "ScheduleUpdate",
-        "title": "[CSIS6813] Seminar Shifted by 30 Minutes",
-        "message": "Time adjusted to accommodate venue availability. See updated Schedule for details.",
+        "title": "[CSIS6813] Class schedule updated",
+        "message": "The assessment schedule for CSIS6813 has changed. Please check your assessment dates.",
         "imagePath": null,
         "createdBy": "2023000021",
         "createdAt": "2025-04-04T10:25:00Z",
@@ -841,8 +731,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[CSIS6813] Literature Review Pack",
-        "message": "Reading checklist, exemplar synthesis paragraphs, and citation style notes uploaded.",
+        "title": "[CSIS6813] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Literature Review Pack.",
         "imagePath": null,
         "createdBy": "2023000021",
         "createdAt": "2025-04-16T11:10:00Z",
@@ -861,13 +751,13 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "[CSIS6813] Poster & Presentation Templates",
-        "message": "Slide and poster templates with presenter notes added to the Repository.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "2023000021",
         "createdAt": "2025-05-20T09:25:00Z",
         "moduleId": 3,
-        "audience": "ModuleStudents"
+        "audience": "All"
     },
     {
         "type": "General",
@@ -881,8 +771,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[BCIS6809] Proposal Checklist & Timeline",
-        "message": "Submission checklist and week-by-week planning timeline uploaded to Module Documents.",
+        "title": "[BCIS6809] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Proposal Checklist & Timeline.",
         "imagePath": null,
         "createdBy": "2023000021",
         "createdAt": "2025-06-07T10:55:00Z",
@@ -910,19 +800,9 @@
         "audience": "ModuleStudents"
     },
     {
-        "type": "RepositoryUpdate",
-        "title": "[BCIS6809] Gantt & Risk Templates",
-        "message": "Sample Gantt charts and risk breakdown structures uploaded for planning.",
-        "imagePath": "/assets/gantt.png",
-        "createdBy": "2023000022",
-        "createdAt": "2025-03-28T09:15:00Z",
-        "moduleId": 2,
-        "audience": "ModuleStudents"
-    },
-    {
         "type": "ScheduleUpdate",
-        "title": "[CSIS6813] Seminar Shifted by 30 Minutes",
-        "message": "Time adjusted to accommodate venue availability. See updated Schedule for details.",
+        "title": "[CSIS6813] Class schedule updated",
+        "message": "The assessment schedule for CSIS6813 has changed. Please check your assessment dates.",
         "imagePath": null,
         "createdBy": "2023000022",
         "createdAt": "2025-04-04T10:25:00Z",
@@ -931,8 +811,8 @@
     },
     {
         "type": "ModuleUpdate",
-        "title": "[CSIA6843] Analytical Programming: Dataset Refresh",
-        "message": "New Kaggle corpus mirrored under Resources. Use v2.1 for Assignment 1 baselines.",
+        "title": "[CSIA6843] Module details updated",
+        "message": "Module details for CSIA6843 have been updated.",
         "imagePath": null,
         "createdBy": "admin",
         "createdAt": "2025-07-29T09:10:00Z",
@@ -941,8 +821,8 @@
     },
     {
         "type": "ScheduleUpdate",
-        "title": "[EVEN6824] Venture Pitches Rescheduled",
-        "message": "Moved to 2 September, 10:10–12:10, WWG212. Mentor feedback slots updated accordingly.",
+        "title": "[EVEN6824] Class schedule updated",
+        "message": "The assessment schedule for EVEN6824 has changed. Please check your assessment dates.",
         "imagePath": null,
         "createdBy": "admin",
         "createdAt": "2025-08-23T09:35:00Z",
@@ -961,8 +841,8 @@
     },
     {
         "type": "FaqUpdate",
-        "title": "FAQ: VPN & Git Access",
-        "message": "Step-by-step for VPN + Git over SSH from residences/labs, with troubleshooting tips.",
+        "title": "FAQ Created",
+        "message": "A new FAQ was posted: VPN & Git Access.",
         "imagePath": null,
         "createdBy": "admin",
         "createdAt": "2025-08-28T15:25:00Z",
@@ -971,8 +851,8 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "Supervisor Report Template",
-        "message": "New DOCX/LaTeX templates for CSIS6809/BCIS6809 progress reviews added.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "admin",
         "createdAt": "2025-09-01T08:20:00Z",
@@ -991,8 +871,8 @@
     },
     {
         "type": "ModuleUpdate",
-        "title": "[BCIS6809] Year Project Milestone 2",
-        "message": "Submit prototype demo links by 13 Sep. Marking rubric and demo checklist posted.",
+        "title": "[BCIS6809] Module details updated",
+        "message": "Module details for BCIS6809 have been updated.",
         "imagePath": null,
         "createdBy": "admin",
         "createdAt": "2025-09-05T11:10:00Z",
@@ -1011,8 +891,8 @@
     },
     {
         "type": "ScheduleUpdate",
-        "title": "[CSIA6843] Code Clinic Slots Added",
-        "message": "Extra clinics on Mon 16:10–17:10 for the next three weeks. Booking required.",
+        "title": "[CSIA6843] Class schedule updated",
+        "message": "The assessment schedule for CSIA6843 has changed. Please check your assessment dates.",
         "imagePath": null,
         "createdBy": "admin",
         "createdAt": "2025-09-09T07:20:00Z",
@@ -1021,8 +901,8 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "Exam Archive (S2 Past Papers)",
-        "message": "For CSID6823, CSID6843, CSIN6843—papers with memos added under Exam Prep.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "admin",
         "createdAt": "2025-09-12T10:55:00Z",
@@ -1031,8 +911,8 @@
     },
     {
         "type": "FaqUpdate",
-        "title": "FAQ: Module Registration Changes",
-        "message": "Explained add/drop deadlines and special permission requests for S2 modules.",
+        "title": "FAQ Created",
+        "message": "A new FAQ was posted: Module Registration Changes.",
         "imagePath": null,
         "createdBy": "admin",
         "createdAt": "2025-09-16T12:05:00Z",
@@ -1081,8 +961,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[EOCC6824] Case Study Pack A",
-        "message": "Retail omnichannel case PDF + data dictionary available for Assignment 1.",
+        "title": "[EOCC6824] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Case Study Pack A.",
         "imagePath": null,
         "createdBy": "2023000009",
         "createdAt": "2025-08-08T12:35:00Z",
@@ -1091,8 +971,8 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "Past Papers: BI & Databases",
-        "message": "Exam archives with memos for CSID6823/CSID6843 added under Exam Prep.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "2023000009",
         "createdAt": "2025-08-12T07:45:00Z",
@@ -1111,8 +991,8 @@
     },
     {
         "type": "ScheduleUpdate",
-        "title": "[EOCC6824] Industry Guest Talk",
-        "message": "Moved to Thu 14:10–15:10 (WWG211). Attendance counts toward participation.",
+        "title": "[EOCC6824] Class schedule updated",
+        "message": "The assessment schedule for EOCC6824 has changed. Please check your assessment dates.",
         "imagePath": null,
         "createdBy": "2023000009",
         "createdAt": "2025-08-20T09:05:00Z",
@@ -1141,8 +1021,8 @@
     },
     {
         "type": "ModuleUpdate",
-        "title": "[BCIS6809] Milestone 2 Requirements Clarified",
-        "message": "Updated rubric with API demo expectations and logging requirements.",
+        "title": "[BCIS6809] Module details updated",
+        "message": "Module details for BCIS6809 have been updated.",
         "imagePath": null,
         "createdBy": "2023000005",
         "createdAt": "2025-08-20T14:15:00Z",
@@ -1151,13 +1031,13 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "[BCIS6809] Supervisor Report Templates v2.1",
-        "message": "Updated DOCX/LaTeX templates aligned to rubric anchors added to Repository.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "2023000008",
         "createdAt": "2025-07-14T11:15:00Z",
         "moduleId": 2,
-        "audience": "ModuleStudents"
+        "audience": "All"
     },
     {
         "type": "SchedulerUpdate",
@@ -1171,8 +1051,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[BCIS6809] Prototype Demo Checklist",
-        "message": "Pre-demo criteria and common pitfalls. Read before your Milestone 2 slot.",
+        "title": "[BCIS6809] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Prototype Demo Checklist.",
         "imagePath": null,
         "createdBy": "2023000017",
         "createdAt": "2025-07-23T09:25:00Z",
@@ -1191,8 +1071,8 @@
     },
     {
         "type": "ModuleUpdate",
-        "title": "[BCIS6809] Milestone 2 Brief Released",
-        "message": "Prototype demo requirements and checklist posted under Assessments.",
+        "title": "[BCIS6809] Module details updated",
+        "message": "Module details for BCIS6809 have been updated.",
         "imagePath": null,
         "createdBy": "2023000017",
         "createdAt": "2025-08-02T09:40:00Z",
@@ -1201,8 +1081,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[BCIS6809] Prototype Demo Checklist",
-        "message": "Pre-demo criteria and common pitfalls—review before Milestone 2.",
+        "title": "[BCIS6809] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Prototype Demo Checklist.",
         "imagePath": null,
         "createdBy": "2023000018",
         "createdAt": "2025-07-25T13:05:00Z",
@@ -1221,8 +1101,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[CSID6843] Assignment 1 Pack",
-        "message": "Schema, starter scripts, and marking rubric uploaded to Module Documents.",
+        "title": "[CSID6843] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Assignment 1 Pack.",
         "imagePath": null,
         "createdBy": "2023000019",
         "createdAt": "2025-08-07T12:10:00Z",
@@ -1231,13 +1111,13 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "[CSID6843] Sample Datasets (Clickstream & POS)",
-        "message": "Anonymised logs for practice queries available under Datasets folder.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "2023000019",
         "createdAt": "2025-08-09T08:55:00Z",
         "moduleId": 12,
-        "audience": "ModuleStudents"
+        "audience": "All"
     },
     {
         "type": "SchedulerUpdate",
@@ -1261,8 +1141,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[CSIA6843] Starter Pack: NumPy/Pandas Lab 1",
-        "message": "Notebook, dataset, and quickstart guide uploaded to Module Documents.",
+        "title": "[CSIA6843] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Starter Pack: NumPy/Pandas Lab 1.",
         "imagePath": null,
         "createdBy": "2023000020",
         "createdAt": "2025-08-14T11:35:00Z",
@@ -1271,13 +1151,13 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "[CSIA6843] Starter Datasets (CSV/Parquet)",
-        "message": "Clean datasets for vectorisation and algorithm analysis added to Repository.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "2023000020",
         "createdAt": "2025-08-16T08:40:00Z",
         "moduleId": 14,
-        "audience": "ModuleStudents"
+        "audience": "All"
     },
     {
         "type": "SchedulerUpdate",
@@ -1291,8 +1171,8 @@
     },
     {
         "type": "ScheduleUpdate",
-        "title": "[CSIA6843] Workshop Time Shift",
-        "message": "Moved to Thu 13:10–14:10 (WWG213) for the next two weeks due to venue clash.",
+        "title": "[CSIA6843] Class schedule updated",
+        "message": "The assessment schedule for CSIA6843 has changed. Please check your assessment dates.",
         "imagePath": null,
         "createdBy": "2023000020",
         "createdAt": "2025-08-27T13:00:00Z",
@@ -1300,19 +1180,9 @@
         "audience": "ModuleStudents"
     },
     {
-        "type": "ModuleUpdate",
-        "title": "[BCIS6809] Milestone 2 Requirements Clarified",
-        "message": "Updated rubric with demo expectations and logging requirements.",
-        "imagePath": null,
-        "createdBy": "2023000020",
-        "createdAt": "2025-08-30T10:45:00Z",
-        "moduleId": 2,
-        "audience": "ModuleStudents"
-    },
-    {
         "type": "DocumentUpload",
-        "title": "[CSIS6809] Results Chapter Exemplars",
-        "message": "Anonymised examples showing tables, figures, and narrative flow.",
+        "title": "[CSIS6809] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Results Chapter Exemplars.",
         "imagePath": null,
         "createdBy": "2023000020",
         "createdAt": "2025-09-09T07:35:00Z",
@@ -1321,13 +1191,13 @@
     },
     {
         "type": "RepositoryUpdate",
-        "title": "[BCIS6809] Poster & Abstract Templates",
-        "message": "A1 poster template and 250-word abstract guide added to Repository.",
+        "title": "Internal Repository Updated",
+        "message": "A new document was uploaded by Admin to the internal repository.",
         "imagePath": null,
         "createdBy": "2023000020",
         "createdAt": "2025-09-12T09:35:00Z",
         "moduleId": 2,
-        "audience": "ModuleStudents"
+        "audience": "All"
     },
     {
         "type": "SchedulerUpdate",
@@ -1341,8 +1211,8 @@
     },
     {
         "type": "ScheduleUpdate",
-        "title": "[BCIS6809] Demo Week Slots Open",
-        "message": "15-minute prototype demos scheduled for 18–20 Sep. Book your slot.",
+        "title": "[BCIS6809] Assessment schedule updated",
+        "message": "The assessment schedule for BCIS6809 has changed. Please check your assessment dates.",
         "imagePath": null,
         "createdBy": "2023000020",
         "createdAt": "2025-09-18T12:10:00Z",
@@ -1361,8 +1231,8 @@
     },
     {
         "type": "DocumentUpload",
-        "title": "[BCIS6809] Final Report Formatting Guide",
-        "message": "APA/Harvard tips, figure labelling, and appendix structure guidance uploaded.",
+        "title": "[BCIS6809] New Module Document Uploaded",
+        "message": "A new document has been uploaded with title: Final Report Formatting Guide.",
         "imagePath": null,
         "createdBy": "2023000020",
         "createdAt": "2025-10-03T08:00:00Z",
@@ -1371,8 +1241,8 @@
     },
     {
         "type": "ModuleUpdate",
-        "title": "[BCIS6809] Final Submission Checklist",
-        "message": "Originality report, PDF/A export, and repository link-verify each item before upload.",
+        "title": "[BCIS6809] Module details updated",
+        "message": "Module details for BCIS6809 have been updated.",
         "imagePath": null,
         "createdBy": "2023000020",
         "createdAt": "2025-10-08T09:10:00Z",
@@ -1411,8 +1281,8 @@
     },
     {
         "type": "ModuleUpdate",
-        "title": "[CSIS6809] Ethics Clearance Pack Posted",
-        "message": "Consent forms, gatekeeper letters, and risk checklist now under Resources.",
+        "title": "[CSIS6809] Module details updated",
+        "message": "Module details for CSIS6809 have been updated.",
         "imagePath": null,
         "createdBy": "2023000021",
         "createdAt": "2025-08-08T10:20:00Z",

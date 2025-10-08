@@ -8,7 +8,7 @@ export const adminGuard: CanActivateFn = (route, state) => {
   const accountService = inject(AccountService);
   const toastr = inject(ToastrService);
 
-  const roles = accountService.roles(); // ⛔ signal evaluation happens once here
+  const roles = accountService.roles(); //  signal evaluation happens once here
 
   //   Check if roles contain "Admin"
   const hasAdmin = Array.isArray(roles) ? roles.includes('Admin') : roles === 'Admin';
