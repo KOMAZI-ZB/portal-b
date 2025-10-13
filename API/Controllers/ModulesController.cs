@@ -37,6 +37,24 @@ public class ModulesController(DataContext context) : BaseApiController
         return (true, null);
     }
 
+    // 🔎 Real-time existence check (mirrors AdminController.UsernameExists)
+    [Authorize(Policy = "RequireAdminRole")]
+    [HttpGet("exists/{moduleCode}")]
+    public async Task<ActionResult> ModuleCodeExists(string moduleCode)
+    {
+        var trimmed = moduleCode?.Trim();
+        if (string.IsNullOrWhiteSpace(trimmed))
+            return Ok(new { exists = false });
+
+        var normalized = trimmed.ToUpperInvariant();
+
+        var exists = await context.Modules
+            .AsNoTracking()
+            .AnyAsync(m => m.ModuleCode != null && m.ModuleCode.ToUpper() == normalized);
+
+        return Ok(new { exists });
+    }
+
     [Authorize(Policy = "RequireAdminRole")]
     [HttpPost]
     public async Task<ActionResult> AddModule(ModuleDto dto)
@@ -45,13 +63,25 @@ public class ModulesController(DataContext context) : BaseApiController
         var isYear = dto.IsYearModule || dto.Semester == 0;
         var semester = isYear ? 0 : dto.Semester;
 
+        // 🔒 Block duplicate ModuleCode (case/space-insensitive)
+        var codeTrimmed = dto.ModuleCode?.Trim();
+        if (string.IsNullOrWhiteSpace(codeTrimmed))
+            return BadRequest("ModuleCode is required.");
+
+        var codeNorm = codeTrimmed.ToUpperInvariant();
+        var dup = await context.Modules
+            .AsNoTracking()
+            .AnyAsync(m => m.ModuleCode != null && m.ModuleCode.ToUpper() == codeNorm);
+
+        if (dup) return Conflict(new { message = $"Module with code '{codeTrimmed}' already exists." });
+
         // ❗ Server-side validation for assessment windows
         var (ok, msg) = ValidateAssessmentMonths(dto.Assessments ?? Enumerable.Empty<AssessmentDto>(), semester, isYear);
         if (!ok) return BadRequest(msg);
 
         var module = new Module
         {
-            ModuleCode = dto.ModuleCode,
+            ModuleCode = codeTrimmed,                 // keep original casing as entered
             ModuleName = dto.ModuleName,
             Semester = semester,
             IsYearModule = isYear,
@@ -294,7 +324,7 @@ public class ModulesController(DataContext context) : BaseApiController
         context.Modules.Remove(module);
 
         await context.SaveChangesAsync();
-        return Ok(new { message = "Module deleted." });
+        return Ok(new { message = "Module deleted successfully." });
     }
 
     [Authorize(Roles = "Admin,Lecturer,Coordinator")]
@@ -334,8 +364,22 @@ public class ModulesController(DataContext context) : BaseApiController
             .OrderBy(a => a.Date).ThenBy(a => a.Title)
             .ToListAsync();
 
-        // Apply basic fields (metadata)
-        if (dto.ModuleCode is not null) module.ModuleCode = dto.ModuleCode;
+        // Apply basic fields (metadata) with duplicate guard if ModuleCode changes
+        if (dto.ModuleCode is not null)
+        {
+            var newCodeTrim = dto.ModuleCode.Trim();
+            var newNorm = newCodeTrim.ToUpperInvariant();
+
+            var collides = await context.Modules
+                .AsNoTracking()
+                .AnyAsync(m => m.Id != id && m.ModuleCode != null && m.ModuleCode.ToUpper() == newNorm);
+
+            if (collides)
+                return Conflict(new { message = $"Module with code '{newCodeTrim}' already exists." });
+
+            module.ModuleCode = newCodeTrim;
+        }
+
         if (dto.ModuleName is not null) module.ModuleName = dto.ModuleName;
 
         // Handle year / semester normalization

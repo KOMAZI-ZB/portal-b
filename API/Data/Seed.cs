@@ -162,6 +162,24 @@ public class Seed
         await context.SaveChangesAsync();
     }
 
+    // >>> NEW: seed initial Documents from Data/SeedData/DocumentSeedData.json
+    public static async Task SeedDocuments(DataContext context)
+    {
+        if (await context.Documents.AnyAsync()) return;
+
+        var path = Path.Combine(Directory.GetCurrentDirectory(), "Data", "SeedData", "DocumentSeedData.json");
+        if (!File.Exists(path)) return;
+
+        var json = await File.ReadAllTextAsync(path);
+        var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+        var docs = JsonSerializer.Deserialize<List<Document>>(json, options);
+
+        if (docs is null) return;
+
+        context.Documents.AddRange(docs);
+        await context.SaveChangesAsync();
+    }
+
     // ---- UPDATED: idempotent re-seeding (adds only missing rows) ----
     public static async Task SeedAssessments(DataContext context)
     {

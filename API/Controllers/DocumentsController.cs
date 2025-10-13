@@ -66,7 +66,7 @@ public class DocumentsController(
             contentType.Equals("application/octet-stream", StringComparison.OrdinalIgnoreCase))
             return (true, null);
 
-        // ✅ Special-case TXT: allow any "text/*" (covers text/plain; charset=..., text/markdown, etc.)
+        //  Special-case TXT: allow any "text/*" (covers text/plain; charset=..., text/markdown, etc.)
         if (ext.Equals(".txt", StringComparison.OrdinalIgnoreCase) &&
             contentType.StartsWith("text/", StringComparison.OrdinalIgnoreCase))
             return (true, null);

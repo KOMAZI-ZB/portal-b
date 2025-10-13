@@ -154,7 +154,7 @@ export class UploadDocumentModalComponent implements OnInit, OnChanges, AfterVie
       return null;
     }
 
-    // ✅ Accept any text/* for .txt (covers text/plain; charset=..., text/markdown, etc.)
+    //  Accept any text/* for .txt (covers text/plain; charset=..., text/markdown, etc.)
     if (ext === '.txt' && mime.startsWith('text/')) {
       return null;
     }

@@ -67,14 +67,16 @@ try
 
     await context.Database.MigrateAsync();
 
-    //   Seeding all supported tables
+
     await Seed.SeedModules(context);
     await Seed.SeedUsers(userManager, roleManager, context);
+
+    await Seed.SeedDocuments(context);
     await Seed.SeedFaqs(context);
     await Seed.SeedNotifications(context);
     await Seed.SeedLabBookings(context);
-    await Seed.SeedRepositories(context); //   NEW: Seeding recommended repositories
-    await Seed.SeedAssessments(context); //   NEW: Seeding assessments
+    await Seed.SeedRepositories(context);
+    await Seed.SeedAssessments(context);
 
 }
 catch (Exception ex)

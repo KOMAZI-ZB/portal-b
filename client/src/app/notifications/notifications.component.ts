@@ -60,7 +60,7 @@ export class NotificationsComponent implements OnInit {
     this.currentUserName = user?.userName || '';
     this.currentUserRole = this.accountService.getUserRole();
 
-    // ✅ Auto-select semester based on today's month
+    //  Auto-select semester based on today's month
     const month = new Date().getMonth() + 1; // 1..12
     this.semesterFilter = month >= 1 && month <= 6 ? '1' : '2';
 
@@ -384,7 +384,7 @@ export class NotificationsComponent implements OnInit {
             this.notifications = this.notifications.filter(x => x.id !== n.id);
             // also remove from filtered/visible and recompute
             this.filtered = this.filtered.filter(x => x.id !== n.id);
-            this.toastr.success('Announcement deleted.');
+            this.toastr.success('Announcement deleted successfully.');
             this.applyFilters();
           },
           error: (err) => {

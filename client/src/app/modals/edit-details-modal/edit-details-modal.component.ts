@@ -356,7 +356,7 @@ export class EditDetailsModalComponent implements OnInit, AfterViewInit, OnDestr
         const st = v.days[day];
         if (!st.checked) continue;
         const start = this.formatTimeString(st.startTime) || '';
-        const end = this.formatTimeString(st.endTime) || ''; // ✅ fixed
+        const end = this.formatTimeString(st.endTime) || ''; //  fixed
         if (!start || !end) continue;
         classSessions.push({ venue: venueName, weekDay: day, startTime: start, endTime: end });
       }

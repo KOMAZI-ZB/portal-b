@@ -103,7 +103,7 @@ export class RepositoryComponent implements OnInit {
     };
 
     this.bsModalRef = this.modalService.show(UploadDocumentModalComponent, { initialState });
-    this.bsModalRef.content.onUpload.subscribe(() => this.loadInternalDocuments());
+    this.bsModalRef.content.onUpload.subscribe(() => this.loadInternalDocuments()); // modal itself toasts success
   }
 
   openAddRepositoryModal() {
@@ -133,6 +133,7 @@ export class RepositoryComponent implements OnInit {
       next: () => {
         this.internalDocuments = this.internalDocuments.filter(d => d.id !== docId);
         this.loadInternalDocuments();
+        this.toastr.success('Document deleted successfully.'); //  ADDED
       },
       error: err => {
         console.error('Failed to delete document', err);
@@ -154,7 +155,7 @@ export class RepositoryComponent implements OnInit {
       onConfirm: () => {
         this.repositoryService.deleteExternalRepository(id).subscribe({
           next: () => {
-            this.toastr.success('Repository removed successfully.');
+            this.toastr.success('Repository link deleted successfully.');
             if (this.externalRepos.length === 1 && this.externalPageNumber > 1) {
               this.externalPageNumber--;
             }

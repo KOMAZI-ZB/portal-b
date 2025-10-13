@@ -166,7 +166,7 @@ export class FaqComponent implements OnInit {
       onConfirm: () => {
         this.faqService.deleteFaq(id).subscribe({
           next: () => {
-            this.toastr.success('FAQ deleted');
+            this.toastr.success('FAQ deleted successfully');
             this.loadFaqs();
           },
           error: () => this.toastr.error('Failed to delete FAQ')

@@ -100,7 +100,7 @@ th,
     page-break-inside: avoid;
 }
 
-/* ========= NEW: Value-only formatting by column ========= */
+/* ========= Value-only formatting by column ========= */
 /* Single-line values (no wrapping) for columns:
    1 Module Code, 2 Start Time, 3 End Time, 4 Venue, 5 Date, 8 Submission Deadline */
 #pdfContent table tbody td:nth-child(1),
@@ -131,6 +131,11 @@ th,
     /* justify text for neat edges */
     text-justify: inter-word;
     /* headings remain centered; this override applies to values only via tbody */
+}
+
+/* === NEW: Date column cells (NOT the header) === */
+#pdfContent table tbody td:nth-child(1) {
+    background-color: #f1f5f2 !important;
 }
 
 /* Print mode */

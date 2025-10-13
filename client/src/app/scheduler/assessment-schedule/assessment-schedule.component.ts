@@ -90,14 +90,7 @@ export class AssessmentScheduleComponent implements OnInit {
     });
   }
 
-  /**
-   * Render a DOM node to PDF using html2canvas + jsPDF.
-   * - Row-aligned breaks (THEAD + TBODY)
-   * - Forbid break between thead and first tbody row
-   * - Tiny overlap bleed between slices to ensure visible borders at page edges
-   * - Remove trailing empty page if created by rounding
-   * - ✅ NEW: append a final boundary at canvas bottom to never drop the last row
-   */
+
   private async renderNodeMultipageToPdf(
     pdf: jsPDF,
     node: HTMLElement,
@@ -159,7 +152,7 @@ export class AssessmentScheduleComponent implements OnInit {
     const MIN_SLICE_CANVAS = Math.round(24 * SCALE);
     const SLICE_OVERLAP = Math.max(1, Math.round(2 * SCALE)); // ~2 CSS px
 
-    // ✅ Ensure we also have a final boundary at the very bottom of content
+    //  Ensure we also have a final boundary at the very bottom of content
     const total = canvas.height;
     if (boundaries[boundaries.length - 1] !== total) {
       boundaries.push(total);
@@ -236,12 +229,7 @@ export class AssessmentScheduleComponent implements OnInit {
     }
   }
 
-  /**
-   * Requirement:
-   * - Page 1: logo + name + FIRST month section.
-   * - Each subsequent month starts on a NEW page (no logo/topbar).
-   * - Row-aligned slicing inside each month; borders preserved.
-   */
+
   async downloadScheduleAsPdf(): Promise<void> {
     const pdfRoot = document.getElementById('pdfContent');
     if (!pdfRoot) return;

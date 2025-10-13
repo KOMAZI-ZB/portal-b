@@ -25,7 +25,7 @@ type VenueConfig = { venue: string; days: { [day: string]: DayState } };
 @Component({
   selector: 'app-add-module-modal',
   standalone: true,
-  imports: [CommonModule, FormsModule, CollapseModule], // ✅ add CollapseModule
+  imports: [CommonModule, FormsModule, CollapseModule], //  add CollapseModule
   templateUrl: './add-module-modal.component.html',
   styleUrls: ['./add-module-modal.component.css']
 })
@@ -55,6 +55,11 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
   moduleName = '';
   semesterChoice: '1' | '2' | 'year' = '1';
 
+  // 🔎 Real-time duplicate check state (NEW)
+  moduleCodeTaken: boolean = false;
+  moduleCodeChecking: boolean = false;
+  private codeCheckTimer: any;
+
   // Venues & sessions
   weekDays: string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   venues: VenueConfig[] = [];
@@ -62,7 +67,7 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
   // Assessments
   assessments: Assessment[] = [];
 
-  // ✅ UI collapse state to mirror Edit modal
+  //  UI collapse state to mirror Edit modal
   venueOpen: boolean[] = [];
   assessmentOpen: boolean[] = [];
 
@@ -153,6 +158,31 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
     return this.isDetailsValid && this.areVenuesValid && this.areAssessmentsValid;
   }
 
+  // ===== Duplicate check (NEW) =====
+  onModuleCodeChange(value: string): void {
+    this.markDirty();
+    // reset states
+    if (this.codeCheckTimer) clearTimeout(this.codeCheckTimer);
+    this.moduleCodeTaken = false;
+    const code = (value || '').trim();
+    if (!code) { this.moduleCodeChecking = false; return; }
+
+    this.moduleCodeChecking = true;
+    this.codeCheckTimer = setTimeout(() => {
+      this.http.get<{ exists: boolean }>(this.baseUrl + 'modules/exists/' + encodeURIComponent(code))
+        .subscribe({
+          next: res => {
+            this.moduleCodeTaken = !!res?.exists;
+            this.moduleCodeChecking = false;
+          },
+          error: () => {
+            // fail-closed to avoid blocking user on transient network issues
+            this.moduleCodeChecking = false;
+          }
+        });
+    }, 300); // small debounce
+  }
+
   // ===== Lifecycle =====
   ngAfterViewInit(): void {
     setTimeout(() => this.moduleCodeInput?.nativeElement.focus(), 0);
@@ -206,17 +236,17 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
 
   addVenue(): void {
     this.venues.push({ venue: '', days: this.makeEmptyDays() });
-    this.venueOpen.push(true); // ✅ keep UI state in sync
+    this.venueOpen.push(true); //  keep UI state in sync
     this.markDirty();
   }
 
   removeVenue(index: number): void {
     this.venues.splice(index, 1);
-    this.venueOpen.splice(index, 1); // ✅ keep UI state in sync
+    this.venueOpen.splice(index, 1); //  keep UI state in sync
     this.markDirty();
   }
 
-  // ✅ collapse toggles to mirror Edit modal
+  //  collapse toggles to mirror Edit modal
   toggleVenue(i: number) { this.venueOpen[i] = !this.venueOpen[i]; }
   toggleAssessment(i: number) { this.assessmentOpen[i] = !this.assessmentOpen[i]; }
 
@@ -237,17 +267,17 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
       endTime: '',
       venue: ''
     });
-    this.assessmentOpen.push(true); // ✅ default expanded like Edit
+    this.assessmentOpen.push(true); //  default expanded like Edit
     this.markDirty();
   }
 
   removeAssessment(i: number) {
     this.assessments.splice(i, 1);
-    this.assessmentOpen.splice(i, 1); // ✅ keep UI state in sync
+    this.assessmentOpen.splice(i, 1); //  keep UI state in sync
     this.markDirty();
   }
 
-  // ===== Submit (unchanged) =====
+  // ===== Submit (unchanged except for duplicate guard) =====
   private buildClassSessionsFromVenues() {
     const sessions: Array<{ venue: string; weekDay: string; startTime: string; endTime: string }> = [];
     for (const v of this.venues) {
@@ -279,6 +309,14 @@ export class AddModuleModalComponent implements AfterViewInit, OnDestroy {
   }
 
   submit(): void {
+    // NEW: block submit if duplicate detected
+    if (this.moduleCodeTaken) {
+      this.toastr.error('A module with this Module Code already exists');
+      this.activeTab = 'details';
+      this.moduleCodeInput?.nativeElement.focus();
+      return;
+    }
+
     if (!this.isDetailsValid || !this.areVenuesValid || !this.areAssessmentsValid) {
       const bad = this.assessments.find(x => x?.date && !this.isDateAllowedForSemester(x.date));
       if (bad) {

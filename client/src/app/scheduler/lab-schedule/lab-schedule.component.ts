@@ -12,6 +12,9 @@ import { UnbookLabSlotModalComponent } from '../../modals/unbook-lab-slot-modal/
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 
+//  Toastr
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-lab-schedule',
   templateUrl: './lab-schedule.component.html',
@@ -38,7 +41,9 @@ export class LabScheduleComponent implements OnInit {
 
   constructor(
     private labbookingService: LabbookingService,
-    public accountService: AccountService
+    public accountService: AccountService,
+    //  Inject toastr (no other logic changed)
+    private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -341,7 +346,12 @@ export class LabScheduleComponent implements OnInit {
 
     this.modalServerError = null; // clear any prior error
     this.labbookingService.createBooking(dto).subscribe({
-      next: () => { this.loadBookings(); this.showBookingModal = false; },
+      next: () => {
+        //  success toast for booking creation
+        this.toastr.success('Booking created successfully.');
+        this.loadBookings();
+        this.showBookingModal = false;
+      },
       error: err => {
         // Keep the modal open; show inline server error (no restart)
         const raw = err?.error;
@@ -354,7 +364,12 @@ export class LabScheduleComponent implements OnInit {
   handleBookingUnconfirmed() {
     if (!this.selectedBookingToDelete?.id) return;
     this.labbookingService.deleteBooking(this.selectedBookingToDelete.id).subscribe({
-      next: () => { this.loadBookings(); this.closeUnbookModal(); },
+      next: () => {
+        //  success toast for booking deletion
+        this.toastr.success('Booking deleted successfully.');
+        this.loadBookings();
+        this.closeUnbookModal();
+      },
       error: err => { console.error('Unbooking failed:', err); this.closeUnbookModal(); }
     });
   }

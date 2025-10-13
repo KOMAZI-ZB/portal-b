@@ -11,6 +11,7 @@ import { ModuleService } from '../_services/module.service';
 import { Module } from '../_models/module';
 import { ConfirmDeleteModalComponent } from '../modals/confirm-delete-modal/confirm-delete-modal.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ToastrService } from 'ngx-toastr'; //  ADDED
 
 @Component({
   selector: 'app-module-documents',
@@ -41,7 +42,8 @@ export class ModuleDocumentsComponent implements OnInit {
     private modalService: BsModalService,
     private accountService: AccountService,
     private router: Router,
-    private moduleService: ModuleService
+    private moduleService: ModuleService,
+    private toastr: ToastrService //  ADDED
   ) { }
 
   ngOnInit(): void {
@@ -120,6 +122,7 @@ export class ModuleDocumentsComponent implements OnInit {
 
         this.bsModalRef.content.onUpload.subscribe(() => {
           this.loadDocuments();
+          // No toast here to avoid duplicate; modal already toasts “Document uploaded successfully.”
         });
       }
     }, 0);
@@ -146,6 +149,7 @@ export class ModuleDocumentsComponent implements OnInit {
     this.documentService.deleteModuleDocument(docId).subscribe({
       next: () => {
         this.documents = this.documents.filter((d) => d.id !== docId);
+        this.toastr.success('Document deleted successfully.'); //  ADDED
       },
       error: (err) => console.error('Failed to delete document', err)
     });

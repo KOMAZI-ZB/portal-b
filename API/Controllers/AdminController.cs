@@ -384,6 +384,6 @@ public class AdminController(
         context.Users.Remove(user);
         await context.SaveChangesAsync();
 
-        return Ok(new { message = $"User {routeUserName} deleted." });
+        return Ok(new { message = "User deleted successfully." });
     }
 }

@@ -1,0 +1,1694 @@
+[
+    {
+        "Title": "[CSIS6809] Computer Information Technology: General IT Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-01-06T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000005",
+        "ModuleId": 1,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6809] Computer Information Technology: General IT Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-01-20T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 1,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6809] Computer Information Technology: General IT Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-02-03T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 1,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6809] Computer Information Technology: General IT Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-02-17T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 1,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6809] Computer Information Technology: General IT Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-03-03T09:05:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 1,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6809] Computer Information Technology: General IT Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-03-17T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000017",
+        "ModuleId": 1,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6809] Computer Information Technology: General IT Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-03-31T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000018",
+        "ModuleId": 1,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6809] Computer Information Technology: General IT Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-04-14T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000019",
+        "ModuleId": 1,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6809] Computer Information Technology: General IT Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-04-28T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000020",
+        "ModuleId": 1,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6809] Computer Information Technology: General IT Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-05-12T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000021",
+        "ModuleId": 1,
+        "Source": "Module"
+    },
+    {
+        "Title": "[BCIS6809] Computer Information Systems Research Project: Research Project Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-01-06T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000005",
+        "ModuleId": 2,
+        "Source": "Module"
+    },
+    {
+        "Title": "[BCIS6809] Computer Information Systems Research Project: Research Project Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-01-20T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 2,
+        "Source": "Module"
+    },
+    {
+        "Title": "[BCIS6809] Computer Information Systems Research Project: Research Project Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-02-03T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 2,
+        "Source": "Module"
+    },
+    {
+        "Title": "[BCIS6809] Computer Information Systems Research Project: Research Project Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-02-17T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 2,
+        "Source": "Module"
+    },
+    {
+        "Title": "[BCIS6809] Computer Information Systems Research Project: Research Project Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-03-03T09:05:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 2,
+        "Source": "Module"
+    },
+    {
+        "Title": "[BCIS6809] Computer Information Systems Research Project: Research Project Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-03-17T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000017",
+        "ModuleId": 2,
+        "Source": "Module"
+    },
+    {
+        "Title": "[BCIS6809] Computer Information Systems Research Project: Research Project Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-03-31T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000018",
+        "ModuleId": 2,
+        "Source": "Module"
+    },
+    {
+        "Title": "[BCIS6809] Computer Information Systems Research Project: Research Project Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-04-14T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000019",
+        "ModuleId": 2,
+        "Source": "Module"
+    },
+    {
+        "Title": "[BCIS6809] Computer Information Systems Research Project: Research Project Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-04-28T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000020",
+        "ModuleId": 2,
+        "Source": "Module"
+    },
+    {
+        "Title": "[BCIS6809] Computer Information Systems Research Project: Research Project Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-05-12T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000021",
+        "ModuleId": 2,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6813] Introduction to Research: Research Methods Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-01-08T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000005",
+        "ModuleId": 3,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6813] Introduction to Research: Research Methods Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-01-18T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 3,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6813] Introduction to Research: Research Methods Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-01-28T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 3,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6813] Introduction to Research: Research Methods Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-02-07T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 3,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6813] Introduction to Research: Research Methods Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-02-17T09:05:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 3,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6813] Introduction to Research: Research Methods Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-02-27T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000017",
+        "ModuleId": 3,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6813] Introduction to Research: Research Methods Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-03-09T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000018",
+        "ModuleId": 3,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6813] Introduction to Research: Research Methods Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-03-19T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000019",
+        "ModuleId": 3,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6813] Introduction to Research: Research Methods Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-03-29T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000020",
+        "ModuleId": 3,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIS6813] Introduction to Research: Research Methods Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-04-08T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000021",
+        "ModuleId": 3,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6833] Human-Computer Interaction: HCI Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-01-08T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000005",
+        "ModuleId": 4,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6833] Human-Computer Interaction: HCI Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-01-18T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000005",
+        "ModuleId": 4,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6833] Human-Computer Interaction: HCI Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-01-28T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000005",
+        "ModuleId": 4,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6833] Human-Computer Interaction: HCI Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-02-07T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000005",
+        "ModuleId": 4,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6833] Human-Computer Interaction: HCI Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-02-17T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000005",
+        "ModuleId": 4,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6833] Human-Computer Interaction: HCI Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-02-27T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000005",
+        "ModuleId": 4,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6833] Human-Computer Interaction: HCI Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-03-09T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000005",
+        "ModuleId": 4,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6833] Human-Computer Interaction: HCI Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-03-19T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000005",
+        "ModuleId": 4,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6833] Human-Computer Interaction: HCI Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-03-29T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000005",
+        "ModuleId": 4,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6833] Human-Computer Interaction: HCI Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-04-08T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000005",
+        "ModuleId": 4,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6853] Data Warehousing: Data Warehousing Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-01-08T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 5,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6853] Data Warehousing: Data Warehousing Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-01-18T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 5,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6853] Data Warehousing: Data Warehousing Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-01-28T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 5,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6853] Data Warehousing: Data Warehousing Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-02-07T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 5,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6853] Data Warehousing: Data Warehousing Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-02-17T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 5,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6853] Data Warehousing: Data Warehousing Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-02-27T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 5,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6853] Data Warehousing: Data Warehousing Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-03-09T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 5,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6853] Data Warehousing: Data Warehousing Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-03-19T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 5,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6853] Data Warehousing: Data Warehousing Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-03-29T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 5,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6853] Data Warehousing: Data Warehousing Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-04-08T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 5,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6813] Information Security: Security Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-01-08T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 6,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6813] Information Security: Security Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-01-18T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 6,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6813] Information Security: Security Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-01-28T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 6,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6813] Information Security: Security Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-02-07T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 6,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6813] Information Security: Security Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-02-17T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 6,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6813] Information Security: Security Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-02-27T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 6,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6813] Information Security: Security Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-03-09T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 6,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6813] Information Security: Security Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-03-19T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 6,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6813] Information Security: Security Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-03-29T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 6,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6813] Information Security: Security Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-04-08T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 6,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6853] Advanced Programming I (Mobile): Mobile Dev Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-01-08T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 7,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6853] Advanced Programming I (Mobile): Mobile Dev Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-01-18T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 7,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6853] Advanced Programming I (Mobile): Mobile Dev Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-01-28T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 7,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6853] Advanced Programming I (Mobile): Mobile Dev Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-02-07T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 7,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6853] Advanced Programming I (Mobile): Mobile Dev Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-02-17T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 7,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6853] Advanced Programming I (Mobile): Mobile Dev Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-02-27T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 7,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6853] Advanced Programming I (Mobile): Mobile Dev Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-03-09T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 7,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6853] Advanced Programming I (Mobile): Mobile Dev Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-03-19T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 7,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6853] Advanced Programming I (Mobile): Mobile Dev Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-03-29T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 7,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6853] Advanced Programming I (Mobile): Mobile Dev Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-04-08T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 7,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6833] Advanced Internet Programming: Web Dev Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-01-08T09:05:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 8,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6833] Advanced Internet Programming: Web Dev Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-01-18T11:20:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 8,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6833] Advanced Internet Programming: Web Dev Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-01-28T14:10:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 8,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6833] Advanced Internet Programming: Web Dev Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-02-07T16:40:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 8,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6833] Advanced Internet Programming: Web Dev Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-02-17T09:05:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 8,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6833] Advanced Internet Programming: Web Dev Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-02-27T11:20:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 8,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6833] Advanced Internet Programming: Web Dev Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-03-09T14:10:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 8,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6833] Advanced Internet Programming: Web Dev Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-03-19T16:40:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 8,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6833] Advanced Internet Programming: Web Dev Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-03-29T09:05:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 8,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIP6833] Advanced Internet Programming: Web Dev Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-04-08T11:20:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 8,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6813] Advanced Data Science: Data Science Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-01-08T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000017",
+        "ModuleId": 9,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6813] Advanced Data Science: Data Science Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-01-18T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000017",
+        "ModuleId": 9,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6813] Advanced Data Science: Data Science Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-01-28T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000017",
+        "ModuleId": 9,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6813] Advanced Data Science: Data Science Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-02-07T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000017",
+        "ModuleId": 9,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6813] Advanced Data Science: Data Science Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-02-17T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000017",
+        "ModuleId": 9,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6813] Advanced Data Science: Data Science Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-02-27T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000017",
+        "ModuleId": 9,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6813] Advanced Data Science: Data Science Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-03-09T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000017",
+        "ModuleId": 9,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6813] Advanced Data Science: Data Science Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-03-19T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000017",
+        "ModuleId": 9,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6813] Advanced Data Science: Data Science Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-03-29T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000017",
+        "ModuleId": 9,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6813] Advanced Data Science: Data Science Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-04-08T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000017",
+        "ModuleId": 9,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EFMN6814] Financial Management for Managers: Finance Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-01-08T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000018",
+        "ModuleId": 10,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EFMN6814] Financial Management for Managers: Finance Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-01-18T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000018",
+        "ModuleId": 10,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EFMN6814] Financial Management for Managers: Finance Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-01-28T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000018",
+        "ModuleId": 10,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EFMN6814] Financial Management for Managers: Finance Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-02-07T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000018",
+        "ModuleId": 10,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EFMN6814] Financial Management for Managers: Finance Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-02-17T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000018",
+        "ModuleId": 10,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EFMN6814] Financial Management for Managers: Finance Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-02-27T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000018",
+        "ModuleId": 10,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EFMN6814] Financial Management for Managers: Finance Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-03-09T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000018",
+        "ModuleId": 10,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EFMN6814] Financial Management for Managers: Finance Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-03-19T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000018",
+        "ModuleId": 10,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EFMN6814] Financial Management for Managers: Finance Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-03-29T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000018",
+        "ModuleId": 10,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EFMN6814] Financial Management for Managers: Finance Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-04-08T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000018",
+        "ModuleId": 10,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6823] Business Intelligence: Business Intelligence Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-07-05T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 11,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6823] Business Intelligence: Business Intelligence Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-07-17T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 11,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6823] Business Intelligence: Business Intelligence Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-07-29T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 11,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6823] Business Intelligence: Business Intelligence Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-08-10T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 11,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6823] Business Intelligence: Business Intelligence Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-08-22T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 11,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6823] Business Intelligence: Business Intelligence Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-09-03T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 11,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6823] Business Intelligence: Business Intelligence Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-09-15T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 11,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6823] Business Intelligence: Business Intelligence Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-09-27T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 11,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6823] Business Intelligence: Business Intelligence Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-10-09T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 11,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6823] Business Intelligence: Business Intelligence Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-10-21T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000006",
+        "ModuleId": 11,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6843] Advanced Databases: Databases Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-07-05T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000019",
+        "ModuleId": 12,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6843] Advanced Databases: Databases Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-07-17T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000019",
+        "ModuleId": 12,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6843] Advanced Databases: Databases Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-07-29T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000019",
+        "ModuleId": 12,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6843] Advanced Databases: Databases Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-08-10T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000019",
+        "ModuleId": 12,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6843] Advanced Databases: Databases Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-08-22T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000019",
+        "ModuleId": 12,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6843] Advanced Databases: Databases Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-09-03T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000019",
+        "ModuleId": 12,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6843] Advanced Databases: Databases Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-09-15T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000019",
+        "ModuleId": 12,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6843] Advanced Databases: Databases Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-09-27T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000019",
+        "ModuleId": 12,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6843] Advanced Databases: Databases Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-10-09T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000019",
+        "ModuleId": 12,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSID6843] Advanced Databases: Databases Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-10-21T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000019",
+        "ModuleId": 12,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6883] Forensics: Forensics Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-07-05T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 13,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6883] Forensics: Forensics Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-07-17T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 13,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6883] Forensics: Forensics Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-07-29T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 13,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6883] Forensics: Forensics Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-08-10T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 13,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6883] Forensics: Forensics Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-08-22T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 13,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6883] Forensics: Forensics Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-09-03T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 13,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6883] Forensics: Forensics Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-09-15T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 13,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6883] Forensics: Forensics Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-09-27T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 13,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6883] Forensics: Forensics Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-10-09T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 13,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSII6883] Forensics: Forensics Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-10-21T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000007",
+        "ModuleId": 13,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6843] Analytical Programming: Analytics Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-07-05T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000020",
+        "ModuleId": 14,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6843] Analytical Programming: Analytics Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-07-17T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000020",
+        "ModuleId": 14,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6843] Analytical Programming: Analytics Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-07-29T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000020",
+        "ModuleId": 14,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6843] Analytical Programming: Analytics Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-08-10T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000020",
+        "ModuleId": 14,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6843] Analytical Programming: Analytics Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-08-22T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000020",
+        "ModuleId": 14,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6843] Analytical Programming: Analytics Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-09-03T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000020",
+        "ModuleId": 14,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6843] Analytical Programming: Analytics Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-09-15T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000020",
+        "ModuleId": 14,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6843] Analytical Programming: Analytics Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-09-27T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000020",
+        "ModuleId": 14,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6843] Analytical Programming: Analytics Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-10-09T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000020",
+        "ModuleId": 14,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIA6843] Analytical Programming: Analytics Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-10-21T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000020",
+        "ModuleId": 14,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIE6863] Project Management: Project Management Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-07-05T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 15,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIE6863] Project Management: Project Management Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-07-17T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 15,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIE6863] Project Management: Project Management Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-07-29T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 15,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIE6863] Project Management: Project Management Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-08-10T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 15,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIE6863] Project Management: Project Management Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-08-22T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 15,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIE6863] Project Management: Project Management Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-09-03T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 15,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIE6863] Project Management: Project Management Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-09-15T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 15,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIE6863] Project Management: Project Management Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-09-27T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 15,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIE6863] Project Management: Project Management Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-10-09T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 15,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIE6863] Project Management: Project Management Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-10-21T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000008",
+        "ModuleId": 15,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIN6843] Advanced Networks: Networks Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-07-05T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000021",
+        "ModuleId": 16,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIN6843] Advanced Networks: Networks Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-07-17T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000021",
+        "ModuleId": 16,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIN6843] Advanced Networks: Networks Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-07-29T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000021",
+        "ModuleId": 16,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIN6843] Advanced Networks: Networks Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-08-10T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000021",
+        "ModuleId": 16,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIN6843] Advanced Networks: Networks Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-08-22T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000021",
+        "ModuleId": 16,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIN6843] Advanced Networks: Networks Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-09-03T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000021",
+        "ModuleId": 16,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIN6843] Advanced Networks: Networks Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-09-15T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000021",
+        "ModuleId": 16,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIN6843] Advanced Networks: Networks Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-09-27T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000021",
+        "ModuleId": 16,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIN6843] Advanced Networks: Networks Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-10-09T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000021",
+        "ModuleId": 16,
+        "Source": "Module"
+    },
+    {
+        "Title": "[CSIN6843] Advanced Networks: Networks Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-10-21T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000021",
+        "ModuleId": 16,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EOCC6824] Omni-Channel Commerce: E-Commerce Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-07-05T09:05:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 17,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EOCC6824] Omni-Channel Commerce: E-Commerce Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-07-17T11:20:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 17,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EOCC6824] Omni-Channel Commerce: E-Commerce Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-07-29T14:10:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 17,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EOCC6824] Omni-Channel Commerce: E-Commerce Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-08-10T16:40:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 17,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EOCC6824] Omni-Channel Commerce: E-Commerce Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-08-22T09:05:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 17,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EOCC6824] Omni-Channel Commerce: E-Commerce Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-09-03T11:20:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 17,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EOCC6824] Omni-Channel Commerce: E-Commerce Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-09-15T14:10:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 17,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EOCC6824] Omni-Channel Commerce: E-Commerce Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-09-27T16:40:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 17,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EOCC6824] Omni-Channel Commerce: E-Commerce Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-10-09T09:05:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 17,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EOCC6824] Omni-Channel Commerce: E-Commerce Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-10-21T11:20:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": 17,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EVEN6824] Venture Creation: Entrepreneurship Overview (Slides)",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-07-05T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000022",
+        "ModuleId": 18,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EVEN6824] Venture Creation: Entrepreneurship Lecture Notes",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-07-17T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000022",
+        "ModuleId": 18,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EVEN6824] Venture Creation: Entrepreneurship Assignment 1 Brief",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-07-29T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000022",
+        "ModuleId": 18,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EVEN6824] Venture Creation: Entrepreneurship Dataset Sample",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-08-10T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000022",
+        "ModuleId": 18,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EVEN6824] Venture Creation: Entrepreneurship Lab Checklist",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-08-22T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000022",
+        "ModuleId": 18,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EVEN6824] Venture Creation: Entrepreneurship Case Study (PDF)",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-09-03T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000022",
+        "ModuleId": 18,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EVEN6824] Venture Creation: Entrepreneurship Assessment Rubric",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-09-15T14:10:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000022",
+        "ModuleId": 18,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EVEN6824] Venture Creation: Entrepreneurship Results Template",
+        "FilePath": "/assets/docs/dumyexcelfile.xlsx",
+        "UploadedAt": "2025-09-27T16:40:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000022",
+        "ModuleId": 18,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EVEN6824] Venture Creation: Entrepreneurship Revision Slides",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-10-09T09:05:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000022",
+        "ModuleId": 18,
+        "Source": "Module"
+    },
+    {
+        "Title": "[EVEN6824] Venture Creation: Entrepreneurship Reference Sheet",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-10-21T11:20:00Z",
+        "UploadedBy": "Lecturer",
+        "UploadedByUserName": "2023000022",
+        "ModuleId": 18,
+        "Source": "Module"
+    },
+    {
+        "Title": "Postgraduate Research: Proposal Template",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-01-06T09:05:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": null,
+        "Source": "Repository"
+    },
+    {
+        "Title": "Ethics: Informed Consent Form",
+        "FilePath": "/assets/docs/dumywordfile.docx",
+        "UploadedAt": "2025-01-20T11:20:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": null,
+        "Source": "Repository"
+    },
+    {
+        "Title": "Literature Review: How-To Guide",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-02-03T14:10:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": null,
+        "Source": "Repository"
+    },
+    {
+        "Title": "Data Collection: Survey Design Basics",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-02-17T16:40:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": null,
+        "Source": "Repository"
+    },
+    {
+        "Title": "Data Analysis: Qualitative Coding Intro",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-03-03T09:05:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": null,
+        "Source": "Repository"
+    },
+    {
+        "Title": "Publishing: Journal Selection Checklist",
+        "FilePath": "/assets/docs/dumypptfile.pptx",
+        "UploadedAt": "2025-03-17T11:20:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": null,
+        "Source": "Repository"
+    },
+    {
+        "Title": "Referencing: Harvard Quick Guide",
+        "FilePath": "/assets/docs/dumypdffile.pdf",
+        "UploadedAt": "2025-03-31T14:10:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": null,
+        "Source": "Repository"
+    },
+    {
+        "Title": "Plagiarism & Turnitin: Best Practices",
+        "FilePath": "/assets/docs/dumytextfile.txt",
+        "UploadedAt": "2025-04-14T16:40:00Z",
+        "UploadedBy": "Coordinator",
+        "UploadedByUserName": "2023000009",
+        "ModuleId": null,
+        "Source": "Repository"
+    }
+]

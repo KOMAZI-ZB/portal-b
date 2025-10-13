@@ -1481,7 +1481,7 @@
         "StartTime": "09:00",
         "EndTime": "11:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG212",
         "ModuleId": 9
     },
     {
@@ -1525,7 +1525,7 @@
         "StartTime": "13:00",
         "EndTime": "16:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG211",
         "ModuleId": 9
     },
     {
@@ -1569,7 +1569,7 @@
         "StartTime": "09:00",
         "EndTime": "12:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG212",
         "ModuleId": 9
     },
     {
@@ -1613,7 +1613,7 @@
         "StartTime": "14:00",
         "EndTime": "16:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG213",
         "ModuleId": 10
     },
     {
@@ -1657,7 +1657,7 @@
         "StartTime": "09:00",
         "EndTime": "12:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG211",
         "ModuleId": 10
     },
     {
@@ -1701,7 +1701,7 @@
         "StartTime": "13:00",
         "EndTime": "16:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG212",
         "ModuleId": 10
     },
     {
@@ -1745,7 +1745,7 @@
         "StartTime": "09:00",
         "EndTime": "11:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG213",
         "ModuleId": 11
     },
     {
@@ -1789,7 +1789,7 @@
         "StartTime": "13:00",
         "EndTime": "15:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG211",
         "ModuleId": 11
     },
     {
@@ -1833,7 +1833,7 @@
         "StartTime": "09:00",
         "EndTime": "12:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG212",
         "ModuleId": 11
     },
     {
@@ -1877,7 +1877,7 @@
         "StartTime": "14:00",
         "EndTime": "17:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG213",
         "ModuleId": 12
     },
     {
@@ -1921,7 +1921,7 @@
         "StartTime": "09:00",
         "EndTime": "12:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG211",
         "ModuleId": 12
     },
     {
@@ -1965,7 +1965,7 @@
         "StartTime": "13:00",
         "EndTime": "16:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG212",
         "ModuleId": 12
     },
     {
@@ -2009,7 +2009,7 @@
         "StartTime": "10:00",
         "EndTime": "12:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG213",
         "ModuleId": 13
     },
     {
@@ -2053,7 +2053,7 @@
         "StartTime": "15:00",
         "EndTime": "17:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG211",
         "ModuleId": 13
     },
     {
@@ -2097,7 +2097,7 @@
         "StartTime": "08:30",
         "EndTime": "11:30",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG212",
         "ModuleId": 13
     },
     {
@@ -2141,7 +2141,7 @@
         "StartTime": "13:00",
         "EndTime": "16:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG213",
         "ModuleId": 14
     },
     {
@@ -2185,7 +2185,7 @@
         "StartTime": "10:00",
         "EndTime": "12:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG211",
         "ModuleId": 14
     },
     {
@@ -2229,7 +2229,7 @@
         "StartTime": "12:00",
         "EndTime": "15:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG212",
         "ModuleId": 14
     },
     {
@@ -2273,7 +2273,7 @@
         "StartTime": "09:00",
         "EndTime": "11:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG213",
         "ModuleId": 15
     },
     {
@@ -2317,7 +2317,7 @@
         "StartTime": "13:00",
         "EndTime": "16:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG211",
         "ModuleId": 15
     },
     {
@@ -2361,7 +2361,7 @@
         "StartTime": "09:00",
         "EndTime": "12:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG212",
         "ModuleId": 15
     },
     {
@@ -2405,7 +2405,7 @@
         "StartTime": "14:00",
         "EndTime": "17:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG213",
         "ModuleId": 16
     },
     {
@@ -2449,7 +2449,7 @@
         "StartTime": "09:00",
         "EndTime": "11:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG211",
         "ModuleId": 16
     },
     {
@@ -2493,7 +2493,7 @@
         "StartTime": "12:30",
         "EndTime": "15:30",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG212",
         "ModuleId": 16
     },
     {
@@ -2537,7 +2537,7 @@
         "StartTime": "13:00",
         "EndTime": "15:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG213",
         "ModuleId": 17
     },
     {
@@ -2581,7 +2581,7 @@
         "StartTime": "10:00",
         "EndTime": "12:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG211",
         "ModuleId": 17
     },
     {
@@ -2625,7 +2625,7 @@
         "StartTime": "08:30",
         "EndTime": "11:30",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG212",
         "ModuleId": 17
     },
     {
@@ -2669,7 +2669,7 @@
         "StartTime": "09:00",
         "EndTime": "11:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG213",
         "ModuleId": 18
     },
     {
@@ -2713,7 +2713,7 @@
         "StartTime": "13:00",
         "EndTime": "16:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG211",
         "ModuleId": 18
     },
     {
@@ -2757,7 +2757,7 @@
         "StartTime": "12:00",
         "EndTime": "15:00",
         "DueTime": null,
-        "Venue": null,
+        "Venue": "WWG212",
         "ModuleId": 18
     }
 ]

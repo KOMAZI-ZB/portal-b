@@ -193,7 +193,7 @@ export class CreateNotificationModalComponent implements OnInit, AfterViewInit, 
 
     this.notificationService.create(formData).subscribe({
       next: () => {
-        this.toastr.success('Announcement posted');
+        this.toastr.success('Announcement created successfully.');
         localStorage.setItem('newAnnouncement', 'true');
         this.justSaved = true;
         this.form.markAsPristine();

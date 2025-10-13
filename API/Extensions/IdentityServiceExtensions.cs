@@ -19,7 +19,7 @@ public static class IdentityServiceExtensions
         .AddRoles<AppRole>()
         .AddRoleManager<RoleManager<AppRole>>()
         .AddEntityFrameworkStores<DataContext>()
-        .AddDefaultTokenProviders(); //   THIS LINE FIXES THE ERROR
+        .AddDefaultTokenProviders();
 
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>

@@ -24,8 +24,12 @@
             <div class="mb-3">
                 <label>Module Code</label>
                 <input #moduleCodeInput type="text" class="form-control" [(ngModel)]="moduleCode" name="moduleCode"
-                    (ngModelChange)="markDirty()" [class.is-invalid]="(moduleCode||'').trim().length===0" />
-                <div class="invalid-feedback">Module Code is required.</div>
+                    (ngModelChange)="onModuleCodeChange($event)"
+                    [class.is-invalid]="((moduleCode||'').trim().length===0) || moduleCodeTaken" />
+                <div class="invalid-feedback" *ngIf="(moduleCode||'').trim().length===0">Module Code is required.</div>
+                <div class="invalid-feedback" *ngIf="moduleCodeTaken">A module with this Module Code already exists.
+                </div>
+                <div class="form-text" *ngIf="moduleCodeChecking">Checking code availability…</div>
             </div>
 
             <div class="mb-3">
@@ -201,6 +205,7 @@
     <hr />
     <div class="text-end">
         <button class="btn btn-secondary me-2" (click)="cancel()">Cancel</button>
-        <button class="btn btn-primary" (click)="submit()" [disabled]="!isFormValid">Add Module</button>
+        <button class="btn btn-primary" (click)="submit()" [disabled]="!isFormValid || moduleCodeTaken">Add
+            Module</button>
     </div>
 </div>

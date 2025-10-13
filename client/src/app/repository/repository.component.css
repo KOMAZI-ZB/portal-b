@@ -87,10 +87,10 @@
     --card-vpad: 1px;
     --meta-gap: 1px;
 
-    /* NEW: neon tokens to match Notifications */
-    --date-neon: #5c5c5c;
+
+    --date-neon: #437e21;
     --date-neon-shadow:
-        0 0 2px rgba(85, 147, 239, 0.1),
+        0 0 2px rgba(13, 110, 253, 0.10),
         0 0 2px rgba(13, 110, 253, 0.10);
 }
 
